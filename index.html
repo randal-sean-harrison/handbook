@@ -117,15 +117,15 @@
 
              <!--right column-->
              <div class="col-md-12" id="rightCol">
-               <h2 id="sec0">Choose Your Own Adventure...</h2>
-               <p class="lead text-center" style="margin-bottom:-20px;">What type of guide are you creating?</p>
+               <h2 class="text-center" style="margin-bottom:-20px;">What type of guide are you creating?</h2>
 
                <div class="alert alert-default text-center" style="margin: 60px 0px 20px;">
                   <div class="btn-group" role="group" aria-label="...">
-                    <button id="subject-button" type="button" class="btn btn-default">Subject Guide</button>
-                    <button id="course-button" type="button" class="btn btn-default">Course Guide</button>
-                    <button id="howto-button" type="button" class="btn btn-default">How-to Guide</button>
-                    <button id="other-button" type="button" class="btn btn-default">Other Guide</button>
+                    <button id="subject-button" type="button" class="btn btn-default">Subject</button>
+                    <button id="course-button" type="button" class="btn btn-default">Course</button>
+                    <button id="howto-button" type="button" class="btn btn-default">How-to</button>
+                    <button id="other-button" type="button" class="btn btn-default">Other</button>
+                    <button id="internal-button" type="button" class="btn btn-default">Internal</button>
                   </div>
                </div>
 
@@ -177,10 +177,17 @@
                Other Goodness
             </div>
 
+            <div class="internal-content hidden">
+               Internal Goodness
+            </div>
 
+            <div class="internal-content hidden">
+               Internal Goodness
+            </div>
 
-
-
+            <div class="internal-content hidden">
+               Internal Goodness
+            </div>
 
                </div><!--/right-->
          	</div><!--/row-->
@@ -235,13 +242,12 @@
       $(".navhome").addClass("active");
 
 
-
-
       $('#subject-button').click(function() {
             $('.subject-content').toggleClass('hidden');
             $('.course-content').addClass('hidden');
             $('.howto-content').addClass('hidden');
             $('.other-content').addClass('hidden');
+            $('.internal-content').addClass('hidden');
       });
 
       $('#course-button').click(function() {
@@ -249,6 +255,7 @@
             $('.subject-content').addClass('hidden');
             $('.howto-content').addClass('hidden');
             $('.other-content').addClass('hidden');
+            $('.internal-content').addClass('hidden');
       });
 
       $('#other-button').click(function() {
@@ -256,6 +263,7 @@
             $('.subject-content').addClass('hidden');
             $('.howto-content').addClass('hidden');
             $('.course-content').addClass('hidden');
+            $('.internal-content').addClass('hidden');
       });
 
       $('#howto-button').click(function() {
@@ -263,8 +271,16 @@
             $('.subject-content').addClass('hidden');
             $('.other-content').addClass('hidden');
             $('.course-content').addClass('hidden');
+            $('.internal-content').addClass('hidden');
       });
 
+      $('#internal-button').click(function() {
+            $('.internal-content').toggleClass('hidden');
+            $('.subject-content').addClass('hidden');
+            $('.other-content').addClass('hidden');
+            $('.course-content').addClass('hidden');
+            $('.howto-content').addClass('hidden');
+      });
 
 
 
