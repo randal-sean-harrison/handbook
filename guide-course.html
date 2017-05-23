@@ -110,11 +110,9 @@
             <div class="col-md-3 hidden-xs hidden-sm" id="leftCol">
                <ul class="nav nav-stacked" id="sidebar">
                   <li><a href="#sec0">Guide Requirements</a></li>
-                  <li><a href="#sec1">Title</a></li>
+                  <li><a href="#sec1">Title Formatter</a></li>
                   <li><a href="#sec2">Course Overview Box</a></li>
-                  <li><a href="#sec3">Guide Requirements</a></li>
-                  <li><a href="#sec4">Guide Requirements</a></li>
-                  <li><a href="#sec5">Guide Requirements</a></li>
+                  <li><a href="#sec3">Examples</a></li>
                   <li><a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> &nbsp;Back to top</a></li>
                </ul>
             </div>
@@ -124,68 +122,114 @@
                <h2 id="sec0">Guide Requirements</h2>
 
 
-               <p>Librarians work closely with instructors to decide the best resources and organization for a course guide. However, Librarians design, build, and maintain the course guide, as instructors are not eligible for LibGuides accounts. <a href="help-faq.html">See our FAQ Page</a> (under policy) for more information.</p>
+               <p>Librarians work closely with instructors to decide the best resources and organization for a course guide. However, Librarians must design, build, and maintain that course guide, as instructors are not eligible for LibGuides accounts.
+                  <a
+                     href="help-faq.html">See our FAQ Page</a> for more information.</p>
+
+               <div class="alert alert-danger">
+                  <p><strong><i class="fa fa-times-circle" aria-hidden="true"></i>The Right Tool...</strong><br/>Course guides should focus on course-related resources. Things like assignments, grading rubrics, and most course-specific documents are best
+                     embedded in learning management software such as <a href="https://sakailogin.nd.edu/" target="_blank">Sakai</a>.</p>
+               </div>
 
                <div class='panel panel-default'>
                   <div class='panel-heading'>
                      <h3 class='panel-title'>Requirements At-a-glance</h3></div>
                   <div class='panel-body'>
                      <div class='row'>
-                           <div class='col-sm-4'><table class="table numbered-steps" cellspacing="4" style="margin-left:30px;width:90%;">
+                        <div class='col-sm-7'>
+                           <table class="table numbered-steps" cellspacing="4" style="margin-left:30px;width:90%;">
                               <tbody>
                                  <tr>
                                     <td style="width:38px;">1</td>
-                                    <td>Must have complete metadata</td>
+                                    <td>Must be based on the Course Guide template.</td>
                                  </tr>
                                  <tr>
                                     <td>2</td>
-                                    <td>Photo (min width 250px) &nbsp;<small><span class="label label-default">Optional</span></small></td>
+                                    <td>Guide must be associated with an instructor(s) and instructor's last name must be listed parenthetically in the title.</td>
                                  </tr>
                                  <tr>
                                     <td>3</td>
-                                    <td>Name</td>
+                                    <td>Librarian's last name may not be in the title.</td>
                                  </tr>
                                  <tr>
                                     <td>4</td>
-                                    <td>Email Me button</td>
-                                 </tr>
-                                 <tr>
-                                    <td>5</td>
-                                    <td>Link to Subject/Location Pathfinder Page </td>
-                                 </tr>
-                                 <tr>
-                                    <td>6</td>
-                                    <td>Address</td>
-                                 </tr>
-                                 <tr>
-                                    <td>7</td>
-                                    <td>Phone and Email</td>
-                                 </tr>
-                                 <tr>
-                                    <td>8</td>
-                                    <td>Schedule a Meeting Button &nbsp;<small><span class="label label-default">Optional</span></small></td>
-                                 </tr>
-                                 <tr>
-                                    <td>9</td>
-                                    <td>Subject specialties &nbsp;<small><span class="label label-default"> Automatically Assigned </span></small></td>
-                                 </tr>
-                                 <tr>
-                                    <td>10</td>
-                                    <td>Social and Professional Media Icons &nbsp;<small><span class="label label-default">Optional</span></small></td>
+                                    <td>Must complement and not compete with Sakai.</td>
                                  </tr>
                               </tbody>
-                           </table></div>
+                           </table>
+                        </div>
 
-                           <div class='col-sm-8'><img class="img img-responsive" src="http://www.placehold.it/800x800" alt=""></div>
+                        <div class='col-sm-5'><img class="img img-responsive" src="http://www.placehold.it/800x800" alt=""></div>
                      </div>
                   </div>
                </div>
 
-               <h2 id="sec0">Metadata</h2>
+               <h2 id="sec1">Title Formatter</h2>
 
-               <p>Required metadat includes</p>
+               <p>Course titles must conform to the approved format. Librarians should not add their names to the course titles. </p>
 
-               <h2 id="sec1">Course Overview Box</h2>
+               <div class="row">
+                  <div class="col-sm-12 col-md-4">
+
+                     <form>
+
+                        <div class="form-group">
+                           <label for="deptCourseName">Course Abbreviation</label>
+                           <input type="text" class="form-control" id="dept-course-1" placeholder="SOC 13181" name="deptCourseName2">
+                        </div>
+
+                        <div class="form-group">
+                           <label for="deptCourseName">2nd Course Abbreviation</label>
+                           <input type="text" class="form-control" id="dept-course-2" placeholder="POLS 13181" name="deptCourseName2">
+                        </div>
+
+                        <div class="form-group">
+                           <label for="courseTitle">Title</label>
+                           <input type="text" class="form-control" id="course-title" placeholder="Social Science University Seminar" name="courseTitle">
+                        </div>
+
+                        <div class="form-group">
+                           <label for="courseSubtitle">Subtitle</label>
+                           <input type="text" class="form-control" id="course-subtitle" placeholder="Immigration and Citizenship" name="courseSubtitle">
+                        </div>
+
+                        <div class="form-group">
+                           <label for="instructorLast">Instructor Last Name</label>
+                           <input type="text" class="form-control" id="instructor-last" placeholder="Johnson" name="instructorLast">
+                        </div>
+
+                     </form>
+
+                     <button style="margin-top: 30px;" type="button" class="btn btn-default" id="clearFormatter">Reset</button>
+                     <button style="margin-top: 30px;" type="button" class="btn btn-primary" id="displayFormatter">Generate</button>
+
+
+                  </div>
+
+                  <div class="col-sm-12 col-md-8">
+
+                     <div class="example" id="simple-example-title">
+
+                     </div>
+
+                     <div class="well">
+
+                        <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-title-code" data-toggle="tooltip" data-placement="bottom" title="copy text">
+                        <i class="fa fa-clipboard" aria-hidden="true"></i>
+                        </button>
+
+<pre class="prettyprint" id="simple-title-code">
+</pre>
+
+                     </div> <!-- example closes -->
+
+                  </div>
+
+               </div>
+               <!-- .row closes -->
+
+
+               <h2 id="sec2">Course Overview Box</h2>
                <p>The first box of the first page should contain an overview of the course, including any/all of the fields, below.</p>
 
                <div class="row">
@@ -261,6 +305,29 @@
                   </div>
                   <!-- .col -->
 
+               </div>
+
+               <h2 id="sec3">Examples</h2>
+               <p>
+                 Here are examples of well-designed course guides.
+               </p>
+               <div class="row">
+                 <div class="col-md-6">
+                  <div class="panel panel-default">
+                     <div class="panel-heading"><h5>Guide #1</h5></div>
+                     <div class="panel-body">
+                        <a href=""><img class="img img-responsive" src="http://www.placehold.it/400x200" class="pull-right" alt="example of a profile box"></a>
+                     </div>
+                  </div>
+                 </div>
+                 <div class="col-md-6">
+                  <div class="panel panel-default">
+                     <div class="panel-heading"><h5>Guide #2</h5></div>
+                     <div class="panel-body">
+                        <a href=""><img class="img img-responsive" src="http://www.placehold.it/400x200" class="pull-right" alt="example of a profile box"></a>
+                     </div>
+                  </div>
+                 </div>
                </div>
 
 
@@ -401,6 +468,38 @@
 
          });
 
+
+         $('#clearFormatter').click(function() {
+            location.reload(true);
+         });
+
+         $('#displayFormatter').click(function() {
+
+
+
+            var course1 = $('#dept-course-1').val();
+            var course2 = $('#dept-course-2').val();
+
+            var slash = " / "
+
+            if (course2 == ''){
+               slash = "";
+            }
+
+            var courseTitle = $('#course-title').val();
+            var courseSubtitle = $('#course-subtitle').val();
+            var instructorLast = $('#instructor-last').val();
+
+            var bsTitle = course1 + slash + course2 + " &mdash; " + courseTitle + ": " + courseSubtitle + " (" + instructorLast + ")";
+
+            $('#simple-title-code').html(bsTitle);
+
+         });
+
+         var bsExample = "<p class='text-center'>AFST 24100 &mdash; Introduction to Africana Studies: The Problematics of Race in America (Mohammed)</p><hr><p class='text-center'>SOC 13181 / POLS 13181 &mdash; Social Science University Seminar: Immigration and Citizenship (Johnson)</p>";
+
+         $('#simple-example-title').html(bsExample);
+
       });
 
       // clipboard button
@@ -415,6 +514,7 @@
 
    <!-- js for the gitbub button -->
 
-</body>
+   <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 
+</body>
 </html>
