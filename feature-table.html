@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hesburgh Libraries &middot; Guides Handbook</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <style type="text/css">
+
+      #displayTable,
+      #clearTable {
+         margin-top:30px;
+      }
+
+    </style>
+
+</head>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
+
+    <!-- header ----------------------------->
+
+    <div class="brand-bar container-fluid">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="hidden-xs col-sm-6 col-md-6 col-lg-6">
+                    <a href="http://www.nd.edu">University <i>of</i> Notre Dame</a>
+                </div>
+                <div class="text-center col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
+                    <a href="http://www.nd.edu">University <i>of</i> Notre Dame</a>
+                </div>
+                <div class="hidden-xs col-sm-6 col-md-6 col-lg-6 text-right">
+                    <a href="https://provost.nd.edu/">Office <i>of the</i>  Provost</a>
+                </div>
+                <div class="text-center col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl text-center">
+                    <a class="brand-bar-bottom-padded" href="https://provost.nd.edu/">Office <i>of the</i>  Provost</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row" id="nd-libguides-header-pattern">
+            <div class="hidden-xs col-sm-6 col-md-6 col-lg-6">
+                <h1 id="hesburgh-libraries"><a href="http://library.nd.edu" target="_blank">HESBURGH <span style="color:#F8E999;">LIBRARIES</span></a></h1>
+            </div>
+            <div class="hidden-xs col-sm-6 col-md-6 col-lg-6">
+                <h1 style="opacity:.6;text-align:right;">Guides Handbook</h1>
+            </div>
+            <div class="col-xs-12 text-center hidden-sm hidden-md hidden-lg">
+                <h1><a href="http://library.nd.edu" target="_blank">HESBURGH <span style="color:#F8E999;margin-bottom:10px;">LIBRARIES</span></a></h1>
+            </div>
+            <div class="col-xs-12 text-center hidden-sm hidden-md hidden-lg">
+                <h1 style="opacity:.6;text-align:center;">Guides Handbook</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- header closes ----------------------------->
+
+    <!-- Main Content ----------------------------->
+
+    <div class="container" id="main-container">
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-right">
+                <a class="btn btn-default help-button" href="https://nd.libapps.com/libapps/login.php" role="button" target="_blank"><i class="fa fa-lock fa-spacer-right" aria-hidden="true"></i> LibGuides Login</a>
+
+<a class="btn btn-default help-button" href="http://libguides.library.nd.edu/reusableassets" role="button" target="_blank"><i class="fa fa-list-alt fa-spacer-right" aria-hidden="true"></i>Reusable Assets</a>
+
+            </div>
+
+        </div>
+
+        <div class="page-header">
+
+            <div w3-include-html="navmenu.html"></div>
+
+        </div>
+        <!-- page header closes -->
+
+        <div id="masthead">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Tables</h1>
+                        <p class="lead">Use tables to display data you wish to compare and contrast.</p>
+                    </div>
+                </div>
+            </div>
+            <!--/container-->
+        </div>
+        <!--/masthead-->
+
+
+        <div class="container">
+            <div class="row">
+
+                <!--left column-->
+                <div class="col-md-3 hidden-xs hidden-sm" id="leftCol">
+                    <ul class="nav nav-stacked" id="sidebar">
+                        <li><a href="#sec0">Table Generator</a></li>
+                        <li><a href="#sec1">Accented Table Rows</a></li>
+                        <li><a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> &nbsp;Back to top</a></li>
+                    </ul>
+                </div>
+
+                <!--right column-->
+                <div class="col-md-9" id="rightCol">
+                    <h2 id="sec0">Table Generator</h2>
+
+                     <p>You may style your tables with any combination of the attributes below.</p>
+
+                        <div class="alert alert-warning"><p><i class="fa fa-thumb-tack" aria-hidden="true"></i><strong>Tables ONLY for Tabular Data</strong><br/>
+                         Do not use tables as faux columns in your Rich Text / HTML boxes. If you need them, <a href="feature-column.html">use columns</a>, instead.</p></div>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-3">
+
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1"># Rows</label>
+                                    <input type="text" class="form-control" id="numRows" placeholder="" style="width:100px;">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1"># Columns</label>
+                                    <input type="text" class="form-control" id="numCols" placeholder="" style="width:100px;">
+                                </div>
+
+                                <div class="checkbox">
+                                    <label>
+                                    <input type="checkbox" id="checkboxHeader"> Header Row
+                                    </label>
+                                 </div>
+
+                                 <div class="checkbox">
+                                     <label>
+                                     <input type="checkbox" id="variableWidths"> Variable Widths
+                                     </label>
+                                  </div>
+
+                                <div class="checkbox">
+                                    <label>
+                        <input type="checkbox" id="checkboxStriped"> Striped
+                      </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                        <input type="checkbox" id="checkboxBordered"> All Borders
+                      </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                        <input type="checkbox" id="checkboxHover"> Hover
+                      </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                        <input type="checkbox" id="checkboxCondensed"> Condensed
+                      </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                        <input type="checkbox" id="checkboxResponsive"> Responsive
+                      </label>
+                                </div>
+
+
+                            </form>
+
+                            <button type="button" class="btn btn-default" id="clearTable">Reset</button>
+                            <button type="button" class="btn btn-primary" id="displayTable">Generate</button>
+
+
+
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+
+                            <div class="example" id="simple-example-table">
+                            </div>
+
+                            <div class="well">
+
+                                <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-table-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                     <i class="fa fa-clipboard" aria-hidden="true"></i>
+                     </button>
+
+<pre class="prettyprint" id="simple-table-code">
+</pre>
+
+                            </div>
+                            <!-- example closes -->
+
+                        </div>
+
+                    </div>
+
+
+                    <h2 id="sec1">Accented Table Rows</h2>
+
+                    <p>By adding a color class to any table row <code> &lt;tr&gt;</code> or table data  <code> &lt;td&gt;</code> element, you can change the background color, and make better meaning for you users.</p><p>Accent colors include: <code>active</code> (grey),&nbsp; <code>success</code> (green),&nbsp; <code>info</code> (blue),&nbsp; <code>warning</code> (yellow),&nbsp; <code>danger</code> (red).</p>
+
+                    <div class="example" id="simple-example-table">
+
+                     <table class="table">
+                       <tr class="active">
+                          <td>This will produce a dark grey row</td>
+                          <td>With two table data cells</td>
+                       </tr>
+                    </table>
+
+                    </div>
+
+                    <div class="well">
+
+                       <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well3" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                    <i class="fa fa-clipboard" aria-hidden="true"></i>
+                    </button>
+
+<pre class="prettyprint" id="well3">
+&lt;tr class="active"&gt;
+   &lt;td&gt;This will produce a dark grey row&lt;/td&gt;
+   &lt;td&gt;With two table data cells&lt;/td&gt;
+&lt;/tr&gt;</pre>
+
+                    </div>
+                    <!-- example closes -->
+
+                    <div class="example">
+
+                     <table class="table">
+                       <tr class="success">
+                         <td>This will produce a green row</td>
+                         <td>With two table data cells</td>
+                       </tr>
+                    </table>
+
+                    </div>
+
+                    <div class="well">
+
+                       <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well4" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                    <i class="fa fa-clipboard" aria-hidden="true"></i>
+                    </button>
+
+ <pre class="prettyprint" id="well4">
+ &lt;tr class="success"&gt;
+   &lt;td&gt;This will produce a green row&lt;/td&gt;
+   &lt;td&gt;With two table data cells&lt;/td&gt;
+ &lt;/tr&gt;</pre>
+
+                    </div>
+                    <!-- example closes -->
+
+
+                    <div class="example">
+
+                     <table class="table">
+                       <tr class="info">
+                         <td>This will produce a blue row</td>
+                         <td>With two table data cells</td>
+                       </tr>
+                    </table>
+
+                    </div>
+
+                    <div class="well">
+
+                       <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well5" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                    <i class="fa fa-clipboard" aria-hidden="true"></i>
+                    </button>
+
+ <pre class="prettyprint" id="well5">
+&lt;tr class="info"&gt;
+   &lt;td&gt;This will produce a blue row&lt;/td&gt;
+   &lt;td&gt;With two table data cells&lt;/td&gt;
+&lt;/tr&gt;</pre>
+
+                    </div>
+                    <!-- example closes -->
+
+
+                    <div class="example">
+
+                     <table class="table">
+                       <tr class="warning">
+                          <td>This will produce a yellow row</td>
+                          <td>With two table data cells</td>
+                       </tr>
+                    </table>
+
+                    </div>
+
+                    <div class="well">
+
+                       <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well6" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                    <i class="fa fa-clipboard" aria-hidden="true"></i>
+                    </button>
+
+<pre class="prettyprint" id="well6">
+&lt;tr class="warning"&gt;
+   &lt;td&gt;This will produce a yellow row&lt;/td&gt;
+   &lt;td&gt;With two table data cells&lt;/td&gt;
+&lt;/tr&gt;</pre>
+
+                    </div>
+                    <!-- example closes -->
+
+
+                    <div class="example">
+
+                     <table class="table">
+                       <tr class="danger">
+                         <td>This will produce a red row</td>
+                         <td>With two table data cells</td>
+                       </tr>
+                    </table>
+
+                    </div>
+
+                    <div class="well">
+
+                       <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well7" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                    <i class="fa fa-clipboard" aria-hidden="true"></i>
+                    </button>
+
+ <pre class="prettyprint" id="well7">
+&lt;tr class="danger"&gt;
+   &lt;td&gt;This will produce a red row&lt;/td&gt;
+   &lt;td&gt;With two table data cells&lt;/td&gt;
+&lt;/tr&gt;</pre>
+
+                    </div>
+                    <!-- example closes -->
+
+
+
+                </div>
+                <!--/right-->
+            </div>
+            <!--/row-->
+        </div>
+        <!--/container-->
+
+
+    </div>
+    <!-- .container -->
+
+    <!-- Main Content closes ----------------------------->
+
+
+    <!-- Footer ----------------------------->
+    <div id="handbook-footer">
+    <div class="container-fluid">
+      <div class="row">
+         <div class="col-xs-12 col-sm-6">
+           <i class="fa fa-copyright" aria-hidden="true"></i><span id="thisYear"></span> University of Notre Dame
+         </div><div class="col-xs-12 col-sm-6">
+     <p class="text-right"><a class="github-button" href="https://github.com/randal-sean-harrison/guides-handbook/archive/master.zip" data-size="large" aria-label="Download randal-sean-harrison/guides-handbook on GitHub">Download</a></p>
+  </div></div>
+    </div>
+</div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- Include for the Back to top button -->
+    <script src="js/back-to-top.js"></script>
+    <!-- Scrollspy / affix js -->
+    <script src="js/scripts.js"></script>
+
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+    <!-- includes for Google's code highlighter 'prettyprint' -->
+    <link rel="stylesheet" type="text/css" href="css/prettify.css">
+    <script type="text/javascript" src="js/prettify.js"></script>
+
+
+    <!-- html include script -->
+    <script src="https://www.w3schools.com/lib/w3data.js"></script>
+
+    <script>
+        w3IncludeHTML();
+    </script>
+
+    <!-- clipboard.js include -->
+    <script src="js/clipboard.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+           // Add and edit the text for the github button https://buttons.github.io/
+           $('p.text-right a.github-button').html('GET randal-sean-harrison/guides-handbook');
+
+           // Add the active classes to the nav menu
+            $(".navfeatures").addClass("active");
+            $(".navtables").addClass("active");
+
+            $('pre').removeClass('prettyprinted');
+            prettyPrint();
+
+            // ------- Display the table --------------------------
+            $('#displayTable').click(function() {
+
+
+               var numRows = $('#numRows').val();
+               var numCols = $('#numCols').val();
+
+               /* $('#numRows').on('input',function(e){
+                   if numRows == 0 {
+                      $('#numRows').val(1);
+                      return;
+                   }
+               });
+
+               $('#numCols').on('input',function(e){
+                  if numCols == 0 {
+                     $('#numCols').val("1");
+                     return;
+                  }
+               }); */
+
+
+               var tableOpen = "<table ";
+               var tableClassOpen = "class='table";
+               var tableClassClose = "'>";
+               var tableClose = "</tbody></table>";
+               var td = "<td>content</td>";
+               var th = "<th>content</th>";
+               var thVar = "<th style='width: %;'>content</th>";
+               var theaderOpen = "<thead>";
+               var theaderClose = "</thead><tbody>";
+               var tds = "";
+               var ths = "";
+               var tr = "";
+               var thFinal = "";
+
+
+               if ($('#variableWidths').is(':checked')) {
+                  th = thVar;
+               }
+
+               if ($('#checkboxStriped').is(':checked')) {
+                  tableClassOpen += " table-striped";
+               }
+
+               if ($('#checkboxBordered').is(':checked')) {
+                  tableClassOpen += " table-bordered";
+               }
+
+               if ($('#checkboxHover').is(':checked')) {
+                  tableClassOpen += " table-hover";
+               }
+
+               if ($('#checkboxCondensed').is(':checked')) {
+                  tableClassOpen += " table-condensed";
+               }
+
+               if ($('#checkboxResponsive').is(':checked')) {
+                  tableClassOpen += " table-responsive";
+               }
+
+
+               // columns
+               for (i = 0; i < numCols; i++) {
+                  tds += td;
+               };
+
+               // header columns
+               for (i = 0; i < numCols; i++) {
+                  ths += th;
+               };
+
+               // rows
+               for (i = 0; i < numRows; i++) {
+                  tr += "<tr>" + tds + "</tr>";
+               };
+
+               // column headers
+               if ($('#checkboxHeader').is(':checked')) {
+                  thFinal = "<tr>" + ths + "</tr>";
+               }
+
+               // Write the table
+                var bsTable = tableOpen + tableClassOpen + tableClassClose + theaderOpen + thFinal + theaderClose + tr + tableClose;
+
+                $("#simple-example-table").html(bsTable);
+                $('#simple-table-code').text(bsTable);
+
+                $('pre').removeClass('prettyprinted');
+                prettyPrint();
+
+            });
+
+            // ------- Reset the parameters  --------------------------
+            $('#clearTable').click(function() {
+
+               // Clear the input fields
+               $('#numRows').val('');
+               $('#numCols').val('');
+
+               // Clear the checkboxes
+
+               $('#checkboxHeader').attr('checked', false).prop('checked', false);
+               $('#variableWidths').attr('checked', false).prop('checked', false);
+               $('#checkboxStriped').attr('checked', false).prop('checked', false);
+               $('#checkboxBordered').attr('checked', false).prop('checked', false);
+               $('#checkboxHover').attr('checked', false).prop('checked', false);
+               $('#checkboxCondensed').attr('checked', false).prop('checked', false);
+               $('#checkboxResponsive').attr('checked', false).prop('checked', false);
+
+               // Clear the example box
+               $('#simple-example-table').empty();
+               $('#simple-table-code').empty();
+
+            });
+
+        });
+
+       // clipboard button
+      new Clipboard('.btn');
+
+      $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+     })
+
+    </script>
+    <!-- add the active class to the correct tab and submenu element -->
+
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+<!-- js for the gitbub button -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+
+</html>

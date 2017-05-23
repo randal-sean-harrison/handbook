@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hesburgh Libraries &middot; Guides Handbook</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!--<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css"> -->
+
+    <link rel="stylesheet" href="css/main.css">
+
+
+   <style type="text/css">
+
+   #rightCol h3 {
+       font-size:1.75em !important;
+       font-weight: 400 !important;
+   }
+
+   #rightCol h4 {
+       font-size:1.5em !important;
+       border-bottom: 1px solid #CCC !important;
+       font-weight: 400 !important;
+   }
+
+   #rightCol h3, h4 {
+       margin: .7em 0em .3em 0em;
+   }
+
+   #rightCol h5 {
+       font-size:1.2em !important;
+       font-weight: 500 !important;
+   }
+
+   #rightCol h6 {
+       font-size:1.1em !important;
+       font-weight: 400 !important;
+       font-style: italic !important;
+   }
+
+   #rightCol h5, h6 {
+       margin: 1.5em 0em .2em 0em;
+   }
+
+   </style>
+
+
+
+</head>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
+
+    <!-- header ----------------------------->
+
+    <div class="brand-bar container-fluid">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="hidden-xs col-sm-6 col-md-6 col-lg-6">
+                    <a href="http://www.nd.edu">University <i>of</i> Notre Dame</a>
+                </div>
+                <div class="text-center col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
+                    <a href="http://www.nd.edu">University <i>of</i> Notre Dame</a>
+                </div>
+                <div class="hidden-xs col-sm-6 col-md-6 col-lg-6 text-right">
+                    <a href="https://provost.nd.edu/">Office <i>of the</i>  Provost</a>
+                </div>
+                <div class="text-center col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl text-center">
+                    <a class="brand-bar-bottom-padded" href="https://provost.nd.edu/">Office <i>of the</i>  Provost</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row" id="nd-libguides-header-pattern">
+            <div class="hidden-xs col-sm-6 col-md-6 col-lg-6">
+                <h1 id="hesburgh-libraries"><a href="http://library.nd.edu" target="_blank">HESBURGH <span style="color:#F8E999;">LIBRARIES</span></a></h1>
+            </div>
+            <div class="hidden-xs col-sm-6 col-md-6 col-lg-6">
+                <h1 style="opacity:.6;text-align:right;">Guides Handbook</h1>
+            </div>
+            <div class="col-xs-12 text-center hidden-sm hidden-md hidden-lg">
+                <h1><a href="http://library.nd.edu" target="_blank">HESBURGH <span style="color:#F8E999;margin-bottom:10px;">LIBRARIES</span></a></h1>
+            </div>
+            <div class="col-xs-12 text-center hidden-sm hidden-md hidden-lg">
+                <h1 style="opacity:.6;text-align:center;">Guides Handbook</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- header closes ----------------------------->
+
+    <!-- Main Content ----------------------------->
+
+    <div class="container" id="main-container">
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-right">
+                <a class="btn btn-default help-button" href="https://nd.libapps.com/libapps/login.php" role="button" target="_blank"><i class="fa fa-lock fa-spacer-right" aria-hidden="true"></i> LibGuides Login</a>
+
+<a class="btn btn-default help-button" href="http://libguides.library.nd.edu/reusableassets" role="button" target="_blank"><i class="fa fa-list-alt fa-spacer-right" aria-hidden="true"></i>Reusable Assets</a>
+
+            </div>
+
+        </div>
+
+        <div class="page-header">
+
+       <div w3-include-html="navmenu.html"></div>
+
+        </div>
+        <!-- page header closes -->
+
+        <div id="masthead">
+          <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <h1>Text <small style="color: #CCC;">(Typography)</small></h1>
+                  <p class="lead">Organize your content with strong typographic hierarchy. Foreground certain content with powerful styles.</p>
+                </div>
+              </div>
+          </div><!--/container-->
+        </div><!--/masthead-->
+
+
+        <div class="container">
+       	<div class="row">
+
+             <!--left column-->
+             <div class="col-md-3 hidden-xs hidden-sm" id="leftCol">
+               <ul class="nav nav-stacked" id="sidebar">
+                 <li><a href="#sec0">Headings</a></li>
+                 <li><a href="#sec1">Body Text</a></li>
+                 <li><a href="#sec2">Lead Text</a></li>
+                 <li><a href="#sec3">Blockquotes</a></li>
+                 <li><a href="#sec4">Notes and Alerts</a></li>
+                 <li><a href="#sec5">Special Text Formats</a></li>
+                 <li><a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> &nbsp;Back to top</a></li>
+               </ul>
+             </div>
+
+             <!--right column-->
+             <div class="col-md-9" id="rightCol">
+               <h2 id="sec0">Headings</h2>
+
+               <p>Use headings to subdivide the content in your Rich Text / HTML boxes.</p>
+
+
+               <div class="alert alert-danger">
+                  <p><i class="fa fa-times-circle" aria-hidden="true"></i><strong>Limited Headings</strong><br/>
+                     For accessibility reasons, headings H1 and H2 are not available in the WYSIWYG editor and should not be used in Rich Text / HTML boxes.</p>
+               </div>
+
+
+               <div class="example">
+
+
+               <h3>This is an H3 heading. It's the largest header.</h3>
+
+               </div>
+               <div class="well">
+
+                  <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well1" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                  <i class="fa fa-clipboard" aria-hidden="true"></i>
+                  </button>
+
+<pre class="prettyprint" id="well1">
+&lt;h3&gt;This is an H3 heading. It's the largest header.&lt;/h3&gt;
+</pre>
+
+               </div> <!-- example closes -->
+
+
+               <div class="example">
+
+
+               <h4>This is an H4 heading. It has a bottom border. </h4>
+
+               </div>
+               <div class="well">
+
+                  <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well2" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                  <i class="fa fa-clipboard" aria-hidden="true"></i>
+                  </button>
+
+<pre class="prettyprint" id="well2">
+&lt;h4&gt;This is an H4 heading. It has a bottom border.&lt;/h4&gt;
+</pre>
+
+               </div> <!-- example closes -->
+
+
+               <div class="example">
+
+
+               <h5>This is an H5 heading. It's a bolded sub-header.</h5>
+
+               </div>
+               <div class="well">
+
+                  <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well3" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                  <i class="fa fa-clipboard" aria-hidden="true"></i>
+                  </button>
+
+<pre class="prettyprint" id="well3">
+&lt;h5&gt;This is an H5 heading. It's a bolded sub-header.&lt;/h5&gt;
+</pre>
+
+               </div> <!-- example closes -->
+
+
+               <div class="example">
+
+
+               <h6>This is an H6 heading. It's an italicized sub-sub-header.</h6>
+
+               </div>
+               <div class="well">
+
+                  <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well4" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                  <i class="fa fa-clipboard" aria-hidden="true"></i>
+                  </button>
+
+<pre class="prettyprint" id="well4">
+&lt;h6&gt;This is an H6 heading. It's an italicized sub-sub-header.&lt;/h6&gt;
+</pre>
+
+               </div> <!-- example closes -->
+
+               <h2 id="sec1">Body Text</h2>
+
+
+               <div class="alert alert-danger">
+                  <p><i class="fa fa-times-circle" aria-hidden="true"></i><strong>Standardized Fonts</strong><br/>Except in special cases, such as foreign languages or maths symbols, please do not change <em>font face</em> or <em>font size</em> in your guides.</p>
+               </div>
+
+               <div class="example">
+
+
+               <p>Paragraphs make up the bulk of the text you will create.</p>
+               <p>They are left-aligned and vertically block-spaced.</p>
+
+               </div>
+               <div class="well">
+
+                  <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well5" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                  <i class="fa fa-clipboard" aria-hidden="true"></i>
+                  </button>
+
+<pre class="prettyprint" id="well5">
+&lt;p&gt;Paragraphs make up the bulk of the text you will create.&lt;/p&gt;
+&lt;p&gt;The are left-aligned and vertically double-spaced.&lt;/p&gt;
+</pre>
+
+               </div> <!-- example closes -->
+
+
+               <h2 id="sec2">Lead Text</h2>
+
+               <div class="example">
+
+
+               <p class="lead">Lead text may be used sparingly at the beginning of larger content blocks (like pages) to summarize content or focus readers.</p>
+
+               </div>
+               <div class="well">
+
+                  <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well6" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                  <i class="fa fa-clipboard" aria-hidden="true"></i>
+                  </button>
+
+<pre class="prettyprint" id="well6">
+&lt;p class="lead"&gt;Lead text may be used sparingly at the beginning of larger
+content blocks (like pages) to summarize content or focus readers.&lt;/p&gt;
+</pre>
+
+               </div> <!-- example closes -->
+
+
+               <h2 id="sec3">Blockquotes</h2>
+
+               <div class="example">
+
+                  <blockquote>
+                    <p>Use blockquotes as epigraphs for content blocks (or pages).</p>
+                    <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                  </blockquote>
+
+               </div>
+               <div class="well">
+
+                  <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well7" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                  <i class="fa fa-clipboard" aria-hidden="true"></i>
+                  </button>
+
+
+<pre class="prettyprint" id="well7">
+&lt;blockquote&gt;
+  &lt;p&gt;Use blockquotes as epigraphs for content blocks (or pages).&lt;/p&gt;
+  &lt;footer&gt;
+     Someone famous in &lt;cite title="Source Title"&gt;Source Title&lt;/cite&gt;
+  &lt;/footer&gt;
+&lt;/blockquote&gt;
+</pre>
+
+               </div> <!-- example closes -->
+
+
+               <h2 id="sec4">Notes and Alerts</h2>
+
+               <p>You may also wish to prepend your alert messages with <a href="feature-icon.html">special icons</a>.</p>
+
+               <div class="example">
+
+                  <div class="alert alert-success" role="alert"><p><i class="fa fa-star fa-spacer-right" aria-hidden="true"></i>
+Use this container to sound a note of affirmation or success.</p></div>
+
+               </div>
+               <div class="well">
+
+                  <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well8" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                  <i class="fa fa-clipboard" aria-hidden="true"></i>
+                  </button>
+
+
+<pre class="prettyprint" id="well8">
+&lt;div class="alert alert-success" role="alert"&gt;
+&lt;p&gt;
+&lt;i class="fa fa-star fa-spacer-right" aria-hidden="true"&gt;&lt;/i&gt;
+Use this container to sound a note of affirmation or success.
+&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+               </div> <!-- example closes -->
+
+               <div class="example">
+
+                  <div class="alert alert-info" role="alert"><p><i class="fa fa-info-circle fa-spacer-right" aria-hidden="true"></i>Use this container to sound a purely informational note.</p></div>
+
+
+               </div>
+               <div class="well">
+
+                  <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well9" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                  <i class="fa fa-clipboard" aria-hidden="true"></i>
+                  </button>
+
+
+<pre class="prettyprint" id="well9">
+&lt;div class="alert alert-info" role="alert"&gt;
+&lt;p&gt;
+&lt;i class="fa fa-info-circle fa-spacer-right" aria-hidden="true"&gt;&lt;/i&gt;
+Use this container to sound a purely informational note.
+&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+
+               </div> <!-- example closes -->
+
+               <div class="example">
+
+                  <div class="alert alert-warning" role="alert"><p><i class="fa fa-exclamation-triangle fa-spacer-right" aria-hidden="true"></i>Use this container to sound a note of caution.</p></div>
+
+               </div>
+               <div class="well">
+
+                  <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well10" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                  <i class="fa fa-clipboard" aria-hidden="true"></i>
+                  </button>
+
+
+<pre class="prettyprint" id="well10">
+&lt;div class="alert alert-warning" role="alert"&gt;
+&lt;p&gt;
+&lt;i class="fa fa-star fa-exclamation-triangle" aria-hidden="true"&gt;&lt;/i&gt;
+Use this container to sound a note of caution.
+&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+               </div> <!-- example closes -->
+
+               <div class="example">
+
+                  <div class="alert alert-danger" role="alert"><p><i class="fa fa-times-circle fa-spacer-right" aria-hidden="true"></i>Use this container to sound a note of severe warning or to indicate prohibition of some action.</p></div>
+
+               </div>
+               <div class="well">
+
+                  <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well11" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                  <i class="fa fa-clipboard" aria-hidden="true"></i>
+                  </button>
+
+
+<pre class="prettyprint" id="well11">
+&lt;div class="alert alert-danger" role="alert"&gt;
+&lt;p&gt;
+&lt;i class="fa fa-star fa-times-circle" aria-hidden="true"&gt;&lt;/i&gt;
+Use this container to sound a note of severe warning or to indicate prohibition of some action.
+&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+               </div> <!-- example closes -->
+
+               <div class="example">
+
+                  <div class="alert alert-intro" role="alert"><p>Use this special container for subtle introductory/explanatory descriptions.</p></div>
+
+
+               </div>
+               <div class="well">
+
+                  <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well12" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                  <i class="fa fa-clipboard" aria-hidden="true"></i>
+                  </button>
+
+
+<pre class="prettyprint" id="well12">
+&lt;div class="alert alert-intro" role="alert"&gt;
+&lt;p&gt;
+Use this special container for subtle introductory/explanatory descriptions.
+&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+            </div> <!-- example closes -->
+
+
+            <h2 id="sec5">Special Text Formats</h2>
+
+
+            <h5>Computer Code</h5>
+            <table style="margin-top: 30px;" class='table table-bordered'>
+               <thead></thead>
+               <tbody>
+                  <tr>
+                     <td>Math Variables</td>
+                     <td><var>a</var> + <var>b</var> = <var>c</var></td>
+                     <td id="well20"><pre class="prettyprint">&lt;var&gt;a&lt;/var&gt; + &lt;var&gt;b&lt;/var&gt; = &lt;var&gt;c&lt;/var&gt;</pre></td>
+                     <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well20" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                     <i class="fa fa-clipboard" aria-hidden="true"></i>
+                     </button></td>
+                  </tr>
+                  <tr>
+                     <td>Keyboard Keys</td>
+                     <td><kbd>CTRL</kbd> + <kbd>Z</kbd></td>
+                     <td id="well21"><pre class="prettyprint">&lt;kbd&gt;CTRL&lt;/kbd&gt; + &lt;kbd&gt;Z&lt;/kbd&gt;</pre></td>
+                     <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well21" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                     <i class="fa fa-clipboard" aria-hidden="true"></i>
+                     </button></td>
+                  </tr>
+                  <tr>
+                     <td>Computer Code</td>
+                     <td><code>&lt;p&gt;This is a paragraph element&lt;/p&gt;</code></td>
+                     <td id="well22"><pre class="prettyprint">&lt;code&gt;&lt;p&gt;This is a paragraph element&lt;/p&gt;&lt;/code&gt;</pre></td>
+                     <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well22" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                     <i class="fa fa-clipboard" aria-hidden="true"></i>
+                     </button></td>
+                  </tr>
+                  <tr>
+                     <td>Sample Computer Output</td>
+                     <td><samp>You have pressed a key!</samp></td>
+                     <td id="well23"><pre class="prettyprint">&lt;samp&gt;You have pressed a key!&lt;/samp&gt;</pre></td>
+                     <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well23" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                     <i class="fa fa-clipboard" aria-hidden="true"></i>
+                     </button></td>
+                  </tr>
+               </tbody>
+            </table>
+
+            <h5>Styled Text</h5>
+            <table style="margin-top: 30px;" class='table table-bordered'>
+               <thead></thead>
+               <tbody>
+                  <tr>
+                     <td>Marker Text</td>
+                     <td>Pay attention <mark>to this</mark></td>
+                     <td id="well25"><pre class="prettyprint">Pay attention &lt;mark&gt;to this&lt;/mark&gt;</pre></td>
+                     <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well25" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                     <i class="fa fa-clipboard" aria-hidden="true"></i>
+                     </button></td>
+                  </tr>
+                  <tr>
+                     <td>Typewriter</td>
+                     <td><tt>Typewriter Text</tt></td>
+                     <td id="well26"><pre class="prettyprint">&lt;tt&gt;Typewriter Text&lt;/tt&gt;</pre></td>
+                     <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well26" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                     <i class="fa fa-clipboard" aria-hidden="true"></i>
+                     </button></td>
+                  </tr>
+                  <tr>
+                     <td>Linethrough</td>
+                     <td>This and <del>not that</del></td>
+                     <td id="well27"><pre class="prettyprint">This and &lt;del&gt;not that&lt;/del&gt;</pre></td>
+                     <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well27" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                     <i class="fa fa-clipboard" aria-hidden="true"></i>
+                     </button></td>
+                  </tr>
+                  <tr>
+                     <td>Small Text</td>
+                     <td>Though smaller <small>(still important!)</small></td>
+                     <td id="well28"><pre class="prettyprint">Though smaller &lt;small&gt;(still important!)&lt;/small&gt;</pre></td>
+                     <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well28" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                     <i class="fa fa-clipboard" aria-hidden="true"></i>
+                     </button></td>
+                  </tr>
+                  <tr>
+                     <td>Big Text</td>
+                     <td>I wish...<big>I were big!</big></td>
+                     <td id="well29"><pre class="prettyprint">I wish...&lt;big&gt;I were big!&lt;/big&gt;</pre></td>
+                     <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well29" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                     <i class="fa fa-clipboard" aria-hidden="true"></i>
+                     </button></td>
+                  </tr>
+                  <tr>
+                     <td>Superscript</td>
+                     <td>Stuart Hall <sup>PhD</sup></td>
+                     <td id="well30"><pre class="prettyprint">Stuart Hall &lt;sup&gt;PhD&lt;/sup&gt;</pre></td>
+                     <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well30" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                     <i class="fa fa-clipboard" aria-hidden="true"></i>
+                     </button></td>
+                  </tr>
+                  <tr>
+                     <td>Subscript</td>
+                     <td>Water, a.k.a. H<sub>2</sub>O</td>
+                     <td id="well31"><pre class="prettyprint">Water, a.k.a. H&lt;sub&gt;2&lt;/sub&gt;O</pre></td>
+                     <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well31" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                     <i class="fa fa-clipboard" aria-hidden="true"></i>
+                     </button></td>
+                  </tr>
+                  <tr>
+                     <td>Uppercase</td>
+                     <td><p class="text-uppercase">make this uppercase!</p></td>
+                     <td id="well32"><pre class="prettyprint">&lt;p class="text-uppercase"&gt;make this uppercase!&lt;/p&gt;</pre></td>
+                     <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well32" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                     <i class="fa fa-clipboard" aria-hidden="true"></i>
+                     </button></td>
+                  </tr>
+               </tbody>
+            </table>
+
+               </div><!--/right-->
+         	</div><!--/row-->
+       </div><!--/container-->
+
+
+    </div>
+    <!-- .container -->
+
+    <!-- Main Content closes ----------------------------->
+
+
+    <!-- Footer ----------------------------->
+    <div id="handbook-footer">
+    <div class="container-fluid">
+      <div class="row">
+         <div class="col-xs-12 col-sm-6">
+           <i class="fa fa-copyright" aria-hidden="true"></i><span id="thisYear"></span> University of Notre Dame
+         </div><div class="col-xs-12 col-sm-6">
+     <p class="text-right"><a class="github-button" href="https://github.com/randal-sean-harrison/guides-handbook/archive/master.zip" data-size="large" aria-label="Download randal-sean-harrison/guides-handbook on GitHub">Download</a></p>
+  </div></div>
+    </div>
+</div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+   <!-- Include for the Back to top button -->
+    <script src="js/back-to-top.js"></script>
+   <!-- Scrollspy / affix js -->
+   <script src="js/scripts.js"></script>
+
+
+ <!-- html include script -->
+ <script src="https://www.w3schools.com/lib/w3data.js"></script>
+
+ <script> w3IncludeHTML(); </script>
+
+<!-- clipboard.js include -->
+<script src="js/clipboard.min.js"></script>
+
+ <script type="text/javascript">
+
+    $( document ).ready(function() {
+
+      // Add and edit the text for the github button https://buttons.github.io/
+      $('p.text-right a.github-button').html('GET randal-sean-harrison/guides-handbook');
+
+      // Add the active classes to the nav menu
+      $(".navfeatures").addClass("active");
+      $(".navtypography").addClass("active");
+
+      $('pre').removeClass('prettyprinted');
+      prettyPrint();
+
+
+
+    });
+
+// clipboard button
+new Clipboard('.btn');
+
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+
+ </script>
+ <!-- add the active class to the correct tab and submenu element -->
+
+
+
+</script>
+<!-- add the active class to the correct tab and submenu element -->
+
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+<!-- js for the gitbub button -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+
+</html>

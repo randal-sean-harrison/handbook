@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hesburgh Libraries &middot; Guides Handbook</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="css/main.css">
+
+   <style>
+
+      #colForm, #col-list-examples {
+         margin-bottom: 30px;
+      }
+
+      #colForm label {
+         margin-bottom: 15px;
+      }
+
+      #colForm input {
+         margin-right: 10px;
+      }
+
+   </style>
+
+   <!-- includes for Google's code highlighter 'prettyprint' -->
+   <link rel="stylesheet" type="text/css" href="css/prettify.css">
+   <script type="text/javascript" src="js/prettify.js"></script>
+
+</head>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
+
+    <!-- header ----------------------------->
+
+    <div class="brand-bar container-fluid">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="hidden-xs col-sm-6 col-md-6 col-lg-6">
+                    <a href="http://www.nd.edu">University <i>of</i> Notre Dame</a>
+                </div>
+                <div class="text-center col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
+                    <a href="http://www.nd.edu">University <i>of</i> Notre Dame</a>
+                </div>
+                <div class="hidden-xs col-sm-6 col-md-6 col-lg-6 text-right">
+                    <a href="https://provost.nd.edu/">Office <i>of the</i>  Provost</a>
+                </div>
+                <div class="text-center col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl text-center">
+                    <a class="brand-bar-bottom-padded" href="https://provost.nd.edu/">Office <i>of the</i>  Provost</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row" id="nd-libguides-header-pattern">
+            <div class="hidden-xs col-sm-6 col-md-6 col-lg-6">
+                <h1 id="hesburgh-libraries"><a href="http://library.nd.edu" target="_blank">HESBURGH <span style="color:#F8E999;">LIBRARIES</span></a></h1>
+            </div>
+            <div class="hidden-xs col-sm-6 col-md-6 col-lg-6">
+                <h1 style="opacity:.6;text-align:right;">Guides Handbook</h1>
+            </div>
+            <div class="col-xs-12 text-center hidden-sm hidden-md hidden-lg">
+                <h1><a href="http://library.nd.edu" target="_blank">HESBURGH <span style="color:#F8E999;margin-bottom:10px;">LIBRARIES</span></a></h1>
+            </div>
+            <div class="col-xs-12 text-center hidden-sm hidden-md hidden-lg">
+                <h1 style="opacity:.6;text-align:center;">Guides Handbook</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- header closes ----------------------------->
+
+    <!-- Main Content ----------------------------->
+
+    <div class="container" id="main-container">
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-right">
+                <a class="btn btn-default help-button" href="https://nd.libapps.com/libapps/login.php" role="button" target="_blank"><i class="fa fa-lock fa-spacer-right" aria-hidden="true"></i> LibGuides Login</a>
+
+<a class="btn btn-default help-button" href="http://libguides.library.nd.edu/reusableassets" role="button" target="_blank"><i class="fa fa-list-alt fa-spacer-right" aria-hidden="true"></i>Reusable Assets</a>
+
+            </div>
+
+        </div>
+
+        <div class="page-header">
+
+       <div w3-include-html="navmenu.html"></div>
+
+        </div>
+        <!-- page header closes -->
+
+        <div id="masthead">
+          <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <h1>Columns</h1>
+                  <p class="lead">Use columns where appropriate to structure the content in your Rich Text / HTML boxes.</p>
+                </div>
+              </div>
+          </div><!--/container-->
+        </div><!--/masthead-->
+
+
+        <div class="container">
+       	<div class="row">
+
+             <!--left column-->
+             <div class="col-md-3 hidden-xs hidden-sm" id="leftCol">
+               <ul class="nav nav-stacked" id="sidebar">
+                 <li><a href="#sec0">Simple Column Generator</a></li>
+                 <li><a href="#sec1">3-column (List)</a></li>
+                 <li><a href="#sec2">3-column (Images)</a></li>
+                 <li><a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> &nbsp;Back to top</a></li>
+               </ul>
+             </div>
+
+             <!--right column-->
+             <div class="col-md-9" id="rightCol">
+                 <h2 id="sec0">Simple Column Generator</h2>
+
+                  <p>In certain cases, you may wish to divide your box into columns. Examples might include: A list spread over multiple columns, columns of images and/or text, or the <a href="guide-course.html#sec1">Course Overview Box</a> for course guides.</li>
+                  </ul>
+                     <div class="alert alert-warning"><p><i class="fa fa-thumb-tack" aria-hidden="true"></i><strong>Limitations of Columns</strong>
+                        <br/>System Content items such as <a href="content-book.html">books</a>, <a href="content-database.html">databases</a>, <a href="content-document.html">documents</a>, <a href="content-link.html">links</a>, or <a href="content-media.html">media widgets</a> take up the width of an entire box and may not be divided into columns.</p></div>
+
+                 <div class="row">
+                     <div class="col-sm-12 col-md-3">
+
+                         <form id="colForm">
+
+                            <label>
+                               <input type="radio" name="cols" value="25-75" id="25-75"> 25 / 75
+                            </label>
+                            <br/>
+                            <label>
+                               <input type="radio" name="cols" value="75-25" id="75-25"> 75 / 25
+                            </label>
+                            <br/>
+                            <label>
+                               <input type="radio" name="cols" value="50-50" id="50-50"> 50 / 50
+                            </label>
+                            <br/>
+                            <label>
+                               <input type="radio" name="cols" value="33-33-33" id="33-33-33"> 33 / 33 / 33
+                            </label>
+                            <label>
+                               <input type="radio" name="cols" value="25-25-25-25" id="25-25-25-25"> 25 / 25 / 25 / 25
+                            </label>
+
+                         </form>
+
+                         <button type="button" class="btn btn-default" id="clearTable">Reset</button>
+                         <button type="button" class="btn btn-primary" id="renderCols">Create</button>
+
+
+
+                     </div>
+                     <div class="col-sm-12 col-md-9">
+
+                         <div class="example" id="simple-example-table">
+                         </div>
+
+                         <div class="well">
+
+                             <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-table-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                  <i class="fa fa-clipboard" aria-hidden="true"></i>
+                  </button>
+
+<pre class="prettyprint" id="simple-table-code">
+</pre>
+
+                         </div>
+                         <!-- example closes -->
+
+                     </div> <!-- .col -->
+
+                 </div> <!-- .row -->
+
+
+                 <h2 id="sec1">3-column List <span class="badge">Example</span></h2>
+
+                 <div class="example">
+
+                    <div class='row'>
+                        <div class='col-sm-4'>
+                          <ul class="list-group">
+                         <li class="list-group-item">content</li>
+                         <li class="list-group-item">content</li>
+                         <li class="list-group-item">content</li>
+                         <li class="list-group-item">content</li>
+                       </ul></div>
+                        <div class='col-sm-4'>
+                          <ul class="list-group">
+                         <li class="list-group-item">content</li>
+                         <li class="list-group-item">content</li>
+                         <li class="list-group-item">content</li>
+                         <li class="list-group-item">content</li>
+                       </ul></div>
+                        <div class='col-sm-4'><ul class="list-group">
+                      <li class="list-group-item">content</li>
+                      <li class="list-group-item">content</li>
+                      <li class="list-group-item">content</li>
+                      <li class="list-group-item">content</li>
+                       </ul></div>
+                    </div>
+
+                 </div>
+
+                 <div class="well">
+
+                    <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well3" data-toggle="tooltip" data-placement="bottom" title="copy HTML" >
+                    <i class="fa fa-clipboard" aria-hidden="true"></i>
+                    </button>
+
+<pre class="prettyprint" id="well3">
+&lt;div class='row'&gt;
+   &lt;div class='col-sm-4'&gt;
+     &lt;ul class="list-group"&gt;
+       &lt;li class="list-group-item"&gt;content&lt;/li&gt;
+       &lt;li class="list-group-item"&gt;content&lt;/li&gt;
+       &lt;li class="list-group-item"&gt;content&lt;/li&gt;
+       &lt;li class="list-group-item"&gt;content&lt;/li&gt;
+      &lt;/ul&gt;
+   &lt;/div&gt;
+   &lt;div class='col-sm-4'&gt;
+     &lt;ul class="list-group"&gt;
+       &lt;li class="list-group-item"&gt;content&lt;/li&gt;
+       &lt;li class="list-group-item"&gt;content&lt;/li&gt;
+       &lt;li class="list-group-item"&gt;content&lt;/li&gt;
+       &lt;li class="list-group-item"&gt;content&lt;/li&gt;
+      &lt;/ul&gt;
+   &lt;/div&gt;
+   &lt;div class='col-sm-4'&gt;
+     &lt;ul class="list-group"&gt;
+       &lt;li class="list-group-item"&gt;content&lt;/li&gt;
+       &lt;li class="list-group-item"&gt;content&lt;/li&gt;
+       &lt;li class="list-group-item"&gt;content&lt;/li&gt;
+       &lt;li class="list-group-item"&gt;content&lt;/li&gt;
+     &lt;/ul&gt;
+   &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                  </div>
+
+                 <h2 id="sec2">3-column Images <span class="badge">Example</span></h2>
+
+                 <div class="example">
+
+                    <div class='row'>
+                        <div class='col-sm-4'>
+                           <img alt="" class="img-thumbnail img-responsive" src="http://placehold.it/250x250"/>
+                        </div>
+                        <div class='col-sm-4'>
+                           <img alt="" class="img-thumbnail img-responsive" src="http://placehold.it/250x250"/>
+                        </div>
+                        <div class='col-sm-4'>
+                           <img alt="" class="img-thumbnail img-responsive" src="http://placehold.it/250x250"/>
+                        </div>
+                    </div> <!-- .row -->
+
+                 </div>
+
+                 <div class="well">
+
+                    <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well4" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                    <i class="fa fa-clipboard" aria-hidden="true"></i>
+                    </button>
+
+<pre class="prettyprint" id="well4">
+&lt;div class='row'&gt;
+  &lt;div class='col-sm-4'&gt;
+    &lt;img alt="" class="img-thumbnail img-responsive"
+                src="http://placehold.it/250x250"/&gt;
+  &lt;/div&gt;
+  &lt;div class='col-sm-4'&gt;
+    &lt;img alt="" class="img-thumbnail img-responsive"
+                src="http://placehold.it/250x250"/&gt;
+  &lt;/div&gt;
+  &lt;div class='col-sm-4'&gt;
+    &lt;img alt="" class="img-thumbnail img-responsive"
+                src="http://placehold.it/250x250"/&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+                  </div>
+
+
+
+               </div><!--/right-->
+         	</div><!--/row-->
+       </div><!--/container-->
+
+
+    </div>
+    <!-- .container -->
+
+    <!-- Main Content closes ----------------------------->
+
+
+    <!-- Footer ----------------------------->
+    <div id="handbook-footer">
+    <div class="container-fluid">
+      <div class="row">
+         <div class="col-xs-12 col-sm-6">
+           <i class="fa fa-copyright" aria-hidden="true"></i><span id="thisYear"></span> University of Notre Dame
+         </div><div class="col-xs-12 col-sm-6">
+     <p class="text-right"><a class="github-button" href="https://github.com/randal-sean-harrison/guides-handbook/archive/master.zip" data-size="large" aria-label="Download randal-sean-harrison/guides-handbook on GitHub">Download</a></p>
+  </div></div>
+    </div>
+</div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!-- Include for the Back to top button -->
+ <script src="js/back-to-top.js"></script>
+   <!-- Scrollspy / affix js -->
+   <script src="js/scripts.js"></script>
+
+ <!-- html include script -->
+ <script src="https://www.w3schools.com/lib/w3data.js"></script>
+
+ <script> w3IncludeHTML(); </script>
+
+<!-- clipboard.js include -->
+<script src="js/clipboard.min.js"></script>
+
+ <script type="text/javascript">
+
+    $( document ).ready(function() {
+
+      // Add and edit the text for the github button https://buttons.github.io/
+      $('p.text-right a.github-button').html('GET randal-sean-harrison/guides-handbook');
+
+      $('pre').removeClass('prettyprinted');
+      prettyPrint();
+
+      // Add the active classes to the nav menu
+      $(".navfeatures").addClass("active");
+      $(".navcolumns").addClass("active");
+
+            // ------- Display the Columns --------------------------
+            $('#renderCols').click(function() {
+
+
+               var bsTable = '';
+
+               var colsFinal = 'dasda';
+               colsFinal = $('input[name=cols]:checked').val();
+
+               var first = "<div class='row'><div class='col-sm-3'>content</div><div class='col-sm-9'>content</div></div>";
+               var second = "<div class='row'><div class='col-sm-9'>content</div><div class='col-sm-3'>content</div></div>";
+               var third = "<div class='row'><div class='col-sm-6'>content</div><div class='col-sm-6'>content</div></div>";
+               var fourth = "<div class='row'><div class='col-sm-4'>content</div><div class='col-sm-4'>content</div><div class='col-sm-4'>content</div></div>";
+               var fifth = "<div class='row'><div class='col-sm-3'>content</div><div class='col-sm-3'>content</div><div class='col-sm-3'>content</div><div class='col-sm-3'>content</div></div>";
+
+               switch (colsFinal) {
+               	case '25-75':
+               		bsTable = first;
+               		break;
+                  case '75-25':
+               		bsTable = second;
+               		break;
+                  case '50-50':
+               		bsTable = third;
+               		break;
+                  case '33-33-33':
+               		bsTable = fourth;
+               		break;
+                     case '25-25-25-25':
+                  		bsTable = fifth;
+                  		break;
+               }
+
+               // Write the table
+
+                $("#simple-example-table").html(bsTable);
+                $('#simple-table-code').text(bsTable);
+
+                $('pre').removeClass('prettyprinted');
+                prettyPrint();
+
+
+            });
+
+
+            // ------- Reset the parameters  --------------------------
+            $('#clearTable').click(function() {
+
+               // Clear the input fields
+               $('#25-75').prop('checked', false);
+               $('#75-25').prop('checked', false);
+               $('#50-50').prop('checked', false);
+               $('#33-33-33').prop('checked', false);
+
+               // Clear the example box
+               $('#simple-example-table').empty();
+               $('#simple-table-code').empty();
+
+            });
+
+
+            // ------- Display the Columns --------------------------
+            $('#renderInstructorBox').click(function() {
+
+
+               var bsInstruct = '';
+
+               var openingRow = "<div class='row'>";
+               var closingRow = "</div></div></div></div>";
+               var instructDescription = $('#instructDescription').val();
+               var instructPanelOpen = "<div class='col-sm-4'><div class='panel panel-default instructor instructorCard'><div class='panel-heading'><h3 class='panel-title'>Instructor</h3></div><div class='panel-body'>";
+               var hasPhoto = '';
+               if ($('#hasPhoto').is(':checked')) {
+                  hasPhoto = "<img class='img-responsive center-block instructor-photo' src='http://www.placehold.it/200x200' alt='photo of instructor' />";
+               }
+
+               var iconHome = "<i class='fa fa-home' aria-hidden='true'></i>&nbsp;&nbsp;&nbsp;";
+               var iconEmail = "<i class='fa fa-envelope' aria-hidden='true'></i>&nbsp;&nbsp;&nbsp;";
+               var iconPhone = "<i class='fa fa-phone' aria-hidden='true'></i>&nbsp;&nbsp;&nbsp;";
+               var iconWebpage = "<i class='fa fa-bookmark' aria-hidden='true'></i>&nbsp;&nbsp;&nbsp;";
+
+               var instructName = $('#instructName').val();
+               var instructTitle = $('#instructTitle').val();
+               var instructOffice = $('#instructOffice').val();
+               var instructEmail = $('#instructEmail').val();
+               var instructTelephone = $('#instructTelephone').val();
+               var instructPage = $('#instructPage').val();
+
+               var instructPanelClose = "</div></div></div></div>"
+               var instructLeftCol = "<div class='col-sm-8'><p>" + instructDescription + "</p></div>";
+
+
+               bsInstruct = openingRow + instructLeftCol + instructPanelOpen + hasPhoto + "<p><strong>" + instructName + "</strong>" + "<br/>" + "<em>" + instructTitle + "</em>" + "</p>" + "<p>" +
+               instructOffice + "<br/>" + "<a href='mailto:" + instructEmail + "'>" + instructEmail + "</a>" + "<br/>" + instructTelephone + "<br/><br/>" + "<a href='" + instructPage + "' target='_blank'>Course Page</a>" + "</p>" + closingRow;
+               // Write the table
+
+                $("#simple-instruct-example").html(bsInstruct);
+                $('#simple-instruct-code').text(bsInstruct);
+
+                $('pre').removeClass('prettyprinted');
+                prettyPrint();
+
+            });
+
+            // ------- Reset the parameters  --------------------------
+            $('#clearInstructorFields').click(function() {
+
+               // Clear the input fields
+              $('#instructName').val('');
+              $('#instructTitle').val('');
+              $('#instructOffice').val('');
+              $('#instructEmail').val('');
+              $('#instructTelephone').val('');
+              $('#instructDescription').val('');
+              $('#instructPage').val('');
+              $('#hasPhoto').attr('checked', false).prop('checked', false);
+
+               // Clear the example box
+               $('#simple-instruct-example').empty();
+               $('#simple-instruct-code').empty();
+            });
+
+        });
+
+       // clipboard button
+      new Clipboard('.btn');
+
+      $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+      })
+
+    </script>
+
+</script>
+
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+<!-- js for the gitbub button -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+
+</html>

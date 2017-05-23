@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hesburgh Libraries &middot; Guides Handbook</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="css/main.css">
+
+
+</head>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
+
+    <!-- header ----------------------------->
+
+    <div class="brand-bar container-fluid">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="hidden-xs col-sm-6 col-md-6 col-lg-6">
+                    <a href="http://www.nd.edu">University <i>of</i> Notre Dame</a>
+                </div>
+                <div class="text-center col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
+                    <a href="http://www.nd.edu">University <i>of</i> Notre Dame</a>
+                </div>
+                <div class="hidden-xs col-sm-6 col-md-6 col-lg-6 text-right">
+                    <a href="https://provost.nd.edu/">Office <i>of the</i>  Provost</a>
+                </div>
+                <div class="text-center col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl text-center">
+                    <a class="brand-bar-bottom-padded" href="https://provost.nd.edu/">Office <i>of the</i>  Provost</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row" id="nd-libguides-header-pattern">
+            <div class="hidden-xs col-sm-6 col-md-6 col-lg-6">
+                <h1 id="hesburgh-libraries"><a href="http://library.nd.edu" target="_blank">HESBURGH <span style="color:#F8E999;">LIBRARIES</span></a></h1>
+            </div>
+            <div class="hidden-xs col-sm-6 col-md-6 col-lg-6">
+                <h1 style="opacity:.6;text-align:right;">Guides Handbook</h1>
+            </div>
+            <div class="col-xs-12 text-center hidden-sm hidden-md hidden-lg">
+                <h1><a href="http://library.nd.edu" target="_blank">HESBURGH <span style="color:#F8E999;margin-bottom:10px;">LIBRARIES</span></a></h1>
+            </div>
+            <div class="col-xs-12 text-center hidden-sm hidden-md hidden-lg">
+                <h1 style="opacity:.6;text-align:center;">Guides Handbook</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- header closes ----------------------------->
+
+    <!-- Main Content ----------------------------->
+
+    <div class="container" id="main-container">
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-right">
+                <a class="btn btn-default help-button" href="https://nd.libapps.com/libapps/login.php" role="button" target="_blank"><i class="fa fa-lock fa-spacer-right" aria-hidden="true"></i> LibGuides Login</a>
+
+               <a class="btn btn-default help-button" href="http://libguides.library.nd.edu/reusableassets" role="button" target="_blank"><i class="fa fa-list-alt fa-spacer-right" aria-hidden="true"></i>Reusable Assets</a>
+
+            </div>
+
+        </div>
+
+        <div class="page-header">
+
+       <div w3-include-html="navmenu.html"></div>
+
+        </div>
+        <!-- page header closes -->
+
+        <div id="masthead">
+          <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <h1>Icons</h1>
+                  <p class="lead">Used sparingly, icons help users to more quickly make meaning of buttons and other interface elements.</p>
+                </div>
+              </div>
+          </div><!--/container-->
+        </div><!--/masthead-->
+
+
+        <div class="container">
+       	<div class="row">
+
+             <!--left column-->
+             <div class="col-md-3 hidden-xs hidden-sm" id="leftCol">
+               <ul class="nav nav-stacked" id="sidebar">
+                 <li><a href="#sec0">Useful Icons</a></li>
+                 <li class="hidden"><a href="#sec1">Walkthrough</a></li>
+                 <li><a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> &nbsp;Back to top</a></li>
+               </ul>
+             </div>
+
+             <!--right column-->
+             <div class="col-md-9" id="rightCol">
+               <h2 id="sec0">Useful Icons</h2>
+               <p style="clear:both; margin-bottom: 60px;">All FontAwesome icons are baked-into LibGuides by default. We have preselected some useful icons for you, here. For the full icon set, <a href="http://fontawesome.io/icons/" target="_blank">visit FontAwesome.com</a></p>
+
+               <table class="table table-hover" id="bootstrap-table">
+                 <thead>
+                   <tr>
+                     <th style="width:20%;">Name</th>
+                     <th style="width:3%;">Icon</th>
+                     <th style="width:70%;">HTML</th>
+                     <th style="width:7%;"></th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                    <tr>
+                       <td>Address</td>
+                       <td><i class="fa fa-map-marker" aria-hidden="true"></i></td>
+                       <td id="well30"><pre class="prettyprint">&lt;i class="fa fa-map-marker" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well30" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Apple / Mac</td>
+                       <td><i class="fa fa-apple" aria-hidden="true"></i></td>
+                       <td id="well77a"><pre class="prettyprint">&lt;i class="fa fa-apple" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well77a" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Appointment</td>
+                       <td><i class="fa fa-calendar-plus-o" aria-hidden="true"></i></td>
+                       <td id="well31"><pre class="prettyprint">&lt;i class="fa fa-calendar-plus-o" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well31" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Archive</td>
+                       <td><i class="fa fa-archive" aria-hidden="true"></i></td>
+                       <td id="well32"><pre class="prettyprint">&lt;i class="fa fa-archive" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well32" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Audio</td>
+                       <td><i class="fa fa-file-audio-o" aria-hidden="true"></i></td>
+                       <td id="well33"><pre class="prettyprint">&lt;i class="fa fa-file-audio-o" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well33" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Calculator</td>
+                       <td><i class="fa fa-calculator" aria-hidden="true"></i></td>
+                       <td id="well34"><pre class="prettyprint">&lt;i class="fa fa-calculator" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well34" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Calendar</td>
+                       <td><i class="fa fa-calendar" aria-hidden="true"></i></td>
+                       <td id="well31a"><pre class="prettyprint">&lt;i class="fa fa-calendar" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well31a" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Camera</td>
+                       <td><i class="fa fa-camera-retro" aria-hidden="true"></i></td>
+                       <td id="well35"><pre class="prettyprint">&lt;i class="fa fa-camera-retro" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well35" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Chart</td>
+                       <td><i class="fa fa-area-chart" aria-hidden="true"></i></td>
+                       <td id="well36"><pre class="prettyprint">&lt;i class="fa fa-area-chart" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well36" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Chart</td>
+                       <td><i class="fa fa-bar-chart" aria-hidden="true"></i></td>
+                       <td id="well37"><pre class="prettyprint">&lt;i class="fa fa-bar-chart" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well37" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Chart</td>
+                       <td><i class="fa fa-line-chart" aria-hidden="true"></i></td>
+                       <td id="well38"><pre class="prettyprint">&lt;i class="fa fa-line-chart" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well38" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Check</td>
+                       <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                       <td id="well39"><pre class="prettyprint">&lt;i class="fa fa-check-square-o" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well39" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Code</td>
+                       <td><i class="fa fa-code" aria-hidden="true"></i></td>
+                       <td id="well40"><pre class="prettyprint">&lt;i class="fa fa-code" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well40" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Copy</td>
+                       <td><i class="fa fa-clipboard" aria-hidden="true"></i></td>
+                       <td id="well42"><pre class="prettyprint">&lt;i class="fa fa-clipboard" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well42" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Creative-Commons</td>
+                       <td><i class="fa fa-creative-commons" aria-hidden="true"></i></td>
+                       <td id="well43"><pre class="prettyprint">&lt;i class="fa fa-creative-commons" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well43" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Dollars</td>
+                       <td><i class="fa fa-usd" aria-hidden="true"></i></td>
+                       <td id="well44"><pre class="prettyprint">&lt;i class="fa fa-usd" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well44" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Download</td>
+                       <td><i class="fa fa-cloud-download" aria-hidden="true"></i></td>
+                       <td id="well45"><pre class="prettyprint">&lt;i class="fa fa-cloud-download" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well45" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Email</td>
+                       <td><i class="fa fa-paper-plane" aria-hidden="true"></i></td>
+                       <td id="well46"><pre class="prettyprint">&lt;i class="fa fa-paper-plane" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well46" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Envelope</td>
+                       <td><i class="fa fa-envelope-o" aria-hidden="true"></i></td>
+                       <td id="well47"><pre class="prettyprint">&lt;i class="fa fa-envelope-o" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well47" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Excel</td>
+                       <td><i class="fa fa-file-excel-o" aria-hidden="true"></i></td>
+                       <td id="well48"><pre class="prettyprint">&lt;i class="fa fa-file-excel-o" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well48" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Faculty</td>
+                       <td><i class="fa fa-graduation-cap" aria-hidden="true"></i></td>
+                       <td id="well49"><pre class="prettyprint">&lt;i class="fa fa-graduation-cap" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well49" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Fax</td>
+                       <td><i class="fa fa-fax" aria-hidden="true"></i></td>
+                       <td id="well50"><pre class="prettyprint">&lt;i class="fa fa-fax" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well50" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Folder</td>
+                       <td><i class="fa fa-folder-open" aria-hidden="true"></i></td>
+                       <td id="well51"><pre class="prettyprint">&lt;i class="fa fa-folder-open" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well51" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Group</td>
+                       <td><i class="fa fa-users" aria-hidden="true"></i></td>
+                       <td id="well52"><pre class="prettyprint">&lt;i class="fa fa-users" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well52" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Help</td>
+                       <td><i class="fa fa-life-ring" aria-hidden="true"></i></td>
+                       <td id="well53"><pre class="prettyprint">&lt;i class="fa fa-life-ring" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well53" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Home</td>
+                       <td><i class="fa fa-home" aria-hidden="true"></i></td>
+                       <td id="well54"><pre class="prettyprint">&lt;i class="fa fa-home" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well54" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>HTML</td>
+                       <td><i class="fa fa-file-code-o" aria-hidden="true"></i></td>
+                       <td id="well41"><pre class="prettyprint">&lt;i class="fa fa-file-code-o" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well41" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Image</td>
+                       <td><i class="fa fa-file-image-o" aria-hidden="true"></i></td>
+                       <td id="well55"><pre class="prettyprint">&lt;i class="fa fa-file-image-o" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well55" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Info</td>
+                       <td><i class="fa fa-info-circle" aria-hidden="true"></i></td>
+                       <td id="well56"><pre class="prettyprint">&lt;i class="fa fa-info-circle" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well56" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Library</td>
+                       <td><i class="fa fa-bank" aria-hidden="true"></i></td>
+                       <td id="well57"><pre class="prettyprint">&lt;i class="fa fa-bank" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well57" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Link</td>
+                       <td><i class="fa fa-link" aria-hidden="true"></i></td>
+                       <td id="well58"><pre class="prettyprint">&lt;i class="fa fa-link" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well58" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>List</td>
+                       <td><i class="fa fa-list" aria-hidden="true"></i></td>
+                       <td id="well59"><pre class="prettyprint">&lt;i class="fa fa-list" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well59" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Lock</td>
+                       <td><i class="fa fa-lock" aria-hidden="true"></i></td>
+                       <td id="well60"><pre class="prettyprint">&lt;i class="fa fa-lock" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well60" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Map</td>
+                       <td><i class="fa fa-map-marker" aria-hidden="true"></i></td>
+                       <td id="well61"><pre class="prettyprint">&lt;i class="fa fa-map-marker" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well61" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Money</td>
+                       <td><i class="fa fa-usd" aria-hidden="true"></i></td>
+                       <td id="well62"><pre class="prettyprint">&lt;i class="fa fa-usd" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well62" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Newspaper</td>
+                       <td><i class="fa fa-newspaper-o" aria-hidden="true"></i></td>
+                       <td id="well63"><pre class="prettyprint">&lt;i class="fa fa-newspaper-o" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well63" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Note</td>
+                       <td><i class="fa fa-sticky-note" aria-hidden="true"></i></td>
+                       <td id="well64"><pre class="prettyprint">&lt;i class="fa fa-sticky-note" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well64" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>PDF</td>
+                       <td><i class="fa fa-file-pdf-o" aria-hidden="true"></i></td>
+                       <td id="well65"><pre class="prettyprint">&lt;i class="fa fa-file-pdf-o" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well65" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Pencil</td>
+                       <td><i class="fa fa-pencil" aria-hidden="true"></i></td>
+                       <td id="well66"><pre class="prettyprint">&lt;i class="fa fa-pencil" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well66" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Powerpoint</td>
+                       <td><i class="fa fa-file-powerpoint-o" aria-hidden="true"></i></td>
+                       <td id="well67"><pre class="prettyprint">&lt;i class="fa fa-file-powerpoint-o" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well67" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Quote</td>
+                       <td><i class="fa fa-quote-left" aria-hidden="true"></i></td>
+                       <td id="well68"><pre class="prettyprint">&lt;i class="fa fa-quote-left" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well68" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Quote</td>
+                       <td><i class="fa fa-quote-right" aria-hidden="true"></i></td>
+                       <td id="well69"><pre class="prettyprint">&lt;i class="fa fa-quote-right" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well69" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>RSS</td>
+                       <td><i class="fa fa-rss" aria-hidden="true"></i></td>
+                       <td id="well70"><pre class="prettyprint">&lt;i class="fa fa-rss" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well70" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Star</td>
+                       <td><i class="fa fa-star" aria-hidden="true"></i></td>
+                       <td id="well71"><pre class="prettyprint">&lt;i class="fa fa-star" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well71" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Table</td>
+                       <td><i class="fa fa-table" aria-hidden="true"></i></td>
+                       <td id="well72"><pre class="prettyprint">&lt;i class="fa fa-table" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well72" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Team</td>
+                       <td><i class="fa fa-users" aria-hidden="true"></i></td>
+                       <td id="well73"><pre class="prettyprint">&lt;i class="fa fa-users" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well73" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Television</td>
+                       <td><i class="fa fa-television" aria-hidden="true"></i></td>
+                       <td id="well74"><pre class="prettyprint">&lt;i class="fa fa-television" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well74" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Text</td>
+                       <td><i class="fa fa-file-text-o" aria-hidden="true"></i></td>
+                       <td id="well75"><pre class="prettyprint">&lt;i class="fa fa-file-text-o" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well75" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Thumbtack</td>
+                       <td><i class="fa fa-thumb-tack" aria-hidden="true"></i></td>
+                       <td id="well76"><pre class="prettyprint">&lt;i class="fa fa-thumb-tack" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well76" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>University</td>
+                       <td><i class="fa fa-bank" aria-hidden="true"></i></td>
+                       <td id="well77"><pre class="prettyprint">&lt;i class="fa fa-bank" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well77" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Upload</td>
+                       <td><i class="fa fa-cloud-upload" aria-hidden="true"></i></td>
+                       <td id="well78"><pre class="prettyprint">&lt;i class="fa fa-cloud-upload" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well78" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>User</td>
+                       <td><i class="fa fa-user" aria-hidden="true"></i></td>
+                       <td id="well80"><pre class="prettyprint">&lt;i class="fa fa-user" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well80" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Video</td>
+                       <td><i class="fa fa-file-video-o" aria-hidden="true"></i></td>
+                       <td id="well81"><pre class="prettyprint">&lt;i class="fa fa-file-video-o" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well81" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Webpage</td>
+                       <td><i class="fa fa-bookmark" aria-hidden="true"></i></td>
+                       <td id="well82"><pre class="prettyprint">&lt;i class="fa fa-bookmark" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well82" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Windows</td>
+                       <td><i class="fa fa-windows" aria-hidden="true"></i></td>
+                       <td id="well83a"><pre class="prettyprint">&lt;i class="fa fa-windows" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well83a" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                       <td>Word</td>
+                       <td><i class="fa fa-file-word-o" aria-hidden="true"></i></td>
+                       <td id="well83"><pre class="prettyprint">&lt;i class="fa fa-file-word-o" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                       <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well83" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                    </tr>
+                 </tbody>
+               </table>
+
+
+               <div class="alert alert-default" style="margin: 60px 0px 20px;">
+                  <p class="text-center" style="color:#666;"><strong>Like an icon added to this table?</strong><a style="margin-left: 1em;" class="btn btn-primary btn-sm" href="mailto:lmt-list@nd.edu?subject=Icon request"><i class="fa fa-paper-plane-o" aria-hidden="true"></i> Email us</a></p>
+               </div>
+
+               <h2 id="sec1" class="hidden">Walthrough</h2>
+
+
+
+               </div><!--/right-->
+         	</div><!--/row-->
+       </div><!--/container-->
+
+
+    </div>
+    <!-- .container -->
+
+    <!-- Main Content closes ----------------------------->
+
+
+    <!-- Footer ----------------------------->
+    <div id="handbook-footer">
+    <div class="container-fluid">
+      <div class="row">
+         <div class="col-xs-12 col-sm-6">
+           <i class="fa fa-copyright" aria-hidden="true"></i><span id="thisYear"></span> University of Notre Dame
+         </div><div class="col-xs-12 col-sm-6">
+     <p class="text-right"><a class="github-button" href="https://github.com/randal-sean-harrison/guides-handbook/archive/master.zip" data-size="large" aria-label="Download randal-sean-harrison/guides-handbook on GitHub">Download</a></p>
+  </div></div>
+    </div>
+</div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!-- Include for the Back to top button -->
+ <script src="js/back-to-top.js"></script>
+   <!-- Scrollspy / affix js -->
+   <script src="js/scripts.js"></script>
+
+ <!-- html include script -->
+ <script src="https://www.w3schools.com/lib/w3data.js"></script>
+
+ <!-- -->
+ <script type="text/javascript" src="js/jquery.sortelements.js"></script>
+ <script type="text/javascript" src="js/jquery.bdt.js"></script>
+
+ <script> w3IncludeHTML(); </script>
+
+<!-- clipboard.js include -->
+<script src="js/clipboard.min.js"></script>
+
+ <script type="text/javascript">
+
+    $( document ).ready(function() {
+
+      // Add and edit the text for the github button https://buttons.github.io/
+      $('p.text-right a.github-button').html('GET randal-sean-harrison/guides-handbook');
+
+      // Add the active classes to the nav menu
+      $(".navfeatures").addClass("active");
+      $(".navicons").addClass("active");
+
+      // The searchable bootstrap table
+      $('#bootstrap-table').bdt();
+      $('#search').css("width", "500px").css("margin-top", "-36px");
+
+      $('pre').removeClass('prettyprinted');
+      prettyPrint();
+
+    });
+
+
+    // clipboard button
+    new Clipboard('.btn');
+
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+
+</script>
+<!-- add the active class to the correct tab and submenu element -->
+
+
+<!-- js for the gitbub button -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+
+
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+</html>
