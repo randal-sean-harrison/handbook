@@ -5,14 +5,11 @@
 
 body {
    position: relative;
-}
-
-body {
    font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 }
 
-p, li, td, a, dl, blockquote, input, textarea, .btn {
+p, li, td, a, dl, input, textarea, .btn {
    font-size: 16px !important;
 }
 
@@ -299,12 +296,13 @@ ul#sidebar li:last-child i {
    margin-bottom:4px;
 }
 
-blockquote, blockquote footer {
-   font-size: 15px;
+blockquote p {
+   font-size: 2.5em;
 }
 
+blockquote footer,
 blockquote footer cite {
-   font-size: 14px;
+   font-size: 1em;
 }
 
 

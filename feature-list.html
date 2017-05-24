@@ -25,7 +25,13 @@
 
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 
+<style>
 
+ul.alt-shaded-rows li:nth-child(odd) {
+   background: #fAfAfA;
+}
+
+</style>
 
 </head>
 
@@ -80,7 +86,7 @@
                 <a class="btn btn-default help-button" href="https://nd.libapps.com/libapps/login.php" role="button" target="_blank"><i class="fa fa-lock fa-spacer-right" aria-hidden="true"></i> LibGuides Login</a>
 
 <a class="btn btn-default help-button" href="http://libguides.library.nd.edu/reusableassets" role="button" target="_blank"><i class="fa fa-list-alt fa-spacer-right" aria-hidden="true"></i>Reusable Assets</a>
-                
+
             </div>
 
         </div>
@@ -111,9 +117,8 @@
              <div class="col-md-3 hidden-xs hidden-sm" id="leftCol">
                <ul class="nav nav-stacked" id="sidebar">
                  <li><a href="#sec0">Standard Lists</a></li>
-                 <li><a href="#sec1">Simple Styled Lists</a></li>
-                 <li><a href="#sec2">Complex Styled Lists</a></li>
-                 <li><a href="#sec3">Media Lists</a></li>
+                 <li><a href="#sec1">Media Lists</a></li>
+                 <li><a href="#sec2">Styled Lists</a></li>
                  <li><a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> &nbsp;Back to top</a></li>
                </ul>
              </div>
@@ -121,8 +126,10 @@
              <!--right column-->
              <div class="col-md-9" id="rightCol">
                <h2 id="sec0">Standard lists</h2>
-
-               <div class="alert alert-danger" role="alert"><p>Standard lists should <strong>not</strong> be used to gather groups of library resources such as <a href="content-database.html">databases</a>, <a href="content-book.html">books</a>, and <a href="content-link.html">other general links</a>. These should be entered as System Content types.</p></div>
+               <p>Standard lists can be generated from within the WYSIWYG editor.</p>
+               <div class="alert alert-danger" role="alert">
+                  <p><i class="fa fa-times-circle" aria-hidden="true"></i>
+                     <br/>Lists should <strong>not</strong> be used to gather groups of library resources such as <a href="content-database.html">databases</a>, <a href="content-book.html">books</a>, and <a href="content-link.html">other general links</a>. These should be entered as System Content types.</p></div>
 
                <div class="example">
 
@@ -180,160 +187,122 @@
                </div> <!-- example closes -->
 
 
-               <h2 id="sec1">Simple Styled Lists</h2>
 
+               <h2 id="sec1">Media Lists</h2>
 
-               <div class="example">
+               <div class="row">
 
+                  <div class="col-sm-12 col-md-3">
+                  <form>
 
-                  <ul class="list-group">
-                    <li class="list-group-item">Unlinked list item 1</li>
-                    <li class="list-group-item">Unlinked list item 2</li>
-                    <li class="list-group-item">Unlinked list item 3</li>
-                    <li class="list-group-item">Unlinked list item 4</li>
-                  </ul>
+                     <label>Image Size  <small style="opacity: .8;">(W x H)</small></label>
+                     <div class="input-group">
+                         <input id="media-width" type="text" class="form-control" placeholder="125">
+                         <span class="input-group-addon">x</span>
+                         <input id="media-height" type="text" class="form-control" placeholder="125">
+                     </div>
+
+                     <div style="margin-top: 20px;" class="form-group">
+                        <label for="media-num"># List Items</label>
+                        <input type="text" class="form-control" id="media-list-item-num" placeholder="3" name="media-num">
+                     </div>
+
+                  </form>
+
+                  <button style="margin-top: 30px;" type="button" class="btn btn-default" id="clearMediaList">Reset</button>
+                  <button style="margin-top: 30px;" type="button" class="btn btn-primary" id="renderMediaList">Generate</button>
 
                </div>
+
+                  <div class="col-sm-12 col-md-9">
+
+
+               <div class="example" id="simple-example-media">
+
+                  <ul class='media-list'><li class='media'><div class='pull-left'><img class='media-object' src='http://www.placehold.it/50x50' alt=''></div><div class='media-body'><h4 class='media-heading'><a href='#' target='_blank'>Media Heading</a></h4><p>Use media lists to pair visual components with textual description.</p></div></li></ul>
+
+               </div>
+
                <div class="well">
 
-                  <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well2" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                  <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-media-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
                   <i class="fa fa-clipboard" aria-hidden="true"></i>
                   </button>
 
-<pre class="prettyprint" id="well2">
-&lt;ul class="list-group"&gt;
-  &lt;li class="list-group-item"&gt;Unlinked List item 1&lt;/li&gt;
-  &lt;li class="list-group-item"&gt;Unlinked List item 2&lt;/li&gt;
-  &lt;li class="list-group-item"&gt;Unlinked List item 3&lt;/li&gt;
-  &lt;li class="list-group-item"&gt;Unlinked List item 4&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+
+   <pre class="prettyprint" id="simple-media-code">
+   </pre>
 
                </div> <!-- example closes -->
 
+   </div>
+   </div>
 
-               <div class="example">
+               <h2 id="sec2">Simple Styled Lists</h2>
+
+               <div class="row">
+
+                  <div class="col-md-3">
+
+                     <form>
+
+                        <label style="margin-top: 20px;" for="numberOfColumns"># Columns</label>
+                        <select class="form-control" id="styled-list-col-num">
+                           <option id="one" value="1" selected="selected">1</option>
+                            <option id="two" value="2">2</option>
+                            <option id="three" value="3">3</option>
+                            <option id="four" value="4">4</option>
+                           </select>
+
+                        <div style="margin-top: 20px;" class="form-group">
+                           <label for="list-item-num"># List Items / Column</label>
+                           <input type="text" class="form-control" id="styled-list-item-num" placeholder="3" name="list-col-num">
+                        </div>
+
+                        <div style="margin-top: 15px;" class="checkbox">
+                           <label>
+                            <input type="checkbox" id="checkbox-has-links"> Links
+                            </label>
+                        </div>
+
+                        <div style="margin-top: 15px;" class="checkbox">
+                           <label>
+                              <input type="checkbox" id="checkbox-has-rows"> Alternating Rows
+                              </label>
+                        </div>
 
 
+                     </form>
 
-                  <ul class="list-group">
-                    <li class="list-group-item"><a href="#">Linked list item 1</a></li>
-                    <li class="list-group-item"><a href="#">Linked list item 2</a></li>
-                    <li class="list-group-item"><a href="#">Linked list item 3</a></li>
-                    <li class="list-group-item"><a href="#">Linked list item 4</a></li>
-                  </ul>
+                     <button style="margin-top: 30px;" type="button" class="btn btn-default" id="clearStyledList">Reset</button>
+                     <button style="margin-top: 30px;" type="button" class="btn btn-primary" id="renderStyledList">Generate</button>
 
-               </div>
-               <div class="well" >
-
-                  <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well3" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
-                  <i class="fa fa-clipboard" aria-hidden="true"></i>
-                  </button>
-
-<pre class="prettyprint" id="well3">
-&lt;ul class="list-group"&gt;
-  &lt;li class="list-group-item"&gt;&lt;a href="#"&gt;Linked list item 1&lt;/a&gt;&lt;/li&gt;
-  &lt;li class="list-group-item"&gt;&lt;a href="#"&gt;Linked list item 2&lt;/a&gt;&lt;/li&gt;
-  &lt;li class="list-group-item"&gt;&lt;a href="#"&gt;Linked list item 3&lt;/a&gt;&lt;/li&gt;
-  &lt;li class="list-group-item"&gt;&lt;a href="#"&gt;Linked list item 4&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
-
-               </div> <!-- example closes -->
-
-
-               <h2 id="sec2">Complex Styled Lists</h2>
-
-               <p>Add the <code>.active</code> class to elevate a particular list item. You may also wish to add classes such as <code>list-group-item-info</code>, <code>list-group-item-success</code>, <code>list-group-item-warning</code>, or <code>list-group-item-danger</code>.</p>
-
-               <div class="example">
-
-                  <div class="list-group">
-                      <a href="#" class="list-group-item">
-                          <h4 class="list-group-item-heading">Heading 1</h4>
-                          <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                      </a>
-                      <a href="#" class="list-group-item active">
-                          <h4 class="list-group-item-heading">Heading 2</h4>
-                          <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                      </a>
-                      <a href="#" class="list-group-item list-group-item-danger">
-                          <h4 class="list-group-item-heading">Heading 3</h4>
-                          <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                      </a>
                   </div>
+                  <div class="col-md-9">
 
+                     <div class="example" id="simple-example-list">
 
+                        <ul class="list-group">
+                           <li class="list-group-item"><a href="">Linked list item 1</a></li>
+                           <li class="list-group-item"><a href="">Linked list item 1</a></li>
+                           <li class="list-group-item">Unlinked list item 2</li>
+                           <li class="list-group-item">Unlinked list item 3</li>
+                        </ul>
+
+                     </div>
+                     <div class="well">
+
+                        <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-list-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                        <i class="fa fa-clipboard" aria-hidden="true"></i>
+                        </button>
+
+      <pre class="prettyprint" id="simple-list-code">
+      </pre>
+
+                     </div> <!-- example closes -->
+
+                  </div>
                </div>
-               <div class="well">
-
-                  <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well4" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
-                  <i class="fa fa-clipboard" aria-hidden="true"></i>
-                  </button>
-
-<pre class="prettyprint" id="well4">
-&lt;div class="list-group"&gt;
-   &lt;a href="#" class="list-group-item"&gt;
-       &lt;h4 class="list-group-item-heading"&gt;Heading 1&lt;/h4&gt;
-       &lt;p class="list-group-item-text"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-   &lt;/a&gt;
-   &lt;a href="#" class="list-group-item active"&gt;
-       &lt;h4 class="list-group-item-heading"&gt;Heading 2&lt;/h4&gt;
-       &lt;p class="list-group-item-text"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-   &lt;/a&gt;
-   &lt;a href="#" class="list-group-item list-group-item-danger"&gt;
-       &lt;h4 class="list-group-item-heading"&gt;Heading 3&lt;/h4&gt;
-       &lt;p class="list-group-item-text"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-   &lt;/a&gt;
-&lt;/div&gt;
-</pre>
-
-               </div> <!-- example closes -->
-
-               <h2 id="sec3">Media Lists</h2>
-
-               <div class="example">
-
-                  <ul class="media-list">
-                      <li class="media">
-                          <div class="media-left">
-                              <a href="#">
-                                  <img class="media-object" src="http://placehold.it/64x64" alt="image of something">
-                              </a>
-                          </div>
-                          <div class="media-body">
-                              <h4 class="media-heading">Media Heading</h4>
-                              <p>Use media lists to pair visual components with textual description.</p>
-                          </div>
-                      </li>
-                  </ul>
-
-               </div>
-               <div class="well">
-
-                  <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well5" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
-                  <i class="fa fa-clipboard" aria-hidden="true"></i>
-                  </button>
-
-
-<pre class="prettyprint" id="well5">
-&lt;ul class="media-list"&gt;
-    &lt;li class="media"&gt;
-        &lt;div class="media-left"&gt;
-            &lt;a href="#"&gt;
-                &lt;img class="media-object" src="http://location-of-your-image/" alt="description of your image"&gt;
-            &lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class="media-body"&gt;
-            &lt;h4 class="media-heading"&gt;Media Heading&lt;/h4&gt;
-            &lt;p&gt;Use media lists to pair visual components with textual description.&lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/li&gt;
-&lt;/ul&gt;
-</pre>
-
-               </div> <!-- example closes -->
-
 
 
 
@@ -373,6 +342,12 @@
  <!-- html include script -->
  <script src="https://www.w3schools.com/lib/w3data.js"></script>
 
+
+ <!-- includes for Google's code highlighter 'prettyprint' -->
+ <link rel="stylesheet" type="text/css" href="css/prettify.css">
+ <script type="text/javascript" src="js/prettify.js"></script>
+
+
  <script> w3IncludeHTML(); </script>
 
 <!-- clipboard.js include -->
@@ -385,9 +360,95 @@
       // Add and edit the text for the github button https://buttons.github.io/
       $('p.text-right a.github-button').html('GET randal-sean-harrison/guides-handbook');
 
+
       // Add the active classes to the nav menu
       $(".navfeatures").addClass("active");
       $(".navlists").addClass("active");
+
+      $('#renderMediaList').click(function() {
+
+         $('simple-example-media').val('');
+         var numItems = $('#media-list-item-num').val();
+         var listOpen = "<ul class='media-list'>"
+         var mediaWidth = $('#media-width').val();
+         var mediaHeight = $('#media-height').val();
+         var listItem = "<li class='media'><div class='pull-left'><img class='media-object' src='http://www.placehold.it/" + mediaWidth + "x" + mediaHeight + "' alt=''></div><div class='media-body'><h4 class='media-heading'><a href='#' target='_blank'>Media Heading</a></h4><p>Use media lists to pair visual components with textual description.</p></div></li>";
+         var listItems = '';
+
+         for (i = 0; i < numItems; i++) {
+            listItems += listItem;
+         };
+
+         var listClose = "</ul>";
+
+         // Write the table
+          var bsMedia = listOpen + listItems + listClose;
+
+          $("#simple-example-media").html(bsMedia);
+          $('#simple-media-code').text(bsMedia);
+
+          $('pre').removeClass('prettyprinted');
+          prettyPrint();
+
+
+      });
+
+      $('#renderStyledList').click(function() {
+
+         $('#simple-example-list').empty();
+
+         var numStyledColumns = $('#styled-list-col-num').val();
+         alert(numStyledColumns);
+         var numlistItems = $('#styled-list-item-num').val();
+         var styledListItem = '';
+         var styledListItems = '';
+         var altShadedRows = "";
+
+         if ($('#checkbox-has-links').is(':checked')) {
+            styledListItem = "<li class='list-group-item'><a href='' target='_blank'>Lorem ipsum dolor</a></li>";
+         } else {
+            styledListItem = "<li class='list-group-item'>Lorem ipsum dolor</li>";
+         }
+
+         for (i = 0; i < numlistItems; i++) {
+            styledListItems += styledListItem;
+         }
+
+         if ($('#checkbox-has-rows').is(':checked')) {
+            listOpen = "<ul class='list-group alt-shaded-rows'>";
+         } else {
+            listOpen = "<ul class='list-group'>";
+         }
+
+         var listColumn = listOpen + styledListItems + "</ul>";
+
+
+
+
+
+
+         // Write the table
+         var bsStyledList = listColumn;
+
+         $("#simple-example-list").html(bsStyledList);
+         $("#simple-list-code").text(bsStyledList);
+
+         $('pre').removeClass('prettyprinted');
+         prettyPrint();
+
+      });
+
+
+      // reset button
+      $('#clearMediaList').click(function() {
+         location.reload(true);
+      });
+
+      // reset button
+      $('#clearStyledList').click(function() {
+         location.reload(true);
+      });
+
     });
 
 // clipboard button
@@ -398,7 +459,9 @@ new Clipboard('.btn');
     })
 
 </script>
-<!-- add the active class to the correct tab and submenu element -->
+
+<!-- prettify -->
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 
 
 <!-- js for the gitbub button -->
