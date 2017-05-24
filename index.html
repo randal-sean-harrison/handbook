@@ -243,23 +243,33 @@
 
 
       $('#subject-button').click(function() {
-            $('.subject-content').toggleClass('hidden');
+            $('.subject-content').removeClass('hidden');
             $('.course-content').addClass('hidden');
             $('.howto-content').addClass('hidden');
             $('.other-content').addClass('hidden');
             $('.internal-content').addClass('hidden');
+
+           $(".subject-content").animate({
+           top: '100px'
+           });
+
       });
 
       $('#course-button').click(function() {
-            $('.course-content').toggleClass('hidden');
+            $('.course-content').removeClass('hidden');
             $('.subject-content').addClass('hidden');
             $('.howto-content').addClass('hidden');
             $('.other-content').addClass('hidden');
             $('.internal-content').addClass('hidden');
+
+            $(".course-content").animate({
+           top: '100px'
+           });
+
       });
 
       $('#other-button').click(function() {
-            $('.other-content').toggleClass('hidden');
+            $('.other-content').removeClass('hidden');
             $('.subject-content').addClass('hidden');
             $('.howto-content').addClass('hidden');
             $('.course-content').addClass('hidden');
@@ -267,7 +277,7 @@
       });
 
       $('#howto-button').click(function() {
-            $('.howto-content').toggleClass('hidden');
+            $('.howto-content').removeClass('hidden');
             $('.subject-content').addClass('hidden');
             $('.other-content').addClass('hidden');
             $('.course-content').addClass('hidden');
@@ -275,7 +285,7 @@
       });
 
       $('#internal-button').click(function() {
-            $('.internal-content').toggleClass('hidden');
+            $('.internal-content').removeClass('hidden');
             $('.subject-content').addClass('hidden');
             $('.other-content').addClass('hidden');
             $('.course-content').addClass('hidden');
