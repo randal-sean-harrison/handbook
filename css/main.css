@@ -96,6 +96,19 @@ h4 {
    color: #002b5b;
 }
 
+div.stepwise h1 {
+   background: #337ab7;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 15px;
+   color: #FFFFFF;
+   height: 90px;
+   width: 90px;
+   opacity: .7;
+   border-radius: 90px;
+}
+
 .help-button {
     border: 1px solid #337ab7;
     color: #337ab7;
