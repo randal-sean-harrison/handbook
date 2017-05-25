@@ -117,19 +117,22 @@
                 <!--left column-->
                 <div class="col-md-3 hidden-xs hidden-sm" id="leftCol">
                     <ul class="nav nav-stacked" id="sidebar">
-                        <li><a href="#sec0">Table Generator</a></li>
-                        <li><a href="#sec1">Accented Table Rows</a></li>
+                        <li><a href="#sec0">Table Builder</a></li>
+                        <li><a href="#sec1">Examples</a></li>
                         <li><a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> &nbsp;Back to top</a></li>
                     </ul>
                 </div>
 
                 <!--right column-->
                 <div class="col-md-9" id="rightCol">
-                    <h2 id="sec0">Table Generator</h2>
+                    <h2 id="sec0">Table Builder</h2>
 
-                     <p>You may style your tables with any combination of the attributes below.</p>
+                     <p>You may style your tables with any combination of the attributes below. <p>Don't forget about accent colors!</p>
 
-                        <div class="alert alert-warning"><p><i class="fa fa-thumb-tack" aria-hidden="true"></i><strong>Tables ONLY for Tabular Data</strong><br/>
+                     <div class="alert alert-info"><p><i class="fa fa-exclamation-circle" aria-hidden="true"></i><strong>Don't Forget About Accent Colors</strong><br/>
+                      By adding a color class to any table row <code> &lt;tr&gt;</code> or table data  <code> &lt;td&gt;</code> element, you can change the background color and make better meaning for you users. Accent colors include: <code>.active</code> (grey),&nbsp; <code>.success</code> (green),&nbsp; <code>.info</code> (blue),&nbsp; <code>.warning</code> (yellow),&nbsp; <code>.danger</code> (red).</p></div>
+
+                        <div class="alert alert-warning"><p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><strong>Tables ONLY for Tabular Data</strong><br/>
                          Do not use tables as faux columns in your Rich Text / HTML boxes. If you need them, <a href="feature-column.html">use columns</a>, instead.</p></div>
 
                     <div class="row">
@@ -195,6 +198,30 @@
                         <div class="col-sm-12 col-md-9">
 
                             <div class="example" id="simple-example-table">
+                               <table class='table'>
+                                  <thead>
+                                     <tr>
+                                        <th>Accent Colors</th>
+                                     </tr>
+                                  </thead>
+                                  <tbody>
+                                     <tr class="active">
+                                        <td>active</td>
+                                     </tr>
+                                     <tr class="info">
+                                        <td>info</td>
+                                     </tr>
+                                     <tr class="success">
+                                        <td>success</td>
+                                     </tr>
+                                     <tr class="warning">
+                                        <td>warning</td>
+                                     </tr>
+                                     <tr class="danger">
+                                        <td>danger</td>
+                                     </tr>
+                                  </tbody>
+                               </table>
                             </div>
 
                             <div class="well">
@@ -204,6 +231,30 @@
                      </button>
 
 <pre class="prettyprint" id="simple-table-code">
+&lt;table class='table'&gt;
+   &lt;thead&gt;
+      &lt;tr&gt;
+         &lt;th&gt;Accent Colors&lt;/th&gt;
+      &lt;/tr&gt;
+   &lt;/thead&gt;
+   &lt;tbody&gt;
+      &lt;tr class="active"&gt;
+         &lt;td&gt;active&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr class="info"&gt;
+         &lt;td&gt;info&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr class="success"&gt;
+         &lt;td&gt;success&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr class="warning"&gt;
+         &lt;td&gt;warning&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr class="danger"&gt;
+         &lt;td&gt;danger&lt;/td&gt;
+      &lt;/tr&gt;
+   &lt;/tbody&gt;
+&lt;/table&gt;
 </pre>
 
                             </div>
@@ -214,144 +265,29 @@
                     </div>
 
 
-                    <h2 id="sec1">Accented Table Rows</h2>
 
-                    <p>By adding a color class to any table row <code> &lt;tr&gt;</code> or table data  <code> &lt;td&gt;</code> element, you can change the background color, and make better meaning for you users.</p><p>Accent colors include: <code>active</code> (grey),&nbsp; <code>success</code> (green),&nbsp; <code>info</code> (blue),&nbsp; <code>warning</code> (yellow),&nbsp; <code>danger</code> (red).</p>
-
-                    <div class="example" id="simple-example-table">
-
-                     <table class="table">
-                       <tr class="active">
-                          <td>This will produce a dark grey row</td>
-                          <td>With two table data cells</td>
-                       </tr>
-                    </table>
-
+                    <h2 id="sec1">Examples</h2>
+                    <p>
+                      Here are examples of tables in action.
+                    </p>
+                    <div class="row">
+                      <div class="col-md-6">
+                       <div class="panel panel-default">
+                          <div class="panel-heading"><h5><a href="http://libguides.library.nd.edu/digital-editing/software" target="_blank">Video Recording with the One Button Studio</a></h5></div>
+                          <div class="panel-body">
+                             <a href="http://libguides.library.nd.edu/digital-editing/software" target="_blank"><img class="img img-responsive" src="http://libguides.library.nd.edu/ld.php?size=medium&screenshot=fhhcgj.png" class="pull-right" alt="example of a profile box"></a>
+                          </div>
+                       </div>
+                      </div>
+                      <div class="col-md-6">
+                       <div class="panel panel-default hidden">
+                          <div class="panel-heading"><h5>Guide #2</h5></div>
+                          <div class="panel-body">
+                             <a href=""><img class="img img-responsive" src="http://www.placehold.it/400x200" class="pull-right" alt="example of a profile box"></a>
+                          </div>
+                       </div>
+                      </div>
                     </div>
-
-                    <div class="well">
-
-                       <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well3" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
-                    <i class="fa fa-clipboard" aria-hidden="true"></i>
-                    </button>
-
-<pre class="prettyprint" id="well3">
-&lt;tr class="active"&gt;
-   &lt;td&gt;This will produce a dark grey row&lt;/td&gt;
-   &lt;td&gt;With two table data cells&lt;/td&gt;
-&lt;/tr&gt;</pre>
-
-                    </div>
-                    <!-- example closes -->
-
-                    <div class="example">
-
-                     <table class="table">
-                       <tr class="success">
-                         <td>This will produce a green row</td>
-                         <td>With two table data cells</td>
-                       </tr>
-                    </table>
-
-                    </div>
-
-                    <div class="well">
-
-                       <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well4" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
-                    <i class="fa fa-clipboard" aria-hidden="true"></i>
-                    </button>
-
- <pre class="prettyprint" id="well4">
- &lt;tr class="success"&gt;
-   &lt;td&gt;This will produce a green row&lt;/td&gt;
-   &lt;td&gt;With two table data cells&lt;/td&gt;
- &lt;/tr&gt;</pre>
-
-                    </div>
-                    <!-- example closes -->
-
-
-                    <div class="example">
-
-                     <table class="table">
-                       <tr class="info">
-                         <td>This will produce a blue row</td>
-                         <td>With two table data cells</td>
-                       </tr>
-                    </table>
-
-                    </div>
-
-                    <div class="well">
-
-                       <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well5" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
-                    <i class="fa fa-clipboard" aria-hidden="true"></i>
-                    </button>
-
- <pre class="prettyprint" id="well5">
-&lt;tr class="info"&gt;
-   &lt;td&gt;This will produce a blue row&lt;/td&gt;
-   &lt;td&gt;With two table data cells&lt;/td&gt;
-&lt;/tr&gt;</pre>
-
-                    </div>
-                    <!-- example closes -->
-
-
-                    <div class="example">
-
-                     <table class="table">
-                       <tr class="warning">
-                          <td>This will produce a yellow row</td>
-                          <td>With two table data cells</td>
-                       </tr>
-                    </table>
-
-                    </div>
-
-                    <div class="well">
-
-                       <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well6" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
-                    <i class="fa fa-clipboard" aria-hidden="true"></i>
-                    </button>
-
-<pre class="prettyprint" id="well6">
-&lt;tr class="warning"&gt;
-   &lt;td&gt;This will produce a yellow row&lt;/td&gt;
-   &lt;td&gt;With two table data cells&lt;/td&gt;
-&lt;/tr&gt;</pre>
-
-                    </div>
-                    <!-- example closes -->
-
-
-                    <div class="example">
-
-                     <table class="table">
-                       <tr class="danger">
-                         <td>This will produce a red row</td>
-                         <td>With two table data cells</td>
-                       </tr>
-                    </table>
-
-                    </div>
-
-                    <div class="well">
-
-                       <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well7" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
-                    <i class="fa fa-clipboard" aria-hidden="true"></i>
-                    </button>
-
- <pre class="prettyprint" id="well7">
-&lt;tr class="danger"&gt;
-   &lt;td&gt;This will produce a red row&lt;/td&gt;
-   &lt;td&gt;With two table data cells&lt;/td&gt;
-&lt;/tr&gt;</pre>
-
-                    </div>
-                    <!-- example closes -->
-
-
 
                 </div>
                 <!--/right-->
@@ -515,23 +451,7 @@
             // ------- Reset the parameters  --------------------------
             $('#clearTable').click(function() {
 
-               // Clear the input fields
-               $('#numRows').val('');
-               $('#numCols').val('');
-
-               // Clear the checkboxes
-
-               $('#checkboxHeader').attr('checked', false).prop('checked', false);
-               $('#variableWidths').attr('checked', false).prop('checked', false);
-               $('#checkboxStriped').attr('checked', false).prop('checked', false);
-               $('#checkboxBordered').attr('checked', false).prop('checked', false);
-               $('#checkboxHover').attr('checked', false).prop('checked', false);
-               $('#checkboxCondensed').attr('checked', false).prop('checked', false);
-               $('#checkboxResponsive').attr('checked', false).prop('checked', false);
-
-               // Clear the example box
-               $('#simple-example-table').empty();
-               $('#simple-table-code').empty();
+               location.reload(true);
 
             });
 

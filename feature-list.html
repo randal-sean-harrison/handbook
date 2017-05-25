@@ -247,6 +247,8 @@
 
                <h2 id="sec2">Simple Styled Lists</h2>
 
+               <p>Accent colors include: <code>.list-group-item-active</code> (primary blue),&nbsp; <code>.list-group-item-success</code> (green),&nbsp; <code>.list-group-item-info</code> (light blue),&nbsp; <code>.list-group-item-warning</code> (yellow),&nbsp; <code>.list-group-item-danger</code> (red).</p>
+
                <div class="row">
 
                   <div class="col-md-3">
@@ -259,6 +261,7 @@
                             <option id="two" value="2">2</option>
                             <option id="three" value="3">3</option>
                             <option id="four" value="4">4</option>
+                            <option id="six" value="6">6</option>
                         </select>
 
                         <div style="margin-top: 20px;" class="form-group">
@@ -274,7 +277,7 @@
 
                         <div style="margin-top: 15px;" class="checkbox">
                            <label>
-                              <input type="checkbox" id="checkbox-has-rows"> Alternating Rows
+                              <input type="checkbox" id="checkbox-has-rows"> Stripey Rows
                               </label>
                         </div>
 
@@ -291,9 +294,10 @@
 
                         <ul class="list-group">
                            <li class="list-group-item"><a href="">Linked list item 1</a></li>
-                           <li class="list-group-item"><a href="">Linked list item 1</a></li>
-                           <li class="list-group-item">Unlinked list item 2</li>
-                           <li class="list-group-item">Unlinked list item 3</li>
+                           <li class="list-group-item list-group-item-info"><a href="">Linked list item 1</a></li>
+                           <li class="list-group-item list-group-item-success">Unlinked list item 2</li>
+                           <li class="list-group-item list-group-item-warning">Unlinked list item 3</li>
+                           <li class="list-group-item list-group-item-danger">Unlinked list item 3</li>
                         </ul>
 
                      </div>
@@ -303,8 +307,26 @@
                         <i class="fa fa-clipboard" aria-hidden="true"></i>
                         </button>
 
-                        <pre class="prettyprint" id="simple-list-code">
-      </pre>
+<pre class="prettyprint" id="simple-list-code">
+&lt;ul class="list-group"&gt;
+   &lt;li class="list-group-item"&gt;
+      &lt;a href=""&gt;Linked list item 1&lt;/a&gt;
+   &lt;/li&gt;
+   &lt;li class="list-group-item list-group-item-info"&gt;
+      &lt;a href=""&gt;Linked list item 1&lt;/a&gt;
+   &lt;/li&gt;
+
+   &lt;li class="list-group-item list-group-item-success"&gt;
+      Unlinked list item 2
+   &lt;/li&gt;
+   &lt;li class="list-group-item list-group-item-warning"&gt;
+      Unlinked list item 3
+   &lt;/li&gt;
+   &lt;li class="list-group-item list-group-item-danger"&gt;
+      Unlinked list item 3
+   &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
 
                      </div>
                      <!-- example closes -->
@@ -447,6 +469,10 @@
 
                case '4':
                   cols = "col-md-3";
+               break;
+
+               case '6':
+                  cols = "col-md-2";
                break;
 
             }

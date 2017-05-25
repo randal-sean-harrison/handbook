@@ -127,18 +127,17 @@
              <!--left column-->
              <div class="col-md-3 hidden-xs hidden-sm" id="leftCol">
                <ul class="nav nav-stacked" id="sidebar">
-                 <li><a href="#sec0">Simple Column Generator</a></li>
-                 <li><a href="#sec1">3-column (List)</a></li>
-                 <li><a href="#sec2">3-column (Images)</a></li>
+                 <li><a href="#sec0">Simple Column Builder</a></li>
+                 <li><a href="#sec1">Images in 3 Columns</a></li>
                  <li><a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> &nbsp;Back to top</a></li>
                </ul>
              </div>
 
              <!--right column-->
              <div class="col-md-9" id="rightCol">
-                 <h2 id="sec0">Simple Column Generator</h2>
+                 <h2 id="sec0">Simple Column Builder</h2>
 
-                  <p>In certain cases, you may wish to divide your box into columns. Examples might include: A list spread over multiple columns, columns of images and/or text, or the <a href="guide-course.html#sec1">Course Overview Box</a> for course guides.</li>
+                  <p>In certain cases, you may wish to divide your box into columns. Examples might include: <a href="feature-list.html#sec2">A multi-column list</a>, columns of images (below) and/or text, or the <a href="guide-course.html#sec1">Course Overview Box</a> for course guides.</li>
                   </ul>
                      <div class="alert alert-warning"><p><i class="fa fa-thumb-tack" aria-hidden="true"></i><strong>Limitations of Columns</strong>
                         <br/>System Content items such as <a href="content-book.html">books</a>, <a href="content-database.html">databases</a>, <a href="content-document.html">documents</a>, <a href="content-link.html">links</a>, or <a href="content-media.html">media widgets</a> take up the width of an entire box and may not be divided into columns.</p></div>
@@ -165,6 +164,9 @@
                             </label>
                             <label>
                                <input type="radio" name="cols" value="25-25-25-25" id="25-25-25-25"> 25 / 25 / 25 / 25
+                            </label>
+                            <label>
+                               <input type="radio" name="cols" value="16-16-16-16-16-16" id="16-16-16-16-16-16"> 16 / 16 / 16 / 16 / 16 / 16
                             </label>
 
                          </form>
@@ -197,73 +199,10 @@
                  </div> <!-- .row -->
 
 
-                 <h2 id="sec1">3-column List <span class="badge">Example</span></h2>
 
-                 <div class="example">
+                 <h2 id="sec1">Images in 3 Columns <span class="badge">Example</span></h2>
 
-                    <div class='row'>
-                        <div class='col-sm-4'>
-                          <ul class="list-group">
-                         <li class="list-group-item">content</li>
-                         <li class="list-group-item">content</li>
-                         <li class="list-group-item">content</li>
-                         <li class="list-group-item">content</li>
-                       </ul></div>
-                        <div class='col-sm-4'>
-                          <ul class="list-group">
-                         <li class="list-group-item">content</li>
-                         <li class="list-group-item">content</li>
-                         <li class="list-group-item">content</li>
-                         <li class="list-group-item">content</li>
-                       </ul></div>
-                        <div class='col-sm-4'><ul class="list-group">
-                      <li class="list-group-item">content</li>
-                      <li class="list-group-item">content</li>
-                      <li class="list-group-item">content</li>
-                      <li class="list-group-item">content</li>
-                       </ul></div>
-                    </div>
-
-                 </div>
-
-                 <div class="well">
-
-                    <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well3" data-toggle="tooltip" data-placement="bottom" title="copy HTML" >
-                    <i class="fa fa-clipboard" aria-hidden="true"></i>
-                    </button>
-
-<pre class="prettyprint" id="well3">
-&lt;div class='row'&gt;
-   &lt;div class='col-sm-4'&gt;
-     &lt;ul class="list-group"&gt;
-       &lt;li class="list-group-item"&gt;content&lt;/li&gt;
-       &lt;li class="list-group-item"&gt;content&lt;/li&gt;
-       &lt;li class="list-group-item"&gt;content&lt;/li&gt;
-       &lt;li class="list-group-item"&gt;content&lt;/li&gt;
-      &lt;/ul&gt;
-   &lt;/div&gt;
-   &lt;div class='col-sm-4'&gt;
-     &lt;ul class="list-group"&gt;
-       &lt;li class="list-group-item"&gt;content&lt;/li&gt;
-       &lt;li class="list-group-item"&gt;content&lt;/li&gt;
-       &lt;li class="list-group-item"&gt;content&lt;/li&gt;
-       &lt;li class="list-group-item"&gt;content&lt;/li&gt;
-      &lt;/ul&gt;
-   &lt;/div&gt;
-   &lt;div class='col-sm-4'&gt;
-     &lt;ul class="list-group"&gt;
-       &lt;li class="list-group-item"&gt;content&lt;/li&gt;
-       &lt;li class="list-group-item"&gt;content&lt;/li&gt;
-       &lt;li class="list-group-item"&gt;content&lt;/li&gt;
-       &lt;li class="list-group-item"&gt;content&lt;/li&gt;
-     &lt;/ul&gt;
-   &lt;/div&gt;
-&lt;/div&gt;</pre>
-
-                  </div>
-
-                 <h2 id="sec2">3-column Images <span class="badge">Example</span></h2>
-
+                  <p>Images work well when ordered across multiple columns.</p>
                  <div class="example">
 
                     <div class='row'>
@@ -374,6 +313,7 @@
                var third = "<div class='row'><div class='col-sm-6'>content</div><div class='col-sm-6'>content</div></div>";
                var fourth = "<div class='row'><div class='col-sm-4'>content</div><div class='col-sm-4'>content</div><div class='col-sm-4'>content</div></div>";
                var fifth = "<div class='row'><div class='col-sm-3'>content</div><div class='col-sm-3'>content</div><div class='col-sm-3'>content</div><div class='col-sm-3'>content</div></div>";
+               var sixth = "<div class='row'><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div></div>";
 
                switch (colsFinal) {
                	case '25-75':
@@ -388,9 +328,12 @@
                   case '33-33-33':
                		bsTable = fourth;
                		break;
-                     case '25-25-25-25':
-                  		bsTable = fifth;
-                  		break;
+                  case '25-25-25-25':
+               		bsTable = fifth;
+               		break;
+                  case '16-16-16-16-16-16':
+               		bsTable = sixth;
+               		break;
                }
 
                // Write the table
