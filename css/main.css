@@ -13,6 +13,10 @@ p, li, td, a, dl, input, textarea, .btn {
    font-size: 16px !important;
 }
 
+ul.alt-shaded-rows li:nth-child(odd) {
+   background: #fAfAfA;
+}
+
 strong {
    font-weight: 500;
 }
