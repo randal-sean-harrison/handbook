@@ -26,22 +26,6 @@
    <!-- Color picker CSS (https://itsjavi.com/bootstrap-colorpicker/) -->
    <link href="css/bootstrap-colorpicker.min.css" rel="stylesheet">
 
-   <style media="screen">
-      a#select-success,
-      a#select-info,
-      a#select-danger,
-      a#select-warning {
-         cursor: pointer;
-      }
-
-      .short-round {
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         color: #FFFFFF;
-      }
-
-   </style>
 
 </head>
 
@@ -143,10 +127,10 @@
                <table class="table table-hover" id="bootstrap-table">
                   <thead>
                      <tr>
-                        <th style="width:20%;">Name</th>
+                        <th style="width:18%;">Name</th>
                         <th style="width:3%;">Icon</th>
                         <th style="width:70%;">HTML</th>
-                        <th style="width:7%;"></th>
+                        <th style="width:9%;" class="text-right">Copy</th>
                      </tr>
                   </thead>
                   <tbody>
@@ -527,7 +511,7 @@
                         </div>
 
 
-                        <label for="icon-html" style="margin-top: 20px;">Icon</label>
+                        <label for="icon-html" style="margin-top: 10px;">Icon, Number, Letter...</label>
                         <div class="input-group">
                            <span style="height: 16px;" class="input-group-addon" id="refresh-button"><i class="fa fa-refresh" aria-hidden="true"></i></span>
                            <input type="text" class="form-control" id="the-icon" placeholder="<i class='fa fa-up'></i>">
@@ -683,7 +667,7 @@
          });
 
          $('#refresh-button').click(function() {
-            $('#icon-html').val("");
+            $('#the-icon').val('');
          });
 
 
@@ -697,7 +681,7 @@
 
             var iconPadding = Math.round(iconHeightWidth / 2.5);
 
-            var bsIcons = "<h1 class='short-round center-block' style='font-size: " + iconHeightWidth + "px; height: " + realIconHeight + "px; width: " + realIconHeight + "px; padding: " + iconPadding + "px; border-radius: " + realIconHeight + "px; background: " + iconColor + ";' >" + theIcon + "</p>";
+            var bsIcons = "<h1 class='short-round center-block' style='font-size: " + iconHeightWidth + "px; height: " + realIconHeight + "px; width: " + realIconHeight + "px; padding: " + iconPadding + "px; border-radius: " + realIconHeight + "px; background: " + iconColor + ";' >" + theIcon + "</h1>";
 
             $("#simple-example-icon").html(bsIcons);
             $('#simple-icon-code').text(bsIcons);

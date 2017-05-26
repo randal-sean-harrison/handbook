@@ -95,8 +95,8 @@
           <div class="container">
               <div class="row">
                 <div class="col-md-12">
-                  <h1>Cards <small style="color: #CCCCCC;">(Panels)</small></h1>
-                  <p class="lead">Cards help organize the contents of a Rich Text / HTML box through clear chunking of information.</p>
+                  <h1>Cards <small style="opacity: .7;">(aka &lsquo;Panels&rsquo;)</small></h1>
+                  <p class="lead">Cards  help organize the contents of a Rich Text / HTML box through clear chunking of information.</p>
                 </div>
               </div>
           </div><!--/container-->
@@ -109,8 +109,9 @@
              <!--left column-->
              <div class="col-md-3 hidden-xs hidden-sm" id="leftCol">
                <ul class="nav nav-stacked" id="sidebar">
-                 <li><a href="#sec0">Card Builder</a></li>
-                 <li class="hidden"><a href="#sec1">Walkthrough</a></li>
+                 <li><a href="#sec0">Card / Panel Builder</a></li>
+                 <li><a href="#sec1">Collapsible Panels</a></li>
+                 <li><a href="#sec2">Examples</a></li>
                  <li><a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> &nbsp;Back to top</a></li>
                </ul>
              </div>
@@ -181,8 +182,103 @@
                   </div> <!-- col-md-9 -->
                </div> <!-- row -->
 
+               <h2 id="sec1">Collapsible Panels</h2>
 
-               <h2 id="sec1">Examples</h2>
+               <div class="row">
+                  <div class="col-sm-12 col-md-3">
+
+                       <form>
+                          <div class="form-group">
+                               <label for="num-panels"># Panels</label>
+                               <input type="text" class="form-control" id="num-panels" placeholder="3">
+                          </div>
+
+                          <label for="icon-html">Icon</label>
+                          <div class="input-group">
+                             <span style="height: 16px;" class="input-group-addon" id="refresh-button"><i class="fa fa-refresh" aria-hidden="true"></i></span>
+                             <input type="text" class="form-control" id="panel-icon" placeholder="<i class='fa fa-up'></i>">
+                          </div>
+
+                          <p class="text-left" style="margin-left: 8px;"><a href="feature-icon.html" target="_blank"><small>Find an Icon</small></a> | <a id="iconDefault" style="cursor: pointer;"><small>Default (<i class='fa fa-question-circle' aria-hidden='true'></i>)</small></a>
+
+                       </form>
+
+                       <button style="margin-top: 30px;" type="button" class="btn btn-default" id="clearCollapsible">Reset</button>
+                       <button style="margin-top: 30px;" type="button" class="btn btn-primary" id="displayCollapsible">Generate</button>
+
+
+
+                  </div>
+                  <div class="col-sm-12 col-md-9">
+
+                       <div class="example" id="simple-example-collapsible">
+
+                          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                             <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading1">
+                                   <h5 class="panel-title">
+                               <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                 Panel 1
+                               </a>
+                             </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+                                   <div class="panel-body">
+                                      Lorem ipsum dolor sit amet!
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading2">
+                                   <h5 class="panel-title">
+                               <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                 Panel 2
+                               </a>
+                             </h4>
+                                </div>
+                                <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                                   <div class="panel-body">
+                                      Lorem ipsum dolor sit amet!
+                                   </div>
+                                </div>
+                             </div>
+                          </div> <!-- panel group -->
+                       </div>  <!-- example -->
+
+                       <div class="well">
+
+                          <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-collapsible-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+               <i class="fa fa-clipboard" aria-hidden="true"></i>
+               </button>
+
+<pre class="prettyprint" id="simple-collapsible-code">
+&lt;div class='panel-group' id='accordion' role='tablist' aria-multiselectable='true'&gt;
+   &lt;div class='panel panel-default'&gt;
+      &lt;div class='panel-heading' role='tab' id='heading0'&gt;
+         &lt;h5 class='panel-title'&gt;&lt;a role='button' data-toggle='collapse' data-parent='#accordion' href='#collapse1' aria-expanded='true' aria-controls='collapse1'&gt;&nbsp; Panel 1&lt;/a&gt;&lt;/h5&gt;&lt;/div&gt;
+      &lt;div id='collapse1' class='panel-collapse collapse' role='tabpanel' aria-labelledby='heading1'&gt;
+         &lt;div class='panel-body'&gt;Lorem ipsum dolor sit amet!&lt;/div&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div class='panel panel-default'&gt;
+      &lt;div class='panel-heading' role='tab' id='heading1'&gt;
+         &lt;h5 class='panel-title'&gt;&lt;a role='button' data-toggle='collapse' data-parent='#accordion' href='#collapse2' aria-expanded='true' aria-controls='collapse2'&gt;&nbsp; Panel 2&lt;/a&gt;&lt;/h5&gt;&lt;/div&gt;
+      &lt;div id='collapse2' class='panel-collapse collapse' role='tabpanel' aria-labelledby='heading2'&gt;
+         &lt;div class='panel-body'&gt;Lorem ipsum dolor sit amet!&lt;/div&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+&lt;/div&gt; &lt;!-- panel group --&gt;
+</pre>
+
+                       </div>
+                       <!-- example closes -->
+
+                  </div>
+
+               </div>
+
+
+               <h2 id="sec2">Examples</h2>
                <p>
                  Here are examples of cards in action.
                </p>
@@ -204,9 +300,6 @@
                   </div>
                  </div>
                </div>
-
-
-
 
 
                </div><!--/right-->
@@ -258,6 +351,11 @@
 
     $( document ).ready(function() {
 
+      // clear the refresh button
+      $('#refresh-button').click(function() {
+         $('#panel-icon').val('');
+      });
+
       // Add and edit the text for the github button https://buttons.github.io/
       $('p.text-right a.github-button').html('GET randal-sean-harrison/guides-handbook');
 
@@ -302,9 +400,6 @@
          $('pre').removeClass('prettyprinted');
          prettyPrint();
 
-
-
-
       });
 
       // Clear the table
@@ -313,6 +408,42 @@
          location.reload(true);
       });
 
+
+
+
+      $('#displayCollapsible').click(function() {
+
+         var panelGroupOpen = "<div class='panel-group' id='accordion' role='tablist' aria-multiselectable='true'>";
+         var panelGroupClose = "</div> <!-- panel group -->";
+         var numPanels = $('#num-panels').val();
+         var singlePanel = $('');
+         var panelIcon = $('#panel-icon').val();
+         var allPanels = '';
+
+         for (i = 0; i < numPanels; i++) {
+            singlePanel = "<div class='panel panel-default'><div class='panel-heading' role='tab' id='heading" + i + "'><h5 class='panel-title'><a role='button' data-toggle='collapse' data-parent='#accordion' href='#collapse" + (i + 1) + "' aria-expanded='true' aria-controls='collapse" + (i + 1) + "'>" + panelIcon + "&nbsp; Panel " + (i + 1) + "</a></h5></div><div id='collapse" + (i + 1) + "' class='panel-collapse collapse' role='tabpanel' aria-labelledby='heading" + (i + 1) + "'><div class='panel-body'>Lorem ipsum dolor sit amet!</div></div></div>";
+
+            allPanels += singlePanel;
+         }
+
+         var bsPanel = panelGroupOpen + allPanels + panelGroupClose;
+
+         $("#simple-example-collapsible").html(bsPanel);
+         $('#simple-collapsible-code').text(bsPanel);
+
+         $('pre').removeClass('prettyprinted');
+         prettyPrint();
+
+
+      });
+
+      $('#iconDefault').click(function() {
+         $('#panel-icon').val("<i class='fa fa-question-circle' aria-hidden='true'></i>");
+      });
+
+      $('#clearCollapsible').click(function() {
+         location.reload(true);
+      });
 
     });
 

@@ -70,10 +70,10 @@ h3.sub-header {
    font-size: 1.3em;
 }
 
-h4.panel-title a:link,
-h4.panel-title a:visited,
-h4.panel-title a:hover,
-h4.panel-title a:active  {
+h5.panel-title a:link,
+h5.panel-title a:visited,
+h5.panel-title a:hover,
+h5.panel-title a:active  {
    text-decoration: none;
    color: #337ab7;
 }
@@ -499,4 +499,19 @@ table.numbered-steps tr td:first-of-type { /* NOTE: formats the table with steps
    text-align: center;
    vertical-align: middle;
    font-weight: 500;
+}
+
+
+a#select-success,
+a#select-info,
+a#select-danger,
+a#select-warning {
+   cursor: pointer;
+}
+
+.short-round {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #FFFFFF;
 }
