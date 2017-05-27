@@ -56,6 +56,25 @@
       h6 {
          margin: 1.5em 0em .2em 0em;
       }
+
+      #typographyModal {
+         padding: 0px !important;
+      }
+
+      .modal-dialog {
+         width: 100%;
+         height: 100%;
+         margin: 0;
+         padding: 0;
+      }
+
+      .modal-content {
+         height: auto;
+         min-height: 100%;
+         border-radius: 0;
+      }
+
+
    </style>
 
 
@@ -159,18 +178,21 @@
             <div class="col-md-9" id="rightCol">
                <h2 id="sec0">Headings</h2>
 
-               <p>Use headings to subdivide the content in your Rich Text / HTML boxes.</p>
+               <p>Use headings to subdivide the content in your Rich Text / HTML boxes. When thinking of how to best employ headings, think Russian Nesting dolls: As a rule of thumb, the <code>H3</code> heading should probably head the content block for the entire box. The <code>H4</code> headings should subdivide that content, with <code>h5</code> headings further subdividing the <code>h4</code> content block, <code>h6</code> further subdividing the <code>h5</code> content&mdash;you get the picture.</p>
 
+               <p> View an <a data-toggle="modal" data-target="#typographyModal">example typographic hierarchy.</a></p>
 
                <div class="alert alert-danger">
-                  <p><i class="fa fa-times-circle" aria-hidden="true"></i><strong>Limiting Headings</strong><br/> For accessibility reasons, headings H1 and H2 are not available in the WYSIWYG editor and should not be used in Rich Text / HTML boxes.</p>
+                  <p><i class="fa fa-times-circle" aria-hidden="true"></i><strong>Limiting Headings</strong><br/> For accessibility reasons, headings H1 and H2 are not available in the WYSIWYG editor dropdown menu and should not be used in Rich Text / HTML boxes.</p>
                </div>
 
 
                <div class="example">
 
-
-                  <h3>This is an H3 heading. It's the largest header.</h3>
+                  <h3 style="margin-bottom:30px;">This is an H3 heading. It's the largest header.</h3>
+                  <h4 style="margin-bottom:30px;">This is an H4 heading. It has a bottom border. </h4>
+                  <h5 style="margin-bottom:30px;">This is an H5 heading. It's a bolded sub-header in all caps.</h5>
+                  <h6 style="margin-bottom:30px;">This is an H6 heading. It's an italicized sub-sub-header.</h6>
 
                </div>
                <div class="well">
@@ -179,67 +201,47 @@
                   <i class="fa fa-clipboard" aria-hidden="true"></i>
                   </button>
 
-                  <pre class="prettyprint" id="well1">
+<pre class="prettyprint" id="well1">
 &lt;h3&gt;This is an H3 heading. It's the largest header.&lt;/h3&gt;
 </pre>
 
                </div>
                <!-- example closes -->
 
+               <div class="well" style="margin-top:-12px;">
 
-               <div class="example">
+               <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well2" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+               <i class="fa fa-clipboard" aria-hidden="true"></i>
+               </button>
 
-
-                  <h4>This is an H4 heading. It has a bottom border. </h4>
-
-               </div>
-               <div class="well">
-
-                  <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well2" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
-                  <i class="fa fa-clipboard" aria-hidden="true"></i>
-                  </button>
-
-                  <pre class="prettyprint" id="well2">
+<pre class="prettyprint" id="well2">
 &lt;h4&gt;This is an H4 heading. It has a bottom border.&lt;/h4&gt;
 </pre>
 
                </div>
+
                <!-- example closes -->
 
-
-               <div class="example">
-
-
-                  <h5>This is an H5 heading. It's a bolded sub-header.</h5>
-
-               </div>
-               <div class="well">
+               <div class="well" style="margin-top:-12px;">
 
                   <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well3" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
                   <i class="fa fa-clipboard" aria-hidden="true"></i>
                   </button>
 
-                  <pre class="prettyprint" id="well3">
+<pre class="prettyprint" id="well3">
 &lt;h5&gt;This is an H5 heading. It's a bolded sub-header.&lt;/h5&gt;
 </pre>
 
                </div>
                <!-- example closes -->
 
-
-               <div class="example">
-
-
-                  <h6>This is an H6 heading. It's an italicized sub-sub-header.</h6>
-
-               </div>
-               <div class="well">
+               <div class="well" style="margin-top:-12px;">
 
                   <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well4" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
                   <i class="fa fa-clipboard" aria-hidden="true"></i>
                   </button>
 
-                  <pre class="prettyprint" id="well4">
+<pre class="prettyprint" id="well4">
 &lt;h6&gt;This is an H6 heading. It's an italicized sub-sub-header.&lt;/h6&gt;
 </pre>
 
@@ -266,7 +268,7 @@
                   <i class="fa fa-clipboard" aria-hidden="true"></i>
                   </button>
 
-                  <pre class="prettyprint" id="well5">
+<pre class="prettyprint" id="well5">
 &lt;p&gt;Paragraphs make up the bulk of the text you will create.&lt;/p&gt;
 &lt;p&gt;The are left-aligned and vertically double-spaced.&lt;/p&gt;
 </pre>
@@ -353,7 +355,7 @@ content blocks (like pages) to summarize content or focus readers.&lt;/p&gt;
                             </label>
                         </div>
 
-                        <label style="margin-top: 10px;" for="icon-html">Custom Icon</label>
+                        <label style="margin-top: 10px;" for="icon-html">Custom Icon (or Text)</label>
                         <div class="input-group">
                            <span style="height: 16px;" class="input-group-addon" id="refresh-button"><i class="fa fa-refresh" aria-hidden="true"></i></span>
                            <input type="text" class="form-control" id="alert-icon" placeholder="<i class='fa fa-up'></i>">
@@ -387,7 +389,7 @@ content blocks (like pages) to summarize content or focus readers.&lt;/p&gt;
                         </button>
 
 
-<pre class="prettyprint" id="simple-alert-code">
+                        <pre class="prettyprint" id="simple-alert-code">
 &lt;div class="alert alert-warning" role="alert"&gt;
    &lt;p&gt;
       &lt;i class="fa fa-exclamation-triangle fa-spacer-right" aria-hidden="true"&gt;&lt;/i&gt;
@@ -533,6 +535,115 @@ content blocks (like pages) to summarize content or focus readers.&lt;/p&gt;
 
    <!-- Main Content closes ----------------------------->
 
+   <!-- Modal ---------------------------------------->
+
+   <div class="modal fade" id="typographyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+     <div class="modal-dialog" role="document">
+       <div class="modal-content">
+         <div class="modal-header">
+
+          <a href="" style="display:block;"><h1 class='short-round pull-right' style='font-size: 24px; height: 60px; width: 60px; padding: 10px; border-radius: 60px; background: #d9534f;' class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></h1></a>
+
+          <h1 class="modal-title pull-left" id="myModalLabel" style="opacity:.4;padding-left: 50px;">Typographic Hierarchy</h4>
+         </div>
+         <div class="modal-body">
+            <div class="container">
+             <div class="col-xs-2 col-sm-2 col-md-2 col-xs-offset-1" class="text-center">
+
+             <h3>h3</h3>
+             <p>p</p>
+
+             <h4 style="border-bottom:none !important;margin-top:50px;">h4</h4>
+             <p>p</p>
+
+             <div class='alert alert-default' role='alert' style="margin-top:65px;">
+                <p>Alert</p>
+             </div>
+
+             <h4 style="border-bottom:none !important;">h4</h4>
+             <p>p</p>
+
+             <h5 style="margin-top: 50px;">h5</h5>
+             <p>p</p>
+
+             <h6 style="margin-top: 45px;">h6</h6>
+             <p>p</p>
+
+             <h6 style="margin-top: 50px;">h6</h6>
+             <p>p</p>
+
+             <h6 style="margin-top: 45px;">h6</h6>
+             <p>p</p>
+
+             <h6 style="margin-top: 50px;">h6</h6>
+             <p>p</p>
+
+             <h6 style="margin-top: 50px;">h6</h6>
+             <p>p</p>
+
+             <h5 style="margin-top: 45px;">h5</h5>
+             <p>p</p>
+
+             <h5 style="margin-top: 45px;">h5</h5>
+             <p>p</p>
+
+             <h5 style="margin-top: 50px;">h5</h5>
+             <p>p</p>
+
+             </div>
+             <!-- col-xs-2 -->
+
+
+             <div class="col-xs-9 col-sm-9 col-md-9">
+                <h3>The Canons of Rhetoric</h3>
+                <p>There are 5 canons of rhetoric. The mnemonic M.A.I.D.S. makes it easy to remember them as
+                    <strong>Memory</strong>,
+                    <strong>Arrangement</strong>,
+                    <strong>Invention</strong>,
+                    <strong>Delivery</strong>, and
+                    <strong>Style</strong>.</p>
+                <h4>Memory</h4>
+                <p>Memory has, in part, to do with mnemonics (memory aids) that would assist a budding orator in retaining his speech. However, it clearly had to do with more than simply learning how to memorize an already composed speech for re-presentation.</p>
+                <div class='alert alert-default' role='alert'>
+                    <p>
+                       <i class="fa fa-asterisk" aria-hidden="true"></i>
+                       <em>Arrangement</em>,
+                       <em>Invention</em>, and
+                       <em>Delivery</em>
+                       omitted.</p>
+                </div>
+                <h4>Style</h4>
+                <p>Style concerns the artful expression of ideas. If invention addresses what is to be said; style addresses how this will be said.</p>
+                <h5>Virtues of Style</h5>
+                <p>Five encompassing concerns of style which relate style to grammar, audience, effective and affective appeals, the guiding principle of decorum, and the importance of ornamenting language through figurative speech.</p>
+                <h6>Correctness of Style</h6>
+                <p>Correctness or purity is that quality of style by which one speaks or writes in a manner consistent with a given language's norms (<em>consuetudo, usus</em>).</p>
+                <h6>Clarity of Style</h6>
+                <p>Clarity (<em>perspicuitas</em>), closely related to correctness or purity (above), is that quality of style by which language is intelligible.
+                </p>
+                <h6>Evidence of Style</h6>
+                <p>"Evidence" does not mean logical proof, but as the Latin root of this word suggests, it refers to that which comes before the eyes.</p>
+                <h6>Propriety of Style</h6>
+                <p>Although listed as a quality of style, propriety is of course a controlling principle for all of rhetoric, known better by the Latin term decorum. With respect to style, it is necessary that the words be aptly fit to the subject matter.</p>
+                <h6>Ornateness of Style</h6>
+                <p>This quality of style refers to the various aesthetic qualities of language so fully illustrated among the various figures of speech.
+                </p>
+                <h5>LEVELS OF STYLE</h5>
+                <p>From the Roman tradition three levels of style have been laid out, each suited to one of three distinct rhetorical purposes.</p>
+                <h5>Qualities of Style</h5>
+                <p>A large descriptive terminology has been developed to critique the qualities of style. These are interpretive in nature, and overlap broadly with figures of speech or the virtues and levels of style.</p>
+                <h5>Figures of Speech</h5>
+                <p>Sometimes considered part of "ornateness" (one of the Virtues of Style), and sometimes taken to represent the whole of rhetoric, the rhetorical figures constitute a vast technical vocabulary naming ways that both ideas and language have been configured.</p>
+             </div>
+
+             <!-- col-xs-9 -->
+          </div>
+       </div>
+         </div>
+
+       </div>
+     </div>
+   </div>
 
    <!-- Footer ----------------------------->
    <div id="handbook-footer">
@@ -605,11 +716,11 @@ content blocks (like pages) to summarize content or focus readers.&lt;/p&gt;
 
          $('#alertButton').click(function() {
 
-          var alertIcon = $('#alert-icon').val();
-          var alertColorChoice = $('#alert-color').val();
-          var alertIconAssignation = '';
-          var checked = $('#standard-icons').prop('checked');
-          var customIzed = $("#alert-icon").val().length > 0;
+            var alertIcon = $('#alert-icon').val();
+            var alertColorChoice = $('#alert-color').val();
+            var alertIconAssignation = '';
+            var checked = $('#standard-icons').prop('checked');
+            var customIzed = $("#alert-icon").val().length > 0;
 
 
             switch (alertColorChoice) {
@@ -629,47 +740,47 @@ content blocks (like pages) to summarize content or focus readers.&lt;/p&gt;
                   break;
                case ' alert-info':
                   if (checked) {
-                  alertIconAssignation = "<i class='fa fa-info-circle fa-spacer-right' aria-hidden='true'></i>";
+                     alertIconAssignation = "<i class='fa fa-info-circle fa-spacer-right' aria-hidden='true'></i>";
                   } else if (customIzed) {
                      alertIconAssignation = alertIcon;
                   }
                   break;
                case ' alert-danger':
                   if (checked) {
-                  alertIconAssignation = "<i class='fa fa-times-circle fa-spacer-right' aria-hidden='true'></i>";
+                     alertIconAssignation = "<i class='fa fa-times-circle fa-spacer-right' aria-hidden='true'></i>";
                   } else if (customIzed) {
                      alertIconAssignation = alertIcon;
                   }
                   break;
                case ' alert-warning':
                   if (checked) {
-                  alertIconAssignation = "<i class='fa fa-exclamation-triangle fa-spacer-right' aria-hidden='true'></i>";
+                     alertIconAssignation = "<i class='fa fa-exclamation-triangle fa-spacer-right' aria-hidden='true'></i>";
                   } else if (customIzed) {
                      alertIconAssignation = alertIcon;
                   }
                   break;
                case ' alert-success':
                   if (checked) {
-                  alertIconAssignation = "<i class='fa fa-star fa-spacer-right' aria-hidden='true'></i>";
+                     alertIconAssignation = "<i class='fa fa-star fa-spacer-right' aria-hidden='true'></i>";
                   } else if (customIzed) {
                      alertIconAssignation = alertIcon;
                   }
                   break;
-               }
+            }
 
-               var alertOpening = "<div class='alert" + alertColorChoice + "' role='alert'><p>";
-               var alertClosing = alertIconAssignation + "In omnibus requiem quaesivi et nusquam inveni nisi in angulo cum libro</p></div>";
+            var alertOpening = "<div class='alert" + alertColorChoice + "' role='alert'><p>";
+            var alertClosing = alertIconAssignation + "In omnibus requiem quaesivi et nusquam inveni nisi in angulo cum libro</p></div>";
 
-               // Write the table
-               var bsAlert = alertOpening + alertClosing;
+            // Write the table
+            var bsAlert = alertOpening + alertClosing;
 
-               $("#simple-example-alert").html(bsAlert);
-               $('#simple-alert-code').text(bsAlert);
+            $("#simple-example-alert").html(bsAlert);
+            $('#simple-alert-code').text(bsAlert);
 
-               $('pre').removeClass('prettyprinted');
-               prettyPrint();
+            $('pre').removeClass('prettyprinted');
+            prettyPrint();
 
-               alertIconAssignation = '';
+            alertIconAssignation = '';
 
 
          });

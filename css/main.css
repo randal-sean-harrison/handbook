@@ -3,12 +3,16 @@
 @import url('fonts/GalaxiePolaris-Medium.woff');
 
 
+
 body {
    position: relative;
    font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 }
 
+table.table-unbound tr td { /* NOTE: Removes borders on tables */
+   border: 0px;
+}
 p, li, td, a, dl, input, textarea, .btn {
    font-size: 16px !important;
 }
@@ -83,6 +87,8 @@ h4 {
     border-bottom: 1px solid #CCC;
     font-weight: 400;
 }
+
+
 
 #lead-trainer p, #lead-trainer h4 {
    text-align: center;
@@ -514,4 +520,66 @@ a#select-warning {
    justify-content: center;
    align-items: center;
    color: #FFFFFF;
+}
+
+
+/* ------------ */
+
+h3 {
+    font-size:1.8em !important;
+    font-weight: 400 !important;
+}
+
+h4 {
+    font-size:1.6em !important;
+    border-bottom: 1px solid #CCC !important;
+    font-weight: 400 !important;
+
+}
+
+h3, h4 {
+    margin: 1em 0em .6em 0em;
+}
+
+h4.media-heading {
+   border-bottom: none;
+}
+
+h5 {
+    font-size:1.2em !important;
+    font-weight: 500 !important;
+}
+
+h6 {
+    font-size:1.1em !important;
+    font-weight: 400 !important;
+    font-style: italic !important;
+}
+
+h5, h6 {
+    margin: 1.5em 0em .2em 0em;
+}
+
+/* ---- placeholder text --------------------------- */
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #ccc !important;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #ccc !important;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #ccc !important;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #ccc !important;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #ccc !important;
+}
+
+::placeholder {
+  color:    #ccc !important;
 }
