@@ -588,3 +588,7 @@ h5, h6 {
 ::placeholder {
   color:    #ccc !important;
 }
+
+.nd-gold {
+   color: #C99700;   
+}
