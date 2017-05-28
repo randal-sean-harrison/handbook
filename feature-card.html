@@ -155,9 +155,10 @@
 
                      </form>
 
-                     <button style="margin-top: 30px;" type="button" class="btn btn-default" id="clearPanel">Reset</button>
-                     <button style="margin-top: 30px;" type="button" class="btn btn-primary" id="displayPanel">Generate</button>
-
+                  <div style="margin-top:30px;">
+                     <button type="button" class="btn btn-default" id="clearPanel">Reset</button>
+                     <button type="button" class="btn btn-primary" id="displayPanel">Build</button>
+                  </div>
 
 
                   </div>
@@ -199,13 +200,14 @@
                              <input type="text" class="form-control" id="panel-icon" placeholder="<i class='fa fa-up'></i>">
                           </div>
 
-                          <p class="text-left" style="margin-left: 8px;"><a href="feature-icon.html" target="_blank"><small>Find an Icon</small></a> | <a id="iconDefault" style="cursor: pointer;"><small>Default (<i class='fa fa-question-circle' aria-hidden='true'></i>)</small></a>
+                          <p class="text-left" style="margin-left: 8px;"><a href="feature-icon.html" target="_blank"><small>Find an Icon</small></a> | <a id="iconDefault" style="cursor: pointer;"><small>Default</small></a>
 
                        </form>
 
-                       <button style="margin-top: 30px;" type="button" class="btn btn-default" id="clearCollapsible">Reset</button>
-                       <button style="margin-top: 30px;" type="button" class="btn btn-primary" id="displayCollapsible">Generate</button>
-
+                     <div style="margin-top:30px;">
+                       <button type="button" class="btn btn-default" id="clearCollapsible">Reset</button>
+                       <button type="button" class="btn btn-primary" id="displayCollapsible">Build</button>
+                     </div>
 
 
                   </div>
@@ -224,7 +226,7 @@
                                 </div>
                                 <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
                                    <div class="panel-body">
-                                      Lorem ipsum dolor sit amet!
+                                      Lorem ipsum dolor sic amet!
                                    </div>
                                 </div>
                              </div>
@@ -238,7 +240,7 @@
                                 </div>
                                 <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
                                    <div class="panel-body">
-                                      Lorem ipsum dolor sit amet!
+                                      Lorem ipsum dolor sic amet!
                                    </div>
                                 </div>
                              </div>
@@ -257,14 +259,14 @@
       &lt;div class='panel-heading' role='tab' id='heading0'&gt;
          &lt;h5 class='panel-title'&gt;&lt;a role='button' data-toggle='collapse' data-parent='#accordion' href='#collapse1' aria-expanded='true' aria-controls='collapse1'&gt;&nbsp; Panel 1&lt;/a&gt;&lt;/h5&gt;&lt;/div&gt;
       &lt;div id='collapse1' class='panel-collapse collapse' role='tabpanel' aria-labelledby='heading1'&gt;
-         &lt;div class='panel-body'&gt;Lorem ipsum dolor sit amet!&lt;/div&gt;
+         &lt;div class='panel-body'&gt;Lorem ipsum dolor sic amet!&lt;/div&gt;
       &lt;/div&gt;
    &lt;/div&gt;
    &lt;div class='panel panel-default'&gt;
       &lt;div class='panel-heading' role='tab' id='heading1'&gt;
          &lt;h5 class='panel-title'&gt;&lt;a role='button' data-toggle='collapse' data-parent='#accordion' href='#collapse2' aria-expanded='true' aria-controls='collapse2'&gt;&nbsp; Panel 2&lt;/a&gt;&lt;/h5&gt;&lt;/div&gt;
       &lt;div id='collapse2' class='panel-collapse collapse' role='tabpanel' aria-labelledby='heading2'&gt;
-         &lt;div class='panel-body'&gt;Lorem ipsum dolor sit amet!&lt;/div&gt;
+         &lt;div class='panel-body'&gt;Lorem ipsum dolor sic amet!&lt;/div&gt;
       &lt;/div&gt;
    &lt;/div&gt;
 &lt;/div&gt; &lt;!-- panel group --&gt;
@@ -421,7 +423,7 @@
          var allPanels = '';
 
          for (i = 0; i < numPanels; i++) {
-            singlePanel = "<div class='panel panel-default'><div class='panel-heading' role='tab' id='heading" + i + "'><h5 class='panel-title'><a role='button' data-toggle='collapse' data-parent='#accordion' href='#collapse" + (i + 1) + "' aria-expanded='true' aria-controls='collapse" + (i + 1) + "'>" + panelIcon + "&nbsp; Panel " + (i + 1) + "</a></h5></div><div id='collapse" + (i + 1) + "' class='panel-collapse collapse' role='tabpanel' aria-labelledby='heading" + (i + 1) + "'><div class='panel-body'>Lorem ipsum dolor sit amet!</div></div></div>";
+            singlePanel = "<div class='panel panel-default'><div class='panel-heading' role='tab' id='heading" + i + "'><h5 class='panel-title'><a role='button' data-toggle='collapse' data-parent='#accordion' href='#collapse" + (i + 1) + "' aria-expanded='true' aria-controls='collapse" + (i + 1) + "'>" + panelIcon + "&nbsp; Panel " + (i + 1) + "</a></h5></div><div id='collapse" + (i + 1) + "' class='panel-collapse collapse' role='tabpanel' aria-labelledby='heading" + (i + 1) + "'><div class='panel-body'>Lorem ipsum dolor sic amet!</div></div></div>";
 
             allPanels += singlePanel;
          }
