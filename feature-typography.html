@@ -73,8 +73,6 @@
          min-height: 100%;
          border-radius: 0;
       }
-
-
    </style>
 
 
@@ -148,7 +146,7 @@
          <div class="container">
             <div class="row">
                <div class="col-md-12">
-                  <h1>Text <small style="color: #CCC;">(Typography)</small></h1>
+                  <h1>Text <small style="color: #999;">(Typography)</small></h1>
                   <p class="lead">Organize and highlight your content with strong typographic hierarchy.</p>
                </div>
             </div>
@@ -166,10 +164,11 @@
                <ul class="nav nav-stacked" id="sidebar">
                   <li><a href="#sec0">Headings</a></li>
                   <li><a href="#sec1">Body Text</a></li>
-                  <li><a href="#sec2">Lead Text</a></li>
-                  <li><a href="#sec3">Blockquotes</a></li>
-                  <li><a href="#sec4">Notes and Alerts</a></li>
-                  <li><a href="#sec5">Special Text Formats</a></li>
+                  <li><a href="#sec2">Links</a></li>
+                  <li><a href="#sec3">Lead Text</a></li>
+                  <li><a href="#sec4">Blockquotes</a></li>
+                  <li><a href="#sec5">Notes and Alerts</a></li>
+                  <li><a href="#sec6">Special Text Formats</a></li>
                   <li><a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> &nbsp;Back to top</a></li>
                </ul>
             </div>
@@ -178,12 +177,15 @@
             <div class="col-md-9" id="rightCol">
                <h2 id="sec0">Headings</h2>
 
-               <p>Use headings to subdivide the content in your Rich Text / HTML boxes. When thinking of how to best employ headings, think Russian Nesting dolls: As a rule of thumb, the <code>H3</code> heading should probably head the content block for the entire box. The <code>H4</code> headings should subdivide that content, with <code>h5</code> headings further subdividing the <code>h4</code> content block, <code>h6</code> further subdividing the <code>h5</code> content&mdash;you get the picture.</p>
+               <p>Use headings to subdivide the content in your Rich Text / HTML boxes. To understand the difference between the headings, think &ldquo;Russian Nesting dolls&rdquo; ... As a rule of thumb, the <code>H3</code> heading should probably head
+                  the content block for the entire box. The <code>H4</code> headings should subdivide that content, with <code>h5</code> headings further subdividing the <code>h4</code> content block. The <code>h6</code> headings may further subdividing
+                  the <code>h5</code> content, and so on. Other combinations are also possible, as long as a rough hierarchy of size is maintained for the reader.</p>
 
-               <p><a href="" data-toggle="modal" data-target="#typographyModal">View Example Hierarchy.</a></p>
+               <p><a href="" data-toggle="modal" data-target="#typographyModal"><i class="fa fa-external-link-square fa-spacer-right" aria-hidden="true"></i>Example Hierarchy of Headings </a></p>
 
                <div class="alert alert-danger">
-                  <p><i class="fa fa-times-circle" aria-hidden="true"></i><strong>Limiting Headings</strong><br/> For accessibility reasons, headings H1 and H2 are not available in the WYSIWYG editor dropdown menu and should not be used in Rich Text / HTML boxes.</p>
+                  <p><i class="fa fa-times-circle" aria-hidden="true"></i><strong>Limiting Headings</strong><br/>Headings <code>H1</code> and <code>H2</code> are not available in the WYSIWYG editor dropdown menu. For accessibility reasons, these should not
+                     be used in Rich Text / HTML boxes.</p>
                </div>
 
 
@@ -201,7 +203,7 @@
                   <i class="fa fa-clipboard" aria-hidden="true"></i>
                   </button>
 
-<pre class="prettyprint" id="well1">
+                  <pre class="prettyprint" id="well1">
 &lt;h3&gt;This is an H3 heading. It's the largest header.&lt;/h3&gt;
 </pre>
 
@@ -210,11 +212,11 @@
 
                <div class="well" style="margin-top:-12px;">
 
-               <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well2" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                  <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well2" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
                <i class="fa fa-clipboard" aria-hidden="true"></i>
                </button>
 
-<pre class="prettyprint" id="well2">
+                  <pre class="prettyprint" id="well2">
 &lt;h4&gt;This is an H4 heading. It has a bottom border.&lt;/h4&gt;
 </pre>
 
@@ -228,7 +230,7 @@
                   <i class="fa fa-clipboard" aria-hidden="true"></i>
                   </button>
 
-<pre class="prettyprint" id="well3">
+                  <pre class="prettyprint" id="well3">
 &lt;h5&gt;This is an H5 heading. It's a bolded sub-header.&lt;/h5&gt;
 </pre>
 
@@ -241,25 +243,25 @@
                   <i class="fa fa-clipboard" aria-hidden="true"></i>
                   </button>
 
-<pre class="prettyprint" id="well4">
+                  <pre class="prettyprint" id="well4">
 &lt;h6&gt;This is an H6 heading. It's an italicized sub-sub-header.&lt;/h6&gt;
 </pre>
 
                </div>
                <!-- example closes -->
 
-               <h2 id="sec1">Body Text</h2>
+               <h2 id="sec1">Body Text <small style="color: #999;">(Paragraphs)</small></h2>
+               <p>Body text is spaced and sized for best readability at approximately 16 pixels. Any text you enter into the WYSIWYG editor will be body text (<code>&lt;p&gt;</code>) by default.</p>
 
-
-               <div class="alert alert-danger">
-                  <p><i class="fa fa-times-circle" aria-hidden="true"></i><strong>Standardized Fonts</strong><br/>Except in special cases, such as foreign languages or maths symbols, please do not change <em>font face</em> or <em>font size</em> in your guides.</p>
+               <div class='alert alert-danger' role='alert'>
+                  <p><i class='fa fa-times-circle fa-spacer-right' aria-hidden='true'></i><strong>Standardized Fonts</strong><br/>Except in special cases, such as foreign languages or maths symbols, please do not change font face or font size in your guides.</p>
                </div>
+
 
                <div class="example">
 
-
-                  <p>Paragraphs make up the bulk of the text you will create.</p>
-                  <p>They are left-aligned and vertically block-spaced.</p>
+                  <p>Paragraphs make up the bulk of the text you create.</p>
+                  <p>They are left-aligned and vertically block-spaced. </p>
 
                </div>
                <div class="well">
@@ -268,21 +270,92 @@
                   <i class="fa fa-clipboard" aria-hidden="true"></i>
                   </button>
 
-<pre class="prettyprint" id="well5">
-&lt;p&gt;Paragraphs make up the bulk of the text you will create.&lt;/p&gt;
+                  <pre class="prettyprint" id="well5">
+&lt;p&gt;Paragraphs make up the bulk of the text you create.&lt;/p&gt;
 &lt;p&gt;The are left-aligned and vertically double-spaced.&lt;/p&gt;
 </pre>
 
                </div>
                <!-- example closes -->
 
+               <h2 id="sec2">Links</h2>
+               <p>Links are the way we help users&mdash;including users with visual impairment&mdash;easily, efficiently reach important resources. For that reason it's important to <a href="help-web-writing.html#sec2">make links meaningful</a>.</p>
 
-               <h2 id="sec2">Lead Text</h2>
+                     <div class="example">
+
+                        <p>Remember: To supercharge your Guides... <a target="_blank">Read the Handbook!</a></p>
+
+                     </div>
+                     <div class="well">
+
+                        <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well7a" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                        <i class="fa fa-clipboard" aria-hidden="true"></i>
+                        </button>
+
+
+                        <pre class="prettyprint" id="well7a">
+&lt;p&gt;Remember: To supercharge your guides...
+   &lt;a href="handbook.html" target="_blank"&gt;Read the Handbook!&lt;/a&gt;.
+&lt;/p&gt;
+</pre>
+
+                  </div>
+                     <!-- example closes -->
+
+<div class='alert alert-info' role='alert'><p><strong><i class="fa fa-code" aria-hidden="true"></i>Coding Pro Tip</strong><br/>Adding the attribute <code>target="_blank"</code> to any link will open the destination URL in a new window.</p></div>
+
+                     <h5 style="margin-top: 40px;">System Component Links vs. Rich Text Box Links</h5>
+                     <p>However, there are 2 distinct ways to add links in guides (and the difference is important). </p>
+
+                  <table class='table table-bordered table-striped'>
+                     <thead>
+                        <tr>
+                           <th style='width: 25%;'>Link Added...</th>
+                           <th style='width: 30%;'>Type of Link</th>
+                           <th style='width: 45%;'>Note</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>As System Components</td>
+                           <td><p><strong>Use for:</strong></p><ul style="margin-left: -20px;">
+                           <li><a href="content-book.html">Books</a></li>
+                           <li><a href="content-database.html">Databases</a></li>
+                           <li><a href="content-document.html">Documents (pdfs)</a></li>
+                           <li><a href="content-book.html">Auto-generated lists of guides</a></li>
+                           </ul></td>
+                           <td><div class='alert alert-success' role='alert'><p><i class='fa fa-link fa-spacer-right' aria-hidden='true'></i>System link-checker regularly finds and repairs broken links for system components. </p></div></td>
+                        </tr>
+                        <tr>
+                           <td>Into Rich Text Boxes</td>
+                           <td><p><strong>Use for: </strong></p>
+                              <ul style="margin-left: -20px;">
+                              <li><a href="feature-typography.html#sec2">In-text Links</a></li>
+                              <li><a href="feature-button.html">Buttons</a></li>
+                              <li><a href="feature-icon.html">Icons</a></li>
+                              <li><a href="feature-list.html">Lists</a></li>
+                              <li><a href="feature-table.html">Tables</a></li>
+
+                           </ul></td>
+                           <td><div class='alert alert-warning' role='alert'><p><i class='fa fa-chain-broken fa-spacer-right' aria-hidden='true'></i>No easy way to find broken links within Rich Text boxes. Onus on the guide author to ensure all links work.</p></div>
+                              <div class='alert alert-success' role='alert'><p><i class='fa fa-star fa-spacer-right' aria-hidden='true'></i>These link types far more customizable and flexible than system components.</p></div>
+
+                              </td>
+                        </tr>
+                     </tbody>
+                  </table>
+
+
+
+
+               <h2 id="sec3">Lead Text</h2>
+
+               <p>Lead text should be used sparingly at the beginning of larger content blocks to summarize content or focus readers.</p>
 
                <div class="example">
 
 
-                  <p class="lead">Lead text may be used sparingly at the beginning of larger content blocks (like pages) to summarize content or focus readers.</p>
+                  <p class="lead">Organize and highlight your content with strong typographic hierarchy.</p>
 
                </div>
                <div class="well">
@@ -292,21 +365,21 @@
                   </button>
 
                   <pre class="prettyprint" id="well6">
-&lt;p class="lead"&gt;Lead text may be used sparingly at the beginning of larger
-content blocks (like pages) to summarize content or focus readers.&lt;/p&gt;
+&lt;p class="lead"&gt;Organize and highlight your content with strong typographic hierarchy.&lt;/p&gt;
 </pre>
 
                </div>
                <!-- example closes -->
 
 
-               <h2 id="sec3">Blockquotes</h2>
-
+               <h2 id="sec4">Blockquotes</h2>
+               <p>Blockquotes are especially useful as epigraphs introducing content blocks.</p>
                <div class="example">
 
                   <blockquote>
-                     <p>Use blockquotes as epigraphs for content blocks (or pages).</p>
-                     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                     <p>And when this happens, when we allow freedom to ring, when we let it ring from every village and every hamlet, from every state and every city, we will be able to speed up that day when all of God's children, black men and white men,
+                        Jews and Gentiles, Protestants and Catholics, will be able to join hands and sing in the words of the old Negro spiritual: &ldquo;Free at last! Free at last! thank God Almighty, we are free at last!&rdquo;</p>
+                     <footer>Rev. Martin Luther King, Jr. <cite title="Source Title">&ldquo;I Have a Dream&rdquo;</cite></footer>
                   </blockquote>
 
                </div>
@@ -319,20 +392,21 @@ content blocks (like pages) to summarize content or focus readers.&lt;/p&gt;
 
                   <pre class="prettyprint" id="well7">
 &lt;blockquote&gt;
-  &lt;p&gt;Use blockquotes as epigraphs for content blocks (or pages).&lt;/p&gt;
-  &lt;footer&gt;
-     Someone famous in &lt;cite title="Source Title"&gt;Source Title&lt;/cite&gt;
-  &lt;/footer&gt;
-&lt;/blockquote&gt;
-</pre>
+   &lt;p&gt;And when this happens, when we allow freedom to ring, when we let it ring from every village and every hamlet, from every state and every city, we will be able to speed up that day when all of God's children, black men and white men, Jews and Gentiles, Protestants and Catholics, will be able to join hands and sing in the words of the old Negro spiritual: &ldquo;Free at last! Free at last! thank God Almighty, we are free at last!&rdquo;&lt;/p&gt;
+   &lt;footer&gt;
+      Rev. Martin Luther King, Jr.
+      &lt;cite title="Source Title"&gt;&ldquo;I Have a Dream&rdquo;&lt;/cite&gt;
+   &lt;/footer&gt;
+&lt;/blockquote&gt;</pre>
 
                </div>
                <!-- example closes -->
 
 
-               <h2 id="sec4">Notes and Alerts</h2>
+               <h2 id="sec5">Notes and Alerts</h2>
 
-               <p>Alerts/Notes are useful to provide general information, provide important information, indicate success, offer warnings, and declare prohibition, respectively. You may also wish to prepend your alert messages with <a href="feature-icon.html">special icons</a>.</p>
+               <p>Notes and alerts are useful to provide general information, provide important information, indicate success, offer warnings, declare prohibition, etc. Whether you choose to use default icons, custom icons, or no icons in your notes and
+                  alerts, just make sure you're consistent across your guide.</p>
 
                <div class="row">
                   <div class="col-sm-3">
@@ -407,8 +481,9 @@ content blocks (like pages) to summarize content or focus readers.&lt;/p&gt;
                <!-- row -->
 
 
-               <h2 id="sec5">Special Text Formats</h2>
+               <h2 id="sec6">Special Text Formats</h2>
 
+               <p>Special formats are useful to foreground for users the Many of these special text formats are available under the <kbd>Styles</kbd> dropdown menu in the WYSIWYG editor.</p>
 
                <h5>Computer Code</h5>
                <table style="margin-top: 30px;" class='table table-bordered'>
@@ -538,13 +613,13 @@ content blocks (like pages) to summarize content or focus readers.&lt;/p&gt;
    <!-- Modal ---------------------------------------->
 
    <div class="modal" id="typographyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-     <div class="modal-dialog" role="document">
-       <div class="modal-content">
-         <div class="modal-header">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
 
-          <a href="" style="display:block;"><h1 class='short-round pull-right' style='font-size: 24px; height: 60px; width: 60px; padding: 10px; border-radius: 60px; background: #d9534f;' class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></h1></a>
+               <a href="" style="display:block;"><h1 class='short-round pull-right' style='font-size: 24px; height: 60px; width: 60px; padding: 10px; border-radius: 60px; background: #d9534f;' class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></h1></a>
 
-          <h1 class="modal-title pull-left" id="myModalLabel" style="opacity:.4;padding-left: 50px;">Typographic Hierarchy</h4>
+               <h1 class="modal-title pull-left" id="myModalLabel" style="opacity:.4;padding-left: 50px;">Typographic Hierarchy</h4>
          </div>
          <div class="modal-body">
             <div class="container">
@@ -556,7 +631,7 @@ content blocks (like pages) to summarize content or focus readers.&lt;/p&gt;
              <h4 style="border-bottom:none !important;margin-top:50px;">h4</h4>
              <p>p</p>
 
-             <div class='alert alert-default' role='alert' style="margin-top:65px;">
+             <div class='alert alert-default' role='alert' style="margin-top:60px;">
                 <p>Alert</p>
              </div>
 
@@ -581,7 +656,7 @@ content blocks (like pages) to summarize content or focus readers.&lt;/p&gt;
              <h6 style="margin-top: 50px;">h6</h6>
              <p>p</p>
 
-             <h5 style="margin-top: 45px;">h5</h5>
+             <h5 style="margin-top: 50px;">h5</h5>
              <p>p</p>
 
              <h5 style="margin-top: 45px;">h5</h5>
@@ -634,6 +709,9 @@ content blocks (like pages) to summarize content or focus readers.&lt;/p&gt;
                 <p>A large descriptive terminology has been developed to critique the qualities of style. These are interpretive in nature, and overlap broadly with figures of speech or the virtues and levels of style.</p>
                 <h5>Figures of Speech</h5>
                 <p>Sometimes considered part of "ornateness" (one of the Virtues of Style), and sometimes taken to represent the whole of rhetoric, the rhetorical figures constitute a vast technical vocabulary naming ways that both ideas and language have been configured.</p>
+
+               <div class='alert alert-info' role='alert'><p><i class='fa fa-info-circle fa-spacer-right' aria-hidden='true'></i>Rhetorical primer excerpted from the <a href="http://rhetoric.byu.edu/" target="_blank"><em>Silva Rhetoricae</em></a>.</p></div>
+
              </div>
 
              <!-- col-xs-9 -->
