@@ -23,6 +23,13 @@
 
    <link rel="stylesheet" href="css/main.css">
 
+   <style type="text/css">
+
+      .determiner {
+         color: #777777;
+      }
+   </style>
+
 </head>
 
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
@@ -160,6 +167,69 @@
 
                   <div class="row">
                      <div class="col-sm-1">
+                        <h1 class='short-round center-block' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #337ab7; opacity:.5;'>0</h1>
+                     </div>
+                     <div class="col-sm-11">
+                        <h2 style="margin-top:50px;">Determine if Guide Should be Created</h2>
+                     </div>
+                  </div>
+
+                  <div class="row">
+
+                     <div class="col-sm-6 col-sm-offset-1" id="create-guide-question">
+                        <!-- q1 ------------------->
+                        <p class="lead text-left determiner" id="q1">Who is the intended audience?</p>
+                        <!-- q2 ------------------->
+                        <p class="lead text-left determiner hidden" id="q2">Do you need to describe and facilitate a process (like this <strong>handbook</strong> does), or simply store large amounts of broadly related data (like an <strong>encyclopedia might)</strong> ?</p>
+                        <!-- q3 ------------------->
+
+                        <!-- q4 ------------------->
+
+                        <!-- q5 ------------------->
+
+                        <!-- q6 ------------------->
+
+                        <!-- q7 ------------------->
+
+                     </div>
+
+                     <div class="col-sm-4">
+                        <p class='text-center' style="margin-top:20px;" id="create-guide-yes-no">
+
+                           <!-- b1 ------------------->
+                           <a style='margin-right: 4px;' role='button' class='btn btn-dim' id='library-personnel'>Library Personnel</a>
+                           <a role='button' class='btn btn-dim' id="nd-personnel">ND Personnel</a>
+                           <!-- b2 ------------------->
+                           <a style='margin-right: 4px;' role='button' class='btn btn-dim hidden' id='handbook-answer'>Handbook</a>
+                           <a role='button' class='btn btn-dim hidden' id='encyclopedia-answer'>Encyclopedia</a>
+                           <!-- b3 ------------------->
+                           <!-- b4 ------------------->
+                           <!-- b5 ------------------->
+                           <!-- b6 ------------------->
+                           <!-- b7 ------------------->
+                        </p>
+                     </div>
+
+
+                     <div class="col-sm-1">
+                        <a role="button" style="text-decoration: none;cursor: pointer; display: block;" id="create-guide-reset"><h1 class='short-round center-block' style='font-size: 18px; height: 45px; width: 45px; padding: 7px; border-radius: 45px; background: #cccccc;' ><i class="fa fa-refresh" aria-hidden="true"></i></h1></a>
+                     </div>
+
+                  </div>
+
+                  <div class="row hidden" id="create-guide-result">
+                     <div class="col-sm-12" id="guide-result">
+                     </div>
+                  </div>
+
+               </div>
+
+
+               <!-- Subject Content --------------------------------------------------->
+               <div class="subject-content hidden">
+
+                  <div class="row">
+                     <div class="col-sm-1">
                         <h1 class='short-round center-block' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #337ab7; opacity:.5;'>1</h1>
                      </div>
                      <div class="col-sm-11">
@@ -281,7 +351,7 @@
 
                   <div class="row">
                      <div class="col-sm-1">
-                        <h1 class='short-round center-block' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #337ab7; opacity:.5;'>1</h1>
+                        <h1 class='short-round center-block' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #337ab7; opacity:.5;'>3</h1>
                      </div>
                      <div class="col-sm-11">
                         <h2 style="margin-top:50px;"> Create a New Guide</h2>
@@ -1104,6 +1174,7 @@
    <script type="text/javascript">
       $(document).ready(function() {
 
+
          // Add and edit the text for the github button https://buttons.github.io/
          $('p.text-right a.github-button').html('GET randal-sean-harrison/guides-handbook');
 
@@ -1162,14 +1233,40 @@
             $('.internal-one-content').addClass('hidden');
          });
 
+         $('#create-guide-reset').click(function() {
+            $('#q1').removeClass('hidden');
+            $('#q2').addClass('hidden');
+            $('#library-personnel').removeClass('hidden');
+            $('#nd-personnel').removeClass('hidden');
+            $('#handbook-answer').addClass('hidden');
+            $('#encyclopedia-answer').addClass('hidden');
 
+            //$('#q3').addClass('hidden');
+            //$('#q4').addClass('hidden');
+            //$('#q5').addClass('hidden');
+            //$('#q6').addClass('hidden');
+         });
+
+      $('#library-personnel').click(function() {
+
+         // write the questions
+         $('#q1').addClass('hidden');
+         $('#q2').removeClass('hidden');
+
+         // write the buttons
+         $('#library-personnel').addClass('hidden');
+         $('#nd-personnel').addClass('hidden');
+         $('#handbook-answer').removeClass('hidden');
+         $('#encyclopedia-answer').removeClass('hidden');
 
       });
+
+      $('#nd-personnel').click(function() {
+      });
+
+   }); // document ready closes
+
    </script>
-   <!-- add the active class to the correct tab and submenu element -->
-
-
-   <!-- js for the gitbub button -->
 
 </body>
 
