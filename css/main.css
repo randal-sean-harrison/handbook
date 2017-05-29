@@ -595,7 +595,7 @@ h5, h6 {
 }
 
 .caption { /* NOTE: Sets the background for the image captions */
-   margin-top: 6px;
+   margin: 6px 0px;
    background: #f7f7f7;
    padding: 10px;
 }
@@ -604,4 +604,8 @@ h5, h6 {
    font-size: 11px !important;
    font-style: italic;
    color: #555555;
+}
+
+code, kbd, pre, samp {
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
 }

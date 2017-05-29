@@ -26,6 +26,26 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atom-one-dark.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>    <script>hljs.initHighlightingOnLoad();</script>
 
+<style tyle="text/css">
+
+/* Adds individual lines to prettyprint */
+ol.linenums{
+    counter-reset:linenumber;
+}
+ol.linenums li{
+    list-style-type:none;
+    counter-increment:linenumber;
+}
+ol.linenums li:before{
+    content: counter(linenumber);
+    float:left;
+    margin-left:-4em;
+    text-align:right;
+    width:3em;
+}
+
+</style>
+
 </head>
 
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="25">
@@ -119,7 +139,7 @@
              <div class="col-md-9" id="rightCol">
                <h2 id="sec0">Code Wells</h2>
 
-               <p>Code Wells are rendered with the <code>&lt;pre&gt;</code> element. Google's Prettify package is used to color-code the output.</p>
+               <p>Code Wells are rendered with the <code>&lt;pre&gt;</code> element. Google's Prettify package is used to color-code the output. Line numbers are added by default. To remove them, simply remove the <code>linenums</code> class.</p>
 
                <div class="alert alert-warning">
                   <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><strong>Please Note</strong><br/>
@@ -129,7 +149,7 @@
 
                <div class="example">
 
-<pre class="prettyprint">
+<pre class="prettyprint linenums">
 // This is sample code ... Replace with your own
 
 $( document ).ready(function() {
@@ -148,7 +168,7 @@ $( document ).ready(function() {
 
 
 <pre class="prettyprint" id="well5">
-&lt;pre class="prettyprint"&gt;
+&lt;pre class="prettyprint linenums"&gt;
 
 // Place your code here. Spacing is preserved...
 
@@ -162,7 +182,7 @@ $( document ).ready(function() {
             <h2 id="sec1">HTML Converter</h2>
             <p>When pasting HTML or any code which uses angle brackets into the <code>&lt;pre&gt;</code> element, you must first replace <code>"&lt;"</code> and <code>"&gt;"</code> with their corresponding HTML entities to render the code properly.</p>
 
-            <p class="alert alert-info"><strong><i class="fa fa-exclamation-circle" aria-hidden="true"></i></strong>This converter will replace <code>"&lt;"</code> and <code>"&gt;"</code> in your HTML and surround it with <code>&lt;pre&gt;</code> tags.</p>
+            <p class="alert alert-default"><strong><i class="fa fa-exclamation-circle" aria-hidden="true"></i></strong>This converter will replace <code>"&lt;"</code> and <code>"&gt;"</code> in your HTML and surround it with <code>&lt;pre&gt;</code> tags.</p>
 
             <form>
                <div class="form-group">
@@ -171,14 +191,15 @@ $( document ).ready(function() {
                </div>
             </form>
 
-         <div style="margin-top:30px;">
+         <div style="margin-top:18px;">
             <button type="button" class="btn btn-default" id="clear-entities">Reset</button>
             <button type="button" class="btn btn-primary" id="generate-entities">Build</button>
-         </div>
-
-            <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#get-entities" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+            <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#get-entities" data-toggle="tooltip" data-placement="bottom" title="copy HTML" style="margin-top: -220px; margin-right: 20px;">
            <i class="fa fa-clipboard" aria-hidden="true"></i>
            </button>
+         </div>
+
+
                </div><!--/right-->
          	</div><!--/row-->
        </div><!--/container-->
@@ -238,7 +259,7 @@ $( document ).ready(function() {
          theHTML = theHTML.replace(/[>]/g, '&gt;');
          theHTML = theHTML.replace(/[<]/g, '&lt;');
 
-         theNewHTML = "<pre class='prettyprint'>" + "\n" + theHTML + "\n" + "</pre>";
+         theNewHTML = "<pre class='prettyprint linenums'>" + "\n" + theHTML + "\n" + "</pre>";
 
          $('#get-entities').val(theNewHTML);
 

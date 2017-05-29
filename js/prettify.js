@@ -41,7 +41,7 @@
  * That's it.  I wanted to keep the API as simple as possible, so there's no
  * need to specify which language the code is in, but if you wish, you can add
  * another class to the {@code <pre>} or {@code <code>} element to specify the
- * language, as in {@code <pre class="prettyprint lang-java">}.  Any class that
+ * language, as in {@code <pre class="prettyprint" lang-java">}.  Any class that
  * starts with "lang-" followed by a file extension, specifies the file type.
  * See the "lang-*.js" files in this directory for code that implements
  * per-language file handlers.
@@ -1614,7 +1614,7 @@ var prettyPrint;
 
             // If the classes includes a language extensions, use it.
             // Language extensions can be specified like
-            //     <pre class="prettyprint lang-cpp">
+            //     <pre class="prettyprint" lang-cpp">
             // the language extension "cpp" is used to find a language handler
             // as passed to PR.registerLangHandler.
             // HTML5 recommends that a language be specified using "language-"
