@@ -407,6 +407,7 @@ pre.prettyprint {
    word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
+
 btn.copier {
    width: 40px;
    height: 40px;
@@ -590,5 +591,17 @@ h5, h6 {
 }
 
 .nd-gold {
-   color: #C99700;   
+   color: #C99700;
+}
+
+.caption { /* NOTE: Sets the background for the image captions */
+   margin-top: 6px;
+   background: #f7f7f7;
+   padding: 10px;
+}
+
+.caption p { /* NOTE: Sets the paragraph inside the image caption div */
+   font-size: 11px !important;
+   font-style: italic;
+   color: #555555;
 }
