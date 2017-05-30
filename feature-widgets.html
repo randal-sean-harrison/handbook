@@ -26,6 +26,9 @@
 
    <style type="text/css">
 
+      .popover {
+         max-width: 90%;
+      }
       .popover-content {
           word-wrap: break-word;
       }
@@ -129,7 +132,7 @@
             <div class="col-md-9" id="rightCol">
                <h2 id="sec0">Google Doc Embed</h2>
 
-               <p>You may embed a Google Doc directly inside a guide box using an iframe. Set the height of your iframe window based on how much of the document you want to show at once, without scrolling.</p>
+               <p>You may embed a Google Doc directly inside a guide box using an iframe. Set the height of your iframe window based on how much of the document you want to show at once without scrolling.</p>
 
                <div class="row">
 
@@ -138,17 +141,28 @@
                      <form>
 
                         <div class="form-group">
-                           <label for="my-doc-id">Document ID </label> <a id="google-doc-popover" tabindex="1" data-html="true" data-trigger="focus" role="button" data-container="body" data-toggle="popover" data-placement="top" data-content="<h5>Share Your Google Doc</h5><hr><p>To share your Google Doc, do the following:</p><ol><li>Open your Google Doc.</li><li>Set your sharing option to 'Anyone on the internet can find and view'.</li><li>Copy your <span style='color:red;font-weight: 500;'>Doc ID</span> from the sharing URL string (see example, below).</li></ol><hr><p>Example of Doc ID:</p><p></p>https://docs.google.com/document/d/ <span style='color:red;font-weight: 500;'>1MPm4fG_RVwwoc3sqQhC_NBjJ_T0eVVGqUBHyS0MSUVY</span>/edit?usp=sharing</p>">
-                           <i class="fa fa-info-circle fa-spacer-left" aria-hidden="true"></i></a>
+                           <label for="my-doc-id">Document ID</label><a id="google-doc-popover" tabindex="1" data-html="true" data-trigger="focus" role="button" data-container="body" data-toggle="popover" data-placement="top" data-content="<h5>Share Your Google Doc</h5><hr><ol><li>Open your Google Doc.</li><li>Set your sharing option to '<strong>Anyone on the internet</strong> can find and view'.</li><li>Copy your <span style='color:red;font-weight: 500;'>Doc ID</span> from the sharing URL string (see example, below).</li></ol><hr><p>Example of Doc ID:<br/><br/><span style='color: #337ab7;'>https://docs.google.com/document/d/</span><span style='color:red;font-weight: 500;'>1MPm4fG_RVwwoc3sqQhC_NBjJ_T0eVVGqUBHyS0MSUVY</span><span style='color: #337ab7;'>/edit?usp=sharing</span></p>"><i class="fa fa-info-circle fa-spacer-left" aria-hidden="true"></i></a>
                            <input type="text" class="form-control" id="my-doc-id" placeholder="1MPm4fG_RVwwoc3sqQhC_NBjJ_T0eVVGqUBHyS0MSUVY">
+                           <a href="https://drive.google.com/drive/my-drive" target="_blank"><small><i class="fa fa-external-link-square fa-spacer-right" /></i>Google Drive</small></a>
                         </div>
 
+                        <div class="form-group" style="margin-top: 20px;">
+                           <label for="google-doc-height">Window Height <small>(pixels)</small></label>
+                           <input type="text" class="form-control" id="google-doc-height" placeholder="1000">
+                        </div>
 
-
-
-
+                        <div style="margin-top: 25px;" class="checkbox">
+                           <label for="print-link">
+                           <input type="checkbox" id="print-link"> Print Document Link
+                           </label>
+                        </div>
 
                      </form>
+
+                     <div style="margin-top:30px;">
+                        <button type="button" class="btn btn-default" id="clearGoogleDocBuilder">Reset</button>
+                        <button type="button" class="btn btn-primary" id="displayGoogleDocBuilder">Build</button>
+                     </div>
 
                   </div>
                   <div class="col-sm-8">
@@ -267,6 +281,25 @@
          $('#google-doc-popover').popover("animation", "true");
 
 
+         $('#clearGoogleDocBuilder').click(function() {
+            location.reload(true);
+         });
+
+
+         $('#displayGoogleDocBuilder').click(function() {
+
+            var myDocID = ('#my-doc-id').val();
+            var gogleDocHeight = ('#google-dog-height').val();
+            var printLink = '';
+
+            var printHeader = '';
+
+            if ($('#print-link').is(':checked')) {
+               printHeader = "<p class='text-center'><i class='fa fa-print' aria-hidden='true'></i><a href=''>Print this document</a></p>";
+            }
+
+
+         });
 
       });
 
