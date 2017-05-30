@@ -168,6 +168,11 @@
                       </label>
                                 </div>
                                 <div class="checkbox">
+                                   <label>
+                       <input type="checkbox" id="checkboxNoBordered"> No Borders
+                    </label>
+                              </div>
+                                <div class="checkbox">
                                     <label>
                         <input type="checkbox" id="checkboxHover"> Hover
                       </label>
@@ -353,27 +358,15 @@
             $('pre').removeClass('prettyprinted');
             prettyPrint();
 
+            $('#numRows').val("1");
+            $('#numCols').val("1");
+
             // ------- Display the table --------------------------
             $('#displayTable').click(function() {
 
 
                var numRows = $('#numRows').val();
                var numCols = $('#numCols').val();
-
-               /* $('#numRows').on('input',function(e){
-                   if numRows == 0 {
-                      $('#numRows').val(1);
-                      return;
-                   }
-               });
-
-               $('#numCols').on('input',function(e){
-                  if numCols == 0 {
-                     $('#numCols').val("1");
-                     return;
-                  }
-               }); */
-
 
                var tableOpen = "<table ";
                var tableClassOpen = "class='table";
@@ -398,12 +391,16 @@
                   tableClassOpen += " table-striped";
                }
 
+               if ($('#checkboxHover').is(':checked')) {
+                  tableClassOpen += " table-hover";
+               }
+
                if ($('#checkboxBordered').is(':checked')) {
                   tableClassOpen += " table-bordered";
                }
 
-               if ($('#checkboxHover').is(':checked')) {
-                  tableClassOpen += " table-hover";
+               if ($('#checkboxNoBordered').is(':checked')) {
+                  tableClassOpen += " table-unbound";
                }
 
                if ($('#checkboxCondensed').is(':checked')) {
@@ -413,7 +410,6 @@
                if ($('#checkboxResponsive').is(':checked')) {
                   tableClassOpen += " table-responsive";
                }
-
 
                // columns
                for (i = 0; i < numCols; i++) {
@@ -448,9 +444,20 @@
 
             // ------- Reset the parameters  --------------------------
             $('#clearTable').click(function() {
-
                location.reload(true);
+            });
 
+            // check the traditional icons checkbox
+            $("#checkboxBordered").click(function() {
+               if ($("#checkboxNoBordered").is(":checked")) { //checks if the checkbox/this is selected or not
+                  $('#checkboxNoBordered').prop("checked", false); //empty the input value
+               }
+            });
+
+            $("#checkboxNoBordered").click(function() {
+               if ($("#checkboxBordered").is(":checked")) { //checks if the checkbox/this is selected or not
+                  $('#checkboxBordered').prop("checked", false); //empty the input value
+               }
             });
 
         });

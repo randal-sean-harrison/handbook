@@ -2,18 +2,13 @@
 
 @import url('fonts/GalaxiePolaris-Medium.woff');
 
-
-
 body {
    position: relative;
    font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 }
 
-table.table-unbound tr td { /* NOTE: Removes borders on tables */
-   border: 0px;
-}
-p, li, td, a, dl, input, textarea, .btn {
+p, li, th, td, a, dl, input, textarea, .btn, {
    font-size: 16px !important;
 }
 
@@ -327,17 +322,18 @@ ul#sidebar li:last-child i {
 }
 
 blockquote p {
-   font-size: 2.5em;
+   font-size: 1em;
    color:#666;
 }
 
 blockquote footer {
-   font-size: .9em;
+   font-size: 1em;
    color:#666;
 }
 
 blockquote footer cite {
    color: #666;
+   font-size: 1em;
 }
 
 
@@ -614,4 +610,10 @@ code, kbd, pre, samp {
    color: #000000;
    background-color: #eeeeee;
    border-color: #cccccc;
+}
+
+.table-unbound tr td,
+.table-unbound thead tr th {
+   border-bottom: none !important;
+   border: 0px !important;
 }

@@ -24,9 +24,12 @@
    <link rel="stylesheet" href="css/main.css">
 
    <style type="text/css">
-
       .determiner {
          color: #777777;
+      }
+
+      #create-guide-result .panel {
+         margin-top: -75px;
       }
    </style>
 
@@ -180,7 +183,7 @@
                         <!-- q1 ------------------->
                         <p class="lead text-left determiner" id="q1">Who is the intended audience?</p>
                         <!-- q2 ------------------->
-                        <p class="lead text-left determiner hidden" id="q2">Do you need to describe and facilitate a process (like this <strong>handbook</strong> does), or simply store large amounts of broadly related data (like an <strong>encyclopedia might)</strong> ?</p>
+                        <p class="lead text-left determiner hidden" id="q2">Do you need to describe and facilitate a process (like this <strong>handbook</strong> does), or simply store large amounts of broadly related data, searchable for easy retrieval (like an <strong>encyclopedia might)</strong> ?</p>
                         <!-- q3 ------------------->
 
                         <!-- q4 ------------------->
@@ -217,8 +220,37 @@
 
                   </div>
 
+<!-- results ----------------------------------------->
                   <div class="row hidden" id="create-guide-result">
-                     <div class="col-sm-12" id="guide-result">
+                     <div class="col-sm-8 col-sm-offset-1">
+
+                        <div id="encyclopedia-result" class="hidden">
+                           <div class='panel panel-warning'>
+                              <div class='panel-heading'>
+                                 <h5 class='panel-title'>Result</h5></div>
+                              <div class='panel-body'>
+                                 <p class="lead">Different platforms have different strengths with regard to organizing data. Guides are best for instructional purposes which take advantage of multiple modes of delivery, so in this case, a Guide <em>may not</em> be the best solution. Please <a style="font-size:100% !important;" class="lead" href="help.html">consult with the LMT</a> to determine the best platform for your needs.</p>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div id="handbook-result" class="hidden">
+                           <div class='panel panel-success'>
+                              <div class='panel-heading'>
+                                 <h5 class='panel-title'>Result</h5></div>
+                              <div class='panel-body'>
+                                 <p class="lead">Sounds like you're creating an internal guide. Because Internal Guides are private to Library employees, they are not bound by style or organization standards. You have two options for internal guides:</p>
+                                 <ul>
+                                    <li style="font-size: 21px !important;"><a class="lead" style="font-size: 21px !important;" href="guide-internal-one.html">One Column template</a><br/>
+                                       Left navigation, 1 content column</li>
+                                    <li style="font-size: 21px !important;"><a class="lead" style="font-size: 21px !important;" href="guide-internal-many.html">Multiple Column template</a><br/>
+                                       Tabbed navigation, up to 4 content columns
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+
                      </div>
                   </div>
 
@@ -1240,6 +1272,9 @@
             $('#nd-personnel').removeClass('hidden');
             $('#handbook-answer').addClass('hidden');
             $('#encyclopedia-answer').addClass('hidden');
+            $('#encyclopedia-result').addClass('hidden');
+            $('#create-guide-result').addClass('hidden');
+
 
             //$('#q3').addClass('hidden');
             //$('#q4').addClass('hidden');
@@ -1247,25 +1282,44 @@
             //$('#q6').addClass('hidden');
          });
 
-      $('#library-personnel').click(function() {
+         $('#library-personnel').click(function() {
 
-         // write the questions
-         $('#q1').addClass('hidden');
-         $('#q2').removeClass('hidden');
+            // write the questions
+            $('#q1').addClass('hidden');
+            $('#q2').removeClass('hidden');
 
-         // write the buttons
-         $('#library-personnel').addClass('hidden');
-         $('#nd-personnel').addClass('hidden');
-         $('#handbook-answer').removeClass('hidden');
-         $('#encyclopedia-answer').removeClass('hidden');
+            // write the buttons
+            $('#library-personnel').addClass('hidden');
+            $('#nd-personnel').addClass('hidden');
+            $('#handbook-answer').removeClass('hidden');
+            $('#encyclopedia-answer').removeClass('hidden');
 
-      });
+         });
 
-      $('#nd-personnel').click(function() {
-      });
+         $('#handbook-answer').click(function() {
 
-   }); // document ready closes
+            $('#create-guide-result').removeClass('hidden');
+            $('#handbook-answer').addClass('hidden');
+            $('#encyclopedia-answer').addClass('hidden');
+            $('#q2').addClass('hidden');
+            $('#handbook-result').removeClass('hidden');
 
+
+         });
+
+         $('#encyclopedia-answer').click(function() {
+
+            $('#create-guide-result').removeClass('hidden');
+            $('#encyclopedia-result').removeClass('hidden');
+            $('#handbook-answer').addClass('hidden');
+            $('#encyclopedia-answer').addClass('hidden');
+            $('#q2').addClass('hidden');
+         });
+
+
+         $('#nd-personnel').click(function() {});
+
+      }); // document ready closes
    </script>
 
 </body>
