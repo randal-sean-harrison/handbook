@@ -119,11 +119,46 @@
             <div class="col-md-9" id="rightCol">
                <h2 id="sec0">Uploading Images</h2>
 
-               <p>The first step in embedding images is to upload the image to your image repository.</p>
+               <p>The first step in embedding your images is to upload them to the LibGuides image repository.</p>
 
+               <div class="row">
+               <div class="col-sm-5">
+
+                  <h3>Steps</h3>
+                  <table class="table numbered-steps" cellspacing="4" style="margin-left:30px;width:90%;">
+                     <tbody>
+                        <tr>
+                           <td style="width:38px;">1</td>
+                           <td>Navigate to <a href="https://nd.libapps.com/libguides/image_manager.php">Your Image Repository</a></td>
+                        </tr>
+                        <tr>
+                           <td>2</td>
+                           <td>Choose <strong>Personal</strong> or <strong>Shared</strong> library</td>
+                        </tr>
+                        <tr>
+                           <td>3</td>
+                           <td><strong>Choose</strong> / <strong>Create</strong> a folder</td>
+                        </tr>
+                        <tr>
+                           <td>4</td>
+                           <td>Upload the image</td>
+                        </tr>
+                        <tr>
+                           <td>5</td>
+                           <td>View / Copy the Image URL</td>
+                        </tr>
+                     </tbody>
+                  </table>
+
+
+               </div>
+               <div class="col-sm-7">
+
+               </div>
+            </div>
 
                <h2 id="sec1">Image Builder</h2>
-               <p>The Image Builder offers improved clarity and flexibility over the system dialog for embedding images.</p>
+               <p>For simple image/text combinations, the Image Builder is more mobile-friendly, and offers improved clarity and flexibility than the system dialog for embedding images.</p>
 
                <div class="row"></div>
 
@@ -140,8 +175,11 @@
 
 
                      <div class="form-group">
-                        <label for="alt-text">Alt-text </label> <a id="alt-text-popover" tabindex="2" data-html="true" data-trigger="focus" role="button" data-container="body" data-toggle="popover" data-placement="top" data-content="<h5>Alt-text describes your image for the visually impaired.</h5><hr><p>Be sure to describe images which matter to the content on the page. For purely decorative images which add no meaning, leave this field blank.</p><p><a href='http://webaim.org/techniques/alttext/' target='_blank'><i class='fa fa-external-link-square fa-spacer-right' aria-hidden='true'></i>Read more about alt-text</a></p>"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
-                        <input type="text" class="form-control" id="image-alt-text" placeholder="Portrait, U.S. President">
+                        <label for="alt-text">Alt-text </label> <a id="alt-text-popover" tabindex="2" data-html="true" data-trigger="focus" role="button" data-container="body" data-toggle="popover" data-placement="top" data-content="<h5>Alt-text describes your image for the visually impaired.</h5><hr><p>Be sure to describe images which matter to the content on the page. For purely decorative images which add no meaning, leave this field blank.</p><p><a href='http://webaim.org/techniques/alttext/' target='_blank'><i class='fa fa-external-link-square fa-spacer-right' aria-hidden='true'></i>Read more about alt-text</a></p>">
+                        <i
+                           class="fa fa-info-circle" aria-hidden="true"></i>
+                           </a>
+                           <input type="text" class="form-control" id="image-alt-text" placeholder="Portrait, U.S. President">
                      </div>
 
 
@@ -189,7 +227,7 @@
 
 
 
-<pre class="prettyprint" id="simple-image-code">
+                     <pre class="prettyprint" id="simple-image-code">
 </pre>
 
                   </div>
@@ -242,10 +280,10 @@
    <script src="https://www.w3schools.com/lib/w3data.js"></script>
 
 
-           <div class="row">
-            <div class="col-sm-3"></div>
-            <div class="col-sm-9"></div>
-           </div>
+   <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-9"></div>
+   </div>
 
 
    <!-- includes for Google's code highlighter 'prettyprint' -->
@@ -287,17 +325,17 @@
 
             switch (imageShape) {
                case 'rectangle-rounded':
-                    imageAddedClasses += " img-rounded";
-                    break;
+                  imageAddedClasses += " img-rounded";
+                  break;
                case 'circle':
-                     imageAddedClasses += " img-circle";
-                    break;
+                  imageAddedClasses += " img-circle";
+                  break;
                case 'rectangle-bordered':
-                    imageAddedClasses += " img-thumbnail";
-                    break;
+                  imageAddedClasses += " img-thumbnail";
+                  break;
                case 'rectangle':
-                    imageAddedClasses += "";
-                    break;
+                  imageAddedClasses += "";
+                  break;
             }
 
             var captionDiv = '';
@@ -306,22 +344,24 @@
                captionDiv = "<div class='caption'>" + imageCaption + "</div>";
             }
 
-            var imageCore = '<img class="img img-responsive center-block' + imageAddedClasses + '" src="' + imageURL +'" alt="' + imageAltText + '" />';
+            var imageCore = '<img class="img img-responsive center-block' + imageAddedClasses + '" src="' + imageURL + '" alt="' + imageAltText + '" />';
 
             switch (imageAlignment) {
-                case 'left-most':
-                    divOneOpen = "<div class='col-sm-3'>" + imageCore + captionDiv;
-                    divTwoOpen = "<div class='col-sm-9'><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit repudiandae architecto doloribus eligendi facilis totam eius quis, error veniam maxime aspernatur eos omnis reprehenderit, ab provident natus magni corporis, dignissimos.</p>";
-                    break;
-                case 'right-most':
-                     divOneOpen = "<div class='col-sm-9'><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit repudiandae architecto doloribus eligendi facilis totam eius quis, error veniam maxime aspernatur eos omnis reprehenderit, ab provident natus magni corporis, dignissimos.</p>";
-                     divTwoOpen = "<div class='col-sm-3'>" + imageCore + captionDiv;
-                 break;
+               case 'left-most':
+                  divOneOpen = "<div class='col-sm-3'>" + imageCore + captionDiv;
+                  divTwoOpen =
+                     "<div class='col-sm-9'><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit repudiandae architecto doloribus eligendi facilis totam eius quis, error veniam maxime aspernatur eos omnis reprehenderit, ab provident natus magni corporis, dignissimos.</p>";
+                  break;
+               case 'right-most':
+                  divOneOpen =
+                     "<div class='col-sm-9'><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit repudiandae architecto doloribus eligendi facilis totam eius quis, error veniam maxime aspernatur eos omnis reprehenderit, ab provident natus magni corporis, dignissimos.</p>";
+                  divTwoOpen = "<div class='col-sm-3'>" + imageCore + captionDiv;
+                  break;
             }
 
 
 
-            var bsImage = openRow + divOneOpen + closeDiv +  divTwoOpen + closeDiv + closeDiv;
+            var bsImage = openRow + divOneOpen + closeDiv + divTwoOpen + closeDiv + closeDiv;
 
             // Write the image
             $("#simple-example-image").html(bsImage);

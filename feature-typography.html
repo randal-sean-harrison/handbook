@@ -281,9 +281,13 @@
                <h2 id="sec2">Links</h2>
                <p>Links are the way we help users&mdash;including users with visual impairment&mdash;easily, efficiently reach important resources. For that reason it's important to <a href="help-web-writing.html#sec2">make links meaningful</a>.</p>
 
+               <div class='alert alert-info' role='alert'>
+                  <p><strong><i class="fa fa-exclamation-circle" aria-hidden="true"></i>All Links Open in New Window/Tab by Default</strong><br/>You may force a new page to load in the current window by <a href="help-faq.html">setting your link's target property in the WYSIWYG editor</a>. In HTML, adding the attribute <code>target="_self"</code> to any link will open the destination URL in a new window.</p>
+               </div>
+
                <div class="example">
 
-                  <p>Remember: To supercharge your Guides... <a target="_blank">Read the Handbook!</a></p>
+                  <p>Remember: To supercharge your Guides... <a target="_self">Read the Handbook!</a></p>
 
                </div>
                <div class="well">
@@ -295,16 +299,12 @@
 
                   <pre class="prettyprint" id="well7a">
 &lt;p&gt;Remember: To supercharge your guides...
-   &lt;a href="handbook.html" target="_blank"&gt;Read the Handbook!&lt;/a&gt;
+   &lt;a href="handbook.html" target="_self"&gt;Read the Handbook!&lt;/a&gt;
 &lt;/p&gt;
 </pre>
 
                </div>
                <!-- example closes -->
-
-               <div class='alert alert-info' role='alert'>
-                  <p><strong><i class="fa fa-code" aria-hidden="true"></i>Coding Pro Tip</strong><br/>Adding the attribute <code>target="_blank"</code> to any link will open the destination URL in a new window.</p>
-               </div>
 
                <h5 style="margin-top: 40px;">System Component Links vs. Rich Text Box Links</h5>
                <p>However, there are 2 distinct ways to add links in guides (and the difference is important). </p>
@@ -353,7 +353,7 @@
                               <p><i class='fa fa-chain-broken fa-spacer-right' aria-hidden='true'></i>No easy way to find broken links within Rich Text boxes. Onus on the guide author to ensure all links work.</p>
                            </div>
                            <div class='alert alert-success' role='alert'>
-                              <p><i class='fa fa-star fa-spacer-right' aria-hidden='true'></i>These link types far more customizable and flexible than system components.</p>
+                              <p><i class='fa fa-star fa-spacer-right' aria-hidden='true'></i>These link types are far more customizable and flexible than system components.</p>
                            </div>
 
                         </td>

@@ -2,186 +2,340 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hesburgh Libraries &middot; Library Guides Handbook &middot; Writing for the Web</title>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Hesburgh Libraries &middot; Library Guides Handbook &middot; Writing for the Web</title>
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+   <!-- Bootstrap -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+   <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+   <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
 
-    <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/main.css">
 
+   <style type="text/css">
+      .determiner {
+         color: #777777;
+      }
+
+      #create-guide-result .panel {
+         margin-top: -75px;
+      }
+   </style>
 
 </head>
 
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
 
-    <!-- header ----------------------------->
+   <!-- header ----------------------------->
 
-    <div class="brand-bar container-fluid">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="hidden-xs col-sm-6 col-md-6 col-lg-6">
-                    <a href="http://www.nd.edu">University <i>of</i> Notre Dame</a>
-                </div>
-                <div class="text-center col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
-                    <a href="http://www.nd.edu">University <i>of</i> Notre Dame</a>
-                </div>
-                <div class="hidden-xs col-sm-6 col-md-6 col-lg-6 text-right">
-                    <a href="https://provost.nd.edu/">Office <i>of the</i>  Provost</a>
-                </div>
-                <div class="text-center col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl text-center">
-                    <a class="brand-bar-bottom-padded" href="https://provost.nd.edu/">Office <i>of the</i>  Provost</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid">
-        <div class="row" id="nd-libguides-header-pattern">
+   <div class="brand-bar container-fluid">
+      <div class="container-fluid">
+         <div class="row">
             <div class="hidden-xs col-sm-6 col-md-6 col-lg-6">
-                <h1 id="hesburgh-libraries"><a href="http://library.nd.edu" target="_blank">HESBURGH <span style="color:#F8E999;">LIBRARIES</span></a></h1>
+               <a href="http://www.nd.edu">University <i>of</i> Notre Dame</a>
             </div>
-            <div class="hidden-xs col-sm-6 col-md-6 col-lg-6">
-                <h1 style="opacity:.6;text-align:right;">Guides Handbook</h1>
+            <div class="text-center col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
+               <a href="http://www.nd.edu">University <i>of</i> Notre Dame</a>
             </div>
-            <div class="col-xs-12 text-center hidden-sm hidden-md hidden-lg">
-                <h1><a href="http://library.nd.edu" target="_blank">HESBURGH <span style="color:#F8E999;margin-bottom:10px;">LIBRARIES</span></a></h1>
+            <div class="hidden-xs col-sm-6 col-md-6 col-lg-6 text-right">
+               <a href="https://provost.nd.edu/">Office <i>of the</i>  Provost</a>
             </div>
-            <div class="col-xs-12 text-center hidden-sm hidden-md hidden-lg">
-                <h1 style="opacity:.6;text-align:center;">Guides Handbook</h1>
+            <div class="text-center col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl text-center">
+               <a class="brand-bar-bottom-padded" href="https://provost.nd.edu/">Office <i>of the</i>  Provost</a>
             </div>
-        </div>
-    </div>
+         </div>
+      </div>
+   </div>
 
-    <!-- header closes ----------------------------->
+   <div class="container-fluid">
+      <div class="row" id="nd-libguides-header-pattern">
+         <div class="hidden-xs col-sm-6 col-md-6 col-lg-6">
+            <h1 id="hesburgh-libraries"><a href="http://library.nd.edu" target="_blank">HESBURGH <span style="color:#F8E999;">LIBRARIES</span></a></h1>
+         </div>
+         <div class="hidden-xs col-sm-6 col-md-6 col-lg-6">
+            <h1 style="opacity:.6;text-align:right;">Guides Handbook</h1>
+         </div>
+         <div class="col-xs-12 text-center hidden-sm hidden-md hidden-lg">
+            <h1><a href="http://library.nd.edu" target="_blank">HESBURGH <span style="color:#F8E999;margin-bottom:10px;">LIBRARIES</span></a></h1>
+         </div>
+         <div class="col-xs-12 text-center hidden-sm hidden-md hidden-lg">
+            <h1 style="opacity:.6;text-align:center;">Guides Handbook</h1>
+         </div>
+      </div>
+   </div>
 
-    <!-- Main Content ----------------------------->
+   <!-- header closes ----------------------------->
 
-    <div class="container" id="main-container">
+   <!-- Main Content ----------------------------->
 
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 text-right">
-                <a class="btn btn-default help-button" href="https://nd.libapps.com/libapps/login.php" role="button" target="_blank"><i class="fa fa-lock fa-spacer-right" aria-hidden="true"></i> LibGuides Login</a>
+   <div class="container" id="main-container">
 
-<a class="btn btn-default help-button" href="http://libguides.library.nd.edu/reusableassets" role="button" target="_blank"><i class="fa fa-list-alt fa-spacer-right" aria-hidden="true"></i>Reusable Assets</a>
+      <div class="row">
+         <div class="col-xs-12 col-sm-12 col-md-12 text-right">
+            <a class="btn btn-default help-button" href="https://nd.libapps.com/libapps/login.php" role="button" target="_blank"><i class="fa fa-lock fa-spacer-right" aria-hidden="true"></i> LibGuides Login</a>
 
-            </div>
+            <a class="btn btn-default help-button" href="http://libguides.library.nd.edu/reusableassets" role="button" target="_blank"><i class="fa fa-list-alt fa-spacer-right" aria-hidden="true"></i>Reusable Assets</a>
 
-        </div>
+         </div>
 
-        <div class="page-header">
+      </div>
 
-           <div w3-include-html="navmenu.html"></div>
+      <div class="page-header">
 
-        </div>
-        <!-- page header closes -->
+         <div w3-include-html="navmenu.html"></div>
 
-        <div id="masthead">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h1>Should I Create a Guide?</h1>
-                        <p class="lead">Carefully consider the use cases and instructional goals of your proposed Guide.</p>
-                    </div>
-                </div>
-            </div>
-            <!--/container-->
-        </div>
-        <!--/masthead-->
+      </div>
+      <!-- page header closes -->
 
-
-        <div class="container">
-
+      <div id="masthead">
+         <div class="container">
             <div class="row">
+               <div class="col-md-12">
+                  <h1>Should I Create a Guide?</h1>
+                  <p class="lead">Before you begin, consider the use cases and instructional goals of your proposed guide.</p>
+               </div>
+            </div>
+         </div>
+         <!--/container-->
+      </div>
+      <!--/masthead-->
 
 
-                <!--right column-->
-                <div class="col-xs-12 col-sm-12" id="rightCol" style="margin-top:-20px;">
+      <div class="container">
 
-                    <h2 id="sec0">Content Creation Decision Tree</h2>
+         <div class="row">
 
-                     <!-- From Julie's lucidchart https://www.lucidchart.com/documents/edit/5e449c8f-0328-4e09-81e7-880a777873b0?shared=true&
-                     -->
-                     <div class="embed-responsive embed-responsive-16by9" style="margin-top: 30px;">
-                     <iframe allowfullscreen class="embed-responsive-item" src="https://www.lucidchart.com/documents/embeddedchart/5e449c8f-0328-4e09-81e7-880a777873b0" id="lf_Z0uJQuebE"></iframe>
+
+            <!--right column-->
+            <div class="col-xs-12 col-sm-12" id="rightCol" style="margin-top:-20px;">
+
+               <h2 id="sec0">Decision Assistant</h2>
+
+
+               <!-- Subject Content --------------------------------------------------->
+
+               <div class="row">
+                  <div class="col-sm-6 col-sm-offset-1" id="create-guide-question">
+                     <!-- q1 ------------------->
+                     <p class="lead text-left determiner" id="q1">Who is the intended audience?</p>
+                     <!-- q2 ------------------->
+                     <p class="lead text-left determiner hidden" id="q2">Do you need to describe and facilitate a process (like this <strong>handbook</strong> does), or simply store large amounts of broadly related data, searchable for easy retrieval (like an <strong>encyclopedia might)</strong> ?</p>
+                     <!-- q3 ------------------->
+
+                     <!-- q4 ------------------->
+
+                     <!-- q5 ------------------->
+
+                     <!-- q6 ------------------->
+
+                     <!-- q7 ------------------->
+
+                  </div>
+
+                  <div class="col-sm-4">
+                     <p class='text-center' style="margin-top:20px;" id="create-guide-yes-no">
+
+                        <!-- b1 ------------------->
+                        <a style='margin-right: 4px;' role='button' class='btn btn-dim' id='library-personnel'>Library Personnel</a>
+                        <a role='button' class='btn btn-dim' id="nd-personnel">ND Personnel</a>
+                        <!-- b2 ------------------->
+                        <a style='margin-right: 4px;' role='button' class='btn btn-dim hidden' id='handbook-answer'>Handbook</a>
+                        <a role='button' class='btn btn-dim hidden' id='encyclopedia-answer'>Encyclopedia</a>
+                        <!-- b3 ------------------->
+                        <!-- b4 ------------------->
+                        <!-- b5 ------------------->
+                        <!-- b6 ------------------->
+                        <!-- b7 ------------------->
+                     </p>
                   </div>
 
 
-                </div>
-                <!--/right-->
+                  <div class="col-sm-1">
+                     <a role="button" style="text-decoration: none;cursor: pointer; display: block;" id="create-guide-reset"><h1 class='short-round center-block' style='font-size: 18px; height: 45px; width: 45px; padding: 7px; border-radius: 45px; background: #cccccc;' ><i class="fa fa-refresh" aria-hidden="true"></i></h1></a>
+                  </div>
+
+               </div>
+
+               <!-- results ----------------------------------------->
+               <div class="row hidden" id="create-guide-result">
+                  <div class="col-sm-8 col-sm-offset-1">
+
+                     <div id="encyclopedia-result" class="hidden">
+                        <div class='panel panel-warning'>
+                           <div class='panel-heading'>
+                              <h5 class='panel-title'>Result</h5></div>
+                           <div class='panel-body'>
+                              <p class="lead">Different platforms have different strengths with regard to organizing data. Guides are best for instructional purposes which take advantage of multiple modes of delivery, so in this case, a Guide <em>may not</em> be the
+                                 best solution. Please <a style="font-size:100% !important;" class="lead" href="help.html">consult with the LMT</a> to determine the best platform for your needs.</p>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div id="handbook-result" class="hidden">
+                        <div class='panel panel-success'>
+                           <div class='panel-heading'>
+                              <h5 class='panel-title'>Result</h5></div>
+                           <div class='panel-body'>
+                              <p class="lead">Sounds like you're creating an internal guide. Because Internal Guides are private to Library employees, they are not bound by style or organization standards. You have two options for internal guides:</p>
+                              <ul>
+                                 <li style="font-size: 21px !important;"><a class="lead" style="font-size: 21px !important;" href="guide-internal-one.html">One Column template</a><br/> Left navigation, 1 content column</li>
+                                 <li style="font-size: 21px !important;"><a class="lead" style="font-size: 21px !important;" href="guide-internal-many.html">Multiple Column template</a><br/> Tabbed navigation, up to 4 content columns
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+
+
+
+
+               <!-- Flowchart embed -------------------------------------------->
+
+               <h2 id="sec0">Decision Tree</h2>
+
+               <!-- From Julie's lucidchart https://www.lucidchart.com/documents/edit/5e449c8f-0328-4e09-81e7-880a777873b0?shared=true&
+                     -->
+               <div class="embed-responsive embed-responsive-16by9" style="margin-top: 30px;">
+                  <iframe allowfullscreen class="embed-responsive-item" src="https://www.lucidchart.com/documents/embeddedchart/5e449c8f-0328-4e09-81e7-880a777873b0" id="lf_Z0uJQuebE"></iframe>
+               </div>
+
 
             </div>
-            <!--/row-->
+            <!--/right-->
 
-        </div>
-        <!--/container-->
+         </div>
+         <!--/row-->
 
-
-    </div>
-    <!-- .container -->
-
-    <!-- Main Content closes ----------------------------->
-
-    <!-- Footer ----------------------------->
-    <div id="handbook-footer">
-    <div class="container-fluid">
-      <div class="row">
-         <div class="col-xs-12 col-sm-6">
-           <i class="fa fa-copyright" aria-hidden="true"></i><span id="thisYear"></span> University of Notre Dame
-         </div><div class="col-xs-12 col-sm-6">
-     <p class="text-right"><a href="https://github.com/randal-sean-harrison/handbook" target="_blank"><i class="fa fa-github fa-spacer-right" aria-hidden="true"></i>randal-sean-harrison/handbook</a></p>
-  </div></div>
-    </div>
-</div>
+      </div>
+      <!--/container-->
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- Include for the Back to top button -->
-    <script src="js/back-to-top.js"></script>
+   </div>
+   <!-- .container -->
 
-    <!-- Scrollspy / affix js -->
+   <!-- Main Content closes ----------------------------->
+
+   <!-- Footer ----------------------------->
+   <div id="handbook-footer">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-xs-12 col-sm-6">
+               <i class="fa fa-copyright" aria-hidden="true"></i><span id="thisYear"></span> University of Notre Dame
+            </div>
+            <div class="col-xs-12 col-sm-6">
+               <p class="text-right"><a href="https://github.com/randal-sean-harrison/handbook" target="_blank"><i class="fa fa-github fa-spacer-right" aria-hidden="true"></i>randal-sean-harrison/handbook</a></p>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <!-- Include all compiled plugins (below), or include individual files as needed -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <!-- Include for the Back to top button -->
+   <script src="js/back-to-top.js"></script>
+
+   <!-- Scrollspy / affix js -->
    <script src="js/scripts.js"></script>
 
- <!-- html include script -->
- <script src="https://www.w3schools.com/lib/w3data.js"></script>
- <script> w3IncludeHTML(); </script>
+   <!-- html include script -->
+   <script src="https://www.w3schools.com/lib/w3data.js"></script>
+   <script>
+      w3IncludeHTML();
+   </script>
 
-<!-- clipboard.js include -->
-<script src="js/clipboard.min.js"></script>
-
-
- <!-- add the active class to the correct tab and submenu element -->
- <script type="text/javascript">
-
-    $( document ).ready(function() {
-
-      // Add and edit the text for the github button https://buttons.github.io/
-      $('p.text-right a.github-button').html('GET randal-sean-harrison/guides-handbook');
-
-      // Add the active classes to the nav menu
-      $(".navstarted").addClass("active");
-      $(".navflowchart").addClass("active");
-    });
-
-</script>
+   <!-- clipboard.js include -->
+   <script src="js/clipboard.min.js"></script>
 
 
-<!-- js for the gitbub button -->
+   <!-- add the active class to the correct tab and submenu element -->
+   <script type="text/javascript">
+      $(document).ready(function() {
+
+         // Add and edit the text for the github button https://buttons.github.io/
+         $('p.text-right a.github-button').html('GET randal-sean-harrison/guides-handbook');
+
+         // Add the active classes to the nav menu
+         $(".navstarted").addClass("active");
+         $(".navflowchart").addClass("active");
+
+         $('#create-guide-reset').click(function() {
+            $('#q1').removeClass('hidden');
+            $('#q2').addClass('hidden');
+            $('#library-personnel').removeClass('hidden');
+            $('#nd-personnel').removeClass('hidden');
+            $('#handbook-answer').addClass('hidden');
+            $('#encyclopedia-answer').addClass('hidden');
+            $('#encyclopedia-result').addClass('hidden');
+            $('#create-guide-result').addClass('hidden');
+
+
+            //$('#q3').addClass('hidden');
+            //$('#q4').addClass('hidden');
+            //$('#q5').addClass('hidden');
+            //$('#q6').addClass('hidden');
+         });
+
+         $('#library-personnel').click(function() {
+
+            // write the questions
+            $('#q1').addClass('hidden');
+            $('#q2').removeClass('hidden');
+
+            // write the buttons
+            $('#library-personnel').addClass('hidden');
+            $('#nd-personnel').addClass('hidden');
+            $('#handbook-answer').removeClass('hidden');
+            $('#encyclopedia-answer').removeClass('hidden');
+
+         });
+
+         $('#handbook-answer').click(function() {
+
+            $('#create-guide-result').removeClass('hidden');
+            $('#handbook-answer').addClass('hidden');
+            $('#encyclopedia-answer').addClass('hidden');
+            $('#q2').addClass('hidden');
+            $('#handbook-result').removeClass('hidden');
+
+
+         });
+
+         $('#encyclopedia-answer').click(function() {
+
+            $('#create-guide-result').removeClass('hidden');
+            $('#encyclopedia-result').removeClass('hidden');
+            $('#handbook-answer').addClass('hidden');
+            $('#encyclopedia-answer').addClass('hidden');
+            $('#q2').addClass('hidden');
+            $('#handbook-result').addClass('hidden');
+
+         });
+
+
+         $('#nd-personnel').click(function() {});
+
+
+      });
+   </script>
+
+
+   <!-- js for the gitbub button -->
 
 </body>
 
