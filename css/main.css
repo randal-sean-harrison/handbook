@@ -595,15 +595,22 @@ h5, h6 {
 }
 
 .caption { /* NOTE: Sets the background for the image captions */
-   margin: 6px 0px;
-   background: #f7f7f7;
-   padding: 10px;
+   margin: 0px 0px;
+   background: transparent; /*#f7f7f7;*/
+   padding: 10px 5px 2px;
+}
+
+.caption i {
+   color: #777777;
 }
 
 .caption p { /* NOTE: Sets the paragraph inside the image caption div */
-   font-size: 11px !important;
+   font-size: 12px !important;
    font-style: italic;
-   color: #555555;
+   color: #777777;
+   font-weight: 400;
+
+
 }
 
 code, kbd, pre, samp {

@@ -122,288 +122,336 @@
                <p>The first step in embedding your images is to upload them to the LibGuides image repository.</p>
 
                <div class="row">
-               <div class="col-sm-5">
+                  <div class="col-sm-5">
 
-                  <h3>Steps</h3>
-                  <table class="table numbered-steps" cellspacing="4" style="margin-left:30px;width:90%;">
-                     <tbody>
-                        <tr>
-                           <td style="width:38px;">1</td>
-                           <td>Navigate to <a href="https://nd.libapps.com/libguides/image_manager.php">Your Image Repository</a></td>
-                        </tr>
-                        <tr>
-                           <td>2</td>
-                           <td>Choose <strong>Personal</strong> or <strong>Shared</strong> library</td>
-                        </tr>
-                        <tr>
-                           <td>3</td>
-                           <td><strong>Choose</strong> / <strong>Create</strong> a folder</td>
-                        </tr>
-                        <tr>
-                           <td>4</td>
-                           <td>Upload the image</td>
-                        </tr>
-                        <tr>
-                           <td>5</td>
-                           <td><strong>View</strong> / <strong>Copy</strong> the Image URL</td>
-                        </tr>
-                     </tbody>
-                  </table>
+                     <h3>Steps</h3>
+                     <table class="table numbered-steps" cellspacing="4" style="margin-left:30px;width:90%;">
+                        <tbody>
+                           <tr>
+                              <td style="width:38px;">1</td>
+                              <td>Navigate to <a href="https://nd.libapps.com/libguides/image_manager.php">Your Image Repository</a></td>
+                           </tr>
+                           <tr>
+                              <td>2</td>
+                              <td>Choose <strong>Personal</strong> or <strong>Shared</strong> library</td>
+                           </tr>
+                           <tr>
+                              <td>3</td>
+                              <td><strong>Choose</strong> / <strong>Create</strong> a folder</td>
+                           </tr>
+                           <tr>
+                              <td>4</td>
+                              <td>Upload the image</td>
+                           </tr>
+                           <tr>
+                              <td>5</td>
+                              <td><strong>View</strong> / <strong>Copy</strong> the Image URL</td>
+                           </tr>
+                        </tbody>
+                     </table>
 
 
+                  </div>
+                  <div class="col-sm-7">
+
+                  </div>
                </div>
-               <div class="col-sm-7">
 
-               </div>
-            </div>
+               <h2 id="sec1">Image + Text Builder</h2>
+               <p>For simple image/text combinations, the Image Builder is a friendly, simpler alternative to using the system dialog for embedding images.</p>
 
-               <h2 id="sec1">Image Builder</h2>
-               <p>For simple image/text combinations, the Image Builder is more mobile-friendly, and offers improved clarity and flexibility than the system dialog for embedding images.</p>
+               <div class="row">
 
-               <div class="row"></div>
+                  <div class="col-sm-3">
 
-               <div class="col-sm-3">
+                     <form>
 
-                  <form>
-
-                     <label for="button-url">URL</label>
-                     <div class="input-group">
-                        <span class="input-group-addon" id="refresh-button"><i class="fa fa-refresh" aria-hidden="true"></i></span>
-                        <input type="text" class="form-control" id="image-url" placeholder="http://www.url.com" style="width:100%;">
-                     </div>
-                     <p style="margin-left: 6px; margin-top: 0px;" class="text-left"><a href="https://nd.libapps.com/libguides/image_manager.php" target="_blank"><small><i class="fa fa-external-link-square" aria-hidden="true"></i>&nbsp; Your Image Library</small></a></p>
+                        <label for="button-url">URL</label>
+                        <div class="input-group">
+                           <span class="input-group-addon" id="refresh-button"><i class="fa fa-refresh" aria-hidden="true"></i></span>
+                           <input type="text" class="form-control" id="image-url" placeholder="http://www.url.com" style="width:100%;">
+                        </div>
+                        <p style="margin-left: 6px; margin-top: 0px;" class="text-left"><a href="https://nd.libapps.com/libguides/image_manager.php" target="_blank"><small><i class="fa fa-external-link-square" aria-hidden="true"></i>&nbsp; Your Image Library</small></a></p>
 
 
-                     <div class="form-group">
-                        <label for="alt-text">Alt-text </label> <a id="alt-text-popover" tabindex="2" data-html="true" data-trigger="focus" role="button" data-container="body" data-toggle="popover" data-placement="top" data-content="<h5>Alt-text describes your image for the visually impaired.</h5><hr><p>Be sure to describe images which matter to the content on the page. For purely decorative images which add no meaning, leave this field blank.</p><p><a href='http://webaim.org/techniques/alttext/' target='_blank'><i class='fa fa-external-link-square fa-spacer-right' aria-hidden='true'></i>Read more about alt-text</a></p>">
-                        <i
-                           class="fa fa-info-circle" aria-hidden="true"></i>
+                        <div class="form-group">
+                           <label for="alt-text">Alt-text </label> <a id="alt-text-popover" tabindex="2" data-html="true" data-trigger="focus" role="button" data-container="body" data-toggle="popover" data-placement="top" data-content="<h5>Alt-text describes your image for the visually impaired.</h5><hr><p>This text does not show in the page. Be sure to describe images which matter to the content on the page. For purely decorative images which add no meaning, leave this field blank.</p><p><a href='http://webaim.org/techniques/alttext/' target='_blank'><i class='fa fa-external-link-square fa-spacer-right' aria-hidden='true'></i>Read more about alt-text</a></p>">
+                           <i class="fa fa-info-circle" aria-hidden="true"></i>
                            </a>
                            <input type="text" class="form-control" id="image-alt-text" placeholder="Portrait, U.S. President">
-                     </div>
+                        </div>
 
 
-                     <div class="form-group">
-                        <label for="image-caption">Caption </label>
-                        <span class="label label-default" style="margin-left:1em; opacity:.5;"><small>Optional</small></span>
-                        <input type="text" class="form-control" id="image-caption" placeholder="Portrait of the US President">
-                     </div>
+                        <div class="form-group">
+                           <label for="image-caption">Caption </label>
+                           <span class="label label-default" style="margin-left:1em; opacity:.5;"><small>Optional</small></span>
+                           <input type="text" class="form-control" id="image-caption" placeholder="Portrait of the US President">
+                        </div>
 
-                     <label style="margin-top: 0px;" for="alignment">Alignment</label>
-                     <select class="form-control" id="image-alignment">
-                         <option value="left-most">Image on Left</option>
-                         <option value="right-most">Image on Right</option>
-                        </select>
-
-                     <label style="margin-top: 15px;" for="alignment">Shape</label>
-                     <select class="form-control" id="image-shape">
+                        <div class="form-group">
+                           <label for="alignment">Shape</label>
+                           <select class="form-control" id="image-shape">
                             <option value="rectangle" selected="selected">Rectangle</option>
                             <option value="rectangle-rounded">Rectangle (Rounded)</option>
                             <option value="rectangle-bordered">Rectangle (borders)</option>
                             <option value="circle">Circle</option>
                            </select>
+                        </div>
 
-                  </form>
+                        <div class="form-group">
+                           <label for="alignment">Alignment</label>
+                           <select class="form-control" id="image-alignment">
+                         <option value="left-most">Image on Left</option>
+                         <option value="right-most">Image on Right</option>
+                         <option style="opacity:.4" role="separator" disabled="disabled">- - - - - - - - - -</option>
+                         <option value="flow-most-right">Flow Text Right of Image</option>
+                         <option value="flow-most-left">Flow Text Left of Image</option>
+                        </select>
+                     </div>
 
-                  <div style="margin-top:30px;">
-                     <button type="button" class="btn btn-default" id="clearImageBuilder">Reset</button>
-                     <button type="button" class="btn btn-primary" id="displayImageBuilder">Build</button>
-                  </div>
+
+                     <div class="form-group hidden" id="width-hider">
+                        <label for="image-width">Image Width <small>(pixels)</small></label>
+                        <input type="text" class="form-control" id="image-width" placeholder="300">
+                     </div>
 
 
-               </div>
-               <div class="col-sm-9">
+                     </form>
+
+                     <div style="margin-top:30px;">
+                        <button type="button" class="btn btn-default" id="clearImageBuilder">Reset</button>
+                        <button type="button" class="btn btn-primary" id="displayImageBuilder">Build</button>
+                     </div>
 
 
-                  <div class="example" id="simple-example-image">
+                     </div>
+                     <div class="col-sm-9">
 
-                  </div>
 
-                  <div class="well">
+                        <div class="example" id="simple-example-image">
 
-                     <button id="copyButton" class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-image-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                        </div>
+
+                        <div class="well">
+
+                           <button id="copyButton" class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-image-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
                      <i class="fa fa-clipboard" aria-hidden="true"></i>
                      </button>
 
 
 
-                     <pre class="prettyprint" id="simple-image-code">
+                           <pre class="prettyprint" id="simple-image-code">
 </pre>
 
+                        </div>
+                        <!-- example closes -->
+
+                     </div>
+
+                     </div>
+                     <!-- row closes -->
+
+
+
                   </div>
-                  <!-- example closes -->
-
+                  <!--/right-->
                </div>
-               <!-- row closes -->
-
-
-
+               <!--/row-->
             </div>
-            <!--/right-->
+            <!--/container-->
+
+
          </div>
-         <!--/row-->
-      </div>
-      <!--/container-->
+         <!-- .container -->
+
+         <!-- Main Content closes ----------------------------->
 
 
-   </div>
-   <!-- .container -->
+         <!-- Footer ----------------------------->
+         <div id="handbook-footer">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-xs-12 col-sm-6">
+                     <i class="fa fa-copyright" aria-hidden="true"></i><span id="thisYear"></span> University of Notre Dame
+                  </div>
+                  <div class="col-xs-12 col-sm-6">
+                     <p class="text-right"><a href="https://github.com/randal-sean-harrison/handbook" target="_blank"><i class="fa fa-github fa-spacer-right" aria-hidden="true"></i>randal-sean-harrison/handbook</a></p>
+                  </div>
+               </div>
+            </div>
+         </div>
 
-   <!-- Main Content closes ----------------------------->
+
+         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+         <!-- Include all compiled plugins (below), or include individual files as needed -->
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+         <!-- Include for the Back to top button -->
+         <script src="js/back-to-top.js"></script>
+         <!-- Scrollspy / affix js -->
+         <script src="js/scripts.js"></script>
+
+         <!-- html include script -->
+         <script src="https://www.w3schools.com/lib/w3data.js"></script>
 
 
-   <!-- Footer ----------------------------->
-   <div id="handbook-footer">
-      <div class="container-fluid">
          <div class="row">
-            <div class="col-xs-12 col-sm-6">
-               <i class="fa fa-copyright" aria-hidden="true"></i><span id="thisYear"></span> University of Notre Dame
-            </div>
-            <div class="col-xs-12 col-sm-6">
-               <p class="text-right"><a href="https://github.com/randal-sean-harrison/handbook" target="_blank"><i class="fa fa-github fa-spacer-right" aria-hidden="true"></i>randal-sean-harrison/handbook</a></p>
-            </div>
+            <div class="col-sm-3"></div>
+            <div class="col-sm-9"></div>
          </div>
-      </div>
-   </div>
 
 
-   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   <!-- Include all compiled plugins (below), or include individual files as needed -->
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-   <!-- Include for the Back to top button -->
-   <script src="js/back-to-top.js"></script>
-   <!-- Scrollspy / affix js -->
-   <script src="js/scripts.js"></script>
+         <!-- includes for Google's code highlighter 'prettyprint' -->
+         <link rel="stylesheet" type="text/css" href="css/prettify.css">
+         <script type="text/javascript" src="js/prettify.js"></script>
 
-   <!-- html include script -->
-   <script src="https://www.w3schools.com/lib/w3data.js"></script>
+         <script>
+            w3IncludeHTML();
+         </script>
 
+         <!-- clipboard.js include -->
+         <script src="js/clipboard.min.js"></script>
 
-   <div class="row">
-      <div class="col-sm-3"></div>
-      <div class="col-sm-9"></div>
-   </div>
+         <script type="text/javascript">
+            $(document).ready(function() {
 
+               // Add and edit the text for the github button https://buttons.github.io/
+               $('p.text-right a.github-button').html('GET randal-sean-harrison/guides-handbook');
 
-   <!-- includes for Google's code highlighter 'prettyprint' -->
-   <link rel="stylesheet" type="text/css" href="css/prettify.css">
-   <script type="text/javascript" src="js/prettify.js"></script>
+               // Add the active classes to the nav menu
+               $(".navfeatures").addClass("active");
+               $(".navimages").addClass("active");
 
-   <script>
-      w3IncludeHTML();
-   </script>
+               $('#image-alignment').on('change', function() {
 
-   <!-- clipboard.js include -->
-   <script src="js/clipboard.min.js"></script>
-
-   <script type="text/javascript">
-      $(document).ready(function() {
-
-         // Add and edit the text for the github button https://buttons.github.io/
-         $('p.text-right a.github-button').html('GET randal-sean-harrison/guides-handbook');
-
-         // Add the active classes to the nav menu
-         $(".navfeatures").addClass("active");
-         $(".navimages").addClass("active");
-
-         $('#displayImageBuilder').click(function() {
-
-            var imageURL = $('#image-url').val();
-            var imageAltText = $('#image-alt-text').val();
-            var imageCaption = $('#image-caption').val();
-            var imageAlignment = $('#image-alignment').val();
-            var imageShape = $('#image-shape').val();
-
-            var openRow = "<div class='row'>";
-            var closeDiv = "</div>"
-
-            var imageAddedClasses = '';
-
-            var divOne = '';
-            var divTwo = '';
-
-            switch (imageShape) {
-               case 'rectangle-rounded':
-                  imageAddedClasses += " img-rounded";
-                  break;
-               case 'circle':
-                  imageAddedClasses += " img-circle";
-                  break;
-               case 'rectangle-bordered':
-                  imageAddedClasses += " img-thumbnail";
-                  break;
-               case 'rectangle':
-                  imageAddedClasses += "";
-                  break;
-            }
-
-            var captionDiv = '';
-
-            if (imageCaption !== "") {
-               captionDiv = "<div class='caption'>" + imageCaption + "</div>";
-            }
-
-            var imageCore = '<img class="img img-responsive center-block' + imageAddedClasses + '" src="' + imageURL + '" alt="' + imageAltText + '" />';
-
-            switch (imageAlignment) {
-               case 'left-most':
-                  divOneOpen = "<div class='col-sm-3'>" + imageCore + captionDiv;
-                  divTwoOpen =
-                     "<div class='col-sm-9'><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit repudiandae architecto doloribus eligendi facilis totam eius quis, error veniam maxime aspernatur eos omnis reprehenderit, ab provident natus magni corporis, dignissimos.</p>";
-                  break;
-               case 'right-most':
-                  divOneOpen =
-                     "<div class='col-sm-9'><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit repudiandae architecto doloribus eligendi facilis totam eius quis, error veniam maxime aspernatur eos omnis reprehenderit, ab provident natus magni corporis, dignissimos.</p>";
-                  divTwoOpen = "<div class='col-sm-3'>" + imageCore + captionDiv;
-                  break;
-            }
+                  switch ($('#image-alignment').val()) {
+                     case 'flow-most-left':
+                        $('#width-hider').removeClass('hidden');
+                        break;
+                     case 'flow-most-right':
+                        $('#width-hider').removeClass('hidden');
+                        break;
+                     case 'right-most':
+                        $('#width-hider').addClass('hidden');
+                        break;
+                     case 'left-most':
+                        $('#width-hider').addClass('hidden');
+                        break;
+                  }
+               });
 
 
+               $('#displayImageBuilder').click(function() {
 
-            var bsImage = openRow + divOneOpen + closeDiv + divTwoOpen + closeDiv + closeDiv;
+                  var imageURL = $('#image-url').val();
+                  var imageAltText = $('#image-alt-text').val();
+                  var imageCaption = $('#image-caption').val();
+                  var imageAlignment = $('#image-alignment').val();
+                  var imageShape = $('#image-shape').val();
+                  var imageWidth = " width='" + $('#image-width').val() + "'";
 
-            // Write the image
-            $("#simple-example-image").html(bsImage);
-            $('#simple-image-code').text(bsImage);
+                  var openRow = "<div class='row'>";
+                  var closeDiv = "</div>"
 
+                  var imageAddedClasses = '';
 
+                  var divOne = '';
+                  var divTwo = '';
 
-            $('pre').removeClass('prettyprinted');
-            prettyPrint();
+                  switch (imageShape) {
+                     case 'rectangle-rounded':
+                        imageAddedClasses += " img-rounded";
+                        break;
+                     case 'circle':
+                        imageAddedClasses += " img-circle";
+                        break;
+                     case 'rectangle-bordered':
+                        imageAddedClasses += " img-thumbnail";
+                        break;
+                     case 'rectangle':
+                        imageAddedClasses += "";
+                        break;
+                  }
 
-         });
+                  var captionDiv = '';
 
-         $('#refresh-button').click(function() {
-            $('#image-url').val("");
-         });
+                  if (imageCaption !== "") {
+                     captionDiv = "<div class='caption'><i class='fa fa-camera-retro fa-spacer-right pull-left' aria-hidden='true'></i><p>" + imageCaption + "</p></div>";
+                  }
 
-         $('#clearImageBuilder').click(function() {
-            location.reload(true);
-         });
+                  var fillerText =
+                     "<div class='col-sm-9'><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit repudiandae architecto doloribus eligendi facilis totam eius quis, error veniam maxime aspernatur eos omnis reprehenderit, ab provident natus magni corporis, dignissimos.</p>"
+
+                  var flowFillertText =
+                     "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit repudiandae architecto doloribus eligendi facilis totam eius quis, error veniam maxime aspernatur eos omnis reprehenderit, ab provident natus magni corporis, dignissimos.</p>"
+
+                  var imageCore = '<img class="img img-responsive center-block' + imageAddedClasses + '" src="' + imageURL + '" alt="' + imageAltText + '" />';
+
+                  switch (imageAlignment) {
+                     case 'left-most':
+                        divOneOpen = "<div class='col-sm-3'>" + imageCore + captionDiv;
+                        divTwoOpen = fillerText;
+                        break;
+                     case 'right-most':
+                        divOneOpen = fillerText;
+                        divTwoOpen = "<div class='col-sm-3'>" + imageCore + captionDiv;
+                        break;
+                     case 'flow-most-left':
+                        divOneOpen = "";
+                        imageCore = "<div class='pull-right'><img class='img img-responsive center-block" + imageAddedClasses + "' src='" + imageURL + "' alt='" + imageAltText + "' /></div>";
+                        divTwoOpen = "<div class='col-sm-12'>" + imageCore + captionDiv + flowFillerText;
+                        break;
+
+                     case 'flow-most-right':
+                        divOneOpen = "";
+                        imageCore = "<div class='pull-left'><img class='img img-responsive center-block" + imageAddedClasses + "' src='" + imageURL + "' alt='" + imageAltText + "' /></div>";
+                        divTwoOpen = "<div class='col-sm-12'>" + imageCore + captionDiv + flowFillerText;
+                        break;
+                  }
+
+                  var bsImage = openRow + divOneOpen + closeDiv + divTwoOpen + closeDiv + closeDiv;
+
+                  // Write the image
+                  $("#simple-example-image").html(bsImage);
+                  $('#simple-image-code').text(bsImage);
 
 
 
-         // Popovers for the information icons
-         $('#alt-text-popover').popover("animation", "true");
+                  $('pre').removeClass('prettyprinted');
+                  prettyPrint();
 
-      });
+               });
 
+               $('#refresh-button').click(function() {
+                  $('#image-url').val("");
+               });
 
-
-
-      // clipboard button
-      new Clipboard('.btn');
-
-      // tooltips add
-      $(function() {
-         $('[data-toggle="tooltip"]').tooltip()
-      })
-   </script>
-   <!-- add the active class to the correct tab and submenu element -->
+               $('#clearImageBuilder').click(function() {
+                  location.reload(true);
+               });
 
 
-   <!-- js for the gitbub button -->
+
+               // Popovers for the information icons
+               $('#alt-text-popover').popover("animation", "true");
+
+            });
+
+
+
+
+            // clipboard button
+            new Clipboard('.btn');
+
+            // tooltips add
+            $(function() {
+               $('[data-toggle="tooltip"]').tooltip()
+            })
+         </script>
+         <!-- add the active class to the correct tab and submenu element -->
+
+
+         <!-- js for the gitbub button -->
 
 </body>
 
