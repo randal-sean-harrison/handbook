@@ -25,14 +25,13 @@
 
 
    <style type="text/css">
-
       .popover {
          max-width: 90%;
       }
-      .popover-content {
-          word-wrap: break-word;
-      }
 
+      .popover-content {
+         word-wrap: break-word;
+      }
    </style>
 
 
@@ -122,7 +121,7 @@
             <!--left column-->
             <div class="col-md-3 hidden-xs hidden-sm" id="leftCol">
                <ul class="nav nav-stacked" id="sidebar">
-                  <li><a href="#sec0">Google Doc Embed</a></li>
+                  <li><a href="#sec0">Google Suite Embed</a></li>
                   <li class="hidden"><a href="#sec1">Twitter Feed Embed</a></li>
                   <li><a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> &nbsp;Back to top</a></li>
                </ul>
@@ -130,9 +129,9 @@
 
             <!--right column-->
             <div class="col-md-9" id="rightCol">
-               <h2 id="sec0">Google Doc Embed</h2>
+               <h2 id="sec0">Google Suite Embed</h2>
 
-               <p>You may embed a Google Doc directly inside a guide box using an iframe. Set the height of your iframe window based on how much of the document you want to show at once without scrolling.</p>
+               <p>You may embed a Google Doc or Spreadsheet or Slide Presentation directly inside a guide box using an iframe. Set the height of your iframe window based on how much of the document you want to show at once without scrolling.</p>
 
                <div class="row">
 
@@ -141,7 +140,16 @@
                      <form>
 
                         <div class="form-group">
-                           <label for="my-doc-id">Document ID</label><a id="google-doc-popover" tabindex="1" data-html="true" data-trigger="focus" role="button" data-container="body" data-toggle="popover" data-placement="top" data-content="<h5>Share Your Google Doc</h5><hr><ol><li>Open your Google Doc.</li><li>Set your sharing option to '<strong>Anyone on the internet</strong> can find and view'.</li><li>Copy your <span style='color:red;font-weight: 500;'>Doc ID</span> from the sharing URL string (see example, below).</li></ol><hr><p>Example of Doc ID:<br/><br/><span style='color: #337ab7;'>https://docs.google.com/document/d/</span><span style='color:red;font-weight: 500;'>1MPm4fG_RVwwoc3sqQhC_NBjJ_T0eVVGqUBHyS0MSUVY</span><span style='color: #337ab7;'>/edit?usp=sharing</span></p>"><i class="fa fa-info-circle fa-spacer-left" aria-hidden="true"></i></a>
+                           <label for="google-type">Type</label>
+                           <select class="form-control" id="google-type">
+                               <option value="document" selected="selected">Google Docs</option>
+                               <option value="spreadsheets">Google Spreadsheets</option>
+                               <option value="presentation">Google Pages</option>
+                           </select>
+                        </div>
+
+                        <div class="form-group">
+                           <label for="my-doc-id">Document ID</label><a id="google-doc-popover" tabindex="1" data-html="true" data-trigger="focus" role="button" data-container="body" data-toggle="popover" data-placement="top" data-content="<h5>Share Your Google Doc</h5><hr><ol><li>Open your Google doc, spreadsheet, or presentation.</li><li>Set your sharing option to '<strong>Public on the Web | Anyone on the internet</strong> can find and view'.</li><li>Copy your <span style='color:red;font-weight: 500;'>Doc ID</span> from the sharing URL string (see example, below).</li></ol><hr><p>Example of Doc ID:<br/><br/><span style='color: #337ab7;'>https://docs.google.com/document/d/</span><span style='color:red;font-weight: 500;'>1MPm4fG_RVwwoc3sqQhC_NBjJ_T0eVVGqUBHyS0MSUVY</span><span style='color: #337ab7;'>/edit?usp=sharing</span></p>"><i class="fa fa-info-circle fa-spacer-left" aria-hidden="true"></i></a>
                            <input type="text" class="form-control" id="my-doc-id" placeholder="1MPm4fG_RVwwoc3sqQhC_NBjJ_T0eVVGqUBHyS0MSUVY">
                            <a href="https://drive.google.com/drive/my-drive" target="_blank"><small><i class="fa fa-external-link-square fa-spacer-right" /></i>Google Drive</small></a>
                         </div>
@@ -167,7 +175,10 @@
                   </div>
                   <div class="col-sm-8">
 
-                     <div class="example">
+                     <div class="example" id="simple-example-google-doc">
+
+
+                        <p class='text-right'><a href='https://docs.google.com/document/d/1MPm4fG_RVwwoc3sqQhC_NBjJ_T0eVVGqUBHyS0MSUVY/edit' target='_blank'><i class='fa fa-print fa-spacer-right' aria-hidden='true'></i>View / Print this document</a></p>
 
                         <iframe width='100%' height='640' frameborder='0' scrolling='no' class="embed-responsive-item" src='https://docs.google.com/document/d/1MPm4fG_RVwwoc3sqQhC_NBjJ_T0eVVGqUBHyS0MSUVY/preview' allowfullscreen></iframe>
 
@@ -175,19 +186,12 @@
 
                      <div class="well">
 
-                        <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well6" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                        <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-google-doc-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
                         <i class="fa fa-clipboard" aria-hidden="true"></i>
                      </button>
 
-<pre class="prettyprint" id="well6">
-
+<pre class="prettyprint" id="simple-google-doc-code">
 </pre>
-
-
-                        <p>You may also download a <a href="https://docs.google.com/document/d/1MPm4fG_RVwwoc3sqQhC_NBjJ_T0eVVGqUBHyS0MSUVY/preview" target="_blank">print copy (via Google Docs)</a></p>
-
-                        <!-- this is the include for your google docs. Remember to change the height to match the length of your document -->
-
 
                      </div>
                      <!-- example closes -->
@@ -199,29 +203,31 @@
 
 
 
-            <div class="hidden"> <!-- hiding this div --------------->
-               <h2 id="sec1">Twitter Feed Embed</h2>
+               <div class="hidden">
+                  <!-- hiding this div --------------->
+                  <h2 id="sec1">Twitter Feed Embed</h2>
 
-               <p>Lead text should be used sparingly at the beginning of larger content blocks to summarize content or focus readers.</p>
+                  <p>Lead text should be used sparingly at the beginning of larger content blocks to summarize content or focus readers.</p>
 
-               <div class="example">
+                  <div class="example">
 
-                  <p class="lead">Organize and highlight your content with strong typographic hierarchy.</p>
+                     <p class="lead">Organize and highlight your content with strong typographic hierarchy.</p>
 
-               </div>
+                  </div>
 
-               <div class="well">
+                  <div class="well">
 
-                  <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well6" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                     <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-google-doc-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
                   <i class="fa fa-clipboard" aria-hidden="true"></i>
                   </button>
 
-                  <pre class="prettyprint" id="well6">
+                     <pre class="prettyprint" id="simple-google-doc-code">
 </pre>
 
+                  </div>
+                  <!-- example closes -->
                </div>
-               <!-- example closes -->
-            </div> <!-- closing the div for hiding this --->
+               <!-- closing the div for hiding this --->
 
             </div>
             <!-- col-md-9 -->
@@ -260,9 +266,12 @@
    <link rel="stylesheet" type="text/css" href="css/prettify.css">
    <script type="text/javascript" src="js/prettify.js"></script>
 
-
    <!-- html include script -->
    <script src="https://www.w3schools.com/lib/w3data.js"></script>
+
+   <!-- includes for Google's code highlighter 'prettyprint' -->
+   <link rel="stylesheet" type="text/css" href="css/prettify.css">
+   <script type="text/javascript" src="js/prettify.js"></script>
 
    <script>
       w3IncludeHTML();
@@ -278,30 +287,39 @@
          $(".navfeatures").addClass("active");
          $(".navwidgets").addClass("active");
 
-         $('#google-doc-popover').popover("animation", "true");
-
+         $('#print-link').prop('checked', true);
 
          $('#clearGoogleDocBuilder').click(function() {
             location.reload(true);
          });
 
-
          $('#displayGoogleDocBuilder').click(function() {
 
-            var myDocID = ('#my-doc-id').val();
-            var gogleDocHeight = ('#google-dog-height').val();
-            var printLink = '';
-
+            var googleType = $('#google-type').val();
+            var theDocID = $('#my-doc-id').val();
+            var googleDocHeight = $('#google-doc-height').val();
             var printHeader = '';
 
-            if ($('#print-link').is(':checked')) {
-               printHeader = "<p class='text-center'><i class='fa fa-print' aria-hidden='true'></i><a href=''>Print this document</a></p>";
+            if ($('#print-link').is(":checked")) {
+               printHeader = "<p class='text-right'><a href='https://docs.google.com/" + googleType + "/d/" + theDocID + "/edit' target='_blank'><i class='fa fa-print fa-spacer-right' aria-hidden='true'></i>Print this document</a></p>";
             }
 
+            var printDoc = "<iframe width='100%' height='" + googleDocHeight + "' frameborder='0' scrolling='no' class='embed-responsive-item'  src='https://docs.google.com/" + googleType + "/d/" + theDocID + "/preview' allowfullscreen></iframe>";
+
+            var bsGoogleDoc = printHeader + printDoc;
+
+            // Write the image
+            $("#simple-example-google-doc").html(bsGoogleDoc);
+            $('#simple-google-doc-code').text(bsGoogleDoc);
+
+            $('pre').removeClass('prettyprinted');
+            prettyPrint();
 
          });
 
-      });
+
+
+      }); // document ready
 
       // clipboard button
       new Clipboard('.btn');
@@ -309,13 +327,16 @@
       $(function() {
          $('[data-toggle="tooltip"]').tooltip()
       });
-
    </script>
    <!-- add the active class to the correct tab and submenu element -->
 
    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 
    <!-- js for the gitbub button -->
+
+   <script type="text/javascript">
+      $('#google-doc-popover').popover('animation', 'true');
+   </script>
 
 </body>
 
