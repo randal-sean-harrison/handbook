@@ -507,12 +507,17 @@ btn.copier {
 }
 
 table.numbered-steps tr td:first-of-type { /* NOTE: formats the table with steps */
-   padding: 4px;
+   padding: 3px;
    text-align: center;
    vertical-align: middle;
    font-weight: 500;
+   background: #fafafa;
+   color: #666666;
 }
 
+h3.jumbotronic {
+   font-size: 36px !important; 
+}
 
 a#select-success,
 a#select-info,
@@ -627,4 +632,8 @@ code, kbd, pre, samp {
 .table-unbound thead tr th {
    border-bottom: none !important;
    border: 0px !important;
+}
+
+.img-instruct {
+   margin:10px 0px;
 }
