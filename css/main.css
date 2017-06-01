@@ -506,19 +506,6 @@ btn.copier {
     height: 0;
 }
 
-table.numbered-steps tr td:first-of-type { /* NOTE: formats the table with steps */
-   padding: 3px;
-   text-align: center;
-   vertical-align: middle;
-   font-weight: 500;
-   background: #fafafa;
-   color: #666666;
-}
-
-h3.jumbotronic {
-   font-size: 36px !important; 
-}
-
 a#select-success,
 a#select-info,
 a#select-danger,
@@ -599,25 +586,6 @@ h5, h6 {
    color: #C99700;
 }
 
-.caption { /* NOTE: Sets the background for the image captions */
-   margin: 0px 0px;
-   background: transparent; /*#f7f7f7;*/
-   padding: 10px 5px 2px;
-}
-
-.caption i {
-   color: #777777;
-}
-
-.caption p { /* NOTE: Sets the paragraph inside the image caption div */
-   font-size: 12px !important;
-   font-style: italic;
-   color: #777777;
-   font-weight: 400;
-
-
-}
-
 code, kbd, pre, samp {
     font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
 }
@@ -636,4 +604,29 @@ code, kbd, pre, samp {
 
 .img-instruct {
    margin:10px 0px;
+}
+
+.embedded-photo-left {
+   margin: 0px 20px 10px 0px;
+}
+
+.embedded-photo-right {
+   margin: 0px 0px 10px 20px;
+}
+
+div.jumbotron h3 {
+   margin-bottom: 12px !important;
+}
+
+table.numbered-steps tr td:first-of-type { /* NOTE: formats the table with steps */
+   padding: 3px;
+   text-align: center;
+   vertical-align: middle;
+   font-weight: 500;
+   background: #fafafa;
+   color: #666666;
+}
+
+h3.jumbotronic {
+   font-size: 42px !important;
 }

@@ -23,17 +23,11 @@
 
    <link rel="stylesheet" href="css/main.css">
 
-
    <style type="text/css">
-      .popover {
-         max-width: 90%;
-      }
-
-      .popover-content {
-         word-wrap: break-word;
-      }
+      /* Allows the popover to work with the long link */
+      .popover { max-width: 90%; }
+      .popover-content { word-wrap: break-word; }
    </style>
-
 
 
 </head>
@@ -134,7 +128,7 @@
                <p>You may embed a Google Doc or Spreadsheet or Slide Presentation directly inside a guide box using an iframe. Set the height of your iframe window based on how much of the document you want to show at once without scrolling.</p>
 
                <div class="row">
-
+               <div class='alert alert-danger' role='alert'><p><i class='fa fa-times-circle fa-spacer-right' aria-hidden='true'></i>Google Suite embeds HTML inside an <code>iframe</code> element, which is not supported on iPads. Do not use this feature if your users will require access on Apple mobile devices (or any device which doesn't support <code>iframe</code> embedding).</p><br/><p><i class="fa fa-thumbs-up" aria-hidden="true"></i>I am currently investigating HTML5 alternatives to this which will work on mobile. Stay tuned!</p></div>
                   <div class="col-sm-4">
 
                      <form>
