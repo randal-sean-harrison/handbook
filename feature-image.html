@@ -111,6 +111,7 @@
                <ul class="nav nav-stacked" id="sidebar">
                   <li><a href="#sec0">Uploading Images</a></li>
                   <li><a href="#sec1">Image Builder</a></li>
+                  <li><a href="#sec2">Image + Text Builder</a></li>
                   <li><a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> &nbsp;Back to top</a></li>
                </ul>
             </div>
@@ -164,7 +165,11 @@
                   </div>
                </div>
 
-               <h2 id="sec1">Image + Text Builder</h2>
+               <h2 id="sec1">Image Builder</h2>
+
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, ratione. Dolorum labore velit blanditiis veniam ea reiciendis pariatur repellendus maiores officiis omnis, vel est id totam a possimus, reprehenderit deserunt!</p>
+
+               <h2 id="sec2">Image + Text Builder</h2>
                <p>For simple image/text combinations, the Image Builder is a friendly, simpler alternative to using the system dialog for embedding images.</p>
 
                <div class="row">
@@ -182,7 +187,7 @@
 
 
                         <div class="form-group">
-                           <label for="alt-text">Alt-text </label> <a id="alt-text-popover" tabindex="2" data-html="true" data-trigger="focus" role="button" data-container="body" data-toggle="popover" data-placement="top" data-content="<h5>Alt-text describes your image for the visually impaired.</h5><hr><p>This text does not show in the page. Be sure to describe images which matter to the content on the page. For purely decorative images which add no meaning, leave this field blank.</p><p><a href='http://webaim.org/techniques/alttext/' target='_blank'><i class='fa fa-external-link-square fa-spacer-right' aria-hidden='true'></i>Read more about alt-text</a></p>">
+                           <label for="alt-text">Alt-text </label> <a id="alt-text-popover" tabindex="2" data-html="true" data-trigger="focus" role="button" data-container="body" data-toggle="popover" data-placement="top" data-content="<h5>Alt-text describes your image for the visually impaired.</h5><hr><p>This text does not show in the page but describe for screen readers images which matter to the content on the page. For purely decorative images which add no meaning, leave this field blank.</p><p><a href='http://webaim.org/techniques/alttext/' target='_blank'><i class='fa fa-external-link-square fa-spacer-right' aria-hidden='true'></i>Read more about alt-text</a></p>">
                            <i class="fa fa-info-circle" aria-hidden="true"></i>
                            </a>
                            <input type="text" class="form-control" id="image-alt-text" placeholder="Portrait, U.S. President">
@@ -237,17 +242,19 @@
 
                         <div class="example" id="simple-example-image">
 
+                           <div class='row'><div class='col-sm-3'><img class="img img-responsive center-block" src="https://libapps.s3.amazonaws.com/accounts/38465/images/russian-constructivism-art_1-b.jpg" alt="Lilya Brik in A. Rodchenko's famous poster "Against the Current" /><div class='caption'><i class='fa fa-camera-retro fa-spacer-right pull-left' aria-hidden='true'></i><p>Lilya Brik in A. Rodchenko's famous poster 'Against the Current'</p></div></div><div class='col-sm-9'><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit repudiandae architecto doloribus eligendi facilis totam eius quis, error veniam maxime aspernatur eos omnis reprehenderit, ab provident natus magni corporis, dignissimos.</p></div></div>
+
                         </div>
 
                         <div class="well">
 
-                           <button id="copyButton" class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-image-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                           <button style="z-index:10000;" id="copyButton" class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-image-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
                      <i class="fa fa-clipboard" aria-hidden="true"></i>
                      </button>
 
 
-
-                           <pre class="prettyprint" id="simple-image-code">
+<pre class="prettyprint" id="simple-image-code">
+&lt;div class='row'&gt;&lt;div class='col-sm-3'&gt;&lt;img class="img img-responsive center-block" src="https://libapps.s3.amazonaws.com/accounts/38465/images/russian-constructivism-art_1-b.jpg" alt="Lilya Brik in Rodchenko poster" /&gt;&lt;div class='caption'&gt;&lt;i class='fa fa-camera-retro fa-spacer-right pull-left' aria-hidden='true'&gt;&lt;/i&gt;&lt;p&gt;Lilya Brik in A. Rodchenko's famous poster "Against the Current"&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class='col-sm-9'&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit repudiandae architecto doloribus eligendi facilis totam eius quis, error veniam maxime aspernatur eos omnis reprehenderit, ab provident natus magni corporis, dignissimos.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
 </pre>
 
                         </div>
@@ -458,6 +465,8 @@
 
 
          <!-- js for the gitbub button -->
+         <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
 
 </body>
 

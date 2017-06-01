@@ -38,6 +38,10 @@
          margin-right: 10px;
       }
 
+      #simple-example-table > div > div {
+         border: 1px dotted #999999;
+      }
+
    </style>
 
    <!-- includes for Google's code highlighter 'prettyprint' -->
@@ -148,25 +152,25 @@
                          <form id="colForm">
 
                             <label>
-                               <input type="radio" name="cols" value="25-75" id="25-75"> 25 - 75
+                               <input type="radio" name="cols" value="25-75" id="25-75"> 2 columns <small>(25/75)</small>
                             </label>
                             <br/>
                             <label>
-                               <input type="radio" name="cols" value="75-25" id="75-25"> 75 - 25
+                               <input type="radio" name="cols" value="75-25" id="75-25"> 2 columns <small>(75/25)</small>
                             </label>
                             <br/>
                             <label>
-                               <input type="radio" name="cols" value="50-50" id="50-50"> 50 - 50
+                               <input type="radio" name="cols" value="50-50" id="50-50"> 2 columns <small>(50/50)</small>
                             </label>
                             <br/>
                             <label>
-                               <input type="radio" name="cols" value="33-33-33" id="33-33-33"> 33 - 33 - 33
+                               <input type="radio" name="cols" value="33-33-33" id="33-33-33"> 3 columns
                             </label>
                             <label>
-                               <input type="radio" name="cols" value="25-25-25-25" id="25-25-25-25"> 25 - 25 - 25 - 25
+                               <input type="radio" name="cols" value="25-25-25-25" id="25-25-25-25"> 4 columns
                             </label>
                             <label>
-                               <input type="radio" name="cols" value="16-16-16-16-16-16" id="16-16-16-16-16-16"> 16 - 16 - 16 - 16 - 16 - 16
+                               <input type="radio" name="cols" value="16-16-16-16-16-16" id="16-16-16-16-16-16"> 6 columns
                             </label>
 
                          </form>
@@ -181,6 +185,7 @@
                      <div class="col-sm-12 col-md-9">
 
                          <div class="example" id="simple-example-table">
+                            <div class='row'><div class='col-sm-4'>content</div><div class='col-sm-4'>content</div><div class='col-sm-4'>content</div></div>
                          </div>
 
                          <div class="well">
@@ -190,10 +195,17 @@
                   </button>
 
 <pre class="prettyprint" id="simple-table-code">
+&lt;div class='row'&gt;
+   &lt;div class='col-sm-4'&gt;content&lt;/div&gt;
+   &lt;div class='col-sm-4'&gt;content&lt;/div&gt;
+   &lt;div class='col-sm-4'&gt;content&lt;/div&gt;
+&lt;/div&gt;
 </pre>
 
                          </div>
                          <!-- example closes -->
+                         <div class='alert alert-info' role='alert'><p><i class="fa fa-thumb-tack" aria-hidden="true"></i>Columns have no borders by default. The dotted lines above are to help visually display the column structure.</p></div>
+
 
                      </div> <!-- .col -->
 
@@ -203,7 +215,7 @@
 
                  <h2 id="sec1">Images in 3 Columns <span class="badge">Example</span></h2>
 
-                  <p>Images work well when ordered across multiple columns.</p>
+                  <p>Images work well when ordered across multiple columns. To embed images inside of columns, <a href="feature-image.html">use our image builder tool.</a></p>
                  <div class="example">
 
                     <div class='row'>
@@ -290,8 +302,8 @@
 
     $( document ).ready(function() {
 
-      
-   
+
+
 
       $('pre').removeClass('prettyprinted');
       prettyPrint();
@@ -299,6 +311,9 @@
       // Add the active classes to the nav menu
       $(".navfeatures").addClass("active");
       $(".navcolumns").addClass("active");
+
+      //set checked for the 3 column default
+      $('#33-33-33').prop('checked', true);
 
             // ------- Display the Columns --------------------------
             $('#renderCols').click(function() {

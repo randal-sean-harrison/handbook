@@ -353,33 +353,6 @@
                   $('#color-picker').val("#000000")
                });
 
-               $('#button-color').on('change', function() {
-
-                  switch ($('#button-color').val()) {
-                     case '':
-                        $('#button-title-group').addClass('hidden');
-                        $('#button-url-group').addClass('hidden');
-                        break;
-                     case ' btn-primary':
-                        $('#button-title-group').removeClass('hidden');
-                        $('#button-url-group').removeClass('hidden');
-                        break;
-                     case ' btn-success':
-                        $('#button-title-group').removeClass('hidden');
-                        $('#button-url-group').removeClass('hidden');
-                        break;
-                     case ' btn-danger':
-                        $('#button-title-group').removeClass('hidden');
-                        $('#button-url-group').removeClass('hidden');
-                        break;
-                     case ' btn-warning':
-                        $('#button-title-group').removeClass('hidden');
-                        $('#button-url-group').removeClass('hidden');
-                        break;
-
-                  }
-               });
-
 
 
                $('#displayJumbotron').click(function() {
@@ -421,7 +394,32 @@
 
             });
 
+            $('#button-color').on('change', function() {
 
+               switch ($('#button-color').val()) {
+                  case '':
+                     $('#button-title-group').addClass('hidden');
+                     $('#button-url-group').addClass('hidden');
+                     break;
+                  case ' btn-primary':
+                     $('#button-title-group').removeClass('hidden');
+                     $('#button-url-group').removeClass('hidden');
+                     break;
+                  case ' btn-success':
+                     $('#button-title-group').removeClass('hidden');
+                     $('#button-url-group').removeClass('hidden');
+                     break;
+                  case ' btn-danger':
+                     $('#button-title-group').removeClass('hidden');
+                     $('#button-url-group').removeClass('hidden');
+                     break;
+                  case ' btn-warning':
+                     $('#button-title-group').removeClass('hidden');
+                     $('#button-url-group').removeClass('hidden');
+                     break;
+
+               }
+            });
 
             // clipboard button
             new Clipboard('.btn');
