@@ -9,7 +9,7 @@
 
    <!-- Bootstrap -->
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,13 +23,38 @@
    <link rel="stylesheet" href="css/main.css">
 
    <style type="text/css">
-      .determiner {
+
+      .determiner { /* NOTE: colors the questions light grey */
          color: #777777;
       }
 
-      #create-guide-result .panel {
-         margin-top: -75px;
+      .speech-bubbled {
+
       }
+
+      .speech-bubbled:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 40px;;
+        width: 0;
+        height: 0;
+        border: 18px solid transparent;
+        border-right-color: #5bc0de ;
+        border-left: 0;
+        margin-top: -18px;
+        margin-left: -18px;
+      }
+
+      .speech-bubbled {
+         position: relative;
+         padding: 20px;
+         border: 5px solid #5bc0de;
+         -webkit-border-radius: 8px;
+         -moz-border-radius: 8px;
+         border-radius: 8px;
+      }
+
    </style>
 
 </head>
@@ -125,7 +150,43 @@
                <!-- Subject Content --------------------------------------------------->
 
                <div class="row">
-                  <div class="col-sm-6 col-sm-offset-1" id="create-guide-question">
+
+                  <div class="col-sm-1" id="interlocutor">
+
+                     <h1 class='short-round center-block' style='font-size: 42px; height: 105px; width: 105px; padding: 17px; border-radius: 105px; background: #5bc0de;'><i class="fa fa-user-o" aria-hidden="true"></i></h1>
+
+                  </div>
+
+
+                  <div class="col-sm-5 col-sm-offset-1 speech-bubbled" id="create-guide-question">
+
+                     <!-- results ----------------------------------------->
+                     <div class="row hidden" id="create-guide-result">
+                        <div class="col-sm-12">
+
+                           <div id="encyclopedia-result" class="hidden">
+                           <h3>Hmmm...</h3>
+                                    <p class="lead">Different platforms have different strengths with regard to organizing data. Guides are best for instructional purposes which take advantage of multiple modes of delivery, so in this case, a Guide <em>may not</em> be the
+                                       best solution. Please <a style="font-size:100% !important;" class="lead" href="help.html">consult with the LMT</a> to determine the best platform for your needs.</p>
+                           </div>
+
+                           <div id="handbook-result" class="hidden">
+                                    <h3>Hmmm...</h3>
+                                    <p class="lead">Sounds like you're creating an internal guide. Because Internal Guides are private to Library employees, they are not bound by style or organization standards. You have two options for internal guides:</p>
+                                    <ul>
+                                       <li style="font-size: 21px !important;"><a class="lead" style="font-size: 21px !important;" href="guide-internal-one.html">One Column template</a><br/> Left navigation, 1 content column</li>
+                                       <li style="font-size: 21px !important;"><a class="lead" style="font-size: 21px !important;" href="guide-internal-many.html">Multiple Column template</a><br/> Tabbed navigation, up to 4 content columns
+                                       </li>
+                                    </ul>
+                                 </div>
+                           
+                        </div>
+                     </div>
+
+
+               <!-- questions ------------->
+
+
                      <!-- q1 ------------------->
                      <p class="lead text-left determiner" id="q1">Who is the intended audience?</p>
                      <!-- q2 ------------------->
@@ -166,38 +227,7 @@
 
                </div>
 
-               <!-- results ----------------------------------------->
-               <div class="row hidden" id="create-guide-result">
-                  <div class="col-sm-8 col-sm-offset-1">
 
-                     <div id="encyclopedia-result" class="hidden">
-                        <div class='panel panel-warning'>
-                           <div class='panel-heading'>
-                              <h5 class='panel-title'>Result</h5></div>
-                           <div class='panel-body'>
-                              <p class="lead">Different platforms have different strengths with regard to organizing data. Guides are best for instructional purposes which take advantage of multiple modes of delivery, so in this case, a Guide <em>may not</em> be the
-                                 best solution. Please <a style="font-size:100% !important;" class="lead" href="help.html">consult with the LMT</a> to determine the best platform for your needs.</p>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div id="handbook-result" class="hidden">
-                        <div class='panel panel-success'>
-                           <div class='panel-heading'>
-                              <h5 class='panel-title'>Result</h5></div>
-                           <div class='panel-body'>
-                              <p class="lead">Sounds like you're creating an internal guide. Because Internal Guides are private to Library employees, they are not bound by style or organization standards. You have two options for internal guides:</p>
-                              <ul>
-                                 <li style="font-size: 21px !important;"><a class="lead" style="font-size: 21px !important;" href="guide-internal-one.html">One Column template</a><br/> Left navigation, 1 content column</li>
-                                 <li style="font-size: 21px !important;"><a class="lead" style="font-size: 21px !important;" href="guide-internal-many.html">Multiple Column template</a><br/> Tabbed navigation, up to 4 content columns
-                                 </li>
-                              </ul>
-                           </div>
-                        </div>
-                     </div>
-
-                  </div>
-               </div>
 
 
 
@@ -267,8 +297,8 @@
    <script type="text/javascript">
       $(document).ready(function() {
 
-         
-      
+
+
 
          // Add the active classes to the nav menu
          $(".navstarted").addClass("active");

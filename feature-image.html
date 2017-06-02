@@ -10,7 +10,7 @@
    <!-- Bootstrap -->
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -342,6 +342,38 @@
                $(".navimages").addClass("active");
 
 
+               $('#image-alignment').on('change', function() {
+
+                  switch ($('#image-alignment').val()) {
+                     case 'image-only':
+                        $('#image-width').val('');
+                        $('#filler-text').prop('checked', false);
+                        break;
+                     case 'left-most':
+                        $('#image-width').val('275');
+                        $('#filler-text').prop('checked', true);
+                        break;
+                     case 'right most':
+                        $('#image-width').val('275');
+                        $('#filler-text').prop('checked', true);
+                        break;
+                  }
+               });
+
+               $('#filler-text').on('change', function() {
+
+                  if ($('#filler-text').is(':checked')) {
+                     $('#image-width').val('275');
+                     $('#image-alignment').val('left-most');
+                     caption = "<div class='panel-footer hidden'><p><i class='fa fa-camera-retro fa-spacer-right' aria-hidden='true'></i>" + imageCaption + "</p></div>"
+                  } else {
+                     $('#image-width').val('');
+                     $('#image-alignment').val('image-only');
+                     caption = "<div class='panel-footer hidden'><p><i class='fa fa-camera-retro fa-spacer-right' aria-hidden='true'></i>" + imageCaption + "</p></div>"
+                  }
+
+               });
+
                $('#displayImageBuilder').click(function() {
 
                   var imageURL = $('#image-url').val();
@@ -366,38 +398,7 @@
                   }
 
 
-                  $('#image-alignment').on('change', function() {
 
-                     switch ($('#image-alignment').val()) {
-                        case 'image-only':
-                           $('#image-width').val('');
-                           $('#filler-text').prop('checked', false);
-                           break;
-                        case 'left-most':
-                           $('#image-width').val('275');
-                           $('#filler-text').prop('checked', true);
-                           break;
-                        case 'right most':
-                           $('#image-width').val('275');
-                           $('#filler-text').prop('checked', true);
-                           break;
-                     }
-                  });
-
-
-                  $('#filler-text').on('change', function() {
-
-                     if ($('#filler-text').is(':checked')) {
-                        $('#image-width').val('275');
-                        $('#image-alignment').val('left-most');
-                        caption = "<div class='panel-footer hidden'><p><i class='fa fa-camera-retro fa-spacer-right' aria-hidden='true'></i>" + imageCaption + "</p></div>"
-                     } else {
-                        $('#image-width').val('');
-                        $('#image-alignment').val('image-only');
-                        caption = "<div class='panel-footer hidden'><p><i class='fa fa-camera-retro fa-spacer-right' aria-hidden='true'></i>" + imageCaption + "</p></div>"
-                     }
-
-                  });
 
                   /*  Mothballed the image shape option
 
@@ -420,12 +421,12 @@
                         break;
                   } */
 
-                  var imageCore = "<img class='img img-responsive center-block ' src='" + imageURL + "' alt='" + imageAltText + "' />";
+                  var imageCore = "<img class='img img-responsive center-block' src='" + imageURL + "' alt='" + imageAltText + "' />";
 
                   if (imageCaption !== "") {
-                     caption = "<div class='panel-footer'><p><i class='fa fa-camera-retro fa-spacer-right' aria-hidden='true'></i>" + imageCaption + "</p></div>";
+                     caption = "<div class='panel-footer' style='font-size: 15px;'><p><i class='fa fa-camera-retro fa-spacer-right' aria-hidden='true'></i>" + imageCaption + "</p></div>";
                   } else {
-                     caption = "<div class='panel-footer hidden'><p><i class='fa fa-camera-retro fa-spacer-right' aria-hidden='true'></i>" + imageCaption + "</p></div>"
+                     caption = "<div class='panel-footer hidden' style='font-size: 15px;'><p><i class='fa fa-camera-retro fa-spacer-right' aria-hidden='true'></i>" + imageCaption + "</p></div>"
                   }
 
                   var fillerText = '';
@@ -435,8 +436,6 @@
                   } else {
                      fillerText = '';
                   }
-
-
 
                   var alignmentAddedClass = '';
 

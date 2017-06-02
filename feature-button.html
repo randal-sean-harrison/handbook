@@ -10,7 +10,7 @@
    <!-- Bootstrap -->
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -182,8 +182,8 @@
                         </form>
 
                         <div style="margin-top:30px;">
-                           <button style="margin-top: 20px;" type="button" class="btn btn-default" id="clearButton">Reset</button>
-                           <button style="margin-top: 20px;" type="button" class="btn btn-primary" id="renderButton">Build</button>
+                           <button type="button" class="btn btn-default" id="clearButton">Reset</button>
+                           <button type="button" class="btn btn-primary" id="renderButton">Build</button>
                         </div>
 
                      </div>
@@ -312,7 +312,7 @@
             }
 
             // Write the button
-            var bsButton = "<p class='" + buttonAlignment + "'>" + "<a role='button' class='btn" + buttonSize + buttonColor + "' href='" + buttonUrl + "'>" + iconHTML + " " + buttonText + "</a></p>";
+            var bsButton = "<p class='" + buttonAlignment + "'>" + "<a role='button' class='btn" + buttonSize + buttonColor + "' href='" + buttonUrl + "' target='blank'>" + iconHTML + " " + buttonText + "</a></p>";
 
             $("#simple-example-button").html(bsButton);
             $('#simple-button-code').text(bsButton);

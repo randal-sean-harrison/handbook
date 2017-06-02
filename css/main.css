@@ -325,19 +325,26 @@ ul#sidebar li:last-child i {
    margin-bottom:4px;
 }
 
+blockquote {
+   background: #FAFAFA;
+   padding-top: 15px;
+   padding-bottom: 15px;
+}
+
 blockquote p {
-   font-size: 1em;
+   font-size: 15px;
    color:#666;
 }
 
 blockquote footer {
-   font-size: 1em;
+   font-size: 15px;
    color:#666;
 }
 
 blockquote footer cite {
    color: #666;
-   font-size: 1em;
+   font-size: 15px;
+   font-style: normal;
 }
 
 

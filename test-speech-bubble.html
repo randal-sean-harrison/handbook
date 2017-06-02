@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+
+    /* General CSS Setup */
+
+    .speech-bubble {
+    	position: relative;
+    	background: #FFFFFF;
+    	border-radius: 8px;
+      border: 8px solid #5bc0de;
+    }
+
+    .speech-bubble:after {
+    	content: '';
+    	position: absolute;
+    	left: 0;
+    	top: 50%;
+    	width: 0;
+    	height: 0;
+    	border: 22px solid transparent;
+    	border-right-color: #5bc0de;
+    	border-left: 0;
+    	margin-top: -22px;
+    	margin-left: -22px;
+    }
+
+    </style>
+
+
+  </head>
+  <body>
+
+<div class="row">
+   <div class="col-sm-8 col-sm-offset-2">
+
+
+
+      <div class="speech-bubble" style="height: 400px; width: 400px;">
+          <p>This talk-bubble uses .left-in class to show a triangle on the left slightly indented. Still a blocky square.</p>
+      </div>
+
+
+
+   </div> <!-- col md 6 -->
+</div> <!-- row -->
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
+</html>

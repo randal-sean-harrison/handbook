@@ -10,7 +10,7 @@
    <!-- Bootstrap -->
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -25,34 +25,34 @@
 
 
    <style type="text/css">
-      #rightCol h3 {
+      #rightCol .modal-body h3 {
          font-size: 1.75em !important;
          font-weight: 400 !important;
       }
 
-      #rightCol h4 {
+      #rightCol .modal-body h4 {
          font-size: 1.5em !important;
          border-bottom: 1px solid #CCC !important;
          font-weight: 400 !important;
       }
 
-      #rightCol h3,
+      #rightCol .modal-body h3,
       h4 {
          margin: .7em 0em .3em 0em;
       }
 
-      #rightCol h5 {
+      #rightCol .modal-body h5 {
          font-size: 1.2em !important;
          font-weight: 500 !important;
       }
 
-      #rightCol h6 {
+      #rightCol .modal-body h6 {
          font-size: 1.1em !important;
          font-weight: 400 !important;
          font-style: italic !important;
       }
 
-      #rightCol h5,
+      #rightCol .modal-body h5,
       h6 {
          margin: 1.5em 0em .2em 0em;
       }
@@ -164,6 +164,7 @@
                <ul class="nav nav-stacked" id="sidebar">
                   <li><a href="#sec0">Headings</a></li>
                   <li><a href="#sec1">Body Text</a></li>
+                  <li><a href="#sec1a">Labels</a></li>
                   <li><a href="#sec2">Links</a></li>
                   <li><a href="#sec3">Lead Text</a></li>
                   <li><a href="#sec4">Blockquotes</a></li>
@@ -278,11 +279,91 @@
                </div>
                <!-- example closes -->
 
+               <h2 id="sec1a">Labels</h2>
+               <p>Labels pop! They strongly add additional meaning when used sparingly.</p>
+
+               <div class="row">
+                  <div class="col-sm-3">
+
+                     <form>
+
+                        <div class="form-group">
+                           <label for="label-text">Label Text</label>
+                           <input type="text" class="form-control" id="label-text" placeholder="Library Only">
+                        </div>
+
+                        <div class="form-group">
+                           <label for="label-color">Color</label>
+                           <select class="form-control" id="label-color">
+                        <option value=" label-default" selected="selected">Default (grey)</option>
+                        <option value=" label-primary">Primary (standard blue)</option>
+                        <option value=" label-info">Information (light blue)</option>
+                        <option value=" label-success">Success (green)</option>
+                        <option value=" label-warning">Warning (yellow)</option>
+                        <option value=" label-danger">Danger (red)</option>
+                     </select>
+                        </div>
+
+                        <div class="form-group">
+                           <label for="label-size">Size</label>
+                           <select class="form-control" id="label-size">
+                        <option value="normal-sized" selected="selected">Normal</option>
+                        <option value="small-sized">Small</option>
+                     </select>
+                        </div>
+
+                     </form>
+
+                     <div style="margin-top:30px;">
+                        <button type="button" class="btn btn-default" id="clearLabel">Reset</button>
+                        <button type="button" class="btn btn-primary" id="displayLabel">Build</button>
+                     </div>
+
+                  </div>
+                  <!-- col-sm-3 -->
+                  <div class="col-sm-9">
+                     <div class="example" id="simple-example-labels">
+
+                        <p>Advertising Red Books <span class='label label-warning'>Library Only</span></p>
+
+                        <p>Ad$pender Online <span class='label label-success'>Best Bet</span></p>
+
+                     </div>
+
+                     <div class="well">
+
+                        <button class="btn btn-primary pull-right copier" title="copy" type="button" data-clipboard-demo="" data-clipboard-target="#simple-label-code">
+                        <i class="fa fa-clipboard" aria-hidden="true"></i>
+                        </button>
+
+                        <pre class="prettyprint" id="simple-label-code">
+&lt;p&gt;Advertising Red Books
+   &lt;span class='label label-warning'&gt;Library Only&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Ad$pender Online
+   &lt;span class='label label-success'&gt;Best Bet&lt;/span&gt;
+&lt;/p&gt;
+</pre>
+
+                     </div>
+                     <!-- example closes -->
+
+
+                  </div>
+                  <!-- col-sm-9 -->
+
+               </div>
+               <!-- row -->
+
+
+
                <h2 id="sec2">Links</h2>
                <p>Links are the way we help users&mdash;including users with visual impairment&mdash;easily, efficiently reach important resources. For that reason it's important to <a href="help-web-writing.html#sec2">make links meaningful</a>.</p>
 
                <div class='alert alert-info' role='alert'>
-                  <p><strong><i class="fa fa-exclamation-circle" aria-hidden="true"></i>All Links Open in New Window/Tab by Default</strong><br/>You may force a new page to load in the current window by <a href="help-faq.html">setting your link's target property in the WYSIWYG editor</a>. In HTML, adding the attribute <code>target="_self"</code> to any link will open the destination URL in a new window.</p>
+                  <p><strong><i class="fa fa-exclamation-circle" aria-hidden="true"></i>All Links Open in New Window/Tab by Default</strong><br/>You may force a new page to load in the current window by <a href="help-faq.html">setting your link's target property in the WYSIWYG editor</a>.
+                     In HTML, adding the attribute <code>target="_self"</code> to any link will open the destination URL in a new window.</p>
                </div>
 
                <div class="example">
@@ -306,63 +387,75 @@
                </div>
                <!-- example closes -->
 
-               <h5 style="margin-top: 40px;">System Component Links vs. Rich Text Box Links</h5>
-               <p>However, there are 2 distinct ways to add links in guides (and the difference is important). </p>
+               <!-- More about Links ----------------------------------->
 
-               <table class='table table-bordered table-striped'>
-                  <thead>
-                     <tr>
-                        <th style='width: 25%;'>Link Added...</th>
-                        <th style='width: 30%;'>Type of Link</th>
-                        <th style='width: 45%;'>Note</th>
-                     </tr>
-                  </thead>
-                  <tbody>
-                     <tr>
-                        <td>As System Components</td>
-                        <td>
-                           <p><strong>Use for:</strong></p>
-                           <ul style="margin-left: -20px;">
-                              <li><a href="content-book.html">Books</a></li>
-                              <li><a href="content-database.html">Databases</a></li>
-                              <li><a href="content-document.html">Documents (pdfs)</a></li>
-                              <li><a href="content-book.html">Auto-generated lists of guides</a></li>
-                           </ul>
-                        </td>
-                        <td>
-                           <div class='alert alert-success' role='alert'>
-                              <p><i class='fa fa-link fa-spacer-right' aria-hidden='true'></i>System link-checker regularly finds and repairs broken links for system components. </p>
-                           </div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>Into Rich Text Boxes</td>
-                        <td>
-                           <p><strong>Use for: </strong></p>
-                           <ul style="margin-left: -20px;">
-                              <li><a href="feature-typography.html#sec2">In-text Links</a></li>
-                              <li><a href="feature-button.html">Buttons</a></li>
-                              <li><a href="feature-icon.html">Icons</a></li>
-                              <li><a href="feature-list.html">Lists</a></li>
-                              <li><a href="feature-table.html">Tables</a></li>
+               <div class='panel-group' id='accordion' role='tablist' aria-multiselectable='true'>
+                  <div class='panel panel-default'>
+                     <div class='panel-heading' role='tab' id='heading0'>
+                        <h5 class='panel-title'><a role='button' data-toggle='collapse' data-parent='#accordion' href='#collapse1' aria-expanded='true' aria-controls='collapse1'><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>&nbsp; More about Links &mdash; System Links vs Links in Rich Text Boxes</a></h5></div>
+                     <div id='collapse1' class='panel-collapse collapse' role='tabpanel' aria-labelledby='heading1'>
+                        <div class='panel-body'>
 
-                           </ul>
-                        </td>
-                        <td>
-                           <div class='alert alert-warning' role='alert'>
-                              <p><i class='fa fa-chain-broken fa-spacer-right' aria-hidden='true'></i>No easy way to find broken links within Rich Text boxes. Onus on the guide author to ensure all links work.</p>
-                           </div>
-                           <div class='alert alert-success' role='alert'>
-                              <p><i class='fa fa-star fa-spacer-right' aria-hidden='true'></i>These link types are far more customizable and flexible than system components.</p>
-                           </div>
+                           <p>There are 2 distinct ways to add links in guides. The difference is important.</p>
 
-                        </td>
-                     </tr>
-                  </tbody>
-               </table>
+                           <table class='table table-bordered table-striped'>
+                              <thead>
+                                 <tr>
+                                    <th style='width: 25%;'>Link Added...</th>
+                                    <th style='width: 30%;'>Type of Link</th>
+                                    <th style='width: 45%;'>Note</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td>As System Components</td>
+                                    <td>
+                                       <p><strong>Use for:</strong></p>
+                                       <ul style="margin-left: -20px;">
+                                          <li><a href="content-book.html">Books</a></li>
+                                          <li><a href="content-database.html">Databases</a></li>
+                                          <li><a href="content-document.html">Documents (pdfs)</a></li>
+                                          <li><a href="content-book.html">Auto-generated lists of guides</a></li>
+                                       </ul>
+                                    </td>
+                                    <td>
+                                       <div class='alert alert-success' role='alert'>
+                                          <p><i class='fa fa-link fa-spacer-right' aria-hidden='true'></i>System link-checker regularly finds and repairs broken links for system components. </p>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td>Into Rich Text Boxes</td>
+                                    <td>
+                                       <p><strong>Use for: </strong></p>
+                                       <ul style="margin-left: -20px;">
+                                          <li><a href="feature-typography.html#sec2">In-text Links</a></li>
+                                          <li><a href="feature-button.html">Buttons</a></li>
+                                          <li><a href="feature-icon.html">Icons</a></li>
+                                          <li><a href="feature-list.html">Lists</a></li>
+                                          <li><a href="feature-table.html">Tables</a></li>
 
+                                       </ul>
+                                    </td>
+                                    <td>
+                                       <div class='alert alert-warning' role='alert'>
+                                          <p><i class='fa fa-chain-broken fa-spacer-right' aria-hidden='true'></i>No easy way to find broken links within Rich Text boxes. Onus on the guide author to ensure all links work.</p>
+                                       </div>
+                                       <div class='alert alert-success' role='alert'>
+                                          <p><i class='fa fa-star fa-spacer-right' aria-hidden='true'></i>These link types are far more customizable and flexible than system components.</p>
+                                       </div>
 
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
 
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- panel group -->
+               <!-- More about links closes ---------------------------------->
 
                <h2 id="sec3">Lead Text</h2>
 
@@ -390,35 +483,80 @@
 
                <h2 id="sec4">Blockquotes</h2>
                <p>Blockquotes are especially useful as epigraphs introducing content blocks.</p>
-               <div class="example">
 
-                  <blockquote>
-                     <p>And when this happens, when we allow freedom to ring, when we let it ring from every village and every hamlet, from every state and every city, we will be able to speed up that day when all of God's children, black men and white men,
-                        Jews and Gentiles, Protestants and Catholics, will be able to join hands and sing in the words of the old Negro spiritual: &ldquo;Free at last! Free at last! thank God Almighty, we are free at last!&rdquo;</p>
-                     <footer>Rev. Martin Luther King, Jr. <cite title="Source Title">&ldquo;I Have a Dream&rdquo;</cite></footer>
-                  </blockquote>
+               <div class="row">
+
+               <div class="col-sm-3">
+
+                  <form>
+
+
+                     <form>
+                        <div class="form-group">
+                            <label for="blockquote-quote">Quote</label>
+                            <textarea id="blockquote-quote" class="form-control" rows="8" placeholder="And when this happens..."></textarea>
+                        </div>
+                     </form>
+
+                     <div class="form-group">
+                         <label for="blockquote-author">Author</label>
+                         <input type="text" class="form-control" id="blockquote-author" placeholder="Rev. Martin Luther King, Jr.">
+                     </div>
+
+                     <div class="form-group">
+                         <label for="blockquote-source">Source</label>
+                         <input type="text" class="form-control" id="blockquote-source" placeholder="I Have a Dream">
+                     </div>
+
+                     <div class="form-group">
+                     <div class="checkbox" style="margin-top: 25px;">
+                        <label>
+                            <input type="checkbox" id="isItalics"> Italicize Source
+                        </label>
+                     </div>
+                     </div>
+
+                  </form>
+
+                <div style="margin-top:30px;">
+                   <button type="button" class="btn btn-default" id="clearBlockquote">Reset</button>
+                   <button type="button" class="btn btn-primary" id="displayBlockquote">Build</button>
+                </div>
+
 
                </div>
-               <div class="well">
+               <div class="col-sm-9">
 
-                  <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well7" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                  <div class="example" id="simple-example-blockquote">
+
+                     <blockquote>
+                        <p>And when this happens, when we allow freedom to ring, when we let it ring from every village and every hamlet, from every state and every city, we will be able to speed up that day when all of God's children, black men and white
+                           men, Jews and Gentiles, Protestants and Catholics, will be able to join hands and sing in the words of the old Negro spiritual: &ldquo;Free at last! Free at last! Thank God Almighty, we are free at last!&rdquo;</p>
+                        <footer>Rev. Martin Luther King, Jr., from <cite title="Source Title">&ldquo;I Have a Dream&rdquo;</cite></footer>
+                     </blockquote>
+
+                  </div>
+                  <div class="well">
+
+                     <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-blockquote-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
                   <i class="fa fa-clipboard" aria-hidden="true"></i>
                   </button>
 
 
-                  <pre class="prettyprint" id="well7">
+<pre class="prettyprint" id="simple-blockquote-code">
 &lt;blockquote&gt;
    &lt;p&gt;And when this happens, when we allow freedom to ring, when we let it ring from every village and every hamlet, from every state and every city, we will be able to speed up that day when all of God's children, black men and white men, Jews and Gentiles, Protestants and Catholics, will be able to join hands and sing in the words of the old Negro spiritual: &ldquo;Free at last! Free at last! thank God Almighty, we are free at last!&rdquo;&lt;/p&gt;
    &lt;footer&gt;
       Rev. Martin Luther King, Jr.
       &lt;cite title="Source Title"&gt;&ldquo;I Have a Dream&rdquo;&lt;/cite&gt;
    &lt;/footer&gt;
-&lt;/blockquote&gt;</pre>
+&lt;/blockquote&gt;
+</pre>
 
-               </div>
-               <!-- example closes -->
-
-
+                  </div>
+                  <!-- example closes -->
+            </div>  <!-- col md 9 -->
+         </div> <!-- row -->
                <h2 id="sec5">Notes and Alerts</h2>
 
                <p>Notes and alerts are useful to provide general information, provide important information, indicate success, offer warnings, declare prohibition, etc. Whether you choose to use default icons, custom icons, or no icons in your notes and
@@ -502,7 +640,7 @@
 
                <h2 id="sec6">Special Text Formats</h2>
 
-               <p>Special formats are useful to foreground for users the Many of these special text formats are available under the <kbd>Styles</kbd> dropdown menu in the WYSIWYG editor.</p>
+               <p>When used correctly, special textual formats decidedly improve the usability and readability of textual entries. Many of these special text formats are available under the <kbd>Styles</kbd> dropdown menu in the WYSIWYG editor.</p>
 
                <h5>Computer Code</h5>
                <table style="margin-top: 30px;" class='table table-bordered'>
@@ -547,22 +685,6 @@
                <table style="margin-top: 30px;" class='table table-bordered'>
                   <thead></thead>
                   <tbody>
-                     <tr>
-                        <td>ddd</td>
-                        <td>Pay attention <mark>to this</mark></td>
-                        <td id="well25"><pre class="prettyprint">Pay attention &lt;mark&gt;to this&lt;/mark&gt;</pre></td>
-                        <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well25" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
-                     <i class="fa fa-clipboard" aria-hidden="true"></i>
-                     </button></td>
-                     </tr>
-                     <tr>
-                        <td>ddd</td>
-                        <td>Pay attention <mark>to this</mark></td>
-                        <td id="well25c"><pre class="prettyprint">Pay attention &lt;mark&gt;to this&lt;/mark&gt;</pre></td>
-                        <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well25c" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
-                     <i class="fa fa-clipboard" aria-hidden="true"></i>
-                     </button></td>
-                     </tr>
                      <tr>
                         <td>Marker Text</td>
                         <td>Pay attention <mark>to this</mark></td>
@@ -738,7 +860,7 @@
                 <h6>Ornateness of Style</h6>
                 <p>This quality of style refers to the various aesthetic qualities of language so fully illustrated among the various figures of speech.
                 </p>
-                <h5>LEVELS OF STYLE</h5>
+                <h5>Levels of Style</h5>
                 <p>From the Roman tradition three levels of style have been laid out, each suited to one of three distinct rhetorical purposes.</p>
                 <h5>Qualities of Style</h5>
                 <p>A large descriptive terminology has been developed to critique the qualities of style. These are interpretive in nature, and overlap broadly with figures of speech or the virtues and levels of style.</p>
@@ -819,13 +941,75 @@
             $('#standard-icons').prop("checked", false);
          });
 
+         $('#displayLabel').click(function() {
 
+            var labelColor = $('#label-color').val();
+            var labelSize = $('#label-size').val();
+            var labelText = $('#label-text').val();
+
+            var labelCore = "<span class='label" + labelColor + "'>" + labelText + "</span>";
+            var bsLabel = '';
+
+            if (labelSize == "normal-sized") {
+               bsLabel = labelCore;
+            } else {
+               bsLabel = "<small>" + labelCore + "</small>";
+            }
+
+            // write the table
+            $("#simple-example-labels").html(bsLabel);
+            $('#simple-label-code').text(bsLabel);
+
+            $('pre').removeClass('prettyprinted');
+            prettyPrint();
+
+         });
 
 
 
          // Add the active classes to the nav menu
          $(".navfeatures").addClass("active");
          $(".navtypography").addClass("active");
+
+
+         $('#displayBlockquote').click(function() {
+
+            var blockquoteQuote = $('#blockquote-quote').val();
+            var blockquoteAuthor = $('#blockquote-author').val();
+            var blockquoteSource = $('#blockquote-source').val();
+
+            // escape the quotation marks in quote and source fields
+            blockquoteQuote = blockquoteQuote.replace(/\"/g,'&#34;');
+            blockquoteQuote = blockquoteQuote.replace(/\”/g,'&#34;');
+            blockquoteQuote = blockquoteQuote.replace(/\“/g,'&#34;');
+            blockquoteQuote = blockquoteQuote.replace(/\'/g,'&#39;');
+            blockquoteQuote = blockquoteQuote.replace(/\‘/g,'&#39;');
+            blockquoteQuote = blockquoteQuote.replace(/\’/g,'&#39;');
+
+            blockquoteSource = blockquoteSource.replace(/\"/g,'&#34;');
+            blockquoteSource = blockquoteSource.replace(/\”/g,'&#34;');
+            blockquoteSource = blockquoteSource.replace(/\“/g,'&#34;');
+            blockquoteSource = blockquoteSource.replace(/\'/g,'&#39;');
+            blockquoteSource = blockquoteSource.replace(/\‘/g,'&#39;');
+            blockquoteSource = blockquoteSource.replace(/\’/g,'&#39;');
+
+            var blockquoteCite = blockquoteSource;
+
+            if ($('#isItalics').is(':checked')) {
+               blockquoteSource = "<em>" + blockquoteSource + "</em>";
+            }
+
+            var bsBlockquote = "<blockquote><p>" + blockquoteQuote + "</p><footer>" + blockquoteAuthor + ", from " + "<cite title='" + blockquoteCite + "'>" + blockquoteSource + "</cite></footer></blockquote>";
+
+            // Write the image
+            $("#simple-example-blockquote").html(bsBlockquote);
+            $('#simple-blockquote-code').text(bsBlockquote);
+
+            $('pre').removeClass('prettyprinted');
+            prettyPrint();
+
+         }); // displayBlockquote function
+
 
          $('#alertButton').click(function() {
 
@@ -901,7 +1085,22 @@
 
       });
 
-      // reset the input
+
+      // reset the forms
+      $('#clearLabel').click(function() {
+         location.reload(true);
+      });
+
+      $('#clearBlockquote').click(function() {
+         location.reload(true);
+      });
+
+      $('#clearButton').click(function() {
+         location.reload(true);
+      });
+
+
+      // reset the inputs
       $('#refresh-button').click(function() {
          $('#alert-icon').val('');
       });
@@ -910,9 +1109,8 @@
          $('#alert-icon').val("<i class='fa fa-question-circle' aria-hidden='true'></i>");
       });
 
-      $('#clearButton').click(function() {
-         location.reload(true);
-      });
+
+
 
       // clipboard button
       new Clipboard('.btn');

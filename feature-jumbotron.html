@@ -10,7 +10,7 @@
    <!-- Bootstrap -->
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -155,7 +155,7 @@
 
                         <div class="form-group">
                            <label for="button-text">Jumbotron Subtitle</label>
-                           <input type="text" class="form-control" id="jumbotron-subtitle" placeholder="Lorem ipsum dolor..." style="width:100%;">
+                           <input type="text" class="form-control" id="jumbotron-subtitle" placeholder="Lorem ipsum dolor...">
                         </div>
 
                         <div class="form-group">
@@ -402,6 +402,10 @@
                      $('#button-url-group').addClass('hidden');
                      break;
                   case ' btn-primary':
+                     $('#button-title-group').removeClass('hidden');
+                     $('#button-url-group').removeClass('hidden');
+                     break;
+                  case ' btn-info':
                      $('#button-title-group').removeClass('hidden');
                      $('#button-url-group').removeClass('hidden');
                      break;
