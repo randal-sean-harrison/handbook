@@ -26,6 +26,14 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atom-one-dark.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>    <script>hljs.initHighlightingOnLoad();</script>
 
+   <style media="screen">
+
+   .example {
+       border-radius: 4px 4px 4px 4px;
+   }
+
+   </style>
+
 </head>
 
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
@@ -110,8 +118,9 @@
              <div class="col-md-3 hidden-xs hidden-sm" id="leftCol">
                <ul class="nav nav-stacked" id="sidebar">
                  <li><a href="#sec0">Card Builder</a></li>
-                 <li><a href="#sec1">Panel Builder</a></li>
-                 <li><a href="#sec2">Examples</a></li>
+                 <li><a href="#sec1">&lsquo;Example&rsquo; Panel</a></li>
+                 <li><a href="#sec2">Panel Builder</a></li>
+                 <li><a href="#sec3">Examples</a></li>
                  <li><a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> &nbsp;Back to top</a></li>
                </ul>
              </div>
@@ -183,7 +192,35 @@
                   </div> <!-- col-md-9 -->
                </div> <!-- row -->
 
-               <h2 id="sec1">Panel Builder</h2>
+               <h2 id="sec1">&lsquo;Example&rsquo; Panel</h2>
+
+                  <p>The &lsquo;example&rsquo; panel is useful for focusing users by framing your content. You may wish to <a href="feature-column.html">place your example panel in a multi-column layout</a>, perhaps placing your explication beside it. As in the example of this handbook, the &lsquo;example&rsquo; panel is also well-paired with a <a href="feature-code.html">code well</a>.</p>
+
+                  <div class="example" id="simple-example-panel">
+
+                     <div class="example">
+
+                        Content goes here...
+
+                     </div>
+
+                  </div>
+                  <div class="well">
+
+                     <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-example-panel-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+          <i class="fa fa-clipboard" aria-hidden="true"></i>
+          </button>
+
+<pre class="prettyprint" id="simple-example-panel-code">
+&lt;div class="example"&gt;
+   Content goes here...
+&lt;/div&gt;
+</pre>
+
+                  </div>
+
+
+               <h2 id="sec2">Panel Builder</h2>
 
                   <p>Like tabs, panels help chunk content efficiently, concealing larger amounts of data and allowing users to quickly navigate to what they need by scanning headings. A good use for collapsible panels? FAQ boxes!</p>
 
@@ -284,7 +321,7 @@
                </div>
 
 
-               <h2 id="sec2">Examples</h2>
+               <h2 id="sec3">Examples</h2>
                <p>
                  Example of cards in action.
                </p>

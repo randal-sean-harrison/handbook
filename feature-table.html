@@ -455,7 +455,7 @@
             // rows -- if variable Width is chosen but no header row, it puts the var widths in the first set of TDs themselves
             for (i = 0; i < numRows; i++) {
                if (tdsVariable !== '') {
-                  tr += tdsVariable;
+                  tr += "<tr>" + tdsVariable + "</tr>";
                   tdsVariable = '';
                }
                tr += "<tr>" + tds + "</tr>";

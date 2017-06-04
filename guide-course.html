@@ -121,14 +121,12 @@
             <div class="col-md-9" id="rightCol">
                <h2 id="sec0">Guide Requirements</h2>
 
+               <p>Course guides should be organized so that they help students to use the Library and information resources in ways that promote their success in a particular course. Librarians work closely with instructors to decide the best resources and organization for a course guide. However, Librarians are responsible for designing, building, and maintaining that course guide, as <a
+                  href="help-faq.html">instructors are not eligible for LibGuides accounts</a>.</p>
 
-               <p>Librarians work closely with instructors to decide the best resources and organization for a course guide. However, Librarians must design, build, and maintain that course guide, as instructors are not eligible for LibGuides accounts.
-                  <a
-                     href="help-faq.html">See our FAQ Page</a> for more information.</p>
-
-               <div class="alert alert-danger">
-                  <p><strong><i class="fa fa-times-circle" aria-hidden="true"></i>The Right Tool...</strong><br/>Course guides should focus on course-related resources. Things like assignments, grading rubrics, and most course-specific documents are best
-                     embedded in learning management software such as <a href="https://sakailogin.nd.edu/" target="_blank">Sakai</a>.</p>
+               <div class="alert alert-warning">
+                  <p><strong><i class="fa fa-wrench" aria-hidden="true"></i>The Right Tool</strong><br/>Help your instructor understand the proper scope and role of the course guide. Things like assignments and grading rubrics are best
+                     embedded in a learning management platform such as <a href="https://sakailogin.nd.edu/" target="_blank">Sakai</a>.</p>
                </div>
 
                <div class='panel panel-default'>
@@ -137,7 +135,7 @@
                   <div class='panel-body'>
                      <div class='row'>
                         <div class='col-sm-7'>
-                           <table class="table numbered-steps" cellspacing="4" style="margin-left:30px;width:90%;">
+                           <table class="table numbered-steps" cellspacing="4">
                               <tbody>
                                  <tr>
                                     <td style="width:38px;">1</td>
@@ -162,15 +160,20 @@
                               </tbody>
                            </table>
                         </div>
-
-                        <div class='col-sm-5'><img class="img img-responsive" src="http://www.placehold.it/800x800" alt=""></div>
                      </div>
                   </div>
                </div>
 
                <h2 id="sec1">Title Formatter</h2>
 
-               <p>Course titles must conform to the approved format. Librarians should not add their names to the course titles. </p>
+               <p>Course titles must conform to the approved format. Because course guide titles tend to be more complex, we recommend using the Title Formatter.</p>
+
+               <div class="alert alert-warning" role="alert">
+                  <p>
+                     <i class="fa fa-exclamation-triangle fa-spacer-right" aria-hidden="true"></i>
+                     Librarians should not add their names to course guide titles. Students searching for a specific librarian's guides, may <a href="http://libguides.library.nd.edu/" target="_blank">search for all guides by a specific librarian</a>.
+                  </p>
+               </div>
 
                <div class="row">
                   <div class="col-sm-12 col-md-4">
@@ -214,7 +217,7 @@
                   <div class="col-sm-12 col-md-8">
 
                      <div class="example" id="simple-example-title">
-
+                        <p class='text-center'>AFST 24100 &mdash; Introduction to Africana Studies: The Problematic of Race in America (Mohammed)</p><hr><p class='text-center'>SOC 13181 / POLS 13181 &mdash; Social Science University Seminar: Immigration and Citizenship (Johnson)</p>
                      </div>
 
                      <div class="well">
@@ -235,20 +238,27 @@
 
 
                <h2 id="sec2">Course Overview Box</h2>
-               <p>The first box of the first page should contain an overview of the course, including any/all of the fields, below.</p>
+               <p>Unless your instructor wants a <a href="feature-jumbotron.html">Jumbotron</a> to open their course guide, the first box of the first page of the course guide should contain an overview of the course. You should Include a <strong>course description</strong>, instructor's <strong>contact information</strong>, and a link to the <strong>Sakai course page</strong>. Optionally, include an <strong>instructor's photo</strong>.</p>
 
                <div class="row">
-                  <div class="col-sm-12 col-md-3">
+                  <div class="col-sm-12 col-md-4">
 
                      <form>
 
-                        <div class="checkbox">
-                           <label>
-                            <input type="checkbox" id="hasPhoto"> Include Photo <small style="opacity:.7;">(optional)</small>
-                            </label>
+                        <label for="button-url">Photo URL</label>
+                        <div class="input-group">
+                           <span class="input-group-addon" id="refresh-button"><i class="fa fa-refresh" aria-hidden="true"></i></span>
+                           <input type="text" class="form-control" id="image-url" placeholder="http://www.url.com">
+                        </div>
+                        <p style="margin-left: 6px; margin-top: 0px;" class="text-left"><a href="https://nd.libapps.com/libguides/image_manager.php" target="_blank"><small><i class="fa fa-external-link-square" aria-hidden="true"></i>&nbsp; Your Image Library</small></a></p>
+
+
+                        <div class="form-group">
+                           <label for="photo-width">Photo Panel Width <small style="opacity:.7">(pixels)</small></label>
+                           <input type="text" class="form-control" id="photo-width" value="250" name="photo-width">
                         </div>
 
-                        <div class="form-group" style="margin-top: 15px;">
+                        <div class="form-group">
                            <label for="instructName">Name</label>
                            <input type="text" class="form-control" id="instructName" placeholder="Dr. Mary Smith" name="instructName">
                         </div>
@@ -276,11 +286,12 @@
                            <textarea class="form-control" id="instructDescription" placeholder="Economics 101 covers..." name="instructDescription"></textarea>
                         </div>
 
-                        <div class="form-group">
-                           <label for="instructPage">Course Page <small style="opacity:.7;">(optional)</small></label>
+                        <label for="instructPage">Course Page <small style="opacity:.7;">(optional)</small></label>
+                        <div class="input-group">
+                           <span class="input-group-addon" id="refresh-button3"><i class="fa fa-refresh" aria-hidden="true"></i></span>
                            <input type="text" class="form-control" id="instructPage" placeholder="http://www.sakai.nd.edu/econ101">
-                           <p style="margin-top:3px;"><a href="https://sakailogin.nd.edu/" target="_blank"><small>&nbsp;&nbsp;<i class="fa fa-external-link fa-spacer-right" aria-hidden="true"></i>Visit Sakai Site</small></a></p>
                         </div>
+                        <p style="margin-top:3px;"><a href="https://sakailogin.nd.edu/" target="_blank"><small>&nbsp;&nbsp;<i class="fa fa-external-link-square" aria-hidden="true"></i>Visit Sakai Site</small></a></p>
 
                      </form>
 
@@ -291,7 +302,7 @@
 
 
                   </div>
-                  <div class="col-sm-12 col-md-9">
+                  <div class="col-sm-12 col-md-8">
 
                      <div class="example" id="simple-instruct-example">
                      </div>
@@ -398,8 +409,8 @@
    <script type="text/javascript">
       $(document).ready(function() {
 
-         
-      
+
+
 
          // Add the active classes to the nav menu
          $(".navguides").addClass("active");
@@ -409,26 +420,10 @@
          //prettyPrint();
 
 
-         // ------- Display the Columns --------------------------
          $('#renderInstructorBox').click(function() {
 
             var bsInstruct = '';
-
-            var openingRow = "<div class='row'>";
-            var closingRow = "</div></div></div></div>";
-            var instructDescription = $('#instructDescription').val();
-            var instructPanelOpen =
-               "<div class='col-sm-4'><div class='panel panel-default instructor'><div class='panel-heading'><h3 class='panel-title'>Instructor</h3></div><div class='panel-body'>";
-            var hasPhoto = '';
-            if ($('#hasPhoto').is(':checked')) {
-               hasPhoto = "<img class='img-responsive center-block instructor-photo' src='https://libapps.s3.amazonaws.com/apps/common/images/profile.jpg' alt='photo of instructor' />";
-            }
-
-            // var iconHome = "<i class='fa fa-home' aria-hidden='true'></i>&nbsp;&nbsp;&nbsp;";
-            // var iconEmail = "<i class='fa fa-envelope' aria-hidden='true'></i>&nbsp;&nbsp;&nbsp;";
-            // var iconPhone = "<i class='fa fa-phone' aria-hidden='true'></i>&nbsp;&nbsp;&nbsp;";
-            // var iconWebpage = "<i class='fa fa-bookmark' aria-hidden='true'></i>&nbsp;&nbsp;&nbsp;";
-
+            var imageURL = $('#image-url').val();
             var instructName = $('#instructName').val();
             var instructTitle = $('#instructTitle').val();
             var instructOffice = $('#instructOffice').val();
@@ -436,13 +431,22 @@
             var instructTelephone = $('#instructTelephone').val();
             var instructPage = $('#instructPage').val();
 
-            var instructPanelClose = "</div></div></div></div>"
-            var instructLeftCol = "<div class='col-sm-8'><p>" + instructDescription + "</p></div>";
 
-            bsInstruct = openingRow + instructLeftCol + instructPanelOpen + hasPhoto + "<strong>" + instructName + "</strong>" + "<br/>" + instructTitle + "<br/><br/>" + /* iconHome + */ instructOffice + "<br/>" + /* iconEmail + */
-               instructEmail + "<br/>" +
-               /* iconPhone + */
-               instructTelephone + "<br/><br/>" + /* iconWebpage + */ "<a href='" + instructPage + "' target='_blank'>Course Page</a>" + "<br/>" + closingRow;
+            var instructDescription = "<p>" + $('#instructDescription').val() + "</p>";
+            var photoWidth = $('#photo-width').val();
+            var imageCore = '';
+
+            if ($('#image-url').val() !== '') {
+               imageCore = "<img class='img img-responsive img-thumbnail center-block' src='" + imageURL + "' alt='Photograph of the instructor' style='margin-bottom: 20px' />";
+            }
+
+            var openingRow = "<div class='row'><div class='col-sm-12'>";
+            var openingPanel = "<div class='panel panel-default pull-right' style='margin:0px 0px 15px 15px; width: " + photoWidth + "px;'><div class='panel-heading'><h5 class='panel-title'>Instructor</h5></div><div class='panel-body'>";
+            var closingDivs = "</div></div>";
+            var middlePanel = imageCore + "<p class='text-center'><strong>" + instructName + "</strong><br/>" + instructTitle + "</p><p class='text-center'>" + instructOffice + "<br />" + instructEmail + "<br />" + instructTelephone + "</p>" + "<p class='text-center'><a role='button' class='btn btn btn-primary' href='" + instructPage + "' target='blank'> Sakai Course Page</a></p>" + "</p>";
+
+
+            bsInstruct = openingRow + openingPanel + middlePanel + closingDivs + instructDescription + closingDivs;
 
             // Write the table
 
@@ -457,21 +461,7 @@
 
          // ------- Reset the parameters  --------------------------
          $('#clearInstructorFields').click(function() {
-
-            // Clear the input fields
-            $('#instructName').val('');
-            $('#instructTitle').val('');
-            $('#instructOffice').val('');
-            $('#instructEmail').val('');
-            $('#instructTelephone').val('');
-            $('#instructDescription').val('');
-            $('#instructPage').val('');
-            $('#hasPhoto').attr('checked', false).prop('checked', false);
-
-            // Clear the example box
-            $('#simple-instruct-example').empty();
-            $('#simple-instruct-code').empty();
-
+            location.reload(true);
          });
 
 
@@ -502,10 +492,18 @@
 
          });
 
-         var bsExample = "<p class='text-center'>AFST 24100 &mdash; Introduction to Africana Studies: The Problematics of Race in America (Mohammed)</p><hr><p class='text-center'>SOC 13181 / POLS 13181 &mdash; Social Science University Seminar: Immigration and Citizenship (Johnson)</p>";
+         var bsExample = "<p class='text-center'>AFST 24100 &mdash; Introduction to Africana Studies: The Problematic of Race in America (Mohammed)</p><hr><p class='text-center'>SOC 13181 / POLS 13181 &mdash; Social Science University Seminar: Immigration and Citizenship (Johnson)</p>";
 
          $('#simple-example-title').html(bsExample);
 
+      });
+
+      $('#refresh-button').click(function() {
+         $('#image-url').val("");
+      });
+
+      $('#refresh-button3').click(function() {
+         $('#instructPage').val("");
       });
 
       // clipboard button
