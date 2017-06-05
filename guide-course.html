@@ -92,9 +92,13 @@
       <div id="masthead">
          <div class="container">
             <div class="row">
-               <div class="col-md-12">
+               <div class="col-md-9">
                   <h1>Course Guides</h1>
                   <p class="lead">Course Guides curate Library and other research-related resources for Notre Dame courses.</p>
+               </div>
+               <div class="col-md-3">
+                  <a href="index.html" style="text-decoration:none;"><h1 class='short-round center-block' style='font-size: 16px; height: 40px; width: 40px; padding: 6px; border-radius: 40px; background: #337ab7;color: #FFFFFF !important;'><i class="fa fa-rocket" aria-hidden="true"></i></h1>
+                  <p class="text-center">Guides Quickstart</p></a>
                </div>
             </div>
          </div>
@@ -129,40 +133,32 @@
                      embedded in a learning management platform such as <a href="https://sakailogin.nd.edu/" target="_blank">Sakai</a>.</p>
                </div>
 
-               <div class='panel panel-default'>
-                  <div class='panel-heading'>
-                     <h3 class='panel-title'>Requirements At-a-glance</h3></div>
-                  <div class='panel-body'>
-                     <div class='row'>
-                        <div class='col-sm-7'>
-                           <table class="table numbered-steps" cellspacing="4">
-                              <tbody>
-                                 <tr>
-                                    <td style="width:38px;">1</td>
-                                    <td>Guide navigation must be based on the Course Guide template.</td>
-                                 </tr>
-                                 <tr>
-                                    <td>2</td>
-                                    <td>Guide must be associated with an instructor(s) and instructor's last name must be listed parenthetically in the title. <span style="color: red;">Librarian's last name may not be in the title.</span></td>
-                                 </tr>
-                                 <tr>
-                                    <td>3</td>
-                                    <td>Structure of pages and boxes decided entirely by librarian and instructor.</td>
-                                 </tr>
-                                 <tr>
-                                    <td>4</td>
-                                    <td>Only the most recent version of any instructor's guide may be published. Versions from previous semesters/years must be unpublished.</td>
-                                 </tr>
-                                 <tr>
-                                    <td>5</td>
-                                    <td>Must complement rather than compete with any LMS or portfolio software.</td>
-                                 </tr>
-                              </tbody>
-                           </table>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+                  <h5 style="margin-bottom:15px;">Requirements At-a-glance</h5>
+                  <table class="table numbered-steps">
+                     <tbody>
+                        <tr>
+                           <td style="width:38px;">1</td>
+                           <td>Guide navigation based on the <strong>Course Guide template</strong> (left navigation; single right content column).</td>
+                        </tr>
+                        <tr>
+                           <td>2</td>
+                           <td>Information architecture (structure of pages and boxes) is decided by Librarian and instructor.</td>
+                        </tr>
+
+                        <tr>
+                           <td>3</td>
+                           <td>Guide title must follow <a href="#sec1">course title conventions</a>.</td>
+                        </tr>
+                        <tr>
+                           <td>4</td>
+                           <td>Only the most recent version of any instructor's guide may be published. Versions from previous semesters/years must be unpublished.</td>
+                        </tr>
+                        <tr>
+                           <td>5</td>
+                           <td>Resources should complement rather than compete with any LMS or portfolio software.</td>
+                        </tr>
+                     </tbody>
+                  </table>
 
                <h2 id="sec1">Title Formatter</h2>
 
@@ -444,6 +440,9 @@
             var openingPanel = "<div class='panel panel-default pull-right' style='margin:0px 0px 15px 15px; width: " + photoWidth + "px;'><div class='panel-heading'><h5 class='panel-title'>Instructor</h5></div><div class='panel-body'>";
             var closingDivs = "</div></div>";
             var middlePanel = imageCore + "<p class='text-center'><strong>" + instructName + "</strong><br/>" + instructTitle + "</p><p class='text-center'>" + instructOffice + "<br />" + instructEmail + "<br />" + instructTelephone + "</p>" + "<p class='text-center'><a role='button' class='btn btn btn-primary' href='" + instructPage + "' target='blank'> Sakai Course Page</a></p>" + "</p>";
+
+
+
 
 
             bsInstruct = openingRow + openingPanel + middlePanel + closingDivs + instructDescription + closingDivs;

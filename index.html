@@ -135,8 +135,8 @@
                         <span class="caret"></span>
                       </button>
                         <ul class="dropdown-menu">
-                           <li id="internal-one-button"><a>One Column</a></li>
-                           <li id="internal-many-button"><a>Many Columns</a></li>
+                           <li id="internal-one-button"><a>Side Navigation, 1 Column</a></li>
+                           <li id="internal-many-button"><a>Tabbed Navigation, 1-4 Columns</a></li>
                         </ul>
                      </div>
                   </div>
@@ -167,6 +167,28 @@
                      <h1 class="nd-gold text-center"></h1>
                   </div>
                </div>
+
+
+               <!-- Determine Need for Your GUide ------------------------------->
+               <div class="subject-content other-content internal-one-content internal-many-content course-content hidden">
+
+                  <div class="row">
+                     <div class="col-sm-1">
+                        <h1 class='short-round center-block' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #337ab7; opacity:.5;'>0</h1>
+                     </div>
+                     <div class="col-sm-11">
+                        <h2 style="margin-top:50px;"> Create a New Guide</h2>
+                     </div>
+                  </div>
+
+                  <div class='row'>
+
+                     <div class='col-sm-11 col-sm-offset-1'>
+                        <p>Before you begin, <a href="started-create.html">determine the need</a> for your Guide</p>
+                     </div>
+                  </div>
+               </div>
+
 
 
                <!-- Subject Content --------------------------------------------------->
@@ -1119,8 +1141,8 @@
       $(document).ready(function() {
 
 
-         
-      
+
+
 
          // Add the active classes to the nav menu
          $(".navstarted").addClass("active");
@@ -1128,53 +1150,66 @@
 
 
          $('#subject-button').click(function() {
-            $('.subject-content').removeClass('hidden');
-            $('#guide-type-page-title').removeClass('hidden');
-            $('#guide-type-page-title h1').html('Subject Guide</h1>');
+            // hide
             $('.course-content').addClass('hidden');
             $('.other-content').addClass('hidden');
             $('.internal-one-content').addClass('hidden');
             $('.internal-many-content').addClass('hidden');
+            // show
+            $('.subject-content').removeClass('hidden');
+            $('#guide-type-page-title').removeClass('hidden');
+            $('#guide-type-page-title h1').html('Subject Guide');
          });
 
          $('#course-button').click(function() {
-            $('.course-content').removeClass('hidden');
-            $('#guide-type-page-title').removeClass('hidden');
-            $('#guide-type-page-title h1').html('Course Guide</h1>');
+
+            // hide
             $('.subject-content').addClass('hidden');
             $('.other-content').addClass('hidden');
             $('.internal-one-content').addClass('hidden');
             $('.internal-many-content').addClass('hidden');
+            // show
+            $('.course-content').removeClass('hidden');
+            $('#guide-type-page-title').removeClass('hidden');
+            $('#guide-type-page-title h1').html('Course Guide');
+
          });
 
          $('#other-button').click(function() {
-            $('.other-content').removeClass('hidden');
-            $('#guide-type-page-title').removeClass('hidden');
-            $('#guide-type-page-title h1').html('Other Guide</h1>');
+            // hide
             $('.subject-content').addClass('hidden');
             $('.course-content').addClass('hidden');
             $('.internal-one-content').addClass('hidden');
             $('.internal-many-content').addClass('hidden');
+            // show
+            $('.other-content').removeClass('hidden');
+            $('#guide-type-page-title').removeClass('hidden');
+            $('#guide-type-page-title h1').html('Other Guide');
          });
 
          $('#internal-one-button').click(function() {
-            $('.internal-one-content').removeClass('hidden');
-            $('#guide-type-page-title').removeClass('hidden');
-            $('#guide-type-page-title h1').html('Internal Guide (1 Column)</h1>');
+            // hide
             $('.subject-content').addClass('hidden');
             $('.course-content').addClass('hidden');
             $('.other-content').addClass('hidden');
             $('.internal-many-content').addClass('hidden');
+            //show
+            $('.internal-one-content').removeClass('hidden');
+            $('#guide-type-page-title').removeClass('hidden');
+            $('#guide-type-page-title h1').html('Internal Guide (1 Column)');
+
          });
 
          $('#internal-many-button').click(function() {
-            $('.internal-many-content').removeClass('hidden');
-            $('#guide-type-page-title').removeClass('hidden');
-            $('#guide-type-page-title h1').html('Internal Guide (1-4 Columns)</h1>');
+            // hide
             $('.subject-content').addClass('hidden');
             $('.course-content').addClass('hidden');
             $('.other-content').addClass('hidden');
             $('.internal-one-content').addClass('hidden');
+            // show
+            $('.internal-many-content').removeClass('hidden');
+            $('#guide-type-page-title').removeClass('hidden');
+            $('#guide-type-page-title h1').html('Internal Guide (1-4 Columns)');
          });
 
 
