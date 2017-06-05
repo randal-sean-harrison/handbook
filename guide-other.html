@@ -94,7 +94,7 @@
             <div class="row">
                <div class="col-md-9">
                   <h1>Other Guides</h1>
-                  <p class="lead">Course Guides curate Library and other research-related resources for Notre Dame courses.</p>
+                  <p class="lead">Other Guides encompasses &lsquo;How-to&rsquo; and other miscellaneous use cases not covered by Subject and Course guides.</p>
                </div>
                <div class="col-md-3">
                   <a href="index.html" style="text-decoration:none;"><h1 class='short-round center-block' style='font-size: 16px; height: 40px; width: 40px; padding: 6px; border-radius: 40px; background: #337ab7;color: #FFFFFF !important;'><i class="fa fa-rocket" aria-hidden="true"></i></h1>
@@ -114,9 +114,7 @@
             <div class="col-md-3 hidden-xs hidden-sm" id="leftCol">
                <ul class="nav nav-stacked" id="sidebar">
                   <li><a href="#sec0">Guide Requirements</a></li>
-                  <li><a href="#sec1">Title Formatter</a></li>
-                  <li><a href="#sec2">Course Overview Box</a></li>
-                  <li><a href="#sec3">Examples</a></li>
+                  <li><a href="#sec1">Examples</a></li>
                   <li><a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> &nbsp;Back to top</a></li>
                </ul>
             </div>
@@ -125,222 +123,48 @@
             <div class="col-md-9" id="rightCol">
                <h2 id="sec0">Guide Requirements</h2>
 
+               <p>The use cases for &lsquo;Other&rsquo; guides are situated between the more general use case of a Subject guide, and the very specific use case for a Course guide. One example of a guide from the &lsquo;Other&rsquo; category might be using the R language to perform statistical analysis for economics research. Another example might be a guide on the management of scholarly citations. A third example might be the guide we publish temporarily during the Hesburgh Library Hackathon with specifics on the logistics of the event.</p>
 
-               <p>Librarians work closely with instructors to decide the best resources and organization for a course guide. However, Librarians must design, build, and maintain that course guide, as instructors are not eligible for LibGuides accounts.
-                  <a
-                     href="help-faq.html">See our FAQ Page</a> for more information.</p>
+               <h5 style="margin-bottom:15px;">Requirements At-a-glance</h5>
 
-               <div class="alert alert-danger">
-                  <p><strong><i class="fa fa-times-circle" aria-hidden="true"></i>The Right Tool...</strong><br/>Course guides should focus on course-related resources. Things like assignments, grading rubrics, and most course-specific documents are best
-                     embedded in learning management software such as <a href="https://sakailogin.nd.edu/" target="_blank">Sakai</a>.</p>
-               </div>
-
-               <div class='panel panel-default'>
-                  <div class='panel-heading'>
-                     <h3 class='panel-title'>Requirements At-a-glance</h3></div>
-                  <div class='panel-body'>
-                     <div class='row'>
-                        <div class='col-sm-7'>
-                           <table class="table numbered-steps" cellspacing="4" style="margin-left:30px;width:90%;">
-                              <tbody>
-                                 <tr>
-                                    <td style="width:38px;">1</td>
-                                    <td>Guide navigation must be based on the Course Guide template.</td>
-                                 </tr>
-                                 <tr>
-                                    <td>2</td>
-                                    <td>Guide must be associated with an instructor(s) and instructor's last name must be listed parenthetically in the title. <span style="color: red;">Librarian's last name may not be in the title.</span></td>
-                                 </tr>
-                                 <tr>
-                                    <td>3</td>
-                                    <td>Structure of pages and boxes decided entirely by librarian and instructor.</td>
-                                 </tr>
-                                 <tr>
-                                    <td>4</td>
-                                    <td>Only the most recent version of any instructor's guide may be published. Versions from previous semesters/years must be unpublished.</td>
-                                 </tr>
-                                 <tr>
-                                    <td>5</td>
-                                    <td>Must complement rather than compete with any LMS or portfolio software.</td>
-                                 </tr>
-                              </tbody>
-                           </table>
-                        </div>
-
-                        <div class='col-sm-5'><img class="img img-responsive" src="http://www.placehold.it/800x800" alt=""></div>
-                     </div>
-                  </div>
-               </div>
-
-               <h2 id="sec1">Title Formatter</h2>
-
-               <p>Course titles must conform to the approved format. Librarians should not add their names to the course titles. </p>
-
-               <div class="row">
-                  <div class="col-sm-12 col-md-4">
-
-                     <form>
-
-                        <div class="form-group">
-                           <label for="deptCourseName">Course Abbreviation</label>
-                           <input type="text" class="form-control" id="dept-course-1" placeholder="SOC 13181" name="deptCourseName2">
-                        </div>
-
-                        <div class="form-group">
-                           <label for="deptCourseName">2nd Course Abbreviation</label>
-                           <input type="text" class="form-control" id="dept-course-2" placeholder="POLS 13181" name="deptCourseName2">
-                        </div>
-
-                        <div class="form-group">
-                           <label for="courseTitle">Title</label>
-                           <input type="text" class="form-control" id="course-title" placeholder="Social Science University Seminar" name="courseTitle">
-                        </div>
-
-                        <div class="form-group">
-                           <label for="courseSubtitle">Subtitle</label>
-                           <input type="text" class="form-control" id="course-subtitle" placeholder="Immigration and Citizenship" name="courseSubtitle">
-                        </div>
-
-                        <div class="form-group">
-                           <label for="instructorLast">Instructor Last Name</label>
-                           <input type="text" class="form-control" id="instructor-last" placeholder="Johnson" name="instructorLast">
-                        </div>
-
-                     </form>
-
-                  <div style="margin-top:30px;">
-                     <button type="button" class="btn btn-default" id="clearFormatter">Reset</button>
-                     <button type="button" class="btn btn-primary" id="displayFormatter">Build</button>
-                  </div>
-
-                  </div>
-
-                  <div class="col-sm-12 col-md-8">
-
-                     <div class="example" id="simple-example-title">
-
-                     </div>
-
-                     <div class="well">
-
-                        <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-title-code" data-toggle="tooltip" data-placement="bottom" title="copy text">
-                        <i class="fa fa-clipboard" aria-hidden="true"></i>
-                        </button>
-
-<pre class="prettyprint" id="simple-title-code">
-</pre>
-
-                     </div> <!-- example closes -->
-
-                  </div>
-
-               </div>
-               <!-- .row closes -->
+               <table class="table numbered-steps" cellspacing="4">
+                  <tbody>
+                     <tr>
+                        <td style="width:38px;">1</td>
+                        <td>Must use the <strong>Other Guide</strong> template.</td>
+                     </tr>
+                     <tr>
+                     <td>2</td>
+                     <td>No constraints on the guide information architecture (structure of pages and boxes).</td>
+                     </tr>
+                  </tbody>
+               </table>
 
 
-               <h2 id="sec2">Course Overview Box</h2>
-               <p>The first box of the first page should contain an overview of the course, including any/all of the fields, below.</p>
-
-               <div class="row">
-                  <div class="col-sm-12 col-md-3">
-
-                     <form>
-
-                        <div class="checkbox">
-                           <label>
-                            <input type="checkbox" id="hasPhoto"> Include Photo <small style="opacity:.7;">(optional)</small>
-                            </label>
-                        </div>
-
-                        <div class="form-group" style="margin-top: 15px;">
-                           <label for="instructName">Name</label>
-                           <input type="text" class="form-control" id="instructName" placeholder="Dr. Mary Smith" name="instructName">
-                        </div>
-                        <div class="form-group">
-                           <label for="instructTitle">Title</label>
-                           <input type="text" class="form-control" id="instructTitle" placeholder="Professor of Economics" name="instructTitle">
-                        </div>
-                        <div class="form-group">
-                           <label for="instructOffice">Office</label>
-                           <input type="text" class="form-control" id="instructOffice" placeholder="123 DeBartolo Hall" name="instructOffice">
-                        </div>
-
-                        <div class="form-group">
-                           <label for="instructEmail">Email</label>
-                           <input type="email" class="form-control" id="instructEmail" name="instructEmail" placeholder="jane.smith@nd.edu">
-                        </div>
-
-                        <div class="form-group">
-                           <label for="instructTelephone">Telephone</label>
-                           <input type="tel" class="form-control" id="instructTelephone" name="instructTelephone" placeholder="(999) 999-9999">
-                        </div>
-
-                        <div class="form-group">
-                           <label for="instructDescription">Course Description</label>
-                           <textarea class="form-control" id="instructDescription" placeholder="Economics 101 covers..." name="instructDescription"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                           <label for="instructPage">Course Page <small style="opacity:.7;">(optional)</small></label>
-                           <input type="text" class="form-control" id="instructPage" placeholder="http://www.sakai.nd.edu/econ101">
-                           <p style="margin-top:3px;"><a href="https://sakailogin.nd.edu/" target="_blank"><small>&nbsp;&nbsp;<i class="fa fa-external-link fa-spacer-right" aria-hidden="true"></i>Visit Sakai Site</small></a></p>
-                        </div>
-
-                     </form>
-
-                  <div style="margin-top:30px;">
-                     <button type="button" class="btn btn-default" id="clearInstructorFields">Reset</button>
-                     <button type="button" class="btn btn-primary" id="renderInstructorBox">Build</button>
-                  </div>
-
-
-                  </div>
-                  <div class="col-sm-12 col-md-9">
-
-                     <div class="example" id="simple-instruct-example">
-                     </div>
-
-                     <div class="well">
-
-                        <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-instruct-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
-                <i class="fa fa-clipboard" aria-hidden="true"></i>
-                </button>
-
-                        <pre class="prettyprint" id="simple-instruct-code">
-</pre>
-
-                     </div>
-                     <!-- example closes -->
-
-                  </div>
-                  <!-- .col -->
-
-               </div>
-
-               <h2 id="sec3">Examples</h2>
+               <h2 id="sec1">Examples</h2>
                <p>
-                 Example ofwell-designed course guides.
+                  Useful Example of Other guides will be posted as we build them.
                </p>
                <div class="row">
-                 <div class="col-md-6">
-                  <div class="panel panel-default">
-                     <div class="panel-heading"><h5>Guide #1</h5></div>
-                     <div class="panel-body">
-                        <a href=""><img class="img img-responsive" src="http://www.placehold.it/400x200" class="pull-right" alt="example of a profile box"></a>
+                  <div class="col-md-6">
+                     <div class="panel panel-default">
+                        <div class="panel-heading">
+                           <h5>Guide #1</h5></div>
+                        <div class="panel-body">
+                           <a href=""><img class="img img-responsive" src="http://www.placehold.it/400x200" class="pull-right" alt="example of a profile box"></a>
+                        </div>
                      </div>
                   </div>
-                 </div>
-                 <div class="col-md-6">
-                  <div class="panel panel-default">
-                     <div class="panel-heading"><h5>Guide #2</h5></div>
-                     <div class="panel-body">
-                        <a href=""><img class="img img-responsive" src="http://www.placehold.it/400x200" class="pull-right" alt="example of a profile box"></a>
+                  <div class="col-md-6">
+                     <div class="panel panel-default">
+                        <div class="panel-heading">
+                           <h5>Guide #2</h5></div>
+                        <div class="panel-body">
+                           <a href=""><img class="img img-responsive" src="http://www.placehold.it/400x200" class="pull-right" alt="example of a profile box"></a>
+                        </div>
                      </div>
                   </div>
-                 </div>
                </div>
-
-
 
 
 

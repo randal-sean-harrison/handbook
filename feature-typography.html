@@ -182,7 +182,7 @@
                   the content block for the entire box. The <code>H4</code> headings should subdivide that content, with <code>h5</code> headings further subdividing the <code>h4</code> content block. The <code>h6</code> headings may further subdividing
                   the <code>h5</code> content, and so on. Other combinations are also possible, as long as a rough hierarchy of size is maintained for the reader.</p>
 
-               <p><a href="" data-toggle="modal" data-target="#typographyModal"><i class="fa fa-external-link-square fa-spacer-right" aria-hidden="true"></i>Example Hierarchy of Headings </a></p>
+               <p><a href="" data-toggle="modal" data-target="#typographyModal"><i class="fa fa-clone fa-spacer-right" aria-hidden="true"></i>Example Hierarchy of Headings </a></p>
 
                <div class="alert alert-danger">
                   <p><i class="fa fa-times-circle" aria-hidden="true"></i><strong>Limited Headings</strong><br/>Headings <code>H1</code> and <code>H2</code> are not available in the WYSIWYG editor dropdown menu. For accessibility reasons, these should not
@@ -486,64 +486,64 @@
 
                <div class="row">
 
-               <div class="col-sm-3">
-
-                  <form>
-
+                  <div class="col-sm-3">
 
                      <form>
+
+
+                        <form>
+                           <div class="form-group">
+                              <label for="blockquote-quote">Quote</label>
+                              <textarea id="blockquote-quote" class="form-control" rows="8" placeholder="And when this happens..."></textarea>
+                           </div>
+                        </form>
+
                         <div class="form-group">
-                            <label for="blockquote-quote">Quote</label>
-                            <textarea id="blockquote-quote" class="form-control" rows="8" placeholder="And when this happens..."></textarea>
+                           <label for="blockquote-author">Author</label>
+                           <input type="text" class="form-control" id="blockquote-author" placeholder="Rev. Martin Luther King, Jr.">
                         </div>
-                     </form>
 
-                     <div class="form-group">
-                         <label for="blockquote-author">Author</label>
-                         <input type="text" class="form-control" id="blockquote-author" placeholder="Rev. Martin Luther King, Jr.">
-                     </div>
+                        <div class="form-group">
+                           <label for="blockquote-source">Source</label>
+                           <input type="text" class="form-control" id="blockquote-source" placeholder="I Have a Dream">
+                        </div>
 
-                     <div class="form-group">
-                         <label for="blockquote-source">Source</label>
-                         <input type="text" class="form-control" id="blockquote-source" placeholder="I Have a Dream">
-                     </div>
-
-                     <div class="form-group">
-                     <div class="checkbox" style="margin-top: 25px;">
-                        <label>
+                        <div class="form-group">
+                           <div class="checkbox" style="margin-top: 25px;">
+                              <label>
                             <input type="checkbox" id="isItalics"> Italicize Source
                         </label>
+                           </div>
+                        </div>
+
+                     </form>
+
+                     <div style="margin-top:30px;">
+                        <button type="button" class="btn btn-default" id="clearBlockquote">Reset</button>
+                        <button type="button" class="btn btn-primary" id="displayBlockquote">Build</button>
                      </div>
-                     </div>
 
-                  </form>
-
-                <div style="margin-top:30px;">
-                   <button type="button" class="btn btn-default" id="clearBlockquote">Reset</button>
-                   <button type="button" class="btn btn-primary" id="displayBlockquote">Build</button>
-                </div>
-
-
-               </div>
-               <div class="col-sm-9">
-
-                  <div class="example" id="simple-example-blockquote">
-
-                     <blockquote>
-                        <p>And when this happens, when we allow freedom to ring, when we let it ring from every village and every hamlet, from every state and every city, we will be able to speed up that day when all of God's children, black men and white
-                           men, Jews and Gentiles, Protestants and Catholics, will be able to join hands and sing in the words of the old Negro spiritual: &ldquo;Free at last! Free at last! Thank God Almighty, we are free at last!&rdquo;</p>
-                        <footer>Rev. Martin Luther King, Jr., from <cite title="Source Title">&ldquo;I Have a Dream&rdquo;</cite></footer>
-                     </blockquote>
 
                   </div>
-                  <div class="well">
+                  <div class="col-sm-9">
 
-                     <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-blockquote-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                     <div class="example" id="simple-example-blockquote">
+
+                        <blockquote>
+                           <p>And when this happens, when we allow freedom to ring, when we let it ring from every village and every hamlet, from every state and every city, we will be able to speed up that day when all of God's children, black men and white
+                              men, Jews and Gentiles, Protestants and Catholics, will be able to join hands and sing in the words of the old Negro spiritual: &ldquo;Free at last! Free at last! Thank God Almighty, we are free at last!&rdquo;</p>
+                           <footer>Rev. Martin Luther King, Jr., from <cite title="Source Title">&ldquo;I Have a Dream&rdquo;</cite></footer>
+                        </blockquote>
+
+                     </div>
+                     <div class="well">
+
+                        <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-blockquote-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
                   <i class="fa fa-clipboard" aria-hidden="true"></i>
                   </button>
 
 
-<pre class="prettyprint" id="simple-blockquote-code">
+                        <pre class="prettyprint" id="simple-blockquote-code">
 &lt;blockquote&gt;
    &lt;p&gt;And when this happens, when we allow freedom to ring, when we let it ring from every village and every hamlet, from every state and every city, we will be able to speed up that day when all of God's children, black men and white men, Jews and Gentiles, Protestants and Catholics, will be able to join hands and sing in the words of the old Negro spiritual: &ldquo;Free at last! Free at last! thank God Almighty, we are free at last!&rdquo;&lt;/p&gt;
    &lt;footer&gt;
@@ -553,10 +553,12 @@
 &lt;/blockquote&gt;
 </pre>
 
+                     </div>
+                     <!-- example closes -->
                   </div>
-                  <!-- example closes -->
-            </div>  <!-- col md 9 -->
-         </div> <!-- row -->
+                  <!-- col md 9 -->
+               </div>
+               <!-- row -->
                <h2 id="sec5">Notes and Alerts</h2>
 
                <p>Notes and alerts are useful to provide general information, provide important information, indicate success, offer warnings, declare prohibition, etc. Whether you choose to use default icons, custom icons, or no icons in your notes and

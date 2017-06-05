@@ -24,6 +24,27 @@
     <link rel="stylesheet" href="css/main.css">
 
 
+   <style media="screen">
+
+   #subjectsModal {
+      padding: 0px !important;
+   }
+
+   .modal-dialog {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+   }
+
+   .modal-content {
+      height: auto;
+      min-height: 100%;
+      border-radius: 0;
+   }
+
+   </style>
+
 </head>
 
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
@@ -111,102 +132,95 @@
              <!--left column-->
              <div class="col-md-3 hidden-xs hidden-sm" id="leftCol">
                <ul class="nav nav-stacked" id="sidebar">
-                 <li><a href="#sec0">Primary Subject Guides</a></li>
-                 <li><a href="#sec1">Subject Guides</a></li>
+                 <li><a href="#sec0">Guide Requirements</a></li>
+                 <li><a href="#sec1">Guide Variants</a></li>
                  <li><a href="#sec2">Section 2</a></li>
-                 <li><a href="#sec3">Section 3</a></li>
                  <li><a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> &nbsp;Back to top</a></li>
                </ul>
              </div>
 
              <!--right column-->
              <div class="col-md-9" id="rightCol">
-               <h2 id="sec0">content</h2>
-               <p>
-                 At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can
-                 find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.</p>
 
-               <hr>
-               <p>
-                 Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                 dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores
-                 eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-                 sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                 Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.
-                 Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                 dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores
-                 eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-                 sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                 Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut!</p>
+                <h2 id="sec0">Guide Requirements</h2>
+                <p>Internal Guides are for use by Library personnel <em>only</em> and are not to be shared with the public. As such, they are not bound by limitations on number of columns or particular style requirements.
 
-               <h2 id="sec1">content</h2>
-               <p>
-                 Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                 dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut.
-               </p>
-               <div class="row">
-                 <div class="col-md-6">
-                   <div class="panel panel-default">
-                     <div class="panel-heading"><h3>Hello.</h3></div>
-                     <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
-                       Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-                       dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
-                       Aliquam in felis sit amet augue.
+               <p><a href="" data-toggle="modal" data-target="#subjectsModal"><i class="fa fa-clone fa-spacer-right" aria-hidden="true"></i>List of Primary subjects</a></p>
+               <p></a></p>
+
+                <h5 style="margin-bottom:15px;">Requirements At-a-glance</h5>
+
+                <table class="table numbered-steps" cellspacing="4">
+                   <tbody>
+                      <tr>
+                         <td style="width:38px;">1</td>
+                         <td>Must use either the <strong>Internal Guide (1 column)</strong> template or the <strong>Internal Guide (1-4 column)</strong> template.</td>
+                      </tr>
+                      <tr>
+                         <td>2</td>
+                         <td>Must remain 'Private' (unpublished from the patron-facing list of guides and hidden from users who don't have the URL).</td>
+                      </tr>
+                      <tr>
+                      <td>3</td>
+                      <td>Must have password protection for sensitive information.</td>
+                      </tr>
+                      <tr>
+                      <td>4</td>
+                      <td>No constraints on the guide information architecture (structure of pages and boxes).</td>
+                      </tr>
+                   </tbody>
+                </table>
+
+
+               <h2 id="sec1">Guide Variants</h2>
+               <p>We recommend the useful constraints of the <strong>Internal Guide (1 column)</strong> template over the <strong>Internal Guide (1-4 column)</strong> template, though needs will vary.</p>
+
+
+            <div class='row'>
+               <div class='col-sm-6'>
+                  <div class='panel panel-success'>
+                     <div class='panel-heading'>
+                        <h5 class='panel-title'>Internal Guide (1 column)</h5></div>
+                     <div class='panel-body'><img class='img img-responsive center-block' src='img/1-col-internal.png' alt='' />
                      </div>
-                   </div>
-                 </div>
-                 <div class="col-md-6">
-                   <div class="panel panel-default">
-                     <div class="panel-heading"><h3>Hello.</h3></div>
-                     <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
-                       Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-                       dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
-                       Aliquam in felis sit amet augue.
+                     <div class='panel-footer text-center'><strong style="color: green;">Recommended</strong></div>
+                  </div>
+               </div>
+               <div class='col-sm-6'>
+                  <div class='panel panel-warning'>
+                     <div class='panel-heading'>
+                        <h5 class='panel-title'>Internal Guide (1-4 column)</h5></div>
+                     <div class='panel-body'><img class='img img-responsive center-block' src='img/2-col-internal.png' alt='' />
                      </div>
-                   </div>
+                     <div class='panel-footer text-center'><strong style="color: #8a6d3b;">Not recommended</strong></div>
+                  </div>
+               </div>
+            </div>
+
+
+                 <h2 id="sec2">Examples</h2>
+                 <p>Useful examples of Subject guides will be posted as we build them.</p>
+
+                 <div class="row">
+                    <div class="col-md-6">
+                       <div class="panel panel-default">
+                          <div class="panel-heading">
+                             <h5>Guide #1</h5></div>
+                          <div class="panel-body">
+                             <a href=""><img class="img img-responsive" src="http://www.placehold.it/400x200" class="pull-right" alt="example of a profile box"></a>
+                          </div>
+                       </div>
+                    </div>
+                    <div class="col-md-6">
+                       <div class="panel panel-default">
+                          <div class="panel-heading">
+                             <h5>Guide #2</h5></div>
+                          <div class="panel-body">
+                             <a href=""><img class="img img-responsive" src="http://www.placehold.it/400x200" class="pull-right" alt="example of a profile box"></a>
+                          </div>
+                       </div>
+                    </div>
                  </div>
-               </div>
-
-               <hr>
-
-               <h2 id="sec2">Section 2</h2>
-               <p>
-                 Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                 dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores
-                 eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-                 sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                 Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut!
-               </p>
-               <div class="row">
-                 <div class="col-md-4"><img src="//placehold.it/300x300" class="img-responsive"></div>
-                 <div class="col-md-4"><img src="//placehold.it/300x300" class="img-responsive"></div>
-                 <div class="col-md-4"><img src="//placehold.it/300x300" class="img-responsive"></div>
-               </div>
-
-               <hr>
-
-               <h2 id="sec3">Section 3</h2>
-               <p>
-                 Images are responsive sed @mdo but sum are more fun peratis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                 totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                 dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores
-                 eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-                 sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                 Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut..</p>
-               <p>
-                 Fos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-                 sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                 Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut..</p>
-
-
-               <h2 id="sec4">Section 4</h2>
-               <p>
-                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                 totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                 dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores
-                 eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-                 sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                 Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.</p>
 
 
 
@@ -219,6 +233,44 @@
     <!-- .container -->
 
     <!-- Main Content closes ----------------------------->
+
+    <div class="modal" id="subjectsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+       <div class="modal-dialog" role="document">
+          <div class="modal-content">
+             <div class="modal-header">
+
+                <a href="" style="display:block;"><h1 class='short-round pull-right' style='font-size: 24px; height: 60px; width: 60px; padding: 10px; border-radius: 60px; background: #d9534f;' class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></h1></a>
+
+                <h1 class="modal-title pull-left" id="myModalLabel" style="opacity:.4;padding-left: 50px;">Primary Subjects</h4>
+             </div> <!-- header -->
+
+             <div class="modal-body">
+
+                <div class="container">
+                   <div class='row'>
+                      <div class='col-md-3'>
+                         <ul class='list-group alt-shaded-rows' id="subjects-list1">
+                         </ul>
+                      </div>
+                      <div class='col-md-3'>
+                         <ul class='list-group alt-shaded-rows' id="subjects-list2">
+                         </ul>
+                      </div>
+                      <div class='col-md-3'>
+                         <ul class='list-group alt-shaded-rows' id="subjects-list3">
+                         </ul>
+                      </div>
+                      <div class='col-md-3'>
+                         <ul class='list-group alt-shaded-rows' id="subjects-list4">
+                         </ul>
+                      </div>
+                   </div>
+                </div>
+
+             </div> <!-- body -->
+          </div> <!-- modal content -->
+       </div> <!-- modal dialog -->
+    </div>
 
 
     <!-- Footer ----------------------------->
@@ -256,6 +308,35 @@
     $( document ).ready(function() {
       $(".navguides").addClass("active");
       $(".navsubject").addClass("active");
+
+
+               $.getJSON('json/subjects.json', function(data) {
+                  for (i = 0; i < 17; i++) {
+                     $('#subjects-list1').append('<li class="list-group-item">' + data[i] + '</li>');
+                  }
+               });
+
+               $.getJSON('json/subjects.json', function(data) {
+                  for (i = 17; i < 34; i++) {
+                     $('#subjects-list2').append('<li class="list-group-item">' + data[i] + '</li>');
+                  }
+               });
+
+               $.getJSON('json/subjects.json', function(data) {
+                  for (i = 34; i < 51; i++) {
+                     $('#subjects-list3').append('<li class="list-group-item">' + data[i] + '</li>');
+                  }
+               });
+
+               $.getJSON('json/subjects.json', function(data) {
+                  for (i = 51; i < 68; i++) {
+                     $('#subjects-list4').append('<li class="list-group-item">' + data[i] + '</li>');
+                  }
+               });
+
+
+
+
     });
 
 </script>
