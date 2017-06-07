@@ -569,7 +569,13 @@
 
                      <form>
 
-                        <label style="margin-top: 20px;" for="button-color">Alert Color</label>
+                        <div class="form-group">
+                           <label for="alert-text">Text</label>
+                           <input type="text" class="form-control" id="alert-text" placeholder="Note that...">
+                        </div>
+
+                     <div class="form-group">
+                        <label for="button-color">Color</label>
                         <select class="form-control" id="alert-color" style="margin-bottom: 15px;">
                         <option id="option-default" value=" alert-default">Default (light grey)</option>
                         <option id="option-default" value=" alert-intro">Introductory (seafoam)</option>
@@ -578,14 +584,15 @@
                         <option id="option-yellow" value=" alert-warning">Warning (yellow)</option>
                         <option id="option-green" value=" alert-success">Success (green)</option>
                         </select>
+                     </div>
 
-                        <div style="margin-top: 15px;" class="checkbox">
+                        <div style="margin-top: 30px;" class="checkbox">
                            <label>
                             <input type="checkbox" id="standard-icons"> Use Default Icons
                             </label>
                         </div>
 
-                        <label style="margin-top: 10px;" for="icon-html">Custom Icon (or Text)</label>
+                        <label style="margin-top: 20px;" for="icon-html">Custom Icon (or Text)</label>
                         <div class="input-group">
                            <span style="height: 16px;" class="input-group-addon" id="refresh-button"><i class="fa fa-refresh" aria-hidden="true"></i></span>
                            <input type="text" class="form-control" id="alert-icon" placeholder="<i class='fa fa-up'></i>">
@@ -610,8 +617,8 @@
 
                      <div class="example" id="simple-example-alert">
 
-                        <div class="alert alert-warning" role="alert">
-                           <p><i class="fa fa-exclamation-triangle fa-spacer-right" aria-hidden="true"></i>Be careful not to do that thing you're about to do!</p>
+                        <div class="alert alert-info" role="alert">
+                           <p><i class="fa fa-exclamation-circle fa-spacer-right" aria-hidden="true"></i>Note that, in fact, <samp>peruse</samp> means &lsquo;to read with extreme care&rsquo;, and not &lsquo;to skim&rsquo;.</p>
                         </div>
 
                      </div>
@@ -622,12 +629,11 @@
                         </button>
 
 
-                        <pre class="prettyprint" id="simple-alert-code">
-&lt;div class="alert alert-warning" role="alert"&gt;
-   &lt;p&gt;
-      &lt;i class="fa fa-exclamation-triangle fa-spacer-right" aria-hidden="true"&gt;&lt;/i&gt;
-      Be careful not to do that thing you're about to do!
-   &lt;/p&gt;
+<pre class="prettyprint" id="simple-alert-code">
+&lt;div class="alert alert-info" role="alert"&gt;
+    &lt;p&gt;&lt;i class="fa fa-exclamation-circle fa-spacer-right" aria-hidden="true"&gt;&lt;/i&gt;Note that, in fact,
+    &lt;samp&gt;peruse&lt;/samp&gt; means &lsquo;to read with extreme care&rsquo;, and not &lsquo;to
+    skim&rsquo;.&lt;/p&gt;
 &lt;/div&gt;
 </pre>
 
@@ -1020,7 +1026,7 @@
             var alertIconAssignation = '';
             var checked = $('#standard-icons').prop('checked');
             var customIzed = $("#alert-icon").val().length > 0;
-
+            var alertText = $('#alert-text').val();
 
             switch (alertColorChoice) {
                case ' alert-default':
@@ -1068,7 +1074,7 @@
             }
 
             var alertOpening = "<div class='alert" + alertColorChoice + "' role='alert'><p>";
-            var alertClosing = alertIconAssignation + "In omnibus requiem quaesivi et nusquam inveni nisi in angulo cum libro</p></div>";
+            var alertClosing = alertIconAssignation + alertText + "</p></div>";
 
             // Write the table
             var bsAlert = alertOpening + alertClosing;

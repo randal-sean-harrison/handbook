@@ -126,14 +126,23 @@
 
                <div class="alert alert-default text-center" style="margin: 60px 0px 20px;">
                   <div class="btn-group" role="group" aria-label="...">
-                     <button id="subject-button" type="button" class="btn btn-default">Subject</button>
+                     <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Subject
+                        <span class="caret"></span>
+                         </button>
+                        <ul class="dropdown-menu">
+                           <li id="subject-button"><a>Subject, Disciplinary <small style="opacity:.7">(was DDW)</small></a></li>
+                           <li id="subject-primary-button"><a>Subject, Standard</a></li>
+                        </ul>
+                     </div>
                      <button id="course-button" type="button" class="btn btn-default">Course</button>
                      <button id="other-button" type="button" class="btn btn-default">Other</button>
                      <div class="btn-group" role="group">
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Internal
                         <span class="caret"></span>
-                      </button>
+                         </button>
                         <ul class="dropdown-menu">
                            <li id="internal-one-button"><a>Side Navigation, 1 Column</a></li>
                            <li id="internal-many-button"><a>Tabbed Navigation, 1-4 Columns</a></li>
@@ -177,14 +186,14 @@
                         <h1 class='short-round center-block' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #337ab7; opacity:.5;'>0</h1>
                      </div>
                      <div class="col-sm-11">
-                        <h2 style="margin-top:50px;"> Create a New Guide</h2>
+                        <h2 style="margin-top:50px;"> Before You Begin...</h2>
                      </div>
                   </div>
 
                   <div class='row'>
 
                      <div class='col-sm-11 col-sm-offset-1'>
-                        <p>Before you begin, <a href="started-create.html">determine the need</a> for your Guide</p>
+                        <p><a href="started-create.html">Determine the use case(s)</a> for your Guide</p>
                      </div>
                   </div>
                </div>

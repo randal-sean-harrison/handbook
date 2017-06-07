@@ -131,8 +131,8 @@
             <div class="col-md-9" id="rightCol">
                <h2 id="sec0">Jumbotron Builder</h2>
 
-               <p>Jumbotrons are an introductory feature and should probably be used once per site, where they are used. Use this feature advisedly&mdash;particular for situations in which users are more process- or information-focused, and the aesthetic
-                  dimension approaches distraction for the user.</p>
+               <p>Jumbotrons are an introductory feature and should probably be used once per site, where they are used. Use this feature advisedly&mdash;particular for situations in which users are more process- or information-focused, and the aesthetic dimension approaches distraction for the user.</p>
+               <p>You may choose an image background <strong>or</strong> a colored background. The default color is <mark>grey</mark>.</p>
 
                <div class="row">
                   <div class="col-sm-12 col-md-3">
@@ -143,14 +143,52 @@
                            <label for="image-url">Image URL</label>
                            <div class="input-group">
                               <span class="input-group-addon" id="refresh-button1"><i class="fa fa-refresh" aria-hidden="true"></i></span>
-                              <input type="text" class="form-control" id="image-url" placeholder="http://url.com" style="width:100%;">
+                              <input type="text" class="form-control" id="image-url" placeholder="http://url.com">
                            </div>
                            <p style="margin-left: 6px; margin-top: 0px;" class="text-left"><a href="https://nd.libapps.com/libguides/image_manager.php" target="_blank"><small><i class="fa fa-external-link-square" aria-hidden="true"></i>&nbsp; Your Image Library</small></a></p>
                         </div>
 
                         <div class="form-group">
+                        <label style="margin-top:0em;" for="button-size">Background Color</label>
+                        <select class="form-control" id="jumbotron-background">
+                           <option value="">None</option>
+                           <option value="default" selected="selected">Default</option>
+                           <option value="custom">Custom</option>
+                           <option value = "" disabled="disabled">- - - - - - - - - - - - - -</option>
+                           <option value="blue">Primary (blue)</option>
+                           <option value="info">Info (light blue)</option>
+                           <option value="success">Success (green)</option>
+                           <option value="warning">Warning (yellow)</option>
+                           <option value="danger">Danger (red)</option>
+                           <option value = "" disabled="disabled">- - - - - - - - - - - - - -</option>
+                           <option value="black">ND Black</option>
+                           <option value="blue-dark">ND Blue (Dark)</option>
+                           <option value="blue-light">ND Blue (Light)</option>
+                           <option value="brown-dark">ND Brown (Dark)</option>
+                           <option value="brown-light">ND Brown (Light)</option>
+                           <option value="yellow-nd-gold">ND Gold</option>
+                           <option value="green-hunter">ND Green (Hunter)</option>
+                           <option value="green-kelly">ND Green (Kelly)</option>
+                           <option value="green-khaki">ND Green (Khaki)</option>
+                           <option value="purple">ND Purple</option>
+                           <option value="red-blood">ND Red (Blood)</option>
+                           <option value="red-oxblood">ND Red (Oxblood)</option>
+                           <option value="yellow-canary">ND Yellow (Canary)</option>
+                           <option value="yellow-sunshine">ND Yellow (Sunshine)</option>
+                           <option value="yellow-tapioca">ND Yellow (Tapioca)</option>
+                           </select>
+                        </div>
+
+                        <hr>
+
+                        <div class="form-group hidden" id="background-color-hider">
+                           <label for="button-text">Custom Background Color</label>
+                           <input type="text" class="form-control" id="custom-color" placeholder="Jumbotron Title">
+                        </div>
+
+                        <div class="form-group">
                            <label for="button-text">Jumbotron Title</label>
-                           <input type="text" class="form-control" id="jumbotron-title" placeholder="Jumbotron Title" style="width:100%;">
+                           <input type="text" class="form-control" id="jumbotron-title" placeholder="Jumbotron Title">
                         </div>
 
                         <div class="form-group">
@@ -168,6 +206,8 @@
                            <a id="select-black"><small>Black</small></a> | <a id="select-white"><small>White</small></a></p>
                         </div>
 
+                        <hr>
+
                         <div class="form-group">
                            <label for="panel-accent">Button Color</label>
                            <select class="form-control" id="button-color">
@@ -182,14 +222,14 @@
 
                         <div class="form-group hidden" id="button-title-group">
                            <label for="button-title">Button Title</label>
-                           <input type="text" class="form-control" id="button-title" placeholder="Learn More" style="width:100%;">
+                           <input type="text" class="form-control" id="button-title" placeholder="Learn More">
                         </div>
 
                         <div class="form-group hidden" id="button-url-group">
                            <label for="button-url">Button URL</label>
                            <div class="input-group">
                               <span class="input-group-addon" id="refresh-button2"><i class="fa fa-refresh" aria-hidden="true"></i></span>
-                              <input type="text" class="form-control" id="button-url" placeholder="http://url.com" style="width:100%;">
+                              <input type="text" class="form-control" id="button-url" placeholder="http://url.com">
                            </div>
                         </div>
 
@@ -209,11 +249,7 @@
 
                      <div class="example" id="simple-example-jumbotron">
 
-                        <div class="jumbotron">
-                           <h3 class="jumbotronic">Jumbotron Title</h3>
-                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam doloribus quasi laudantium similique animi.</p>
-                           <p><a class="btn btn-primary" role="button">Learn more</a></p>
-                        </div>
+                        <div class='jumbotron' style='background-size: cover; background-image: url("https://libapps.s3.amazonaws.com/accounts/38465/images/Africana-mini.jpg");'><h3 style=' text-shadow: 1px 1px 1px #000; color:#ffffff' class='jumbotronic'>Africana Studies</h3><p style=' text-shadow: 1px 1px 1px #000; color:#ffffff'>The Problematic of Race in America</p><p><a class='btn btn-warning' href='' target='_blank' role='button'>Sakai Course Page</a></p></div>
 
                      </div>
 
@@ -224,12 +260,17 @@
                         </button>
 
 <pre class="prettyprint" id="simple-jumbotron-code">
-&lt;div class="jumbotron"&gt;
-   &lt;h3 class="jumbotronic"&gt;Jumbotron Title&lt;/h3&gt;
-   &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam doloribus quasi laudantium similique animi.
+&lt;div class='jumbotron' style='background-size: cover; background-image: url("https://libapps.s3.amazonaws.com/accounts/38465/images/Africana-mini.jpg");'&gt;
+   &lt;h3 style='color:#ffffff' class='jumbotronic'&gt;
+      Africana Studies
+   &lt;/h3&gt;
+   &lt;p style='color:#ffffff'&gt;
+      The Problematic of Race in America
    &lt;/p&gt;
    &lt;p&gt;
-      &lt;a class="btn btn-primary" href="#" role="button"&gt;Learn more&lt;/a&gt;
+      &lt;a class='btn btn-warning' href='' target='_blank' role='button'&gt;
+         Sakai Course Page
+      &lt;/a&gt;
    &lt;/p&gt;
 &lt;/div&gt;
 </pre>
@@ -245,14 +286,14 @@
 
                <h2 id="sec2">Examples</h2>
                <p>
-                 Example of cards in action.
+                 Example of a jumbotron in action.
                </p>
                <div class="row">
                  <div class="col-md-6">
                   <div class="panel panel-default">
                      <div class="panel-heading"><h5><a href="http://libguides.library.nd.edu/onebutton/virtual-tour" target="_blank">Video Recording with the One Button Studio</a></h5></div>
                               <div class="panel-body">
-                                 <a href="http://libguides.library.nd.edu/onebutton/virtual-tour" target="_blank"><img class="img img-responsive" src="http://libguides.library.nd.edu/ld.php?size=medium&screenshot=ccbagf.png" class="pull-right" alt="example of a profile box"></a>
+                                 <a href="http://libguides.library.nd.edu/medieval-studies/institute-collections" target="_blank"><img class="img img-responsive" src="http://libguides.library.nd.edu/ld.php?size=medium&screenshot=gebdfc.png" class="pull-right" alt="example of a profile box"></a>
                               </div>
                            </div>
                         </div>
@@ -358,22 +399,128 @@
                $('#displayJumbotron').click(function() {
 
                   var imageURL = $('#image-url').val();
+                  var jumbotronBackground = $('#jumbotron-background').val();
                   var jumbotronTitle = $('#jumbotron-title').val();
                   var jumbotronSubtitle = $('#jumbotron-subtitle').val();
                   var buttonURL = $('#button-url').val();
                   var buttonColor = $('#button-color').val();
                   var buttonTitle = $('#button-title').val();
                   var textColor = $('#color-picker').val();
-
+                  var setBackground = '';
                   var addImage = '';
+                  var customColor = $('#custom-color').val()
+
+                  switch (jumbotronBackground) {
+
+                     // base lines
+                     case 'none':
+                        setBackground = 'transparent';
+                        $('#background-color-hider').addClass('hidden');
+                        break;
+                     case 'default':
+                        setBackground = '#eeeeee';
+                        $('#background-color-hider').addClass('hidden');
+                        break;
+                     case 'custom':
+                        $('#background-color-hider').removeClass('hidden');
+                        break;
+
+                     // Bootstrap Colors
+                     case 'info':
+                        setBackground = '#d9edf7';
+                        $('#background-color-hider').addClass('hidden');
+                        break;
+                     case 'success':
+                        setBackground = '#dff0d8';
+                        $('#background-color-hider').addClass('hidden');
+                        break;
+                     case 'warning':
+                        setBackground = '#fcf8e3';
+                        $('#background-color-hider').addClass('hidden');
+                        break;
+                     case 'danger':
+                        setBackground = '#f2dede';
+                        $('#background-color-hider').addClass('hidden');
+                        break;
+                     case 'blue':
+                        setBackground = '#2c76c8';
+                        $('#background-color-hider').addClass('hidden');
+                        break;
+
+                     // nd colors
+                     case 'black':
+                        setBackground = '#302205';
+                        $('#background-color-hider').addClass('hidden');
+                        break;
+                     case 'blue-dark':
+                        setBackground = '#0C2340';
+                        $('#background-color-hider').addClass('hidden');
+                        break;
+                     case 'blue-light':
+                        setBackground = '#5AABBC';
+                        $('#background-color-hider').addClass('hidden');
+                        break;
+                     case 'brown-dark':
+                        setBackground = '#5A412F';
+                        $('#background-color-hider').addClass('hidden');
+                        break;
+                     case 'brown-light':
+                        setBackground = '#BA6F2E';
+                        $('#background-color-hider').addClass('hidden');
+                        break;
+                     case 'green-hunter':
+                        setBackground = '#465510';
+                        $('#background-color-hider').addClass('hidden');
+                        break;
+                     case 'green-kelly':
+                        setBackground = '#00843D';
+                        $('#background-color-hider').addClass('hidden');
+                        break;
+                     case 'green-khaki':
+                        setBackground = '#999623';
+                        $('#background-color-hider').addClass('hidden');
+                        break;
+                     case 'purple':
+                        setBackground = '#4A3651';
+                        $('#background-color-hider').addClass('hidden');
+                        break;
+                     case 'red-blood':
+                        setBackground = '#AA272F';
+                        $('#background-color-hider').addClass('hidden');
+                        break;
+                     case 'red-oxblood':
+                        setBackground = '#5F1709';
+                        $('#background-color-hider').addClass('hidden');
+                        break;
+                     case 'yellow-canary':
+                        setBackground = '#F2D653';
+                        $('#background-color-hider').addClass('hidden');
+                        break;
+                     case 'yellow-nd-gold':
+                        setBackground = '#C99700';
+                        $('#background-color-hider').addClass('hidden');
+                        break;
+                     case 'yellow-sunshine':
+                        setBackground = '#FFCF01';
+                        $('#background-color-hider').addClass('hidden');
+                        break;
+                     case 'yellow-tapioca':
+                        setBackground = '#F6E7A1';
+                        $('#background-color-hider').addClass('hidden');
+                        break;
+                  }
 
                   if (imageURL !== '') {
-                     addImage = " style='background-image: url(\"" + imageURL + "\");'";
+                     addImage = " style='background-size: cover; background-image: url(\"" + imageURL + "\");'";
+                  }
+
+                  if (jumbotronBackground !== '') {
+                     addImage = " style='background:" + setBackground + "'";
                   }
 
 
                   var jumboOpening = "<div class='jumbotron'" + addImage + ">";
-                  var jumboMiddle = "<h3 style='color:" + textColor + "' class='jumbotronic'>" + jumbotronTitle + "</h3><p style='color:" + textColor + "'>" + jumbotronSubtitle + "</p>";
+                  var jumboMiddle = "<h3 style='text-shadow: 1px 1px 1px #000000; color:" + textColor + "' class='jumbotronic'>" + jumbotronTitle + "</h3><p style=' text-shadow: 1px 1px 1px #000000; color:" + textColor + "'>" + jumbotronSubtitle + "</p>";
                   var jumboClosing = "<p><a class='btn" + buttonColor + "' href='" + buttonURL + "' target='_blank' role='button'>" + buttonTitle + "</a></p></div>";
 
                   // Write the table
@@ -385,6 +532,8 @@
                   $('pre').removeClass('prettyprinted');
                   prettyPrint();
 
+
+
                });
 
                // Clear the Jumbotron
@@ -393,6 +542,20 @@
                });
 
             });
+
+
+            $('#jumbotron-background').on('change', function() {
+               if ($('#jumbotron-background').val() !== 'none') {
+                  $('#image-url').val('');
+               }
+            });
+
+            $('#image-url').on('change', function() {
+               if ($('#image-url').val() !== '') {
+                  $('#jumbotron-background').val('');
+               }
+            });
+
 
             $('#button-color').on('change', function() {
 
@@ -421,9 +584,9 @@
                      $('#button-title-group').removeClass('hidden');
                      $('#button-url-group').removeClass('hidden');
                      break;
-
                }
             });
+
 
             // clipboard button
             new Clipboard('.btn');
