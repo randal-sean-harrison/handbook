@@ -120,7 +120,7 @@
 
                <h2 id="sec0">Video Builder</h2>
                <p>The LibGuides platform does not allow for uploading of video. However, video can be embedded from any number of streaming services, including <a href="https://www.youtube.com/">YouTube</a>, <a href="https://vimeo.com/">Vimeo</a>, <a href="https://archive.org/details/movies">The Internet Archive</a>,
-                  <a href="https://www.ted.com/talks">TED</a>, and many others. Remember that as librarians we must be models of academic honestly when reusing content. While embedding a link to a video shared on another platform reduces potential liability,
+                  <a href="https://www.ted.com/talks">TED</a>, and any others using the <code>&lt;iframe&gt;</code> embed. Remember that as librarians we must be models of academic honestly when reusing content. While embedding a link to a video shared on another platform reduces potential liability,
                   it remains our responsibility to follow <a href="https://www.nd.edu/copyright/">the University's policies</a> on copyright and intellectual property. </p>
 
 
@@ -135,7 +135,8 @@
                      <form>
 
                         <label for="button-url">iFrame Embed URL</label>
-                        <a id="url-popover" tabindex="2" data-html="true" data-trigger="focus" role="button" data-container="body" data-toggle="popover" data-placement="top" data-content="<h5>Alt-text describes your image for the visually impaired.</h5><hr><p>This text does not show in the page but describe images which matter to the content on the page. For purely decorative images which add no meaning, leave this field blank.</p><p><a href='http://webaim.org/techniques/alttext/' target='_blank'><i class='fa fa-external-link-square fa-spacer-right' aria-hidden='true'></i>Read more about alt-text</a></p>">
+                        <a id="url-popover" tabindex="2" data-html="true" data-trigger="focus" role="button" data-container="body" data-toggle="popover" data-placement="top" data-content="<h5>Embedding Your Video</h5><hr><p>Look for an embedding option to find the iframe code you need. The code should look like this:</p><p><code>&lt;iframe src = 'https://archive.org/embed/CamelCigaretteCommercialsAd1' width='640' height='480' frameborder='0' webkitallowfullscreen='true' mozallowfullscreen='true' allowfullscreen&gt;&lt;/iframe&gt;</code>
+                        </p>">
                         <i class="fa fa-info-circle" aria-hidden="true"></i>
                         </a>
                         <div class="input-group">
@@ -181,6 +182,8 @@
 
                      <div class="example" id="simple-example-video">
 
+                        <div class='panel panel-default'><div class='panel-body' style='background: #000000'><div class='embed-responsive embed-responsive-16by9'><iframe src="https://archive.org/embed/CamelCigaretteCommercialsAd1" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen="" class="embed-responsive-item"></iframe></div></div>
+                        <div class='panel-footer'><i class='fa fa-film fa-spacer-right'></i>Television Commercial for Camel Cigarettes (1954)</div></div>
 
                      </div>
 
@@ -192,6 +195,8 @@
 
 
 <pre class="prettyprint" id="simple-video-code">
+&lt;div class='panel panel-default'&gt;&lt;div class='panel-body' style='background: #000000'&gt;&lt;div class='embed-responsive embed-responsive-16by9'&gt;&lt;iframe src="https://archive.org/embed/CamelCigaretteCommercialsAd1" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen="" class="embed-responsive-item"&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class='panel-footer'&gt;&lt;i class='fa fa-film fa-spacer-right'&gt;&lt;/i&gt;Television Commercial for Camel Cigarettes (1954)&lt;/div&gt;&lt;/div&gt;
 </pre>
 
                      </div>
