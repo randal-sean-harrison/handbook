@@ -131,8 +131,7 @@
             <div class="col-md-9" id="rightCol">
                <h2 id="sec0">Jumbotron Builder</h2>
 
-               <p>Jumbotrons are an introductory feature and should probably be used once per site, where they are used. Use this feature advisedly&mdash;particular for situations in which users are more process- or information-focused, and the aesthetic dimension approaches distraction for the user.</p>
-               <p>You may choose an image background <strong>or</strong> a colored background. The default color is <mark>grey</mark>.</p>
+               <p>Jumbotrons are an introductory / titling feature. Use this feature advisedly&mdash;particular for situations in which users are more process- or information-focused, and the aesthetic dimension approaches distraction for the user. You may choose an image background <strong>or</strong> a colored background. The default background color is <code>grey</code>.</p>
 
                <div class="row">
                   <div class="col-sm-12 col-md-3">
@@ -211,7 +210,9 @@
                         <div class="form-group">
                            <label for="panel-accent">Button Color</label>
                            <select class="form-control" id="button-color">
-                                 <option value="" selected="selected">No Button</option>
+                                  <option value="" selected="selected">No Button</option>
+                                  <option value=" btn-secondary-light">Transparent (light)</option>
+                                  <option value=" btn-secondary-dark">Transparent (dark)</option>
                                   <option value=" btn-primary">Primary (blue)</option>
                                   <option value=" btn-info">Info (light blue)</option>
                                   <option value=" btn-success">Success (green)</option>
@@ -565,6 +566,14 @@
                      $('#button-url-group').addClass('hidden');
                      break;
                   case ' btn-primary':
+                     $('#button-title-group').removeClass('hidden');
+                     $('#button-url-group').removeClass('hidden');
+                     break;
+                  case ' btn-secondary-light':
+                     $('#button-title-group').removeClass('hidden');
+                     $('#button-url-group').removeClass('hidden');
+                     break;
+                  case ' btn-secondary-dark':
                      $('#button-title-group').removeClass('hidden');
                      $('#button-url-group').removeClass('hidden');
                      break;

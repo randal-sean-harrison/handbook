@@ -8,7 +8,7 @@ body {
 	font-weight: 300;
 }
 
-p, li, th, td, a, dl, input, textarea, button {
+p, li, th, td, a, dl, input, textarea, button, select, option {
    font-size: 16px !important;
 }
 
@@ -636,4 +636,17 @@ table.numbered-steps tr td:first-of-type { /* NOTE: formats the table with steps
 
 h3.jumbotronic {
    font-size: 42px !important;
+}
+
+
+.btn-secondary-light {
+    color: #337ab7;
+    background-color: transparent;
+    border-color: #2e6da4;
+}
+
+.btn-secondary-dark {
+   color: #FFFFFF;
+   background-color: transparent;
+   border-color: #FFFFFF;
 }

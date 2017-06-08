@@ -94,7 +94,7 @@
             <div class="row">
                <div class="col-md-12">
                   <h1>Video</h1>
-                  <p class="lead">Video is engaging, facilitating active learning by allowing users multiple views of material at their own pace.</p>
+                  <p class="lead">Video is highly engaging and facilitates active learning, allowing users multiple views of material at their own pace.</p>
                </div>
             </div>
          </div>
@@ -119,382 +119,259 @@
             <div class="col-md-9" id="rightCol">
 
                <h2 id="sec0">Video Builder</h2>
-               <p>For simple image/text combinations, the Image Builder is far friendly alternative to using the system dialog for embedding images. The first step in working with images is to <a href="https://nd.libapps.com/libguides/image_manager.php" target="_blank">open the image repository</a>. When uploading images, ensure you've saved your images at a sufficiently high resolution before uploading.</p>
+               <p>The LibGuides platform does not allow for uploading of video. However, video can be embedded from any number of streaming services, including <a href="https://www.youtube.com/">YouTube</a>, <a href="https://vimeo.com/">Vimeo</a>, <a href="https://archive.org/details/movies">The Internet Archive</a>,
+                  <a href="https://www.ted.com/talks">TED</a>, and many others. Remember that as librarians we must be models of academic honestly when reusing content. While embedding a link to a video shared on another platform reduces potential liability,
+                  it remains our responsibility to follow <a href="https://www.nd.edu/copyright/">the University's policies</a> on copyright and intellectual property. </p>
 
-               <div class='alert alert-success' role='alert'><p><i class="fa fa-comments-o" aria-hidden="true"></i>Working with images can be tricky. If you need help determining things like size and resolution for your guide images, <a href="help.html">contact the LMT</a>. We're here to help!</p></div>
+
+               <div class='alert alert-warning' role='alert'>
+                  <p><i class='fa fa-exclamation-triangle fa-spacer-right' aria-hidden='true'></i><strong>Embed Size</strong><br/>Make sure to choose an embed size of <code>640 pixels</code> for the video you wish to embed.</p>
+               </div>
 
                <div class="row">
 
-                  <div class="col-sm-3">
+                  <div class="col-sm-4">
 
                      <form>
 
-                        <label for="button-url">URL</label>
+                        <label for="button-url">iFrame Embed URL</label>
+                        <a id="url-popover" tabindex="2" data-html="true" data-trigger="focus" role="button" data-container="body" data-toggle="popover" data-placement="top" data-content="<h5>Alt-text describes your image for the visually impaired.</h5><hr><p>This text does not show in the page but describe images which matter to the content on the page. For purely decorative images which add no meaning, leave this field blank.</p><p><a href='http://webaim.org/techniques/alttext/' target='_blank'><i class='fa fa-external-link-square fa-spacer-right' aria-hidden='true'></i>Read more about alt-text</a></p>">
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        </a>
                         <div class="input-group">
                            <span class="input-group-addon" id="refresh-button"><i class="fa fa-refresh" aria-hidden="true"></i></span>
-                           <input type="text" class="form-control" id="image-url" placeholder="http://www.url.com" style="width:100%;">
+                           <input type="text" class="form-control" id="video-url" placeholder="&lt;iframe width='640' height='360' src='">
                         </div>
-                        <p style="margin-left: 6px; margin-top: 0px;" class="text-left"><a href="https://nd.libapps.com/libguides/image_manager.php" target="_blank"><small><i class="fa fa-external-link-square" aria-hidden="true"></i>&nbsp; Your Image Library</small></a></p>
-
+                        <p style="margin-left: 6px; margin-top: 0px;" class="text-left"><a href="https://nd.libapps.com/libguides/image_manager.php" target="_blank"><a href="https://www.youtube.com/" target="_blank"><small><i class="fa fa-youtube-square" aria-hidden="true"></i> Youtube</a></small>&nbsp; |&nbsp;
+                           <a
+                              href="https://vimeo.com/" target="_blank"><small><i class="fa fa-vimeo-square" aria-hidden="true"></i> Vimeo</a></small></a>
+                        </p>
 
                         <div class="form-group">
-                           <label for="alt-text">Alt-text </label> <a id="alt-text-popover" tabindex="2" data-html="true" data-trigger="focus" role="button" data-container="body" data-toggle="popover" data-placement="top" data-content="<h5>Alt-text describes your image for the visually impaired.</h5><hr><p>This text does not show in the page but describe images which matter to the content on the page. For purely decorative images which add no meaning, leave this field blank.</p><p><a href='http://webaim.org/techniques/alttext/' target='_blank'><i class='fa fa-external-link-square fa-spacer-right' aria-hidden='true'></i>Read more about alt-text</a></p>">
-                           <i class="fa fa-info-circle" aria-hidden="true"></i>
-                           </a>
-                           <input type="text" class="form-control" id="image-alt-text" placeholder="Photo of Ilya Brik">
+                           <label for="video-dimensions">Dimensions</label>
+                           <select class="form-control" id="video-dimensions">
+                               <option value="16by9" selected="selected">16:9 ratio (letterbox) </option>
+                               <option value="4by3">4:3 ratio (pan-and-scan)</option>
+                           </select>
                         </div>
+
 
                         <label for="button-url">Caption</label>
                         <div class="input-group">
                            <span class="input-group-addon" id="refresh-button2"><i class="fa fa-refresh" aria-hidden="true"></i></span>
-                           <input type="text" class="form-control" id="image-caption" placeholder="Photo of the Ilya Brik" style="width:100%;">
+                           <input type="text" class="form-control" id="video-caption" placeholder="Deep Thoughts, by Jack Handey">
                         </div>
 
-                        <div class="form-group hidden">
-                           <label for="alignment">Shape</label>
-                           <select class="form-control" id="image-shape">
-                            <option value="rectangle" selected="selected">Rectangle</option>
-                            <option value="rectangle-rounded">Rectangle (Rounded)</option>
-                            <option value="rectangle-bordered">Rectangle (borders)</option>
-                            <option value="circle">Circle</option>
-                           </select>
-                        </div>
-
-                        <div class="form-group" style="margin-top: 15px;">
-                           <label for="alignment">Alignment</label>
-                           <select class="form-control" id="image-alignment">
-                        <option value="image-only" selected="selected">Image Only</option>
-                         <option value="left-most">Image on Left</option>
-                         <option value="right-most">Image on Right</option>
-                        </select>
-                     </div>
-
-                     <div class="form-group">
-                        <label for="image-width">Width <small>(pixels)</small></label>
-                        <input type="text" class="form-control" id="image-width" placeholder="300">
-                     </div>
-
-                     <div class="form-group">
-                     <div class="checkbox" style="margin-top: 20px;">
-                        <label>
+                        <div class="form-group">
+                           <div class="checkbox" style="margin-top: 20px;">
+                              <label>
                             <input type="checkbox" id="reverse-background"> Dark Background
                             </label>
-                     </div>
-                  </div>
-
-                  <div class="form-group">
-                  <div class="checkbox" style="margin-top: 20px;">
-                     <label>
-                         <input type="checkbox" id="filler-text"> Filler Text
-                     </label>
-                  </div>
-                  </div>
-
-
-
+                           </div>
+                        </div>
                      </form>
 
                      <div style="margin-top:30px;">
                         <button type="button" class="btn btn-default" id="clearImageBuilder">Reset</button>
-                        <button type="button" class="btn btn-primary" id="displayImageBuilder">Build</button>
+                        <button type="button" class="btn btn-primary" id="displayVideoBuilder">Build</button>
                      </div>
 
+                  </div>
+                  <div class="col-sm-8">
+
+                     <div class="example" id="simple-example-video">
+
 
                      </div>
-                     <div class="col-sm-9">
 
+                     <div class="well">
 
-                        <div class="example" id="simple-example-image">
-
-                           <div class='row'>
-                              <div class='col-sm-12'>
-                                 <div style='width:275px;' class='panel panel-default pull-left embedded-photo-left'>
-                                    <div class='panel-body' style='background:#FFFFFF'><img class='img img-responsive center-block' src='https://libapps.s3.amazonaws.com/accounts/38465/images/russian-constructivism-art_1-b.jpg' alt='Lilya Brik' /></div>
-                                    <div class='panel-footer'>
-                                       <p><i class='fa fa-camera-retro fa-spacer-right' aria-hidden='true'></i>Photo of Lilya Brik in Rodchenko's famous protest poster from Russian Constructivism</p>
-                                    </div>
-                                 </div>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit repudiandae architecto doloribus eligendi facilis totam eius quis, error veniam maxime aspernatur eos omnis reprehenderit, ab provident natus magni corporis, dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit repudiandae architecto doloribus eligendi facilis totam eius quis, error veniam maxime aspernatur eos omnis reprehenderit, ab provident natus magni corporis, dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit repudiandae architecto doloribus eligendi facilis totam eius quis, error veniam maxime aspernatur eos omnis reprehenderit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque corporis nostrum repellat aperiam tenetur, maxime laborum. Maxime enim optio minus voluptatem, alias voluptates totam, sapiente amet sequi officia nesciunt odio.</p>
-                              </div>
-                           </div>
-
-
-                        </div>
-
-                        <div class="well">
-
-                           <button style="z-index:10000;" id="copyButton" class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-image-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                        <button style="z-index:10000;" id="copyButton" class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-video-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
                      <i class="fa fa-clipboard" aria-hidden="true"></i>
                      </button>
 
 
-<pre class="prettyprint" id="simple-image-code">
-&lt;div class='row'&gt;
-   &lt;div class='col-sm-12'&gt;
-      &lt;div style='width:275px;' class='panel panel-default pull-left embedded-photo-left'&gt;
-         &lt;div class='panel-body' style='background:#FFFFFF'&gt;&lt;img class='img img-responsive center-block' src='https://libapps.s3.amazonaws.com/accounts/38465/images/russian-constructivism-art_1-b.jpg' alt='Lilya Brik' /&gt;&lt;/div&gt;
-         &lt;div class='panel-footer'&gt;
-            &lt;p&gt;&lt;i class='fa fa-camera-retro fa-spacer-right' aria-hidden='true'&gt;&lt;/i&gt;Photo of Lilya Brik in Rodchenko's famous protest poster from Russian Constructivism&lt;/p&gt;
-         &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit repudiandae architecto doloribus eligendi facilis totam eius quis, error veniam maxime aspernatur eos omnis reprehenderit, ab provident natus magni corporis, dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit repudiandae architecto doloribus eligendi facilis totam eius quis, error veniam maxime aspernatur eos omnis reprehenderit, ab provident natus magni corporis, dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit repudiandae architecto doloribus eligendi facilis totam eius quis, error veniam maxime aspernatur eos omnis reprehenderit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque corporis nostrum repellat aperiam tenetur, maxime laborum. Maxime enim optio minus voluptatem, alias voluptates totam, sapiente amet sequi officia nesciunt odio.&lt;/p&gt;
-   &lt;/div&gt;
-&lt;/div&gt;
+<pre class="prettyprint" id="simple-video-code">
 </pre>
 
-                        </div>
-                        <!-- example closes -->
-
                      </div>
-
-                     </div>
-                     <!-- row closes -->
-                     <h2 id="sec1">Examples</h2>
-
-                     <p>
-                        Example of icons in action.
-                     </p>
-                     <div class="row">
-                        <div class="col-md-6">
-                           <div class="panel panel-default">
-                              <div class="panel-heading">
-                                 <h5><a href="http://libguides.library.nd.edu/digital-editing/software" target="_blank">Video Recording with the One Button Studio</a></h5></div>
-                              <div class="panel-body">
-                                 <a href="http://libguides.library.nd.edu/digital-editing/software" target="_blank"><img class="img img-responsive" src="http://libguides.library.nd.edu/ld.php?size=medium&screenshot=fhhcgj.png" class="pull-right" alt="example of a profile box"></a>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-md-6">
-                           <div class="panel panel-default hidden">
-                              <div class="panel-heading">
-                                 <h5>Guide #2</h5></div>
-                              <div class="panel-body">
-                                 <a href=""><img class="img img-responsive" src="http://www.placehold.it/400x200" class="pull-right" alt="example of a profile box"></a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+                     <!-- example closes -->
 
                   </div>
-                  <!--/right-->
+
                </div>
-               <!--/row-->
-            </div>
-            <!--/container-->
+               <!-- row closes -->
+               <h2 id="sec1">Examples</h2>
 
-
-         </div>
-         <!-- .container -->
-
-         <!-- Main Content closes ----------------------------->
-
-
-         <!-- Footer ----------------------------->
-         <div id="handbook-footer">
-            <div class="container-fluid">
+               <p>
+                  Example of icons in action.
+               </p>
                <div class="row">
-                  <div class="col-xs-12 col-sm-6">
-                     <i class="fa fa-copyright" aria-hidden="true"></i><span id="thisYear"></span> University of Notre Dame
+                  <div class="col-md-6">
+                     <div class="panel panel-default">
+                        <div class="panel-heading">
+                           <h5><a href="http://libguides.library.nd.edu/digital-editing/software" target="_blank">Video Recording with the One Button Studio</a></h5></div>
+                        <div class="panel-body">
+                           <a href="http://libguides.library.nd.edu/digital-editing/software" target="_blank"><img class="img img-responsive" src="http://libguides.library.nd.edu/ld.php?size=medium&screenshot=fhhcgj.png" class="pull-right" alt="example of a profile box"></a>
+                        </div>
+                     </div>
                   </div>
-                  <div class="col-xs-12 col-sm-6">
-                     <p class="text-right"><a href="https://github.com/randal-sean-harrison/handbook" target="_blank"><i class="fa fa-github fa-spacer-right" aria-hidden="true"></i>randal-sean-harrison/handbook</a></p>
+                  <div class="col-md-6">
+                     <div class="panel panel-default hidden">
+                        <div class="panel-heading">
+                           <h5>Guide #2</h5></div>
+                        <div class="panel-body">
+                           <a href=""><img class="img img-responsive" src="http://www.placehold.it/400x200" class="pull-right" alt="example of a profile box"></a>
+                        </div>
+                     </div>
                   </div>
                </div>
+
+            </div>
+            <!--/right-->
+         </div>
+         <!--/row-->
+      </div>
+      <!--/container-->
+
+
+   </div>
+   <!-- .container -->
+
+   <!-- Main Content closes ----------------------------->
+
+
+   <!-- Footer ----------------------------->
+   <div id="handbook-footer">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-xs-12 col-sm-6">
+               <p><i class="fa fa-copyright" aria-hidden="true"></i><span id="thisYear"></span> University of Notre Dame</p>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+               <p class="text-right"><a href="https://github.com/randal-sean-harrison/handbook" target="_blank"><i class="fa fa-github fa-spacer-right" aria-hidden="true"></i>randal-sean-harrison/handbook</a></p>
             </div>
          </div>
+      </div>
+   </div>
+
+   <!-- This div writes the input to a DOM element so I can add a class. -->
+   <div id="temp-div" class="hidden"></div>
+
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <!-- Include all compiled plugins (below), or include individual files as needed -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+   <!-- Include for the Back to top button -->
+   <script src="js/back-to-top.js"></script>
+   <!-- Scrollspy / affix js -->
+   <script src="js/scripts.js"></script>
+
+   <!-- html include script -->
+   <script src="https://www.w3schools.com/lib/w3data.js"></script>
 
 
-         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-         <!-- Include all compiled plugins (below), or include individual files as needed -->
-         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-         <!-- Include for the Back to top button -->
-         <script src="js/back-to-top.js"></script>
-         <!-- Scrollspy / affix js -->
-         <script src="js/scripts.js"></script>
+   <!-- includes for Google's code highlighter 'prettyprint' -->
+   <link rel="stylesheet" type="text/css" href="css/prettify.css">
+   <script type="text/javascript" src="js/prettify.js"></script>
 
-         <!-- html include script -->
-         <script src="https://www.w3schools.com/lib/w3data.js"></script>
+   <script>
+      w3IncludeHTML();
+   </script>
 
+   <!-- clipboard.js include -->
+   <script src="js/clipboard.min.js"></script>
 
-         <div class="row">
-            <div class="col-sm-3"></div>
-            <div class="col-sm-9"></div>
-         </div>
+   <script type="text/javascript">
+      $(document).ready(function() {
 
-
-         <!-- includes for Google's code highlighter 'prettyprint' -->
-         <link rel="stylesheet" type="text/css" href="css/prettify.css">
-         <script type="text/javascript" src="js/prettify.js"></script>
-
-         <script>
-            w3IncludeHTML();
-         </script>
-
-         <!-- clipboard.js include -->
-         <script src="js/clipboard.min.js"></script>
-
-         <script type="text/javascript">
-            $(document).ready(function() {
-
-               // Add the active classes to the nav menu
-               $(".navfeatures").addClass("active");
-               $(".navimages").addClass("active");
+         // Add the active classes to the nav menu
+         $(".navfeatures").addClass("active");
+         $(".navvideo").addClass("active");
 
 
-               $('#image-alignment').on('change', function() {
+         $('#displayVideoBuilder').click(function() {
 
-                  switch ($('#image-alignment').val()) {
-                     case 'image-only':
-                        $('#image-width').val('');
-                        $('#filler-text').prop('checked', false);
-                        break;
-                     case 'left-most':
-                        $('#image-width').val('275');
-                        $('#filler-text').prop('checked', true);
-                        break;
-                     case 'right most':
-                        $('#image-width').val('275');
-                        $('#filler-text').prop('checked', true);
-                        break;
-                  }
-               });
+            var videoURL = $("#video-url").val();
+            $("#temp-div").html(videoURL);
+            $("#temp-div iframe").addClass('embed-responsive-item');
+            var newVideoURL = $("#temp-div").html();
+            $("#temp-div iframe").remove();
 
-               $('#filler-text').on('change', function() {
+            var panelBackground = '';
+            if ($('#reverse-background').is(':checked')) {
+               panelBackground = " style='background: #000000'";
+            } else {
+               panelBackground = "";
+            }
 
-                  if ($('#filler-text').is(':checked')) {
-                     $('#image-width').val('275');
-                     $('#image-alignment').val('left-most');
-                     caption = "<div class='panel-footer hidden'><p><i class='fa fa-camera-retro fa-spacer-right' aria-hidden='true'></i>" + imageCaption + "</p></div>"
-                  } else {
-                     $('#image-width').val('');
-                     $('#image-alignment').val('image-only');
-                     caption = "<div class='panel-footer hidden'><p><i class='fa fa-camera-retro fa-spacer-right' aria-hidden='true'></i>" + imageCaption + "</p></div>"
-                  }
+            var panelOpen = "<div class='panel panel-default'>";
+            var panelBodyOpen = "<div class='panel-body'" + panelBackground + ">";
+            var closingDiv = "</div>";
+            var panelFooterClose = "</div>";
 
-               });
+            var videoCaption = "<i class='fa fa-film fa-spacer-right'></i>" + $("#video-caption").val();
 
-               $('#displayImageBuilder').click(function() {
+            var videoDimensions = $("#video-dimensions").val();
+            var dimensionsClass = '';
 
-                  var imageURL = $('#image-url').val();
-                  var imageAltText = $('#image-alt-text').val();
-                  var imageCaption = $('#image-caption').val();
-                  var imageAlignment = $('#image-alignment').val();
-                  var imageWidth = " style='width:" + $('#image-width').val() + "px;'";
-                  var reverseBackground = $('#reverse-background').val();
-                  var openRow = "<div class='row'><div class='col-sm-12'>";
-                  var closeRow = "</div></div>";
-                  var caption = '';
-                  var background = "#FFFFFF";
-
-                  if ($('#reverse-background').is(':checked')) {
-                     background =  "#21252B";  //"#282C34";
-                  } else {
-                     background = "#FFFFFF";
-                  }
-
-                  if ($('#image-width').val() == '') {
-                     imageWidth = '';
-                  }
+            var panelFooterOpen = "<div class='panel-footer'>";
 
 
 
+            if (videoDimensions == '16by9') {
+               dimensionsClass = 'embed-responsive-16by9';
+            } else {
+               dimensionsClass = 'embed-responsive-4by3';
+            }
 
-                  /*  Mothballed the image shape option
+            var responsiveDivOpen = "<div class='embed-responsive "  +  dimensionsClass + "'>";
 
+            var bsVideo = panelOpen + panelBodyOpen + responsiveDivOpen + newVideoURL + closingDiv + closingDiv + panelFooterOpen + videoCaption + panelFooterClose + closingDiv;
 
-                  var imageShape = $('#image-shape').val();
-                  var imageAddedClasses = '';
+            // Write the image
+            $("#simple-example-video").html(bsVideo);
+            $('#simple-video-code').text(bsVideo);
 
-                  switch (imageShape) {
-                     case 'rectangle':
-                        imageAddedClasses += '';
-                        break;
-                     case 'rectangle-rounded':
-                        imageAddedClasses += " img-rounded";
-                        break;
-                     case 'circle':
-                        imageAddedClasses += " img-circle";
-                        break;
-                     case 'rectangle-bordered':
-                        imageAddedClasses += " img-thumbnail";
-                        break;
-                  } */
+            $('pre').removeClass('prettyprinted');
+            prettyPrint();
 
-                  var imageCore = "<img class='img img-responsive center-block' src='" + imageURL + "' alt='" + imageAltText + "' />";
+         });
 
-                  if (imageCaption !== "") {
-                     caption = "<div class='panel-footer' style='font-size: 15px;'><p><i class='fa fa-camera-retro fa-spacer-right' aria-hidden='true'></i>" + imageCaption + "</p></div>";
-                  } else {
-                     caption = "<div class='panel-footer hidden' style='font-size: 15px;'><p><i class='fa fa-camera-retro fa-spacer-right' aria-hidden='true'></i>" + imageCaption + "</p></div>"
-                  }
+         $('#refresh-button').click(function() {
+            $('#video-url').val("");
+         });
 
-                  var fillerText = '';
+         $('#refresh-button2').click(function() {
+            $('#video-caption').val("");
+         });
 
-                  if ($('#filler-text').is(':checked')) {
-                     fillerText = "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit repudiandae architecto doloribus eligendi facilis totam eius quis, error veniam maxime aspernatur eos omnis reprehenderit, ab provident natus magni corporis, dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit repudiandae architecto doloribus eligendi facilis totam eius quis, error veniam maxime aspernatur eos omnis reprehenderit, ab provident natus magni corporis, dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit repudiandae architecto doloribus eligendi facilis totam eius quis, error veniam maxime aspernatur eos omnis reprehenderit, ab provident natus magni corporis, dignissimos. reprehenderit, ab provident natus magni corporis, dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit repudiandae architecto doloribus eligendi facilis totam eius quis, error veniam maxime aspernatur eos omnis reprehenderit, ab provident natus magni corporis, dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit repudiandae architecto doloribus eligendi facilis totam eius quis, error veniam maxime aspernatur eos omnis reprehenderit, ab provident natus magni corporis, dignissimos.</p>";
-                  } else {
-                     fillerText = '';
-                  }
-
-                  var alignmentAddedClass = '';
-
-                  switch (imageAlignment) {
-                     case 'left-most':
-                        alignmentAddedClass = ' pull-left embedded-photo-left';
-                        break;
-                     case 'right-most':
-                        alignmentAddedClass = ' pull-right embedded-photo-right';
-                        break;
-                  }
-
-                  var cardWrapper = "<div" + imageWidth + " class='panel panel-default" + alignmentAddedClass + "'><div class='panel-body' style='background:" + background + "'>" + imageCore + "</div>" + caption +  "</div>" + fillerText;
-
-                  var bsImage = openRow + cardWrapper + closeRow;
-
-                  // Write the image
-                  $("#simple-example-image").html(bsImage);
-                  $('#simple-image-code').text(bsImage);
-
-                  $('pre').removeClass('prettyprinted');
-                  prettyPrint();
-
-               });
-
-               $('#refresh-button').click(function() {
-                  $('#image-url').val("");
-               });
-
-               $('#refresh-button2').click(function() {
-                  $('#image-caption').val("");
-               });
-
-               $('#clearImageBuilder').click(function() {
-                  location.reload(true);
-               });
+         $('#clearImageBuilder').click(function() {
+            location.reload(true);
+         });
 
 
 
-               // Popovers for the information icons
-               $('[data-toggle="popover"]').popover("animation","true");
-            });
+         // Popovers for the information icons
+         $('[data-toggle="popover"]').popover("animation", "true");
+      });
 
 
 
 
-            // clipboard button
-            new Clipboard('.btn');
+      // clipboard button
+      new Clipboard('.btn');
 
-            // tooltips add
-            $(function() {
-               $('[data-toggle="tooltip"]').tooltip()
-            })
-         </script>
-         <!-- add the active class to the correct tab and submenu element -->
+      // tooltips add
+      $(function() {
+         $('[data-toggle="tooltip"]').tooltip()
+      })
+   </script>
+   <!-- add the active class to the correct tab and submenu element -->
 
 
-         <!-- js for the gitbub button -->
-         <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+   <!-- js for the gitbub button -->
+   <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 
 
 </body>

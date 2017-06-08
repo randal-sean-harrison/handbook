@@ -148,21 +148,21 @@
 
                            <label style="margin-top:0em;" for="button-size">Button Size</label>
                            <select class="form-control" id="button-size">
-                                 <option id="option-lg" value="btn-lg">Large</option>
-                                 <option id="option-norm" value="btn" selected="selected">Normal</option>
-                                 <option id="option-sm" value="btn-sm">Small</option>
-                                 <option id="option-xs" value="btn-xs">Extra-small</option>
+                                 <option id="option-lg" value=" btn-lg">Large</option>
+                                 <option id="option-norm" value="" selected="selected">Normal</option>
+                                 <option id="option-sm" value=" btn-sm">Small</option>
+                                 <option id="option-xs" value=" btn-xs">Extra-small</option>
                               </select>
 
                            <label style="margin-top: 20px;" for="button-color">Button Color</label>
                            <select class="form-control" id="button-color">
-                              <option id="option-default" value="btn-default">Default (transparent)</option>
-                              <option id="option-dim" value="btn-dim">Dim (grey)</option>
-                              <option id="option-primary" value="btn-primary" selected="selected">Primary (standard blue)</option>
-                              <option id="option-lt-blue" value="btn-info">Information (light blue)</option>
-                              <option id="option-green" value="btn-success">Success (green)</option>
-                              <option id="option-yellow" value="btn-warning">Warning (yellow)</option>
-                              <option id="option-red" value="btn-danger">Danger (red)</option>
+                              <option id="option-default" value=" btn-default">Default (transparent)</option>
+                              <option id="option-dim" value=" btn-dim">Dim (grey)</option>
+                              <option id="option-primary" value=" btn-primary" selected="selected">Primary (standard blue)</option>
+                              <option id="option-lt-blue" value=" btn-info">Information (light blue)</option>
+                              <option id="option-green" value=" btn-success">Success (green)</option>
+                              <option id="option-yellow" value=" btn-warning">Warning (yellow)</option>
+                              <option id="option-red" value=" btn-danger">Danger (red)</option>
                            </select>
 
                            <label style="margin-top: 20px;" for="alignment">Alignment</label>
@@ -300,8 +300,8 @@
             var buttonText = $('#button-text').val();
 
             var buttonUrl = $('#button-url').val();
-            var buttonColor = " " + $('#button-color').val();
-            var buttonSize = " " + $('#button-size').val();
+            var buttonColor = $('#button-color').val();
+            var buttonSize = $('#button-size').val();
             var buttonAlignment = $('#alignment').val();
             var iconHTML = $('#icon-html').val();
 
@@ -312,7 +312,7 @@
             }
 
             // Write the button
-            var bsButton = "<p class='" + buttonAlignment + "'>" + "<a role='button' class='btn" + buttonSize + buttonColor + "' href='" + buttonUrl + "' target='blank'>" + iconHTML + " " + buttonText + "</a></p>";
+            var bsButton = "<p class='" + buttonAlignment + "'>" + "<a role='button' class='btn" + buttonSize + buttonColor + "' href='" + buttonUrl + "' target='blank'>" + iconHTML + "&nbsp;&nbsp;" + buttonText + "</a></p>";
 
             $("#simple-example-button").html(bsButton);
             $('#simple-button-code').text(bsButton);
