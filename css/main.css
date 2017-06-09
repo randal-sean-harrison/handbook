@@ -8,8 +8,16 @@ body {
 	font-weight: 300;
 }
 
-p, li, th, td, a, dl, input, textarea, button, select, option {
+p, li, th, td, dd, dt, dl, a, dl, input, textarea, button, select, option {
    font-size: 16px !important;
+}
+
+dd {
+   margin-bottom: .5em;
+}
+
+dt {
+   font-weight: 400;
 }
 
 label {
