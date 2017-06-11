@@ -128,7 +128,7 @@
          <div class="container">
             <div class="row">
                <div class="col-md-12">
-                  <h1>Quickstart</h1>
+                  <h1>Quick Start</h1>
                   <p class="lead">Quickly create a guide. Soup-to-nuts!</p>
                </div>
             </div>
@@ -152,20 +152,21 @@
                         <span class="caret"></span>
                          </button>
                         <ul class="dropdown-menu">
-                           <li id="subject-button"><a>Subject, Disciplinary <small style="opacity:.7">(was DDW)</small></a></li>
-                           <li id="subject-primary-button"><a>Subject, Standard</a></li>
+                           <li id="subject-disciplinary-button"><a>Subject, Disciplinary <small style="opacity:.7">(was DDW)</small></a></li>
+                           <li id="subject-standard-button"><a>Subject, Standard</a></li>
                         </ul>
                      </div>
                      <button id="course-button" type="button" class="btn btn-default">Course</button>
-                     <button id="other-button" type="button" class="btn btn-default">Other</button>
+                     <button id="general-purpose-button" type="button" class="btn btn-default">General Purpose</button>
+                     <button id="general-purpose-button" type="button" class="btn btn-default">Other</button>
                      <div class="btn-group" role="group">
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Internal
                         <span class="caret"></span>
                          </button>
                         <ul class="dropdown-menu">
-                           <li id="internal-one-button"><a>Side Navigation, 1 Column</a></li>
-                           <li id="internal-many-button"><a>Tabbed Navigation, 1-4 Columns</a></li>
+                           <li id="internal-one-button"><a>Side Nav (1 Column)</a></li>
+                           <li id="internal-many-button"><a>Tabbed Nav (1-4 Columns)</a></li>
                         </ul>
                      </div>
                   </div>
@@ -192,14 +193,18 @@
 
                <!-- Chosen Guide Title Div ----------------------------------------------------->
                <div id="guide-type-page-title" class="row hidden">
-                  <div class="col-sm-12">
+                  <div class="col-sm-8 col-sm-offset-2" id="page-title">
                      <h1 class="nd-gold text-center"></h1>
+                  </div>
+                  <div class="col-sm-2" id="guide-requirements-link">
+                     <h1 class='short-round center-block' style='font-size: 22px; height: 48px; width: 48px; padding: 9px; border-radius: 55px; background: #337ab7; color: #FFFFFF !important;'><i class="fa fa-list-ol" aria-hidden="true"></i></h1>
+                     <p class="text-center">Guide Requirements</p>
                   </div>
                </div>
 
 
-               <!-- Determine Need for Your GUide ------------------------------->
-               <div class="subject-content other-content internal-one-content internal-many-content course-content hidden">
+               <!-- Determine Need for Your Guide ------------------------------->
+               <div class="subject-disciplinary-content subject-standard-content other-content internal-one-content internal-many-content course-content hidden">
 
                   <div class="row">
                      <div class="col-sm-1">
@@ -218,10 +223,189 @@
                   </div>
                </div>
 
+               <!-- Subject Disciplinary Content --------------------------------------------------->
+               <div class="subject-disciplinary-content hidden">
 
+                  <div class="row">
+                     <div class="col-sm-1">
+                        <h1 class='short-round center-block' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #337ab7; opacity:.5;'>1</h1>
+                     </div>
+                     <div class="col-sm-11">
+                        <h2 style="margin-top:50px;"> Create a New Guide</h2>
+                     </div>
+                  </div>
 
-               <!-- Subject Content --------------------------------------------------->
-               <div class="subject-content hidden">
+                  <div class='row'>
+
+                     <div class='col-sm-5 col-sm-offset-1'>
+                        <h3>Steps</h3>
+
+                        <table class="table numbered-steps" cellspacing="4">
+                           <tbody>
+                              <tr>
+                                 <td style="width:40px;">1</td>
+                                 <td>subj</td>
+                              </tr>
+                              <tr>
+                                 <td>2</td>
+                                 <td>step</td>
+                              </tr>
+                              <tr>
+                                 <td>3</td>
+                                 <td>step</td>
+                              </tr>
+                              <tr>
+                                 <td>4</td>
+                                 <td>step</td>
+                              </tr>
+                              <tr>
+                                 <td>5</td>
+                                 <td>step</td>
+                              </tr>
+                              <tr>
+                                 <td>6</td>
+                                 <td>step</td>
+                              </tr>
+                              <tr>
+                                 <td>7</td>
+                                 <td>step</td>
+                              </tr>
+                           </tbody>
+                        </table>
+
+                     </div>
+                     <div class='col-sm-6'>
+                        <h3>Walkthrough</h3>
+                        <div class="embed-responsive embed-responsive-16by9 walkthrough"><iframe width="853" height="480" src="" allowfullscreen></iframe>
+                        </div>
+                     </div>
+
+                  </div>
+
+               </div>
+
+               <!-- Subject Disciplinary Content --------------------------------------------------->
+               <div class="subject-disciplinary-content hidden">
+                  <div class="row">
+                     <div class="col-sm-1">
+                        <h1 class='short-round center-block' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #337ab7; opacity:.5;'>2</h1>
+                     </div>
+                     <div class="col-sm-11">
+                        <h2 style="margin-top:50px;"> Create a New Guide</h2>
+                     </div>
+                  </div>
+
+                  <div class='row'>
+
+                     <div class='col-sm-5 col-sm-offset-1'>
+                        <h3>Steps</h3>
+
+                        <table class="table numbered-steps" cellspacing="4">
+                           <tbody>
+                              <tr>
+                                 <td style="width:40px;">1</td>
+                                 <td>step</td>
+                              </tr>
+                              <tr>
+                                 <td>2</td>
+                                 <td>step</td>
+                              </tr>
+                              <tr>
+                                 <td>3</td>
+                                 <td>step</td>
+                              </tr>
+                              <tr>
+                                 <td>4</td>
+                                 <td>step</td>
+                              </tr>
+                              <tr>
+                                 <td>5</td>
+                                 <td>step</td>
+                              </tr>
+                              <tr>
+                                 <td>6</td>
+                                 <td>step</td>
+                              </tr>
+                              <tr>
+                                 <td>7</td>
+                                 <td>step</td>
+                              </tr>
+                           </tbody>
+                        </table>
+
+                     </div>
+                     <div class='col-sm-6'>
+                        <h3>Walkthrough</h3>
+                        <div class="embed-responsive embed-responsive-16by9 walkthrough"><iframe width="853" height="480" src="" allowfullscreen></iframe>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+
+               <!--   Subject Disciplinary Content --------------------------------------------------->
+
+               <div class="subject-disciplinary-content hidden">
+
+                  <div class="row">
+                     <div class="col-sm-1">
+                        <h1 class='short-round center-block' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #337ab7; opacity:.5;'>3</h1>
+                     </div>
+                     <div class="col-sm-11">
+                        <h2 style="margin-top:50px;"> Create a New Guide</h2>
+                     </div>
+                  </div>
+
+                  <div class='row'>
+
+                     <div class='col-sm-5 col-sm-offset-1'>
+                        <h3>Steps</h3>
+
+                        <table class="table numbered-steps" cellspacing="4">
+                           <tbody>
+                              <tr>
+                                 <td style="width:40px;">1</td>
+                                 <td>step</td>
+                              </tr>
+                              <tr>
+                                 <td>2</td>
+                                 <td>step</td>
+                              </tr>
+                              <tr>
+                                 <td>3</td>
+                                 <td>step</td>
+                              </tr>
+                              <tr>
+                                 <td>4</td>
+                                 <td>step</td>
+                              </tr>
+                              <tr>
+                                 <td>5</td>
+                                 <td>step</td>
+                              </tr>
+                              <tr>
+                                 <td>6</td>
+                                 <td>step</td>
+                              </tr>
+                              <tr>
+                                 <td>7</td>
+                                 <td>step</td>
+                              </tr>
+                           </tbody>
+                        </table>
+
+                     </div>
+                     <div class='col-sm-6'>
+                        <h3>Walkthrough</h3>
+                        <div class="embed-responsive embed-responsive-16by9 walkthrough"><iframe width="853" height="480" src="" allowfullscreen></iframe>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+
+               <!-- Subject Standard Content --------------------------------------------------->
+               <div class="subject-standard-content hidden">
 
                   <div class="row">
                      <div class="col-sm-1">
@@ -282,7 +466,7 @@
                </div>
 
                <!-- Subject Content --------------------------------------------------->
-               <div class="subject-content hidden">
+               <div class="subject-standard-content hidden">
                   <div class="row">
                      <div class="col-sm-1">
                         <h1 class='short-round center-block' style='font-size: 22px; height: 55px; width: 55px; padding: 9px; border-radius: 55px; background: #337ab7; opacity:.5;'>2</h1>
@@ -342,7 +526,7 @@
 
                <!--   Subject Content --------------------------------------------------->
 
-               <div class="subject-content hidden">
+               <div class="subject-standard-content hidden">
 
                   <div class="row">
                      <div class="col-sm-1">
@@ -1178,67 +1362,105 @@
          $(".navhome").addClass("active");
 
 
-         $('#subject-button').click(function() {
+         $('#subject-disciplinary-button').click(function() {
             // hide
             $('.course-content').addClass('hidden');
             $('.other-content').addClass('hidden');
             $('.internal-one-content').addClass('hidden');
             $('.internal-many-content').addClass('hidden');
+            $('.subject-standard-content').addClass('hidden');
+
             // show
-            $('.subject-content').removeClass('hidden');
+            $('.subject-disciplinary-content').removeClass('hidden');
             $('#guide-type-page-title').removeClass('hidden');
-            $('#guide-type-page-title h1').html('Subject Guide');
+            $('#guide-type-page-title #page-title h1').html('Subject <small style="opacity:.7">(disciplinary)</small>');
+            $('#guide-requirements-link h1').wrap("<a href='guide-subject.html' style='text-decoration:none;'></a>");
+            $('#guide-requirements-link p').wrap("<a href='guide-subject.html' style='text-decoration:none;'></a>");
+
+         });
+
+         $('#subject-standard-button').click(function() {
+            // hide
+            $('.course-content').addClass('hidden');
+            $('.other-content').addClass('hidden');
+            $('.internal-one-content').addClass('hidden');
+            $('.internal-many-content').addClass('hidden');
+            $('.subject-disciplinary-content').addClass('hidden');
+
+            // show
+            $('.subject-standard-content').removeClass('hidden');
+            $('#guide-type-page-title').removeClass('hidden');
+            $('#guide-type-page-title #page-title h1').html('Subject <small style="opacity:.7">(standard)</small>');
+            $('#guide-requirements-link h1').wrap("<a href='guide-subject.html' style='text-decoration:none;'></a>");
+            $('#guide-requirements-link p').wrap("<a href='guide-subject.html' style='text-decoration:none;'></a>");
+
          });
 
          $('#course-button').click(function() {
 
             // hide
-            $('.subject-content').addClass('hidden');
+            $('.subject-disciplinary-content').addClass('hidden');
+            $('.subject-standard-content').addClass('hidden');
             $('.other-content').addClass('hidden');
             $('.internal-one-content').addClass('hidden');
             $('.internal-many-content').addClass('hidden');
             // show
             $('.course-content').removeClass('hidden');
             $('#guide-type-page-title').removeClass('hidden');
-            $('#guide-type-page-title h1').html('Course Guide');
+            $('#guide-type-page-title #page-title h1').html('Course Guide');
+            $('#guide-requirements-link h1').wrap("<a href='guide-course.html' style='text-decoration:none;'></a>");
+            $('#guide-requirements-link p').wrap("<a href='guide-course.html' style='text-decoration:none;'></a>");
+
 
          });
 
          $('#other-button').click(function() {
             // hide
-            $('.subject-content').addClass('hidden');
+            $('.subject-disciplinary-content').addClass('hidden');
+            $('.subject-standard-content').addClass('hidden');
             $('.course-content').addClass('hidden');
             $('.internal-one-content').addClass('hidden');
             $('.internal-many-content').addClass('hidden');
             // show
             $('.other-content').removeClass('hidden');
             $('#guide-type-page-title').removeClass('hidden');
-            $('#guide-type-page-title h1').html('Other Guide');
+            $('#guide-type-page-title #page-title h1').html('Other Guide');
+            $('#guide-requirements-link h1').wrap("<a href='guide-general-purpose.html' style='text-decoration:none;'></a>");
+            $('#guide-requirements-link p').wrap("<a href='guide-general-purpose.html' style='text-decoration:none;'></a>");
+
          });
 
          $('#internal-one-button').click(function() {
             // hide
-            $('.subject-content').addClass('hidden');
+            $('.subject-disciplinary-content').addClass('hidden');
+            $('.subject-standard-content').addClass('hidden');
             $('.course-content').addClass('hidden');
             $('.other-content').addClass('hidden');
             $('.internal-many-content').addClass('hidden');
             //show
             $('.internal-one-content').removeClass('hidden');
             $('#guide-type-page-title').removeClass('hidden');
-            $('#guide-type-page-title h1').html('Internal Guide (1 Column)');
+            $('#guide-type-page-title #page-title h1').html('Internal Guide (1 Column)');
+            $('#guide-requirements-link h1').wrap("<a href='guide-internal.html' style='text-decoration:none;'></a>");
+            $('#guide-requirements-link p').wrap("<a href='guide-internal.html' style='text-decoration:none;'></a>");
+
 
          });
 
          $('#internal-many-button').click(function() {
             // hide
-            $('.subject-content').addClass('hidden');
+            $('.subject-disciplinary-content').addClass('hidden');
+            $('.subject-standard-content').addClass('hidden');
             $('.course-content').addClass('hidden');
             $('.other-content').addClass('hidden');
             $('.internal-one-content').addClass('hidden');
             // show
             $('.internal-many-content').removeClass('hidden');
             $('#guide-type-page-title').removeClass('hidden');
-            $('#guide-type-page-title h1').html('Internal Guide (1-4 Columns)');
+            $('#guide-type-page-title #page-title h1').html('Internal Guide (1-4 Columns)');
+            $('#guide-requirements-link h1').wrap("<a href='guide-internal.html' style='text-decoration:none;'></a>");
+            $('#guide-requirements-link p').wrap("<a href='guide-onternal.html' style='text-decoration:none;'></a>");
+
          });
 
 

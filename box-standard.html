@@ -43,8 +43,6 @@
    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
 
 
-
-
    <!-- ND Styles -->
    <link rel="stylesheet" href="css/main.css">
 
@@ -122,7 +120,7 @@
             <div class="row">
                <div class="col-md-12">
                   <h1>Standard Boxes</h1>
-                  <p class="lead">Your profile box and profile page elevate you as the &lsquo;luminous point of contact&rsquo; for the subject of that guide.</p>
+                  <p class="lead">Use Standard Boxes to subdivide the content of your pages into meaningful chunks of related information.</p>
                </div>
             </div>
          </div>
@@ -136,220 +134,38 @@
             <!--left column-->
             <div class="col-md-3 hidden-xs hidden-sm" id="leftCol">
                <ul class="nav nav-stacked" id="sidebar">
-                  <li><a href="#sec0">Profile Box</a></li>
-                  <li><a href="#sec1">Profile Page</a></li>
-                  <li><a href="#sec2">Address Builder</a></li>
+                  <li><a href="#sec0">Standard Box</a></li>
+                  <li class="hidden"><a href="#sec1">Stack Your Chunks</a></li>
                   <li><a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> &nbsp;Back to top</a></li>
                </ul>
             </div>
 
             <!--right column-->
             <div class="col-md-9" id="rightCol">
-               <h2 id="sec0">Profile Box</h2>
-               <p><em>Subject</em>, <em>Course</em>, <em>How-to</em>, and <em>Other</em> guides are focused around a Librarian, whose profile box is located underneath the left navigation menu on each page of the guide.</p>
+               <h2 id="sec0">Standard Box</h2>
+               <p>A page will be subdivided into a number of boxes (with Standard Boxes the most common type). Likewise, each standard box should be subdivided into a series of &lsquo;content chunks&rsquo; of closely-related content, including <strong>system components</strong> (e.g., books, links, databases...), and <strong>features</strong> (cards, collapsible panels, code wells, lists, videos, image-text combinations...).</p>
 
-               <div class="alert alert-warning">
-                  <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><strong>Ask us About Profile Boxes</strong><br/>Profile boxes are standardized by the LibGuides Management Team. Please <a href="help.html">contact the LMT</a> if
-                     you require edits to your profile box.</p>
-               </div>
+               <p>Your content chunks should be stacked so that users may scroll vertically through your content. You may <a href="http://localhost:8888/handbook/feature-typography.html#sec0">use the hierarchy of headings</a> to delineate these sections.</p>
 
-               <div class="panel panel-default">
-                  <!-- Default panel contents -->
-                  <div class="panel-heading">
-                     <h3 class="panel-title">Profile Box Explained</h3>
+               <div class='alert alert-default' role='alert'><p><span class="label label-danger">UX Myth 3</span>&nbsp;&nbsp;&nbsp;<a href="http://uxmyths.com/post/654047943/myth-people-dont-scroll" target="_blank">&lsquo; People don't scroll &rsquo;</a></p></div>
 
-                  </div>
-                  <div class="panel-body">
-                     <div class="row">
-                        <div class="col-sm-7">
-                           <p>All profile boxes must feature:</p>
+               <p>While concealing your content in <a href="box-tabbed.html">tabbed boxes</a> may be useful in certain limited cases, stacking content vertically on the page is preferred. Frequently, <a href="feature-typography.html#sec2">collapsible panels</a> are a useful alternative to tabs. You may also wish to <a href="feature-column.html#sec0">divide your box into columns</a> &mdash;1, 2, 3, 4, or even 6 columns is possible within a Standard Box.</p>
 
-                           <table class="table numbered-steps" cellspacing="4" style="margin-left:30px;width:90%;">
-                              <tbody>
-                                 <tr>
-                                    <td style="width:38px;">1</td>
-                                    <td>Title</td>
-                                 </tr>
-                                 <tr>
-                                    <td>2</td>
-                                    <td>Photo (min width 250px) &nbsp;<small><span class="label label-default"> Optional </span></small></td>
-                                 </tr>
-                                 <tr>
-                                    <td>3</td>
-                                    <td>Name</td>
-                                 </tr>
-                                 <tr>
-                                    <td>4</td>
-                                    <td>Email Me button</td>
-                                 </tr>
-                                 <tr>
-                                    <td>5</td>
-                                    <td>Link to Subject/Location Pathfinder Page </td>
-                                 </tr>
-                                 <tr>
-                                    <td>6</td>
-                                    <td>Address</td>
-                                 </tr>
-                                 <tr>
-                                    <td>7</td>
-                                    <td>Phone and Email</td>
-                                 </tr>
-                                 <tr>
-                                    <td>8</td>
-                                    <td>Schedule a Meeting Button &nbsp;<small><span class="label label-default"> Optional </span></small></td>
-                                 </tr>
-                                 <tr>
-                                    <td>9</td>
-                                    <td>Subject specialties &nbsp;<small><span class="label label-default"> Automatically Assigned </span></small></td>
-                                 </tr>
-                                 <tr>
-                                    <td>10</td>
-                                    <td>Social and Professional Media Icons &nbsp;<small><span class="label label-default"> Optional </span></small></td>
-                                 </tr>
-                              </tbody>
-                           </table>
+               <div class="example">
 
+                           <button id="steps-button" class="btn btn-xs btn-primary pull-right" style="margin-bottom: 20px;">View Steps &amp; Structure</button>
 
-                        </div>
-                        <div class="col-sm-5">
-                           <img class="img img-responsive" src="img/profile-box.png" class="pull-right" alt="example of a profile box">
-                        </div>
-                     </div>
+                  <img id="box-final" src="img/stacking-paradigm-final.png" class="img img-responsive center-block" alt="" />
 
-                  </div>
+                  <img id="box-steps" src="img/stacking-paradigm-steps.png" class="img img-responsive center-block hidden" alt="" />
 
                </div>
 
 
-               <!-- panel closes -->
+               <h2 id="sec1" class="hidden">Stack Your Chunks</h2>
+               <p class="hidden">Stacking your chunks will make them far easier to add, edit, and reorder.</p>
 
 
-
-
-               <h2 id="sec1">Profile Page</h2>
-               <p>
-                  Profile pages are automatically generated, except for the bio information under the About Me heading.
-               </p>
-
-               <div class="panel panel-default">
-                  <div class="panel-heading">
-                     <h3 class="panel-title">Profile Page Explained</h3>
-                  </div>
-                  <div class="panel-body">
-                     <div class="row">
-                        <div class="col-md-12">
-                              <p>All profile pages feature a <strong>Profile Box</strong>, <strong>Subject Specialties</strong> (if any), a <strong>List of Published Guides</strong> (if any), and a <strong>Brief Bio of the Librarian</strong>. Under this &lsquo;About Me&rsquo; heading, we recommend including at least relevant degrees and further information about your expertise.</p>
-
-                        </div>
-                        <div class="col-md-12">
-                           <img class="img img-responsive img-thumbnail" src="img/hans-olo-profile-page.png" class="pull-right" alt="example of a profile box">
-                        </div>
-
-                        <div class="col-md-6">
-                        </div>
-                     </div>
-                     <!-- .row -->
-                  </div>
-               </div>
-
-
-
-
-               <h2 id="sec2">Address Builder</h2>
-
-
-               <div class="row">
-                  <div class="col-sm-12 col-md-4">
-
-                     <form id="addressForm">
-
-                        <!-- <div class="form-group">
-                                    <label for="myName">Name</label>
-                                    <input type="text" class="form-control" id="myName" placeholder="Jane Smith">
-                                </div> -->
-
-                        <label for="myLocation">Location</label>
-                        <select class="form-control" id="myLocation">
-                                <option value="http://library.nd.edu/architecture/">Architecture Library</option>
-                                <option id="archiv" value="http://archives.nd.edu/">Notre Dame Archives</option>
-                                <option id="busine" value="http://library.nd.edu/business/">Thomas Mahaffey, Jr. Business Library</option>
-                                <option id="center" value="http://library.nd.edu/cds">Center for Digital Scholarship</option>
-                                <option id="chemist" value="http://library.nd.edu/chemistry">Chemistry-Physics Library</option>
-                                <option id="engine" value="http://library.nd.edu/engineering">EngineeringLibrary</option>
-                                <option id="hesbur" value="http://library.nd.edu" selected="selected">Hesburgh Library</option>
-                                <option id="instit" value="http://latinostudies.nd.edu">Institute for Latino Studies</option>
-                                <option id="kellog" value="http://library.nd.edu/kelloggkroc">Kellogg Kroc Library Information Center</option>
-                                <option id="lawscho" value="http://law.nd.edu/library">Notre Dame Law School Library</option>
-                                <option id="mathem" value="http://library.nd.edu/mathematics">O'Meara Mathematics Library</option>
-                                <option id="mediev" value="http://library.nd.edu">Medieval Institute</option>
-                                <option id="radiat" value="https://library.nd.edu/radlab">Radiation-Chemistry Reading Room</option>
-                                <option id="rarebo" value="http://rarebooks.library.nd.edu/">Rare Books &amp; Special Collections</option>
-                                <option id="visual" value="https://library.nd.edu/vrc">Visual Resources Center</option>
-                                </select>
-
-                        <div class="form-group">
-                           <label for="myOffice">Office #</label>
-                           <input type="text" class="form-control" id="myOffice" placeholder="115a Hesburgh Library">
-                        </div>
-
-                        <div class="form-group">
-                           <label for="myOffice">Address</label>
-                           <input type="text" class="form-control" id="myAddress" value="University of Notre Dame" disabled>
-                        </div>
-
-                        <div class="form-group">
-                           <label for="myOffice">City, State, Zip</label>
-                           <input type="text" class="form-control" id="myZip" value="Notre Dame, IN 46556" disabled>
-                        </div>
-
-                        <div class="form-group">
-                           <label for="myEmail">Email</label>
-                           <input type="email" class="form-control" id="myEmail" placeholder="jane.smith@nd.edu">
-                        </div>
-
-                        <div class="form-group">
-                           <label for="myTelephone">Telephone</label>
-                           <input type="tel" class="form-control" id="myTelephone" placeholder="(999) 999-9999">
-                        </div>
-
-                        <div class="form-group" style="margin-top: 20px;">
-                           <label for="meeting-button">Scheduler Button (optional)</label>
-                           <input type="text" class="form-control" id="meeting-button" placeholder="https://AnnLee.youcanbook.me" style="width:100%;">
-                           <p style="margin-top:3px;"><a href="https://youcanbook.me/" target="_blank"><small>&nbsp;&nbsp;<i class="fa fa-external-link fa-spacer-right" aria-hidden="true"></i>Sign up @ youcanbook.me</small></a></p>
-                        </div>
-
-                     </form>
-
-                     <div style="margin-top:30px;">
-                        <button type="button" class="btn btn-default" id="clearProfile">Reset</button>
-                        <button type="button" class="btn btn-primary" id="displayProfile">Build</button>
-                     </div>
-
-
-                  </div>
-                  <div class="col-sm-12 col-md-8">
-
-                     <div class="example" id="myAddressExample">
-
-
-
-                     </div>
-
-                     <div class="well" id="myAddressCode">
-
-                        <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-profile-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
-                                 <i class="fa fa-clipboard" aria-hidden="true"></i>
-                              </button>
-
-                        <pre class="prettyprint" id="simple-profile-code">
-</pre>
-
-                     </div>
-                     <!-- example closes -->
-
-                  </div>
-
-               </div>
 
 
             </div>
@@ -430,6 +246,19 @@
          $('#clearProfile').click(function() {
             location.reload(true);
          });
+
+         $('#steps-button').click(function() {
+            $('#box-final').toggleClass('hidden');
+            $('#box-steps').toggleClass('hidden');
+
+            if ($('#steps-button').html() !== 'View Steps &amp; Structure') {
+               $('#steps-button').html('View Steps &amp; Structure');
+            } else {
+               $('#steps-button').html('View Final Result');
+            }
+
+         });
+
 
       });
 
