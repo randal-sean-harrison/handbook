@@ -386,7 +386,7 @@
                      In HTML, adding the attribute <code>target="_self"</code> to any link will open the destination URL in a new window.</p>
                </div>
 
-               
+
 
                <div class="example">
 
@@ -1007,6 +1007,11 @@
             var blockquoteAuthor = $('#blockquote-author').val();
             var blockquoteSource = $('#blockquote-source').val();
 
+            if (blockquoteSource !== '') {
+               blockquoteAuthor += ", from ";
+            }
+
+
             // escape the quotation marks in quote and source fields
             blockquoteQuote = blockquoteQuote.replace(/\"/g,'&#34;');
             blockquoteQuote = blockquoteQuote.replace(/\”/g,'&#34;');
@@ -1028,7 +1033,7 @@
                blockquoteSource = "<em>" + blockquoteSource + "</em>";
             }
 
-            var bsBlockquote = "<blockquote><p>" + blockquoteQuote + "</p><footer>" + blockquoteAuthor + ", from " + "<cite title='" + blockquoteCite + "'>" + blockquoteSource + "</cite></footer></blockquote>";
+            var bsBlockquote = "<blockquote><p>" + blockquoteQuote + "</p><footer>" + blockquoteAuthor + "<cite title='" + blockquoteCite + "'>" + blockquoteSource + "</cite></footer></blockquote>";
 
             // Write the image
             $("#simple-example-blockquote").html(bsBlockquote);
