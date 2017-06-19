@@ -530,12 +530,26 @@
                         </div>
 
                         <div class="form-group">
-                           <div class="checkbox" style="margin-top: 25px;">
+                           <div class="checkbox" style="margin-top: 20px;">
                               <label>
-                            <input type="checkbox" id="isItalics"> Italicize Source
+                            <input type="checkbox" id="isItalics"> Make Source Italic
                         </label>
                            </div>
                         </div>
+
+                        <div class="form-group">
+                           <div class="checkbox">
+                              <label>
+                            <input type="checkbox" id="is-link"> Make Source a Link
+                        </label>
+                           </div>
+                        </div>
+
+                        <div class="form-group hidden" id="source-link-hidden">
+                           <label for="blockquote-source">Source Link</label>
+                           <input type="text" class="form-control" id="source-link" placeholder="&lt;a href='http://link.com'&gt;">
+                        </div>
+
 
                      </form>
 
@@ -1006,6 +1020,8 @@
             var blockquoteQuote = $('#blockquote-quote').val();
             var blockquoteAuthor = $('#blockquote-author').val();
             var blockquoteSource = $('#blockquote-source').val();
+            var sourceLink = $('#source-link').val();
+
 
             if (blockquoteSource !== '') {
                blockquoteAuthor += ", from ";
@@ -1027,13 +1043,21 @@
             blockquoteSource = blockquoteSource.replace(/\‘/g,'&#39;');
             blockquoteSource = blockquoteSource.replace(/\’/g,'&#39;');
 
+            var linkOpen = "<a href='" + sourceLink + "' target='_blank'>";
+            var linkClose = "</a>";
+
+            if (sourceLink == '') {
+               linkOpen = '';
+               linkClose = '';
+            }
+
             var blockquoteCite = blockquoteSource;
 
             if ($('#isItalics').is(':checked')) {
                blockquoteSource = "<em>" + blockquoteSource + "</em>";
             }
 
-            var bsBlockquote = "<blockquote><p>" + blockquoteQuote + "</p><footer>" + blockquoteAuthor + "<cite title='" + blockquoteCite + "'>" + blockquoteSource + "</cite></footer></blockquote>";
+            var bsBlockquote = "<blockquote><p>" + blockquoteQuote + "</p><footer>" + blockquoteAuthor + "<cite title='" + blockquoteCite + "'>" + linkOpen + blockquoteSource + linkClose + "</cite></footer></blockquote>";
 
             // Write the image
             $("#simple-example-blockquote").html(bsBlockquote);
@@ -1144,7 +1168,10 @@
       });
 
 
-
+      $('#is-link').click(function() {
+         $('#source-link-hidden').toggleClass('hidden');
+         $('#source-link').val('');
+      });
 
       // clipboard button
       new Clipboard('.btn');

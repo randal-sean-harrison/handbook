@@ -43,6 +43,10 @@
 
    <link rel="stylesheet" href="css/main.css">
 
+   <style type="text/css">
+      .popover { max-width: 60%; }
+      .popover-content { word-wrap: break-word; }
+   </style>
 
 </head>
 
@@ -155,8 +159,8 @@
                      <form>
 
                         <label for="button-url">iFrame Embed URL</label>
-                        <a id="url-popover" tabindex="2" data-html="true" data-trigger="focus" role="button" data-container="body" data-toggle="popover" data-placement="top" data-content="<h5>Embedding Your Video</h5><hr><p>Look for an embedding option to find the iframe code you need. The code should look like this:</p><p><code>&lt;iframe src = 'https://archive.org/embed/CamelCigaretteCommercialsAd1' width='640' height='480' frameborder='0' webkitallowfullscreen='true' mozallowfullscreen='true' allowfullscreen&gt;&lt;/iframe&gt;</code>
-                        </p>">
+                        <a id="url-popover" tabindex="2" data-html="true" data-trigger="focus" role="button" data-container="body" data-toggle="popover" data-placement="top" width="400px" data-content="<h5>Embedding Your Video</h5><hr><p>Look for an &lt;mark&gt;embed&lt;/mark&gt; option to find the <code>&lt;&#8203;iframe&#8203;&gt;</code> code you need. The code should look something like this:</p><pre class='prettyprint'>&lt;&#8203;iframe src='https://archive.org/embed/someVideo' width='640' height='480' frameborder='0' webkitallowfullscreen='true' mozallowfullscreen='true' allowfullscreen&gt;&#8203;&lt;&#8203;iframe&gt;
+                        &lt;/pre&gt;">
                         <i class="fa fa-info-circle" aria-hidden="true"></i>
                         </a>
                         <div class="input-group">
