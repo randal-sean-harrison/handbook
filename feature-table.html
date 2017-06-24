@@ -431,6 +431,7 @@
 
             if ($('#variableWidths').is(':checked')) {
                th = thVar;
+               numRows -= 1;
             }
 
             if ($('#checkboxStriped').is(':checked')) {
@@ -464,8 +465,8 @@
                for (i = 0; i < numCols; i++) {
                   tdsVariable += tdVariable;
                }
-
             }
+
 
             // columns
             for (i = 0; i < numCols; i++) {
@@ -512,6 +513,7 @@
          $('#someBordered').prop("checked", true);
 
 
+
          // check the traditional icons checkbox
          $("#checkboxBordered").click(function() {
                $('#checkboxNoBordered').prop("checked", false); //empty the input value
@@ -531,15 +533,28 @@
          $("#checkboxSteps").click(function() {
                if ($('#variableWidths').is(':not(:checked')) {
                   $('#variableWidths').prop("checked", true);
+                  $('#checkboxHeader').prop("checked", false);
                }
+         });
+
+         $("#checkboxHeader").click(function() {
+                  $('#checkboxSteps').prop("checked", false);
+
+         });
+
+         $("#checkboxSteps").click(function() {
+                  $('#checkboxHeader').prop("checked", false);
+
          });
 
          $("#variableWidths").click(function() {
                if ($('#checkboxSteps').is(':checked')) {
                   $('#variableWidths').prop("checked", true);
+                  $('#checkboxHeader').prop("checked", false);
                }
 
          });
+
 
       });
 

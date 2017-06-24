@@ -89,6 +89,10 @@ h5.panel-title a:active  {
    color: #337ab7;
 }
 
+.blue {
+   color: #337ab7;
+}
+
 h4 {
     font-size:1.5em;
     border-bottom: 1px solid #CCC;
@@ -564,7 +568,9 @@ h4.media-heading {
 h5 {
     font-size:1.2em !important;
     font-weight: 500 !important;
+    margin: 1em 0em 1em 0em !important;
 }
+
 
 h6 {
     font-size:1.1em !important;
