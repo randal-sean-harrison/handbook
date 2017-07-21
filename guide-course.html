@@ -149,7 +149,7 @@
                   href="help-faq.html">instructors are not eligible for LibGuides accounts</a>.</p>
 
                <div class="alert alert-warning">
-                  <p><strong><i class="fa fa-wrench" aria-hidden="true"></i>The Right Tool</strong><br/>Help your instructor understand the proper scope and role of the course guide. Things like assignments and grading rubrics are best
+                  <p><strong><i class="fa fa-wrench" aria-hidden="true"></i>The Right Tool for the Job...</strong><br/>Help your instructor understand the proper scope and role of the Course Guide. Things like assignments and grading rubrics are usually best
                      embedded in a learning management platform such as <a href="https://sakailogin.nd.edu/" target="_blank">Sakai</a>.</p>
                </div>
 
@@ -157,36 +157,33 @@
                   <table class="table numbered-steps">
                      <tbody>
                         <tr>
-                           <td style="width:38px;">1</td>
-                           <td>Guide navigation based on the <strong>Course Guide template</strong> (left navigation; single right content column).</td>
+                           <td style="width:38px;">0</td>
+                           <td>Guide navigation based on the <code>Course Guide template</code>.</td>
+                        </tr>
+                        <tr>
+                           <td>1</td>
+                           <td>Guide title must follow <a href="#sec1">course Title conventions</a>.</td>
                         </tr>
                         <tr>
                            <td>2</td>
-                           <td>Guide title must follow <a href="#sec1">course title conventions</a>.</td>
+                           <td>Should provide a <a href="#sec2">Course Overview Box</a> to introduce the course description and instructor.</td>
                         </tr>
                         <tr>
                            <td>3</td>
-                           <td>Should provide a <a href="#sec2">Course Overview box</a> to introduce the course description and instructor.</td>
+                           <td>Only the most recent version of any instructor's Course Guide may be published. Versions from previous semesters/years must be unpublished (archived).</td>
                         </tr>
-                        <tr>
-                           <td>4</td>
-                           <td>Only the most recent version of any instructor's guide may be published. Versions from previous semesters/years must be unpublished.</td>
-                        </tr>
-                        <tr>
-                           <td>5</td>
-                           <td>Resources should complement rather than compete with any LMS or portfolio software.</td>
-                        </tr>
+
                      </tbody>
                   </table>
 
                <h2 id="sec1">Title Formatter</h2>
 
-               <p>Course titles must conform to the approved format. Because course guide titles tend to be more complex, we recommend using the Title Formatter.</p>
+               <p>Course titles must conform to the approved format. Because course guide titles tend to be more complex, we recommend using this Title Formatter.</p>
 
-               <div class="alert alert-warning" role="alert">
+               <div class="alert alert-danger" role="alert">
                   <p>
-                     <i class="fa fa-exclamation-triangle fa-spacer-right" aria-hidden="true"></i>
-                     Librarians should not add their names to course guide titles. Students searching for a specific librarian's guides, may <a href="http://libguides.library.nd.edu/" target="_blank">search for all guides by a specific librarian</a>.
+                     <i class="fa fa-times-circle fa-spacer-right" aria-hidden="true"></i>
+                     Librarians should not add their names to course guide titles.  Students searching for a specific librarian's guides may <a href="http://libguides.library.nd.edu/" target="_blank">search for all guides by a specific librarian</a>.
                   </p>
                </div>
 
@@ -253,7 +250,7 @@
 
 
                <h2 id="sec2">Course Overview Box</h2>
-               <p>Unless your instructor wants a <a href="feature-jumbotron.html">Jumbotron</a> to open their course guide, the first box of the first page of the course guide should contain an overview of the course. You should Include a <strong>course description</strong>, instructor's <strong>contact information</strong>, and a link to the <strong>Sakai course page</strong>. Optionally, include an <strong>instructor's photo</strong>.</p>
+               <p>Unless your instructor wants a <a href="feature-jumbotron.html">Jumbotron</a> to open their course guide, the first box of the first page of the course guide should contain an overview of the course. You should Include a <strong>course description</strong>, instructor's <strong>contact information</strong>, and a link to the <strong>Sakai course page</strong>. Optionally, you may include an <strong>instructor's photo</strong>.</p>
 
                <div class="row">
                   <div class="col-sm-12 col-md-4">
@@ -494,8 +491,7 @@
             var course1 = $('#dept-course-1').val();
             var course2 = $('#dept-course-2').val();
 
-            var slash = " / "
-
+            var slash = " / ";
             if (course2 == ''){
                slash = "";
             }
@@ -504,7 +500,16 @@
             var courseSubtitle = $('#course-subtitle').val();
             var instructorLast = $('#instructor-last').val();
 
-            var bsTitle = course1 + slash + course2 + " &mdash; " + courseTitle + ": " + courseSubtitle + " (" + instructorLast + ")";
+            var colonic = ": ";
+            if (courseSubtitle == '') {
+               colonic = "";
+            }
+
+            if (instructorLast !== '') {
+               instructorLast = " (" + instructorLast + ")";
+            }
+
+            var bsTitle = course1 + slash + course2 + " &mdash; " + courseTitle + colonic + courseSubtitle + instructorLast;
 
             $('#simple-title-code').html(bsTitle);
 
