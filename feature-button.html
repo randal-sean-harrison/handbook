@@ -325,6 +325,11 @@
             var buttonAlignment = $('#alignment').val();
             var iconHTML = $('#icon-html').val();
 
+            var spacer = "";
+
+            if (iconHTML !== '') {
+               spacer = "&nbsp;&nbsp;";
+            }
 
             var setIcon = '';
             if ($('#hasIcon').is(':checked')) {
@@ -332,7 +337,7 @@
             }
 
             // Write the button
-            var bsButton = "<p class='" + buttonAlignment + "'>" + "<a role='button' class='btn" + buttonSize + buttonColor + "' href='" + buttonUrl + "' target='blank'>" + iconHTML + "&nbsp;&nbsp;" + buttonText + "</a></p>";
+            var bsButton = "<p class='" + buttonAlignment + "'>" + "<a role='button' class='btn" + buttonSize + buttonColor + "' href='" + buttonUrl + "' target='blank'>" + iconHTML + spacer + buttonText + "</a></p>";
 
             $("#simple-example-button").html(bsButton);
             $('#simple-button-code').text(bsButton);

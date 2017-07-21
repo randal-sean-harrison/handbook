@@ -64,10 +64,9 @@ a, a:link {
    border-top: 1px solid #cccccc;
 }
 
-#rightCol ul li,
-#rightCol ol li,
- {
-   margin-bottom: .5em;
+ul li, ol li {
+   margin-bottom: .25em;
+   margin-top: .25em;
 }
 
 #rightCol ul.list-group li,
