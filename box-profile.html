@@ -166,16 +166,16 @@
             <!--right column-->
             <div class="col-md-9" id="rightCol">
                <h2 id="sec0">Profile Box</h2>
-               <p>All public-facing guides are focused around a Librarian, whose profile box must be located beneath the left navigation menu on each page of the guide. Profile boxes and profile pages are standardized by the LibGuides Management Team. Please <a href="help.html">contact the LMT</a> if you need help editing them.</p>
+               <p>All public-facing guides are focused around a Librarian, whose profile box must be located beneath the left navigation menu on each page of the guide. Profile boxes and profile pages are standardized by the LibGuides Management Team.</p>
 
-               <div class="alert alert-success">
-                  <p><i class="fa fa-star fa-spacer-right" aria-hidden="true"></i><strong>Group Profile Boxes</strong><br/>Group profile boxes are possible in limited cases. <a href="help.html">Contact the LMT</a> for more information.</p>
+               <div class="alert alert-info">
+                  <p><i class="fa fa-info-circle fa-spacer-right" aria-hidden="true"></i><strong>Group Profile Boxes</strong><br/>Group profile boxes are possible in certain cases. <a href="help.html">Contact the LMT</a> for more information.</p>
                </div>
 
                <div class="panel panel-default">
                   <!-- Default panel contents -->
                   <div class="panel-heading">
-                     <h3 class="panel-title">Profile Box Explained</h3>
+                     <h5 class="panel-title">Profile Box Explained</h5>
 
                   </div>
                   <div class="panel-body">
@@ -203,27 +203,23 @@
                                  </tr>
                                  <tr>
                                     <td>5</td>
-                                    <td>Link to Subject/Location Pathfinder Page </td>
+                                    <td>Link to Location (Pathfinder Page) and Address</td>
                                  </tr>
                                  <tr>
                                     <td>6</td>
-                                    <td>Address</td>
-                                 </tr>
-                                 <tr>
-                                    <td>7</td>
                                     <td>Phone and Email</td>
                                  </tr>
                                  <tr>
-                                    <td>8</td>
+                                    <td>7</td>
                                     <td>Schedule a Meeting Button &nbsp;<small><span class="label label-default"> Optional </span></small></td>
+                                 </tr>
+                                 <tr>
+                                    <td>8</td>
+                                    <td>Social and Professional Media Icons &nbsp;<small><span class="label label-default"> Optional </span></small></td>
                                  </tr>
                                  <tr>
                                     <td>9</td>
                                     <td>Subject specialties &nbsp;<small><span class="label label-default"> Automatically Assigned </span></small></td>
-                                 </tr>
-                                 <tr>
-                                    <td>10</td>
-                                    <td>Social and Professional Media Icons &nbsp;<small><span class="label label-default"> Optional </span></small></td>
                                  </tr>
                               </tbody>
                            </table>
@@ -231,7 +227,7 @@
 
                         </div>
                         <div class="col-sm-5">
-                           <img class="img img-responsive" src="img/profile-box.png" class="pull-right" alt="example of a profile box">
+                           <img class="img img-responsive" src="img/profileArtboard-1.png" class="pull-right" alt="example of a profile box">
                         </div>
                      </div>
 
@@ -246,18 +242,16 @@
 
 
                <h2 id="sec1">Profile Page</h2>
-               <p>
-                  Profile pages are automatically generated, except for the bio information under the About Me heading.
-               </p>
+               <p>Profile pages are automatically generated, except for the bio information under the About Me heading. All profile pages feature and require a <em>Profile Box</em>, <em>Subject Specialties</em> (if any), a <em>List of Published Guides</em> (if any), and a <em>Brief Bio of the Librarian</em>. Under this &lsquo;About Me&rsquo; heading, we recommend including a synopsis of your expertise, and information such as relevant degrees and experience.</p>
 
                <div class="panel panel-default">
                   <div class="panel-heading">
-                     <h3 class="panel-title">Profile Page Explained</h3>
+                     <h5 class="panel-title">Profile Page At-a-glance</h5>
                   </div>
                   <div class="panel-body">
                      <div class="row">
                         <div class="col-md-12">
-                              <p>All profile pages feature a <strong>Profile Box</strong>, <strong>Subject Specialties</strong> (if any), a <strong>List of Published Guides</strong> (if any), and a <strong>Brief Bio of the Librarian</strong>. Under this &lsquo;About Me&rsquo; heading, we recommend including at least relevant degrees and further information about your expertise.</p>
+                              <p></p>
 
                         </div>
                         <div class="col-md-12">
@@ -276,7 +270,7 @@
 
                <h2 id="sec2">Address Builder</h2>
 
-
+               <p>Place the code produced by this address builder inside the <code>Address</code> field on the Pofile page.</p>
                <div class="row">
                   <div class="col-sm-12 col-md-4">
 
@@ -455,7 +449,7 @@
 
             // concatenate the inputs together
             var concatProfile = "&lt;p&gt;" + "&lt;a href='" + myLocation + "' target='_blank'&gt;" + myLocation2 + "&lt;/a&gt;" + "&lt;br&gt;" + myOffice + "&lt;br&gt;" + myAddress + "&lt;br&gt;" + myZip +
-               "&lt;/p&gt;&lt;table border='0' cellpadding='0' cellspacing='0' class='table' width='100%'&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style='width:45px'&gt;&lt;i class='fa fa-phone'&gt;&lt;/i&gt;&lt;/td&gt;&lt;td&gt;" +
+               "&lt;/p&gt;&lt;table border='0' cellpadding='0' cellspacing='0' class='table' width='100%'&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style='width:35px'&gt;&lt;i class='fa fa-phone'&gt;&lt;/i&gt;&lt;/td&gt;&lt;td&gt;" +
                myTelephone + "&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;i class='fa fa-envelope'&gt;&lt;/i&gt;&lt;/td&gt;&lt;td&gt;&lt;a href='mailto:" + myEmail + "'&gt;" + myEmail +
                "&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" + addMeetingButton;
 
