@@ -1,14 +1,6 @@
 <!-- Fallbacks ; for later iterations, perhaps. Not calling these, at present -->
 
-<!-- jquery local fallback -->
-<script>
-window.jQuery || document.write ('<script src="js/jquery-3.2.1.min.js"><\/script>')
-</script>
-
-<!-- Bootstrap JS local fallback -->
-<script>
-if(typeof($.fn.modal) === 'undefined'){
-   document.write('<script src="js/bootstrap.min.js"><\/script>')
+s/bootstrap.min.js"><\/script>')
 }
 </script>
 

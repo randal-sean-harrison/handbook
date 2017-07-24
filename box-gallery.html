@@ -97,7 +97,7 @@
                 <a class="btn btn-default help-button" href="https://nd.libapps.com/libapps/login.php" role="button" target="_blank"><i class="fa fa-lock fa-spacer-right" aria-hidden="true"></i> LibGuides Login</a>
 
 <a class="btn btn-default help-button" href="http://libguides.library.nd.edu/reusable-assets" role="button" target="_blank"><i class="fa fa-list-alt fa-spacer-right" aria-hidden="true"></i>Reusable Assets</a>
-                
+
             </div>
 
         </div>
@@ -113,8 +113,8 @@
           <div class="container">
               <div class="row">
                 <div class="col-md-12">
-                  <h1>Gallery Boxes</h1>
-                  <p class="lead">lead text</p>
+                  <h1>Gallery Boxes <span><small style="opacity: .6">(Carousel)</small></span></h1>
+                  <p class="lead">The Gallery Box is meant to juxtapose multiple images in succession.</p>
                 </div>
               </div>
           </div><!--/container-->
@@ -271,8 +271,8 @@
 
     $( document ).ready(function() {
 
-      
-   
+
+
 
       // Add the active classes to the nav menu
       $(".navboxes").addClass("active");
@@ -285,6 +285,19 @@
 
 <!-- js for the gitbub button -->
 
-</body>
+
+s/bootstrap.min.js"><\/script>')
+}
+</script>
+
+<!-- Bootstrap CSS local fallback -->
+<script>
+    $(document).ready(function() {
+    $("head").prepend('<link rel="stylesheet" href="css/bootstrap.min.css">');
+    $("head").prepend('<link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">');
+});
+  </script>
+
+  </body>
 
 </html>

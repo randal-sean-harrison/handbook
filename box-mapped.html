@@ -164,7 +164,7 @@
             <!--right column-->
             <div class="col-md-9" id="rightCol">
                <h2 id="sec0">Mapped Box</h2>
-               <p>Certain boxes are commonly shared among Guide authors. By mapping to these relatively static boxes rather than copying them, we can reduce workload and ensure changes to content are propagated to all guides when the source box is changed. Mapped boxes are stored in teh <a href="http://libguides.library.nd.edu/reusable-assets" target="_blank">Reusable Assets Guide</a> and include:</p>
+               <p>Certain boxes are commonly shared among Guide authors. By mapping to these relatively static boxes rather than copying them, we can reduce workload and ensure changes to content are propagated to all guides when the source box is changed. Mapped boxes are stored in the <a href="http://libguides.library.nd.edu/reusable-assets" target="_blank">Reusable Assets Guide</a> and include:</p>
 
                <ul>
                   <li>Books</li>
@@ -265,6 +265,19 @@
 
    <!-- js for the gitbub button -->
 
-</body>
+
+s/bootstrap.min.js"><\/script>')
+}
+</script>
+
+<!-- Bootstrap CSS local fallback -->
+<script>
+    $(document).ready(function() {
+    $("head").prepend('<link rel="stylesheet" href="css/bootstrap.min.css">');
+    $("head").prepend('<link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">');
+});
+  </script>
+
+  </body>
 
 </html>
