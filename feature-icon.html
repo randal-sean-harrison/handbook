@@ -7,23 +7,23 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <title>Hesburgh Libraries &middot; Guides Handbook</title>
 
-<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-<link rel="manifest" href="favicons/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+   <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+   <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+   <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+   <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+   <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+   <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+   <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+   <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+   <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+   <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-icon-192x192.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+   <link rel="manifest" href="favicons/manifest.json">
+   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
+   <meta name="theme-color" content="#ffffff">
 
 
 
@@ -993,12 +993,39 @@
                      <form>
 
                         <div class="form-group">
-                           <label style="margin-top:0em;" for="icon-shape">Shape</label>
+                           <label for="icon-shape">Shape</label>
                            <select class="form-control" id="icon-shape">
                               <option value="circle-shape" selected="selected">Circle</option>
                               <option value="square-shape">Square</option>
-                        </select>
+                              <option value="primitive-shape">Primitive</option>
+                           </select>
                         </div>
+
+                        <div class="form-group hidden" id="all-borders-group">
+                           <label for="icon-shape">Border Radius</label>
+                           <input id="all-borders-radius" type="text" class="form-control" value="4">
+                        </div>
+
+                           <div class="form-group primitive-borders-group hidden">
+                             <label for="border-top-left">Top Left Radius</label>
+                             <input type="text" class="form-control" id="border-top-left" value="2">
+
+                           </div>
+
+                           <div class="form-group primitive-borders-group hidden">
+                             <label for="border-top-right">Top Right Radius</label>
+                             <input type="text" class="form-control" id="border-top-right" value="25">
+                           </div>
+
+                           <div class="form-group primitive-borders-group hidden">
+                            <label for="border-bottom-right">Bottom Right Radius</label>
+                            <input type="text" class="form-control" id="border-bottom-right" value="2">
+                           </div>
+
+                           <div class="form-group primitive-borders-group hidden">
+                             <label for="border-bottom-left">Bottom Left Radius</label>
+                             <input type="text" class="form-control" id="border-bottom-left" value="25">
+                           </div>
 
                         <div class="form-group">
                            <label>Color</label>
@@ -1014,7 +1041,7 @@
                         <div class="form-group">
                            <div style="margin-top: 20px;" class="form-group">
                               <label for="media-num">Icon Size <small style="opacity:.8;">( pixels )</small></label>
-                              <input type="text" class="form-control" id="icon-size" placeholder="90" name="media-num">
+                              <input type="text" class="form-control" id="icon-size" value="50" name="media-num">
                            </div>
                         </div>
 
@@ -1024,7 +1051,9 @@
                               <span style="height: 16px;" class="input-group-addon" id="refresh-button"><i class="fa fa-refresh" aria-hidden="true"></i></span>
                               <input type="text" class="form-control" id="the-icon" placeholder="<i class='fa fa-up'></i>">
                            </div>
+                              <p style="margin-left: 6px;" class="text-left"><a href="#sec0" target="_blank"><small><i class="fa fa-external-link-square fa-spacer-right" aria-hidden="true"></i>Find Icon</small></a></p>
                         </div>
+
 
                      </form>
 
@@ -1038,7 +1067,7 @@
 
                      <div class="example" id="simple-example-icon">
 
-                        <h1 class='short-round center-block' style='font-size: 60px; height: 150px; width: 150px; padding: 24px; border-radius: 150px; background: #337ab7;' ><i class="fa fa-calendar-plus-o" aria-hidden="true"></i></h1>
+                        <h1 class='short-round center-block' style='font-size: 60px; height: 150px; width: 150px; padding: 24px; border-radius: 150px; background: #337ab7;'><i class="fa fa-calendar-plus-o" aria-hidden="true"></i></h1>
 
                      </div>
 
@@ -1048,7 +1077,7 @@
                         <i class="fa fa-clipboard" aria-hidden="true"></i>
                         </button>
 
-<pre class="prettyprint" id="simple-icon-code">
+                        <pre class="prettyprint" id="simple-icon-code">
 &lt;h1 class='short-round center-block' style='font-size: 60px; height: 150px; width: 150px; padding: 24px; border-radius: 150px; background: #337ab7;'&gt;
 &lt;i class="fa fa-calendar-plus-o" aria-hidden="true"&gt;&lt;/i&gt;
 &lt;/h1&gt;
@@ -1182,24 +1211,46 @@
             $('#the-icon').val('');
          });
 
+         $("#icon-shape").on('change', function() {
+            if ($('#icon-shape').val() == 'primitive-shape') {
+               $('.primitive-borders-group').removeClass('hidden');
+               $('#all-borders-group').addClass('hidden');
+            } else if ($('#icon-shape').val() == 'square-shape') {
+               $('.primitive-borders-group').addClass('hidden');
+               $('#all-borders-group').removeClass('hidden');
+            } else {
+               $('.primitive-borders-group').addClass('hidden');
+               $('#all-borders-group').addClass('hidden');
+            }
+         });
+
          $('#renderIcon').click(function() {
+
+            var topRight = $('#border-top-right').val();
+            var topLeft = $('#border-top-left').val();
+            var bottomLeft = $('#border-bottom-left').val();
+            var bottomRight = $('#border-bottom-right').val();
 
             var iconHeightWidth = $('#icon-size').val();
             var realIconHeight = iconHeightWidth * 2.2;
             var borderRadius = '';
-            var iconShape = $('#icon-shape').val()
+            var iconShape = $('#icon-shape').val();
             var iconColor = $('#color-picker').val();
             var theIcon = $('#the-icon').val();
 
             var iconPadding = Math.round(iconHeightWidth / 2.5);
 
+            var concatBorderRadii = topLeft + "px " + topRight + "px " + bottomRight + "px " + bottomLeft;
 
             switch (iconShape) {
                case 'circle-shape':
                   borderRadius = iconHeightWidth * 2.5;
                   break;
                case 'square-shape':
-                  borderRadius = '4';
+                  borderRadius = $('#all-borders-radius').val();
+                  break;
+               case 'primitive-shape':
+                  borderRadius = concatBorderRadii;
                   break;
             }
 
@@ -1244,9 +1295,6 @@
 
 
 
-
-
-
-  </body>
+</body>
 
 </html>
