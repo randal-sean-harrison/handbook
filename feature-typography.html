@@ -93,6 +93,10 @@
          min-height: 100%;
          border-radius: 0;
       }
+
+      .capitalized {
+         text-transform: capitalize;
+      }
    </style>
 
 
@@ -293,7 +297,7 @@
 
                   <pre class="prettyprint" id="well5">
 &lt;p&gt;Paragraphs make up the bulk of the text you create.&lt;/p&gt;
-&lt;p&gt;The are left-aligned and vertically double-spaced.&lt;/p&gt;
+&lt;p&gt;The are left-aligned and vertically block-spaced.&lt;/p&gt;
 </pre>
 
                </div>
@@ -596,17 +600,20 @@
                <!-- row -->
                <h2 id="sec5">Notes and Alerts</h2>
 
-               <p>Notes and alerts are useful to provide general information, provide important information, indicate success, offer warnings, declare prohibition, etc. Whether you choose to use default icons, custom icons, or no icons in your notes and
-                  alerts, just make sure you're consistent across your guide.</p>
+               <p>Notes and alerts are useful to make information 'pop', foregrounding important information, indicate success, offering warnings, declaring prohibition, and elevating specific links. Whether you choose to use default icons, custom icons, or no icons in your notes and alerts, just make sure you're consistent across your guide.</p>
 
                <div class="row">
                   <div class="col-sm-3">
 
                      <form>
+                        <div class="form-group">
+                           <label for="alert-text">Title <span style="opacity:.5">(Optional)</span></label>
+                           <input type="text" class="form-control" id="alert-title" placeholder="Standardized Fonts">
+                        </div>
 
                         <div class="form-group">
                            <label for="alert-text">Text</label>
-                           <input type="text" class="form-control" id="alert-text" placeholder="Note that...">
+                           <input type="text" class="form-control" id="alert-text" placeholder="Except in special...">
                         </div>
 
                      <div class="form-group">
@@ -652,8 +659,8 @@
 
                      <div class="example" id="simple-example-alert">
 
-                        <div class="alert alert-warning" role="alert">
-                           <p><i class="fa fa-exclamation-triangle fa-spacer-right" aria-hidden="true"></i>Note that resource access is limited to library-use.</p>
+                        <div class="alert alert-danger" role="alert">
+                           <p><i class="fa fa-times-circle fa-spacer-right" aria-hidden="true"></i><strong>Standardized Fonts</strong><br/>Except in special cases, such as foreign languages or maths symbols, please do not change font face or font size in your guides.</p>
                         </div>
 
                      </div>
@@ -664,13 +671,16 @@
                         </button>
 
 <pre class="prettyprint" id="simple-alert-code">
-&lt;div class="alert alert-warning" role="alert"&gt;
+&lt;div class="alert alert-danger" role="alert"&gt;
   &lt;p&gt;
-     &lt;i class="fa fa-exclamation-triangle fa-spacer-right" aria-hidden="true"&gt;&lt;/i&gt;
-     Note that resource access is limited to library-use.
+     &lt;i class="fa fa-times-circle fa-spacer-right" aria-hidden="true"&gt;&lt;/i&gt;
+     &lt;strong&gt;Standardized Fonts&lt;/strong&gt;&lt;br/&gt;
+     Except in special cases, such as foreign languages or maths symbols, please do not change font face or font size in your guides.
   &lt;/p&gt;
 &lt;/div&gt;
 </pre>
+
+
 
 
                      </div>
@@ -1078,6 +1088,11 @@
             var checked = $('#standard-icons').prop('checked');
             var customIzed = $("#alert-icon").val().length > 0;
             var alertText = $('#alert-text').val();
+            var alertTitle = '';
+
+            if ($('#alert-title').val() !== '') {
+               alertTitle = "<strong class='capitalized'>" + $('#alert-title').val() + "</strong><br/>";
+            }
 
             switch (alertColorChoice) {
                case ' alert-default':
@@ -1125,7 +1140,7 @@
             }
 
             var alertOpening = "<div class='alert" + alertColorChoice + "' role='alert'><p>";
-            var alertClosing = alertIconAssignation + alertText + "</p></div>";
+            var alertClosing = alertIconAssignation + alertTitle + alertText + "</p></div>";
 
             // Write the table
             var bsAlert = alertOpening + alertClosing;
