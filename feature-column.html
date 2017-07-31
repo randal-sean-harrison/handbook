@@ -190,6 +190,9 @@
                                <input type="radio" name="cols" value="25-25-25-25" id="25-25-25-25"> 4 columns
                             </label>
                             <label>
+                               <input type="radio" name="cols" value="20-20-20-20-20" id="20-20-20-20-20"> 5 columns
+                            </label>
+                            <label>
                                <input type="radio" name="cols" value="16-16-16-16-16-16" id="16-16-16-16-16-16"> 6 columns
                             </label>
 
@@ -349,7 +352,8 @@
                var third = "<div class='row'><div class='col-sm-6'>content</div><div class='col-sm-6'>content</div></div>";
                var fourth = "<div class='row'><div class='col-sm-4'>content</div><div class='col-sm-4'>content</div><div class='col-sm-4'>content</div></div>";
                var fifth = "<div class='row'><div class='col-sm-3'>content</div><div class='col-sm-3'>content</div><div class='col-sm-3'>content</div><div class='col-sm-3'>content</div></div>";
-               var sixth = "<div class='row'><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div></div>";
+               var sixth = "<div class='row'><div class='col-sm-2 col-sm-offset-1'>content</div><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div></div>";
+               var seventh = "<div class='row'><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div></div>";
 
                switch (colsFinal) {
                	case '25-75':
@@ -367,8 +371,11 @@
                   case '25-25-25-25':
                		bsTable = fifth;
                		break;
-                  case '16-16-16-16-16-16':
+                  case '20-20-20-20-20':
                		bsTable = sixth;
+               		break;
+                  case '16-16-16-16-16-16':
+               		bsTable = seventh;
                		break;
                }
 
