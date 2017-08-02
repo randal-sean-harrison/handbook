@@ -565,9 +565,9 @@ h4.media-heading {
 }
 
 h5 {
-    font-size:1.2em !important;
+    font-size:1.35em !important;
     font-weight: 500 !important;
-    margin: 1em 0em 1em 0em !important;
+    margin: 1em 0em .75em 0em !important;
 }
 
 
@@ -575,11 +575,9 @@ h6 {
     font-size:1.1em !important;
     font-weight: 400 !important;
     font-style: italic !important;
-}
-
-h5, h6 {
     margin: 1.5em 0em .2em 0em;
 }
+
 
 /* ---- placeholder text --------------------------- */
 
