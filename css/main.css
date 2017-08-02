@@ -42,7 +42,7 @@ input {
 
 p {
    line-height: 1.5em;
-   margin-bottom:1.2em;
+   margin-bottom: 1.2em;
 }
 
 p.lead {
@@ -97,8 +97,6 @@ h4 {
     border-bottom: 1px solid #CCC;
     font-weight: 400;
 }
-
-
 
 #lead-trainer p, #lead-trainer h4 {
    text-align: center;
@@ -295,10 +293,7 @@ ul.nav li a {
   color: #FFFFFF;
 }
 
-
 /* --------------------- Affix bar ------------------------ */
-
-
 
 @media (min-width: 979px) {
     #sidebar.affix-top {
@@ -570,7 +565,6 @@ h5 {
     margin: 1em 0em .75em 0em !important;
 }
 
-
 h6 {
     font-size:1.1em !important;
     font-weight: 400 !important;
@@ -651,7 +645,6 @@ table.numbered-steps tr td:first-of-type { /* NOTE: formats the table with steps
 h3.jumbotronic {
    font-size: 42px !important;
 }
-
 
 .btn-secondary-light {
     color: #337ab7;
