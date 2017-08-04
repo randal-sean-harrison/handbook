@@ -133,8 +133,9 @@
             <div class="col-md-3 hidden-xs hidden-sm" id="leftCol">
                <ul class="nav nav-stacked" id="sidebar">
                   <li><a href="#sec0">Icon Finder</a></li>
-                  <li><a href="#sec1">Icon Builder</a></li>
-                  <li><a href="#sec2">Examples</a></li>
+                  <li><a href="#sec1">Symbol Builder</a></li>
+                  <li><a href="#sec2">Specialty Classes</a></li>
+                  <li><a href="#sec3">Examples</a></li>
                   <li><a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> &nbsp;Back to top</a></li>
                </ul>
             </div>
@@ -142,12 +143,12 @@
             <!--right column-->
             <div class="col-md-9" id="rightCol">
                <h2 id="sec0">Icon Finder</h2>
-               <p>All FontAwesome icons are baked-into LibGuides by default. We have preselected some useful icons for you, here.</p>
+               <p>All FontAwesome icons are baked into LibGuides by default. We have preselected some useful icons for you, here. For the full icon set, <a href="http://fontawesome.io/icons/" target="_blank">visit FontAwesome.com</a>.</p>
 
-               <div class="alert alert-intro" style="margin: 10px 0px 50px;">
-                  <p class="text-center" style="color:#666;">For the full icon set, <a href="http://fontawesome.io/icons/" target="_blank">visit FontAwesome.com</a></p>
+               <div class='alert alert-intro' role='alert' style="margin: 10px 0px 75px;">
+                  <p><i class='fa fa-info-circle fa-spacer-right' aria-hidden='true'></i><strong class='capitalized'>Alternate Sizes</strong><br/>Icons take the size and color of the containing element. However, you may specify an alternate size with the
+                     following classes: Large (<code>fa-lg</code>), Double-size (<code>fa-2x</code>), Triple-size (<code>fa-3x</code>), Quadruple-size (<code>fa-4x</code>), and Quintuple-size (<code>fa-5x</code>).</p>
                </div>
-
 
                <table class="table table-hover" id="bootstrap-table">
                   <thead>
@@ -328,6 +329,12 @@
                         <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well28" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
                      </tr>
                      <tr>
+                        <td>check</td>
+                        <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                        <td id="well30a"><pre class="prettyprint">&lt;i class="fa fa-check" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                        <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well30a" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                     </tr>
+                     <tr>
                         <td>check, circle</td>
                         <td><i class="fa fa-check-circle-o" aria-hidden="true"></i></td>
                         <td id="well29"><pre class="prettyprint">&lt;i class="fa fa-check-circle-o" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
@@ -404,6 +411,12 @@
                         <td><i class="fa fa-comment-o" aria-hidden="true"></i></td>
                         <td id="well41"><pre class="prettyprint">&lt;i class="fa fa-comment-o" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
                         <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well41" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
+                     </tr>
+                     <tr>
+                        <td>compass, navigate, bubble</td>
+                        <td><i class="fa fa-compass" aria-hidden="true"></i></td>
+                        <td id="well41b"><pre class="prettyprint">&lt;i class="fa fa-compass" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
+                        <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well41b" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
                      </tr>
                      <tr>
                         <td>copyright</td>
@@ -640,7 +653,7 @@
                         <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well93" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
                      </tr>
                      <tr>
-                        <td>life ring, buoy, help, assistance, faq</td>
+                        <td>life preserver, life ring, buoy, help, assistance, FAQ</td>
                         <td><i class="fa fa-life-ring" aria-hidden="true"></i></td>
                         <td id="well94"><pre class="prettyprint">&lt;i class="fa fa-life-ring" aria-hidden="true"&gt;&lt;/i&gt;</pre></td>
                         <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well94" data-toggle="tooltip" data-placement="bottom" title="copy HTML"><i class="fa fa-clipboard" aria-hidden="true"></i></button></td>
@@ -984,18 +997,23 @@
                </div>
 
 
-               <h2 id="sec1">Icon Builder</h2>
+               <h2 id="sec1">Symbol Builder</h2>
+
 
                <div class="row">
+                  <div class="col-md-12">
+                     <p>Use the Symbol Builder to create custom symbols.</p>
+
+                  </div>
 
                   <div class="col-md-3">
+
 
                      <form>
 
                         <div class="form-group">
                            <label for="icon-shape">Background Shape</label>
                            <select class="form-control" id="icon-shape">
-                              <option value="simple-icon">None</option>
                               <option value="circle-shape" selected="selected">Circle</option>
                               <option value="square-shape">Square</option>
                               <option value="primitive-shape">Primitive</option>
@@ -1028,7 +1046,7 @@
                            <input type="text" class="form-control" id="border-bottom-left" value="25">
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group" id="bg-colored">
                            <label>Background Color</label>
                            <div id="cp2" class="input-group colorpicker-component">
                               <input id="color-picker" type="text" value="#337ab7" class="form-control">
@@ -1039,21 +1057,9 @@
                            </p>
                         </div>
 
-                        <label for="button-icon-size">Icon Size</label>
-                        <select class="form-control" id="button-icon-size">
-                           <option id="icon-size-normal" selected="selected" value="">Normal</option>
-                           <option id="icon-size-large" value=" fa-lg">Large</option>
-                           <option id="icon-size-2x" value=" fa-2x">2x</option>
-                           <option id="icon-size-3x" value=" fa-3x">3x</option>
-                           <option id="icon-size-4x" value=" fa-4x">4x</option>
-                           <option id="option-size-5x" value=" fa-5x">5x</option>
-                        </select>
-
-                        <div class="form-group hidden" id="specific-icon-size">
-                           <div style="margin-top: 20px;" class="form-group">
-                              <label for="media-num">Icon Size <small style="opacity:.8;">( pixels )</small></label>
-                              <input type="text" class="form-control" id="icon-size" value="50" name="media-num">
-                           </div>
+                        <div class="form-group" id="custom-icon-size">
+                           <label for="media-num">Icon Size <small style="opacity:.8;">(pixels)</small></label>
+                           <input type="text" class="form-control" id="icon-dimensions" value="50" name="media-num">
                         </div>
 
                         <div class="form-group">
@@ -1064,17 +1070,6 @@
                            </div>
                            <p style="margin-left: 6px;" class="text-left"><a href="#sec0" target="_blank"><small><i class="fa fa-external-link-square fa-spacer-right" aria-hidden="true"></i>Find Icon</small></a></p>
                         </div>
-
-                        <label style="margin-top: 20px;" for="button-color">Rotation</label>
-                        <select class="form-control" id="button-color">
-                           <option id="option-default" value=" btn-default">Default (transparent)</option>
-                           <option id="option-dim" value=" btn-dim">Dim (grey)</option>
-                           <option id="option-primary" value=" btn-primary" selected="selected">Primary (standard blue)</option>
-                           <option id="option-lt-blue" value=" btn-info">Information (light blue)</option>
-                           <option id="option-green" value=" btn-success">Success (green)</option>
-                           <option id="option-yellow" value=" btn-warning">Warning (yellow)</option>
-                           <option id="option-red" value=" btn-danger">Danger (red)</option>
-                        </select>
 
                      </form>
 
@@ -1098,7 +1093,7 @@
                         <i class="fa fa-clipboard" aria-hidden="true"></i>
                         </button>
 
-                        <pre class="prettyprint" id="simple-icon-code">
+<pre class="prettyprint" id="simple-icon-code">
 &lt;h1 class='short-round center-block' style='font-size: 60px; height: 150px; width: 150px; padding: 24px; border-radius: 150px; background: #337ab7;'&gt;
 &lt;i class="fa fa-calendar-plus-o" aria-hidden="true"&gt;&lt;/i&gt;
 &lt;/h1&gt;
@@ -1113,9 +1108,183 @@
 
 
 
+               <h2 id="sec2">Specialty Classes &mdash; Rotation / Size / Spin</h2>
+
+               <h3>Rotation Classes</h3>
+               <p>These classes may be added to rotate FontAwesome icons.</p>
+
+               <div class="example" style="margin-bottom: 25px">
+<pre class='prettyprint linenums'>
+&lt;i class="fa fa-key fa-rotate-90" aria-hidden="true"&gt;&lt;/i&gt;
+</pre>
+               </div>
+
+               <table class='table table-striped table-condensed'>
+                  <thead>
+                     <tr>
+                        <th style='width:20%;'>Example</th>
+                        <th style='width:30%;'>CSS Class</th>
+                        <th style='width:50%;'>Description</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td><i class="fa fa-key" aria-hidden="true"></i></td>
+                        <td> -- </td>
+                        <td>Normal—no rotation</td>
+                     </tr>
+                     <tr>
+                        <td><i class="fa fa-key fa-rotate-90" aria-hidden="true"></i></td>
+                        <td><code>fa-rotate-90</code></td>
+                        <td>Rotate icon 90&deg;</td>
+                     </tr>
+                     <tr>
+                        <td><i class="fa fa-key fa-rotate-180" aria-hidden="true"></i></td>
+                        <td><code>fa-rotate-180</code></td>
+                        <td>Rotate icon 180&deg;</td>
+                     </tr>
+                     <tr>
+                        <td><i class="fa fa-key fa-rotate-270" aria-hidden="true"></i></td>
+                        <td><code>fa-rotate-270</code></td>
+                        <td>Rotate icon 270&deg;</td>
+                     </tr>
+                     <tr>
+                        <td><i class="fa fa-key fa-flip-horizontal" aria-hidden="true"></i></td>
+                        <td><code>fa-flip-horizontal</code></td>
+                        <td>Flip the icon horizontally</td>
+                     </tr>
+                     <tr>
+                        <td><i class="fa fa-key fa-flip-vertical" aria-hidden="true"></i></td>
+                        <td><code>fa-flip-vertical</code></td>
+                        <td>Flip the icon vertically</td>
+                     </tr>
+                  </tbody>
+               </table>
+
+               <hr style="border: 1px dashed #ccc">
+
+               <h3>Size Classes</h3>
+               <p>FontAwesome icons take the size and color of the containing element. However, you may specify an alternate size with the following classes: </p>
+
+               <div class="example" style="margin-bottom: 35px">
+<pre class='prettyprint linenums'>
+&lt;i class="fa fa-camera-retro fa-3x" aria-hidden="true"&gt;&lt;/i&gt;
+</pre>
+               </div>
+
+               <table class='table table-striped table-condensed'>
+                  <thead>
+                     <tr>
+                        <th style='width:20%;'>Example</th>
+                        <th style='width:30%;'>CSS Class</th>
+                        <th style='width:50%;'>Description</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td><i class="fa fa-camera-retro" aria-hidden="true"></i></td>
+                        <td> -- </td>
+                        <td>Standard sized</td>
+                     </tr>
+                     <tr>
+                        <td><i class="fa fa-camera-retro fa-lg" aria-hidden="true"></i></td>
+                        <td><code>fa-lg</code></td>
+                        <td>Super-sized</td>
+                     </tr>
+                     <tr>
+                        <td><i class="fa fa-camera-retro fa-2x" aria-hidden="true"></i></td>
+                        <td><code>fa-2x</code></td>
+                        <td>Double-sized</td>
+                     </tr>
+                     <tr>
+                        <td><i class="fa fa-camera-retro fa-3x" aria-hidden="true"></i></td>
+                        <td><code>fa-3x</code></td>
+                        <td>Triple-sized</td>
+                     </tr>
+                     <tr>
+                        <td><i class="fa fa-camera-retro fa-4x" aria-hidden="true"></i></td>
+                        <td><code>fa-4x</code></td>
+                        <td>Quadruple-sized</td>
+                     </tr>
+                     <tr>
+                        <td><i class="fa fa-camera-retro fa-5x" aria-hidden="true"></i></td>
+                        <td><code>fa-5x</code></td>
+                        <td>Quintuple-sized</td>
+                     </tr>
+                  </tbody>
+               </table>
+
+               <hr style="border: 1px dashed #ccc">
 
 
-               <h2 id="sec2">Examples</h2>
+               <h3>Spin Classes</h3>
+               <p>These classes may be added to spin certain FontAwesome icons. Some browsers don't support this effect (e.g., IE8, IE9), or <a href="https://github.com/FortAwesome/Font-Awesome/issues/671" target="_blank">have issues rendering animated icons</a>. <strong>We recommend using this technique sparingly, if at all.</strong></p>
+
+               <div class="example" style="margin-bottom: 35px">
+<pre class='prettyprint linenums'>
+&lt;i class="fa fa-cog fa-spin fa-lg fa-fw"&gt;&lt;/i&gt;
+</pre>
+               </div>
+
+               <table class='table table-striped table-condensed'>
+                  <thead>
+                     <tr>
+                        <th style='width:20%;'>Example</th>
+                        <th style='width:30%;'>CSS Class</th>
+                        <th style='width:50%;'>Description</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td><i class="fa fa-spinner fa-spin fa-fw"></i>
+                        <span class="sr-only">Loading...</span></td>
+                        <td><code>fa-spin</code></td>
+                        <td>Smooth spin on a standard <code>fa-spinner</code> icon</td>
+                     </tr>
+                     <tr>
+                        <td><i class="fa fa-spinner fa-pulse fa-fw"></i>
+                        <span class="sr-only">Loading...</span></td>
+                        <td><code>fa-pulse</code></td>
+                        <td>Stepwise spin on a standard <code>fa-spinner</code> icon</td>
+                     </tr>
+                     <tr>
+                        <td><i class="fa fa-circle-o-notch fa-spin fa-lg fa-fw"></i>
+                        <span class="sr-only">Loading...</span></td>
+                        <td><code>fa-spin</code></td>
+                        <td>Smooth spin on a large <code>fa-circle-o-notch</code> icon</td>
+                     </tr>
+                     <tr>
+                        <td><i class="fa fa-refresh fa-spin fa-lg fa-fw"></i>
+                        <span class="sr-only">Loading...</span></td>
+                        <td><code>fa-spin</code></td>
+                        <td>Smooth spin on a large <code>fa-refresh</code> icon</td>
+                     </tr>
+                     <tr>
+                        <td><i class="fa fa-cog fa-spin fa-lg fa-fw"></i>
+                        <span class="sr-only">Loading...</span></td>
+                        <td><code>fa-spin</code></td>
+                        <td>Smooth spin on a large <code>fa-cog</code> icon</td>
+                     </tr>
+                     <tr>
+                        <td><i class="fa fa-compass fa-spin fa-lg fa-fw" aria-hidden="true"></i>
+                        <span class="sr-only">Loading...</span></td>
+                        <td><code>fa-spin</code></td>
+                        <td>Smooth spin on a large <code>fa-compass</code> icon</td>
+                     </tr>
+                     <tr>
+                        <td><i class="fa fa-plane fa-spin fa-lg fa-fw"></i>
+                        <span class="sr-only">Loading...</span></td>
+                        <td><code>fa-spin</code></td>
+                        <td>Smooth spin on a large <code>fa-plane</code> icon <sup style="color:red;font-weight: 700">*</sup>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+
+               <p><sup style="color:red;font-weight: 700">*</sup> Obviously not all icons look amazing when spinning...</em></p>
+
+
+               <h2 id="sec3">Examples</h2>
                <div class="row">
                   <div class="col-md-6">
                      <h5>
@@ -1232,20 +1401,32 @@
             $('#the-icon').val('');
          });
 
-         $("#icon-shape").on('change', function() {
-             if ($('#icon-shape').val() == 'simple-icon') {
+         $('#refresh-button2').click(function() {
+            $('#source-link').val('');
+         });
 
-             } else if ($('#icon-shape').val() == 'primitive-shape') {
+         $("#icon-shape").on('change', function() {
+            if ($('#icon-shape').val() == 'primitive-shape') {
                $('.primitive-borders-group').removeClass('hidden');
+               $('#bg-colored').removeClass('hidden');
+               $('#custom-icon-size').removeClass('hidden');
+               $('#icon-size').addClass('hidden');
                $('#all-borders-group').addClass('hidden');
             } else if ($('#icon-shape').val() == 'square-shape') {
                $('.primitive-borders-group').addClass('hidden');
+               $('#bg-colored').removeClass('hidden');
                $('#all-borders-group').removeClass('hidden');
+               $('#custom-icon-size').removeClass('hidden');
+               $('#icon-size').addClass('hidden');
             } else {
                $('.primitive-borders-group').addClass('hidden');
+               $('#bg-colored').removeClass('hidden');
                $('#all-borders-group').addClass('hidden');
+               $('#custom-icon-size').removeClass('hidden');
+               $('#icon-size').addClass('hidden');
             }
          });
+
 
          $('#renderIcon').click(function() {
 
@@ -1254,21 +1435,23 @@
             var bottomLeft = $('#border-bottom-left').val();
             var bottomRight = $('#border-bottom-right').val();
 
-            var iconHeightWidth = $('#icon-size').val();
+            var iconHeightWidth = $('#icon-dimensions').val();
             var realIconHeight = iconHeightWidth * 2.2;
             var borderRadius = '';
             var iconShape = $('#icon-shape').val();
             var iconColor = $('#color-picker').val();
+            var sourceLink = $('#source-link').val();
+            var sourceLinkOpen = '';
+            var sourceLinkClose = '';
+            var buttonIconSize = $('#button-icon-size').val();
             var theIcon = $('#the-icon').val();
+
 
             var iconPadding = Math.round(iconHeightWidth / 2.5);
 
             var concatBorderRadii = topLeft + "px " + topRight + "px " + bottomRight + "px " + bottomLeft;
 
             switch (iconShape) {
-               case 'simple-icon':
-
-                  break;
                case 'circle-shape':
                   borderRadius = iconHeightWidth * 2.5;
                   break;
@@ -1279,6 +1462,7 @@
                   borderRadius = concatBorderRadii;
                   break;
             }
+
 
             var bsIcons = "<h1 class='short-round center-block' style='font-size: " + iconHeightWidth + "px; height: " + realIconHeight + "px; width: " + realIconHeight + "px; padding: " + iconPadding + "px; border-radius: " +
                borderRadius + "px; background: " + iconColor + ";'>" + theIcon + "</h1>";

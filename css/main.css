@@ -657,3 +657,7 @@ h3.jumbotronic {
    background-color: transparent;
    border-color: #FFFFFF;
 }
+
+.icon-link, .icon-link:hover {
+   text-decoration: none;
+}
