@@ -135,8 +135,8 @@ ol.linenums li:before{
           <div class="container">
               <div class="row">
                 <div class="col-md-12">
-                  <h1>Code Wells</h1>
-                  <p class="lead">Code wells display snippets of computer code, color-coded for easier readibility.</p>
+                  <h1>Code</h1>
+                  <p class="lead">Display numbered snippets colored code in code wells for easier readibility and instruction.</p>
                 </div>
               </div>
           </div><!--/container-->
@@ -159,18 +159,19 @@ ol.linenums li:before{
              <div class="col-md-9" id="rightCol">
                <h2 id="sec0">Code Wells</h2>
 
-               <p>Code Wells are rendered with the <code>&lt;pre&gt;</code> element. Google's Prettify package is used to color-code the output. Line numbers are added by default. To remove them, simply remove the <code>linenums</code> class.</p>
+               <p>Code Wells are rendered with the <code>&lt;pre&gt;</code> element. Google's Prettify package is used to color-code the output. Line numbers are added by default. To remove them, simply remove the <code>linenums</code> class.</p> <p>Unlike other HTML elements, the <code>&lt;pre&gt;</code> element preserves all spacing exactly as you type it. Note: Code may not render in color until you view the page in live or preview mode.</p>
 
                <div class="alert alert-warning">
-                  <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><strong>Please Note</strong><br/>
-                  Unlike other HTML elements, within the <code>&lt;pre&gt;</code> element all spacing is preserved exactly as you type it. Note: Code may not render in color until you view the page in live or preview mode.</p>
+                  <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><strong>Pasting HTML Code Inside the <code>&lt;pre&gt;</code> Element</strong><br/>
+                  You will need to use the <a href="#sec1">HTML converter</a> on HTML, or other code which uses angle brackets.
+                  </p>
                 </div>
 
 
                <div class="example">
 
 <pre class="prettyprint linenums">
-// This is sample code ... Replace with your own
+// This is sample jQuery code ... Replace with your own code snippet
 
 $( document ).ready(function() {
    $('.navfeatures').addClass('active');
@@ -190,7 +191,7 @@ $( document ).ready(function() {
 <pre class="prettyprint" id="well5">
 &lt;pre class="prettyprint linenums"&gt;
 
-// Place your code here. Spacing is preserved...
+// Place your code snippet here. Spacing is preserved...
 
 &lt;/pre&gt;
 </pre>
@@ -200,20 +201,21 @@ $( document ).ready(function() {
 
 
             <h2 id="sec1">HTML Converter</h2>
-            <p>When pasting HTML or any code which uses angle brackets into the <code>&lt;pre&gt;</code> element, you must first replace <code>"&lt;"</code> and <code>"&gt;"</code> with their corresponding HTML entities to render the code properly.</p>
+            <p>When pasting HTML or any code which uses angle brackets {<code>&lt;</code> and <code>&gt;</code>} into the <code>&lt;pre&gt;</code> element, you must first replace the angle bracket characters with their corresponding HTML entities {<code>&&#8203;lt;</code> and <code>&&#8203;gt;</code>} to render the code properly. This converter will perform the replacement and surround the code with <code>&lt;pre&gt;</code> tags.</p>
 
-            <p class="alert alert-default"><strong><i class="fa fa-exclamation-circle" aria-hidden="true"></i></strong>This converter will replace <code>"&lt;"</code> and <code>"&gt;"</code> in your HTML and surround it with <code>&lt;pre&gt;</code> tags.</p>
+
+&#8203;
 
             <form>
                <div class="form-group">
                    <label for="get-entities">Paste Your Code Here</label>
-                   <textarea id="get-entities" class="form-control" rows="10" placeholder="ex., &lt;p&gt;html code&lt;/p&gt;"></textarea>
+                   <textarea id="get-entities" class="form-control" rows="10" placeholder="&lt;p&gt;HTML or other code snippets here...&lt;/p&gt;"></textarea>
                </div>
             </form>
 
          <div style="margin-top:18px;">
             <button type="button" class="btn btn-default" id="clear-entities">Reset</button>
-            <button type="button" class="btn btn-primary" id="generate-entities">Build</button>
+            <button type="button" class="btn btn-primary" id="generate-entities">Convert</button>
             <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#get-entities" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
            <i class="fa fa-clipboard" aria-hidden="true"></i>
            </button>
@@ -309,7 +311,7 @@ $( document ).ready(function() {
 
 
 
-  
+
   </body>
 
 </html>

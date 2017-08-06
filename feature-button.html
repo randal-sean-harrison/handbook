@@ -142,12 +142,12 @@
             <!--right column-->
             <div class="col-md-9" id="rightCol">
                <h2 id="sec0">Buttons</h2>
-               <p>If using multiple buttons on your page, make sure that all the buttons are the same size. Button defaults are sized <code>Normal</code>, colored <code>Primary(standard blue)</code>, and have an alignment of <code>Center</code>.
+               <p>If using multiple buttons on your page, make sure that all the buttons are the same size. Button defaults are: Sized <code>Normal</code>, colored <code>Primary(standard blue)</code>, and have an alignment of <code>Center</code>.</p>
+               <p>Buttons are also set to open in a new window with the <code>target='_blank'</code> attribute. You may force the button to open in the same window by changing this attribute to <code>target='_self'</code>.</p>
 
-                  <p>You may wish to add an icon from <a href="http://fontawesome.io/icons/" target="_blank">FontAwesome</a>. For more information, read our <a href="feature-icon.html">style guidelines on using icons</a>.</p>
+
                   <div class="alert alert-warning">
-                     <p><strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Alternate Button Colors<br/></strong>Non-default accent colors should be used only to signal an alternate mood. For example, a red button would signify probibition,
-                        danger.</p>
+                     <p><strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Alternate Button Colors<br/></strong>Non-default accent colors should be used only to signal an alternate mood. For example, a red button would signify probibition or danger.</p>
                   </div>
 
                   <div class="row">
@@ -165,16 +165,18 @@
                               <input type="text" class="form-control" id="button-text" placeholder="My Cool Button" style="width:100%;">
                            </div>
 
-
-                           <label style="margin-top:0em;" for="button-size">Button Size</label>
+                           <div class="form-group">
+                           <label for="button-size">Button Size</label>
                            <select class="form-control" id="button-size">
                                  <option id="option-lg" value=" btn-lg">Large</option>
                                  <option id="option-norm" value="" selected="selected">Normal</option>
                                  <option id="option-sm" value=" btn-sm">Small</option>
                                  <option id="option-xs" value=" btn-xs">Extra-small</option>
                               </select>
+                           </div>
 
-                           <label style="margin-top: 20px;" for="button-color">Button Color</label>
+                           <div class="form-group">
+                           <label for="button-color">Button Color</label>
                            <select class="form-control" id="button-color">
                               <option id="option-default" value=" btn-default">Default (transparent)</option>
                               <option id="option-dim" value=" btn-dim">Dim (grey)</option>
@@ -184,13 +186,23 @@
                               <option id="option-yellow" value=" btn-warning">Warning (yellow)</option>
                               <option id="option-red" value=" btn-danger">Danger (red)</option>
                            </select>
+                           </div>
 
-                           <label style="margin-top: 20px;" for="alignment">Alignment</label>
+
+                           <div class="form-group">
+                           <label for="alignment">Alignment</label>
                            <select class="form-control" id="alignment">
                                 <option id="leftmost" value="text-left">Left</option>
                                 <option id="centedmost" value="text-center" selected="selected">Center</option>
                                 <option id="rightmost" value="text-right">Right</option>
                               </select>
+                           </div>
+
+                              <label style="margin-top:0em;" for="button-size">Open In</label>
+                              <select class="form-control" id="open-in">
+                                    <option value="new" selected="selected">New window</option>
+                                    <option value="same">Same window</option>
+                                 </select>
 
                            <label for="icon-html" style="margin-top: 20px;">Optional Icon (or Text)</label>
                            <div class="input-group">
@@ -210,6 +222,8 @@
                      <div class="col-sm-12 col-md-9">
 
                         <div class="example" id="simple-example-button">
+                           <p class='text-center'><a role='button' class='btn btn-primary' target='blank'><i class="fa fa-calendar-plus-o" aria-hidden="true"></i>&nbsp;&nbsp;Register for ALA</a></p>
+
                         </div>
 
                         <div class="well">
@@ -219,8 +233,13 @@
                  </button>
 
 
-                           <pre class="prettyprint" id="simple-button-code">
+
+<pre class='prettyprint' id='simple-button-code'>
+&lt;p class='text-center'&gt;
+&lt;a role='button' class='btn btn-primary' href='http://alaannual.org' target='blank'&gt;&lt;i class="fa fa-calendar-plus-o" aria-hidden="true"&gt;&lt;/i&gt;&nbsp;&nbsp;Register for ALA&lt;/a&gt;
+&lt;/p&gt;
 </pre>
+
 
                         </div>
                         <!-- example closes -->
@@ -324,11 +343,18 @@
             var buttonSize = $('#button-size').val();
             var buttonAlignment = $('#alignment').val();
             var iconHTML = $('#icon-html').val();
-
+            var buttonOpenIn = $('#open-in').val();
+            var setOpen = "";
             var spacer = "";
 
             if (iconHTML !== '') {
                spacer = "&nbsp;&nbsp;";
+            }
+
+            if (buttonOpenIn == "same") {
+               setOpen = "target='_self'";
+            } else {
+               setOpen = "target='_blank'";
             }
 
             var setIcon = '';
@@ -337,7 +363,7 @@
             }
 
             // Write the button
-            var bsButton = "<p class='" + buttonAlignment + "'>" + "<a role='button' class='btn" + buttonSize + buttonColor + "' href='" + buttonUrl + "' target='blank'>" + iconHTML + spacer + buttonText + "</a></p>";
+            var bsButton = "<p class='" + buttonAlignment + "'>" + "<a role='button' class='btn" + buttonSize + buttonColor + "' " + setOpen + " href='" + buttonUrl + "' target='blank'>" + iconHTML + spacer + buttonText + "</a></p>";
 
             $("#simple-example-button").html(bsButton);
             $('#simple-button-code').text(bsButton);

@@ -7,23 +7,23 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <title>Hesburgh Libraries &middot; Guides Handbook</title>
 
-<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-<link rel="manifest" href="favicons/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+   <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+   <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+   <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+   <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+   <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+   <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+   <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+   <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+   <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+   <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-icon-192x192.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+   <link rel="manifest" href="favicons/manifest.json">
+   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
+   <meta name="theme-color" content="#ffffff">
 
 
 
@@ -44,6 +44,14 @@
    <link rel="stylesheet" href="css/main.css">
 
    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+   <style type="text/css">
+
+      .radio {
+         margin-bottom: 15px;
+      }
+   </style>
+
 
 </head>
 
@@ -139,199 +147,237 @@
 
             <!--right column-->
             <div class="col-md-9" id="rightCol">
+
                <h2 id="sec0">Standard lists</h2>
-               <p>Standard lists can be generated from within the WYSIWYG editor.</p>
-               <div class="alert alert-danger" role="alert">
-                  <p><i class="fa fa-times-circle" aria-hidden="true"></i><strong>Favor System Links When Creating Lists of Links</strong>
-                     <br/>Springshare's linkchecker detects broken links for <a href="content-link.html">links added as System Content</a> but cannot find broken links in Rich Text / HTML boxes. Therefore, lists should <em>not</em> be used to enumerate groups of library resources such as <a href="content-database.html">databases</a>, <a href="content-book.html">books</a>, and <a href="content-link.html">other general links</a>.
-                     Enter these as System Content types.</p>
-               </div>
 
-               <div class="example">
+         <div class="row">
 
+               <div class="col-sm-12 col-md-12">
 
-                  <ul>
-                     <li>Unordered List element 1</li>
-                     <li>Unordered List element 2</li>
-                     <li>Unordered List element 3</li>
-                     <li>Unordered List element 4</li>
-                  </ul>
+                  <p>Standard lists can be generated from within the WYSIWYG editor. You may also specify special icons for your Unordered List Type. In fact, any FontAwesome icon may be used to replace the standard bullet points ba adding the <code>fa-ul</code> class to the <code>&lt;ul&gt;</code> element, and <code>fa-li</code> class to the <code>&lt;li&gt;</code> of any list.</p>
 
                </div>
-               <div class="well">
 
-                  <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well0" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
-                  <i class="fa fa-clipboard" aria-hidden="true"></i>
-                  </button>
 
-                  <pre class="prettyprint" id="well0">
-&lt;ul&gt;
-   &lt;li&gt;List element 1&lt;/li&gt;
-   &lt;li&gt;List element 2&lt;/li&gt;
-   &lt;li&gt;List element 3&lt;/li&gt;
-   &lt;li&gt;List element 4&lt;/li&gt;
+               <div class="col-sm-12 col-md-3">
+
+                  <form>
+
+                     <div class="form-group">
+                        <label for="simple-list-count"># List Items</label>
+                        <input type="text" class="form-control" id="simple-list-count" value="3" name="media-num">
+                     </div>
+
+                     <div class="form-group">
+                        <label for="list-type">List Type</label>
+                        <select class="form-control" id="list-type">
+                         <option value="ul">Unordered (bullets) </option>
+                         <option value="ol">Ordered (numbers)</option>
+                         <option value="special-icon" selected='selected'>Special Icon</option>
+                     </select>
+                     </div>
+
+            <div class="form-group" id="special-list-icon">
+
+                     <label for="list-type">List Icon</label>
+                     <div class="radio">
+                       <label>
+                         <input type="radio" name="specialtyIcons" id="specialIcons1" value="fa fa-li fa-check fa-spacer-right">
+                         <i class="fa fa-check fa-spacer-left fa-spacer-right" aria-hidden="true"></i>Simple
+                       </label>
+                     </div>
+                     <div class="radio">
+                       <label>
+                         <input type="radio" name="specialtyIcons" id="specialIcons2" value="fa fa-li fa-check-square-o fa-spacer-right" checked>
+                         <i class="fa fa-check-square-o fa-spacer-left fa-spacer-right" aria-hidden="true"></i>Square
+                       </label>
+                     </div>
+                     <div class="radio">
+                       <label>
+                         <input type="radio" name="specialtyIcons" id="specialIcons3" value="fa fa-check-circle-o fa-spacer-right">
+                         <i class="fa fa-check-circle-o fa-spacer-left fa-spacer-right" aria-hidden="true"></i>Circle
+                       </label>
+                     </div>
+                     <div class="radio">
+                       <label>
+                         <input type="radio" name="specialtyIcons" id="specialIcons4" value="fa fa-li fa-arrow-circle-o-right fa-spacer-right">
+                         <i class="fa fa-arrow-circle-o-right fa-spacer-left fa-spacer-right" aria-hidden="true"></i>Arrow
+                       </label>
+                     </div>
+                     <div class="radio">
+                       <label>
+                         <input type="radio" name="specialtyIcons" id="specialIcons6" value="fa fa-li fa-thumb-tack fa-spacer-right">
+                         <i class="fa fa-thumb-tack fa-spacer-left fa-spacer-right" aria-hidden="true"></i>Thumb Tack
+                       </label>
+                     </div>
+               </div>
+
+                  </form>
+
+                  <div style="margin-top:30px;">
+                     <button type="button" class="btn btn-default" id="clearSimpleList">Reset</button>
+                     <button type="button" class="btn btn-primary" id="renderSimpleList">Build</button>
+                  </div>
+
+               </div>
+
+               <div class="col-sm-12 col-md-9">
+
+                  <div class="example" id="simpler-example-list">
+                     <ul class='fa-ul'><li><i class='fa fa-li fa-check-square-o fa-spacer-right'></i>Content</li><li><i class='fa fa-li fa-check-square-o fa-spacer-right'></i>Content</li><li><i class='fa fa-li fa-check-square-o fa-spacer-right'></i>Content</li></ul>
+                  </div>
+
+                  <div class="well">
+
+                     <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simpler-list-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                     <i class="fa fa-clipboard" aria-hidden="true"></i>
+                     </button>
+
+   <pre class="prettyprint" id="simpler-list-code">
+&lt;ul class='fa-ul'&gt;
+   &lt;li&gt;&lt;i class='fa fa-li fa-check-square-o fa-spacer-right'&gt;&lt;/i&gt;Content&lt;/li&gt;
+   &lt;li&gt;&lt;i class='fa fa-li fa-check-square-o fa-spacer-right'&gt;&lt;/i&gt;Content&lt;/li&gt;
+   &lt;li&gt;&lt;i class='fa fa-li fa-check-square-o fa-spacer-right'&gt;&lt;/i&gt;Content&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
 
-               </div>
-               <!-- example closes -->
+                  </div> <!-- well -->
 
-               <div class="example">
+                  </div>
+                  <!-- col-md-9 closes -->
 
-                  <ol>
-                     <li>Ordered List element 1</li>
-                     <li>Ordered List element 2</li>
-                     <li>Ordered List element 3</li>
-                     <li>Ordered List element 4</li>
-                  </ol>
+</div>
 
-               </div>
-               <div class="well">
+                  <h2 id="sec1">Media Lists</h2>
 
-                  <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well1" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                  <div class="row">
+
+                     <div class="col-sm-12 col-md-3">
+                        <form>
+
+                           <label>Image Size  <small style="opacity: .8;">(W x H)</small></label>
+                           <div class="input-group">
+                              <input id="media-width" type="text" class="form-control" placeholder="125">
+                              <span class="input-group-addon">x</span>
+                              <input id="media-height" type="text" class="form-control" placeholder="125">
+                           </div>
+
+                           <div style="margin-top: 20px;" class="form-group">
+                              <label for="media-num"># List Items</label>
+                              <input type="text" class="form-control" id="media-list-item-num" placeholder="3" name="media-num">
+                           </div>
+
+                        </form>
+
+                        <div style="margin-top:30px;">
+                           <button type="button" class="btn btn-default" id="clearMediaList">Reset</button>
+                           <button type="button" class="btn btn-primary" id="renderMediaList">Build</button>
+                        </div>
+
+                     </div>
+
+                     <div class="col-sm-12 col-md-9">
+
+
+                        <div class="example" id="simple-example-media">
+
+                           <ul class='media-list'><li class='media'><div class='pull-left'><img class='media-object' src='http://www.placehold.it/50x50' alt=''></div><div class='media-body'><h4 class='media-heading'><a href='#' target='_blank'>Media Heading</a></h4><p>Use media lists to pair visual components with textual description.</p></div></li><li class='media'><div class='pull-left'><img class='media-object' src='http://www.placehold.it/50x50' alt=''></div><div class='media-body'><h4 class='media-heading'><a href='#' target='_blank'>Media Heading</a></h4><p>Use media lists to pair visual components with textual description.</p></div></li></ul>
+
+                        </div>
+
+                        <div class="well">
+
+                           <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-media-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
                   <i class="fa fa-clipboard" aria-hidden="true"></i>
                   </button>
 
-                  <pre class="prettyprint" id="well1">
-&lt;ol&gt;
-   &lt;li&gt;Ordered List element 1&lt;/li&gt;
-   &lt;li&gt;Ordered List element 2&lt;/li&gt;
-   &lt;li&gt;Ordered List element 3&lt;/li&gt;
-   &lt;li&gt;Ordered List element 4&lt;/li&gt;
-&lt;/ol&gt;
+
+<pre class="prettyprint" id="simple-media-code">
+&lt;ul class='media-list'&gt;
+   &lt;li class='media'&gt;
+      &lt;div class='pull-left'&gt;&lt;img class='media-object' src='http://www.placehold.it/50x50' alt=''&gt;
+      &lt;/div&gt;
+      &lt;div class='media-body'&gt;&lt;h4 class='media-heading'&gt;&lt;a href='#' target='_blank'&gt;Media Heading&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Use media lists to pair visual components with textual description.&lt;/p&gt;
+      &lt;/div&gt;
+   &lt;/li&gt;
+   &lt;li class='media'&gt;
+      &lt;div class='pull-left'&gt;&lt;img class='media-object' src='http://www.placehold.it/50x50' alt=''&gt;&lt;/div&gt;&lt;div class='media-body'&gt;&lt;h4 class='media-heading'&gt;&lt;a href='#' target='_blank'&gt;Media Heading&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Use media lists to pair visual components with textual description.&lt;/p&gt;&lt;/div&gt;
+   &lt;/li&gt;
+&lt;/ul&gt;
 </pre>
 
-               </div>
-               <!-- example closes -->
-
-
-
-               <h2 id="sec1">Media Lists</h2>
-
-               <div class="row">
-
-                  <div class="col-sm-12 col-md-3">
-                     <form>
-
-                        <label>Image Size  <small style="opacity: .8;">(W x H)</small></label>
-                        <div class="input-group">
-                           <input id="media-width" type="text" class="form-control" placeholder="125">
-                           <span class="input-group-addon">x</span>
-                           <input id="media-height" type="text" class="form-control" placeholder="125">
                         </div>
-
-                        <div style="margin-top: 20px;" class="form-group">
-                           <label for="media-num"># List Items</label>
-                           <input type="text" class="form-control" id="media-list-item-num" placeholder="3" name="media-num">
-                        </div>
-
-                     </form>
-
-                     <div style="margin-top:30px;">
-                     <button type="button" class="btn btn-default" id="clearMediaList">Reset</button>
-                     <button type="button" class="btn btn-primary" id="renderMediaList">Build</button>
-                  </div>
-
-                  </div>
-
-                  <div class="col-sm-12 col-md-9">
-
-
-                     <div class="example" id="simple-example-media">
-
-                        <ul class='media-list'>
-                           <li class='media'>
-                              <div class='pull-left'><img class='media-object' src='http://www.placehold.it/50x50' alt=''></div>
-                              <div class='media-body'>
-                                 <h4 class='media-heading'><a href='#' target='_blank'>Media Heading</a></h4>
-                                 <p>Use media lists to pair visual components with textual description.</p>
-                              </div>
-                           </li>
-                        </ul>
+                        <!-- example closes -->
 
                      </div>
-
-                     <div class="well">
-
-                        <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-media-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
-                  <i class="fa fa-clipboard" aria-hidden="true"></i>
-                  </button>
-
-
-                        <pre class="prettyprint" id="simple-media-code">
-   </pre>
-
-                     </div>
-                     <!-- example closes -->
-
                   </div>
-               </div>
 
-               <h2 id="sec2">Simple Styled Lists</h2>
+                  <h2 id="sec2">Simple Styled Lists</h2>
 
-               <p>Accent colors include: <code>.list-group-item-active</code> (primary blue),&nbsp; <code>.list-group-item-success</code> (green),&nbsp; <code>.list-group-item-info</code> (light blue),&nbsp; <code>.list-group-item-warning</code> (yellow),&nbsp; <code>.list-group-item-danger</code> (red).</p>
+                  <p>Accent colors include: <code>.list-group-item-active</code> (primary blue),&nbsp; <code>.list-group-item-success</code> (green),&nbsp; <code>.list-group-item-info</code> (light blue),&nbsp; <code>.list-group-item-warning</code> (yellow),&nbsp;
+                     <code>.list-group-item-danger</code> (red).</p>
 
-               <div class="row">
+                  <div class="row">
 
-                  <div class="col-md-3">
+                     <div class="col-md-3">
 
-                     <form>
+                        <form>
 
-                        <label style="margin-top: 20px;" for="numberOfColumns"># Columns</label>
-                        <select class="form-control" id="styled-list-col-num">
-                           <option id="one" value="1" selected="selected">1</option>
-                            <option id="two" value="2">2</option>
-                            <option id="three" value="3">3</option>
-                            <option id="four" value="4">4</option>
-                            <option id="six" value="6">6</option>
+                           <label style="margin-top: 20px;" for="numberOfColumns"># Columns</label>
+                           <select class="form-control" id="styled-list-col-num">
+                           <option value="1" selected="selected">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="6">6</option>
                         </select>
 
-                        <div style="margin-top: 20px;" class="form-group">
-                           <label for="list-item-num"># List Items / Column</label>
-                           <input type="text" class="form-control" id="styled-list-item-num" placeholder="3" name="list-col-num">
-                        </div>
+                           <div style="margin-top: 20px;" class="form-group">
+                              <label for="list-item-num"># List Items / Column</label>
+                              <input type="text" class="form-control" id="styled-list-item-num" placeholder="3" name="list-col-num">
+                           </div>
 
-                        <div style="margin-top: 15px;" class="checkbox">
-                           <label>
+                           <div style="margin-top: 15px;" class="checkbox">
+                              <label>
                             <input type="checkbox" id="checkbox-has-links"> Links
                             </label>
-                        </div>
+                           </div>
 
-                        <div style="margin-top: 15px;" class="checkbox">
-                           <label>
-                              <input type="checkbox" id="checkbox-has-rows"> Stripey Rows
+                           <div style="margin-top: 15px;" class="checkbox">
+                              <label>
+                              <input type="checkbox" id="checkbox-has-rows"> Striped Rows
                               </label>
+                           </div>
+
+
+                        </form>
+
+                        <div style="margin-top:30px;">
+                           <button type="button" class="btn btn-default" id="clearStyledList">Reset</button>
+                           <button type="button" class="btn btn-primary" id="renderStyledList">Build</button>
                         </div>
-
-
-                     </form>
-
-                     <div style="margin-top:30px;">
-                     <button type="button" class="btn btn-default" id="clearStyledList">Reset</button>
-                     <button type="button" class="btn btn-primary" id="renderStyledList">Build</button>
-                  </div>
-
-                  </div>
-                  <div class="col-md-9">
-
-                     <div class="example" id="simple-example-list">
-
-                        <ul class="list-group">
-                           <li class="list-group-item"><a href="">Linked list item 1</a></li>
-                           <li class="list-group-item list-group-item-info"><a href="">Linked list item 1</a></li>
-                           <li class="list-group-item list-group-item-success">Unlinked list item 2</li>
-                           <li class="list-group-item list-group-item-warning">Unlinked list item 3</li>
-                           <li class="list-group-item list-group-item-danger">Unlinked list item 3</li>
-                        </ul>
 
                      </div>
-                     <div class="well">
+                     <div class="col-md-9">
 
-                        <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-list-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                        <div class="example" id="simple-example-list">
+
+                           <ul class="list-group">
+                              <li class="list-group-item"><a href="">Linked list item 1</a></li>
+                              <li class="list-group-item list-group-item-info"><a href="">Linked list item 1</a></li>
+                              <li class="list-group-item list-group-item-success">Unlinked list item 2</li>
+                              <li class="list-group-item list-group-item-warning">Unlinked list item 3</li>
+                              <li class="list-group-item list-group-item-danger">Unlinked list item 3</li>
+                           </ul>
+
+                        </div>
+                        <div class="well">
+
+                           <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-list-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
                         <i class="fa fa-clipboard" aria-hidden="true"></i>
                         </button>
 
-<pre class="prettyprint" id="simple-list-code">
+                           <pre class="prettyprint" id="simple-list-code">
 &lt;ul class="list-group"&gt;
    &lt;li class="list-group-item"&gt;
       &lt;a href=""&gt;Linked list item 1&lt;/a&gt;
@@ -352,214 +398,275 @@
 &lt;/ul&gt;
 </pre>
 
+                        </div>
+                        <!-- example closes -->
+
                      </div>
-                     <!-- example closes -->
-
                   </div>
+
+
+
                </div>
-
-
-
+               <!--/right-->
             </div>
-            <!--/right-->
+            <!--/row-->
          </div>
-         <!--/row-->
+         <!--/container-->
+
+
       </div>
-      <!--/container-->
+      <!-- .container -->
+
+      <!-- Main Content closes ----------------------------->
 
 
-   </div>
-   <!-- .container -->
-
-   <!-- Main Content closes ----------------------------->
-
-
-   <!-- Footer ----------------------------->
-   <div id="handbook-footer">
-      <div class="container-fluid">
-         <div class="row">
-            <div class="col-xs-12 col-sm-6">
-               <i class="fa fa-copyright" aria-hidden="true"></i><span id="thisYear"></span> University of Notre Dame
-            </div>
-            <div class="col-xs-12 col-sm-6">
-               <p class="text-right"><a href="https://github.com/randal-sean-harrison/handbook" target="_blank"><i class="fa fa-github fa-spacer-right" aria-hidden="true"></i>randal-sean-harrison/handbook</a></p>
+      <!-- Footer ----------------------------->
+      <div id="handbook-footer">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-xs-12 col-sm-6">
+                  <i class="fa fa-copyright" aria-hidden="true"></i><span id="thisYear"></span> University of Notre Dame
+               </div>
+               <div class="col-xs-12 col-sm-6">
+                  <p class="text-right"><a href="https://github.com/randal-sean-harrison/handbook" target="_blank"><i class="fa fa-github fa-spacer-right" aria-hidden="true"></i>randal-sean-harrison/handbook</a></p>
+               </div>
             </div>
          </div>
       </div>
-   </div>
 
 
-   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   <!-- Include all compiled plugins (below), or include individual files as needed -->
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-   <!-- Include for the Back to top button -->
-   <script src="js/back-to-top.js"></script>
-   <!-- Scrollspy / affix js -->
-   <script src="js/scripts.js"></script>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      <!-- Include for the Back to top button -->
+      <script src="js/back-to-top.js"></script>
+      <!-- Scrollspy / affix js -->
+      <script src="js/scripts.js"></script>
 
-   <!-- html include script -->
-   <script src="https://www.w3schools.com/lib/w3data.js"></script>
-
-
-   <!-- includes for Google's code highlighter 'prettyprint' -->
-   <link rel="stylesheet" type="text/css" href="css/prettify.css">
-   <script type="text/javascript" src="js/prettify.js"></script>
+      <!-- html include script -->
+      <script src="https://www.w3schools.com/lib/w3data.js"></script>
 
 
-   <script>
-      w3IncludeHTML();
-   </script>
-
-   <!-- clipboard.js include -->
-   <script src="js/clipboard.min.js"></script>
-
-   <script type="text/javascript">
-      $(document).ready(function() {
-
-         
-      
+      <!-- includes for Google's code highlighter 'prettyprint' -->
+      <link rel="stylesheet" type="text/css" href="css/prettify.css">
+      <script type="text/javascript" src="js/prettify.js"></script>
 
 
-         // Add the active classes to the nav menu
-         $(".navfeatures").addClass("active");
-         $(".navlists").addClass("active");
+      <script>
+         w3IncludeHTML();
+      </script>
 
-         $('#renderMediaList').click(function() {
+      <!-- clipboard.js include -->
+      <script src="js/clipboard.min.js"></script>
 
-            $('simple-example-media').val('');
-            var numItems = $('#media-list-item-num').val();
-            var listOpen = "<ul class='media-list'>"
-            var mediaWidth = $('#media-width').val();
-            var mediaHeight = $('#media-height').val();
-            var listItem = "<li class='media'><div class='pull-left'><img class='media-object' src='http://www.placehold.it/" + mediaWidth + "x" + mediaHeight +
-               "' alt=''></div><div class='media-body'><h4 class='media-heading'><a href='#' target='_blank'>Media Heading</a></h4><p>Use media lists to pair visual components with textual description.</p></div></li>";
-            var listItems = '';
+      <script type="text/javascript">
+         $(document).ready(function() {
 
-            for (i = 0; i < numItems; i++) {
-               listItems += listItem;
-            };
 
-            var listClose = "</ul>";
+            $("#list-type").on('change', function() {
 
-            // Write the table
-            var bsMedia = listOpen + listItems + listClose;
+               if ($("#list-type").val() == 'special-icon') {
+                  $('#special-list-icon').removeClass('hidden');
+               } else {
+                  $('#special-list-icon').addClass('hidden');
+               }
 
-            $("#simple-example-media").html(bsMedia);
-            $('#simple-media-code').text(bsMedia);
+            });
 
-            $('pre').removeClass('prettyprinted');
-            prettyPrint();
+            $('#renderSimpleList').click(function() {
 
+               var listType = $('#list-type').val();
+               var simpleListCount = $('#simple-list-count').val();
+               var specialIconChoice = $("input[name='specialtyIcons']:checked").val();
+               var simpleListOpen = '';
+               var simpleListClose = '';
+               var simpleListItems = '';
+               var simpleListItems = '';
+
+               switch (listType) {
+                  case 'ul':
+                     simpleListOpen = '<ul>';
+                     simpleListClose = '</ul>';
+                     simpleListItem = '<li>Content</li>';
+                     break;
+
+                  case 'ol':
+                     simpleListOpen = '<ol>';
+                     simpleListClose = '</ol>';
+                     simpleListItem = '<li>Content</li>';
+                     break;
+
+                  case 'special-icon':
+                     simpleListOpen = "<ul class='fa-ul'>";
+                     simpleListClose = '</ul>';
+                     simpleListItem = "<li><i class='" + specialIconChoice + "'></i>Content</li>";
+                  break;
+
+               }
+
+               for (i = 0; i < simpleListCount; i++) {
+                  simpleListItems += simpleListItem;
+               };
+
+
+               var bsSimpleList = simpleListOpen + simpleListItems + simpleListClose;
+
+
+
+               $("#simpler-example-list").html(bsSimpleList);
+               $('#simpler-list-code').text(bsSimpleList);
+
+               $('pre').removeClass('prettyprinted');
+               prettyPrint();
+
+
+            });
+
+
+
+
+            // Add the active classes to the nav menu
+            $(".navfeatures").addClass("active");
+            $(".navlists").addClass("active");
+
+            $('#renderMediaList').click(function() {
+
+               $('simple-example-media').val('');
+               var numItems = $('#media-list-item-num').val();
+               var listOpen = "<ul class='media-list'>"
+               var mediaWidth = $('#media-width').val();
+               var mediaHeight = $('#media-height').val();
+               var listItem = "<li class='media'><div class='pull-left'><img class='media-object' src='http://www.placehold.it/" + mediaWidth + "x" + mediaHeight +
+                  "' alt=''></div><div class='media-body'><h4 class='media-heading'><a href='#' target='_blank'>Media Heading</a></h4><p>Use media lists to pair visual components with textual description.</p></div></li>";
+               var listItems = '';
+
+               for (i = 0; i < numItems; i++) {
+                  listItems += listItem;
+               };
+
+               var listClose = "</ul>";
+
+               // Write the table
+               var bsMedia = listOpen + listItems + listClose;
+
+               $("#simple-example-media").html(bsMedia);
+               $('#simple-media-code').text(bsMedia);
+
+               $('pre').removeClass('prettyprinted');
+               prettyPrint();
+
+
+            });
+
+            $('#renderStyledList').click(function() {
+
+               $('#simple-example-list').empty();
+
+               var numStyledColumns = $('#styled-list-col-num').val();
+               var numlistItems = $('#styled-list-item-num').val();
+               var styledListItem = '';
+               var styledListItems = '';
+               var altShadedRows = "";
+               var finalOutput = '';
+               var withDivs = '';
+
+               if ($('#checkbox-has-links').is(':checked')) {
+                  styledListItem = "<li class='list-group-item'><a href='' target='_blank'>Lorem ipsum dolor</a></li>";
+               } else {
+                  styledListItem = "<li class='list-group-item'>Lorem ipsum dolor</li>";
+               }
+
+               for (i = 0; i < numlistItems; i++) {
+                  styledListItems += styledListItem;
+               }
+
+               var cols = "";
+
+               switch (numStyledColumns) {
+                  case '1':
+                     cols = "";
+                     break;
+
+                  case '2':
+                     cols = "col-md-6";
+                     break;
+
+                  case '3':
+                     cols = "col-md-4";
+                     break;
+
+                  case '4':
+                     cols = "col-md-3";
+                     break;
+
+                  case '6':
+                     cols = "col-md-2";
+                     break;
+
+               }
+
+               if ($('#checkbox-has-rows').is(':checked')) {
+                  listOpen = "<ul class='list-group alt-shaded-rows'>";
+               } else {
+                  listOpen = "<ul class='list-group'>";
+               }
+
+               var listClose = "</ul>";
+
+               var listColumn = listOpen + styledListItems + listClose;
+
+               for (i = 0; i < numStyledColumns; i++) {
+                  withDivs += "<div class='" + cols + "'>" + listColumn + "</div>";
+               }
+
+               if (numStyledColumns == 1) {
+                  finalOutput = listColumn;
+               } else {
+                  finalOutput = "<div class='row'>" + withDivs + "</div>";
+               }
+
+               // Write the table
+               $("#simple-example-list").html(finalOutput);
+               $("#simple-list-code").text(finalOutput);
+
+               $('pre').removeClass('prettyprinted');
+               prettyPrint();
+
+            });
+
+            // reset buttons
+            $('#clearSimpleList').click(function() {
+               location.reload(true);
+            });
+
+            $('#clearMediaList').click(function() {
+               location.reload(true);
+            });
+
+            $('#clearStyledList').click(function() {
+               location.reload(true);
+            });
 
          });
 
-         $('#renderStyledList').click(function() {
+         // clipboard button
+         new Clipboard('.btn');
 
-            $('#simple-example-list').empty();
+         $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+         })
+      </script>
 
-            var numStyledColumns = $('#styled-list-col-num').val();
-            var numlistItems = $('#styled-list-item-num').val();
-            var styledListItem = '';
-            var styledListItems = '';
-            var altShadedRows = "";
-            var finalOutput = '';
-            var withDivs = '';
-
-            if ($('#checkbox-has-links').is(':checked')) {
-               styledListItem = "<li class='list-group-item'><a href='' target='_blank'>Lorem ipsum dolor</a></li>";
-            } else {
-               styledListItem = "<li class='list-group-item'>Lorem ipsum dolor</li>";
-            }
-
-            for (i = 0; i < numlistItems; i++) {
-               styledListItems += styledListItem;
-            }
-
-            var cols = "";
-
-            switch (numStyledColumns) {
-               case '1':
-                  cols = "";
-               break;
-
-               case '2':
-                  cols = "col-md-6";
-               break;
-
-               case '3':
-               cols = "col-md-4";
-               break;
-
-               case '4':
-                  cols = "col-md-3";
-               break;
-
-               case '6':
-                  cols = "col-md-2";
-               break;
-
-            }
-
-            if ($('#checkbox-has-rows').is(':checked')) {
-               listOpen = "<ul class='list-group alt-shaded-rows'>";
-            } else {
-               listOpen = "<ul class='list-group'>";
-            }
-
-            var listClose = "</ul>";
-
-            var listColumn = listOpen + styledListItems + listClose;
-
-            for (i = 0; i < numStyledColumns; i++) {
-               withDivs += "<div class='" + cols + "'>" + listColumn + "</div>";
-            }
-
-            if (numStyledColumns == 1) {
-               finalOutput = listColumn;
-            } else {
-               finalOutput = "<div class='row'>" + withDivs + "</div>";
-            }
-
-            // Write the table
-            $("#simple-example-list").html(finalOutput);
-            $("#simple-list-code").text(finalOutput);
-
-            $('pre').removeClass('prettyprinted');
-            prettyPrint();
-
-         });
-
-
-         // reset button
-         $('#clearMediaList').click(function() {
-            location.reload(true);
-         });
-
-         // reset button
-         $('#clearStyledList').click(function() {
-            location.reload(true);
-         });
-
-      });
-
-      // clipboard button
-      new Clipboard('.btn');
-
-      $(function() {
-         $('[data-toggle="tooltip"]').tooltip()
-      })
-   </script>
-
-   <!-- prettify -->
-   <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-
-
-   
+      <!-- prettify -->
+      <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 
 
 
-  
-  </body>
+
+
+
+
+</body>
 
 </html>
