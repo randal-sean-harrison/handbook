@@ -50,6 +50,7 @@
       .radio {
          margin-bottom: 15px;
       }
+
    </style>
 
 
@@ -154,7 +155,7 @@
 
                <div class="col-sm-12 col-md-12">
 
-                  <p>Standard lists can be generated from within the WYSIWYG editor. You may also specify special icons for your Unordered List Type. In fact, any FontAwesome icon may be used to replace the standard bullet points ba adding the <code>fa-ul</code> class to the <code>&lt;ul&gt;</code> element, and <code>fa-li</code> class to the <code>&lt;li&gt;</code> of any list.</p>
+                  <p>Standard lists can be generated here, or from within the WYSIWYG editor, though you may also choose special icons for your list. In fact, any FontAwesome icon may be used to replace the standard bullet points ba adding the <code>fa-ul</code> class to the <code>&lt;ul&gt;</code> element, and <code>fa-li</code> class to the <code>&lt;li&gt;</code> of any list.</p>
 
                </div>
 
@@ -252,6 +253,11 @@
 
                   <div class="row">
 
+                     <div class="col-sm-12 col-md-12">
+                     <p>Media lists pair images, links, and short descriptions. They are also well-suited to pages with several subpages, where they cam serve as a strongly visual table of contents. Don't forget to replace the URL for each placeholder image with the link to an image from <a href="https://nd.libapps.com/libguides/image_manager.php" target="_blank">your Image Library</a>.</p>
+
+                     </div>
+
                      <div class="col-sm-12 col-md-3">
                         <form>
 
@@ -262,9 +268,15 @@
                               <input id="media-height" type="text" class="form-control" placeholder="125">
                            </div>
 
-                           <div style="margin-top: 20px;" class="form-group">
+                           <div class="form-group">
                               <label for="media-num"># List Items</label>
                               <input type="text" class="form-control" id="media-list-item-num" placeholder="3" name="media-num">
+                           </div>
+
+                           <div style="margin-top: 15px;" class="checkbox">
+                              <label>
+                            <input type="checkbox" id="media-list-striped"> Striped Rows
+                            </label>
                            </div>
 
                         </form>
@@ -509,10 +521,7 @@
                   simpleListItems += simpleListItem;
                };
 
-
                var bsSimpleList = simpleListOpen + simpleListItems + simpleListClose;
-
-
 
                $("#simpler-example-list").html(bsSimpleList);
                $('#simpler-list-code').text(bsSimpleList);
@@ -520,11 +529,7 @@
                $('pre').removeClass('prettyprinted');
                prettyPrint();
 
-
             });
-
-
-
 
             // Add the active classes to the nav menu
             $(".navfeatures").addClass("active");
@@ -534,7 +539,14 @@
 
                $('simple-example-media').val('');
                var numItems = $('#media-list-item-num').val();
-               var listOpen = "<ul class='media-list'>"
+               var listOpen = "";
+
+               if ($('#media-list-striped').is(':checked')) {
+                  listOpen = "<ul class='media-list media-list-alt'>";
+               } else {
+                  listOpen = "<ul class='media-list'>";
+               }
+
                var mediaWidth = $('#media-width').val();
                var mediaHeight = $('#media-height').val();
                var listItem = "<li class='media'><div class='pull-left'><img class='media-object' src='http://www.placehold.it/" + mediaWidth + "x" + mediaHeight +
@@ -570,6 +582,7 @@
                var altShadedRows = "";
                var finalOutput = '';
                var withDivs = '';
+
 
                if ($('#checkbox-has-links').is(':checked')) {
                   styledListItem = "<li class='list-group-item'><a href='' target='_blank'>Lorem ipsum dolor</a></li>";

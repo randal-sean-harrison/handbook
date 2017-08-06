@@ -661,3 +661,11 @@ h3.jumbotronic {
 .icon-link, .icon-link:hover {
    text-decoration: none;
 }
+
+.media-list li {
+   padding: 20px;
+}
+
+.media-list-alt li:nth-child(odd) {
+   background: #f5FaFa;
+}

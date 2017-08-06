@@ -521,7 +521,7 @@
 
                $('#displayCollapsible').click(function() {
 
-                  var accordionRando = Math.random() * 1000000000000;
+                  var accordionRando = ~~(Math.random() * 10000000);
                   var panelGroupOpen = "<div class='panel-group' id='accordion" + accordionRando + "' role='tablist' aria-multiselectable='true'>";
                   var panelGroupClose = "</div> <!-- panel group -->";
                   var numPanels = $('#num-panels').val();
@@ -532,7 +532,7 @@
                   var startOpen = '';
 
                   for (i = 0; i < numPanels; i++) {
-                     rando = Math.random() * 1000000000000;
+                     rando = ~~(Math.random() * 10000000);
 
                      if (i == 0 && $('#first-open').is(":checked")) {
                         startOpen = ' in';
