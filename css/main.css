@@ -12,12 +12,16 @@ p, li, th, td, dd, dt, dl, a, dl, input, textarea, button, select, option {
    font-size: 16px !important;
 }
 
+dl {
+   margin-left: 1em;
+}
+
 dd {
-   margin-bottom: .5em;
+   margin-bottom: 1em;
 }
 
 dt {
-   font-weight: 400;
+   font-weight: 500;
 }
 
 label {

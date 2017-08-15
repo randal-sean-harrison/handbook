@@ -140,8 +140,9 @@
             <div class="col-md-3 hidden-xs hidden-sm" id="leftCol">
                <ul class="nav nav-stacked" id="sidebar">
                   <li><a href="#sec0">Standard Lists</a></li>
-                  <li><a href="#sec1">Media Lists</a></li>
-                  <li><a href="#sec2">Styled Lists</a></li>
+                  <li><a href="#sec1">Definition Lists</a></li>
+                  <li><a href="#sec2">Media Lists</a></li>
+                  <li><a href="#sec3">Styled Lists</a></li>
                   <li><a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> &nbsp;Back to top</a></li>
                </ul>
             </div>
@@ -181,6 +182,12 @@
             <div class="form-group" id="special-list-icon">
 
                      <label for="list-type">List Icon</label>
+                     <div class="radio">
+                       <label>
+                         <input type="radio" name="specialtyIcons" id="specialIcons0" value="">
+                         <i style="opacity: 0" class="fa fa-times fa-spacer-left fa-spacer-right" aria-hidden="true"></i><span style="opacity: .7">Unstyled</span>
+                       </label>
+                     </div>
                      <div class="radio">
                        <label>
                          <input type="radio" name="specialtyIcons" id="specialIcons1" value="fa fa-li fa-check fa-spacer-right">
@@ -249,7 +256,76 @@
 
 </div>
 
-                  <h2 id="sec1">Media Lists</h2>
+
+                  <h2 id="sec1">Definition lists</h2>
+
+
+                  <div class="row">
+
+                        <div class="col-sm-12 col-md-12">
+
+                           <p>Definition lists are useful in setting up simple term-value pairs. They can be oriented horizontally or vertically.</p>
+
+                        </div>
+
+
+                        <div class="col-sm-12 col-md-3">
+
+                           <form>
+
+                              <div class="form-group">
+                                 <label for="definiton-list-count"># List Items</label>
+                                 <input type="text" class="form-control" id="definition-list-count" value="3" name="media-num">
+                              </div>
+
+                              <div class="form-group">
+                                 <label for="list-type">List Type</label>
+                                 <select class="form-control" id="definition-list-type">
+                                  <option value="dl-horizontal">Horizontal</option>
+                                  <option value="" selected="selected">Vertical</option>
+                              </select>
+                              </div>
+
+                           </form>
+
+                           <div style="margin-top:30px;">
+                              <button type="button" class="btn btn-default" id="clearDefinitionList">Reset</button>
+                              <button type="button" class="btn btn-primary" id="renderDefinitionList">Build</button>
+                           </div>
+
+                        </div>
+
+                        <div class="col-sm-12 col-md-9">
+
+                           <div class="example" id="definition-example-list">
+
+                              <dl class=''><dt>Content</dt><dd>Content</dd><dt>Content</dt><dd>Content</dd><dt>Content</dt><dd>Content</dd></dl>
+
+                           </div>
+
+                           <div class="well">
+
+                              <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#definition-list-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                              <i class="fa fa-clipboard" aria-hidden="true"></i>
+                              </button>
+
+<pre class="prettyprint" id="definition-list-code">
+&lt;dl class=''&gt;
+&lt;dt&gt;Content&lt;/dt&gt;&lt;dd&gt;Content&lt;/dd&gt;
+&lt;dt&gt;Content&lt;/dt&gt;&lt;dd&gt;Content&lt;/dd&gt;
+&lt;dt&gt;Content&lt;/dt&gt;&lt;dd&gt;Content&lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
+
+                           </div> <!-- well -->
+
+                           </div>
+                           <!-- col-md-9 closes -->
+
+               </div>
+
+
+                  <h2 id="sec2">Media Lists</h2>
 
                   <div class="row">
 
@@ -263,9 +339,9 @@
 
                            <label>Image Size  <small style="opacity: .8;">(W x H)</small></label>
                            <div class="input-group">
-                              <input id="media-width" type="text" class="form-control" placeholder="125">
+                              <input id="media-width" type="text" class="form-control" placeholder="100">
                               <span class="input-group-addon">x</span>
-                              <input id="media-height" type="text" class="form-control" placeholder="125">
+                              <input id="media-height" type="text" class="form-control" placeholder="100">
                            </div>
 
                            <div class="form-group">
@@ -293,7 +369,7 @@
 
                         <div class="example" id="simple-example-media">
 
-                           <ul class='media-list'><li class='media'><div class='pull-left'><img class='media-object' src='http://www.placehold.it/50x50' alt=''></div><div class='media-body'><h4 class='media-heading'><a href='#' target='_blank'>Media Heading</a></h4><p>Use media lists to pair visual components with textual description.</p></div></li><li class='media'><div class='pull-left'><img class='media-object' src='http://www.placehold.it/50x50' alt=''></div><div class='media-body'><h4 class='media-heading'><a href='#' target='_blank'>Media Heading</a></h4><p>Use media lists to pair visual components with textual description.</p></div></li></ul>
+                           <ul class='media-list'><li class='media'><div class='pull-left'><img class='media-object' src='http://www.placehold.it/100x100' alt=''></div><div class='media-body'><h4 class='media-heading'><a href='#' target='_blank'>Media Heading</a></h4><p>Use media lists to pair visual components with textual description.</p></div></li><li class='media'><div class='pull-left'><img class='media-object' src='http://www.placehold.it/100x100' alt=''></div><div class='media-body'><h4 class='media-heading'><a href='#' target='_blank'>Media Heading</a></h4><p>Use media lists to pair visual components with textual description.</p></div></li></ul>
 
                         </div>
 
@@ -307,13 +383,13 @@
 <pre class="prettyprint" id="simple-media-code">
 &lt;ul class='media-list'&gt;
    &lt;li class='media'&gt;
-      &lt;div class='pull-left'&gt;&lt;img class='media-object' src='http://www.placehold.it/50x50' alt=''&gt;
+      &lt;div class='pull-left'&gt;&lt;img class='media-object' src='http://www.placehold.it/100x100' alt=''&gt;
       &lt;/div&gt;
       &lt;div class='media-body'&gt;&lt;h4 class='media-heading'&gt;&lt;a href='#' target='_blank'&gt;Media Heading&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Use media lists to pair visual components with textual description.&lt;/p&gt;
       &lt;/div&gt;
    &lt;/li&gt;
    &lt;li class='media'&gt;
-      &lt;div class='pull-left'&gt;&lt;img class='media-object' src='http://www.placehold.it/50x50' alt=''&gt;&lt;/div&gt;&lt;div class='media-body'&gt;&lt;h4 class='media-heading'&gt;&lt;a href='#' target='_blank'&gt;Media Heading&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Use media lists to pair visual components with textual description.&lt;/p&gt;&lt;/div&gt;
+      &lt;div class='pull-left'&gt;&lt;img class='media-object' src='http://www.placehold.it/100x100' alt=''&gt;&lt;/div&gt;&lt;div class='media-body'&gt;&lt;h4 class='media-heading'&gt;&lt;a href='#' target='_blank'&gt;Media Heading&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Use media lists to pair visual components with textual description.&lt;/p&gt;&lt;/div&gt;
    &lt;/li&gt;
 &lt;/ul&gt;
 </pre>
@@ -324,7 +400,7 @@
                      </div>
                   </div>
 
-                  <h2 id="sec2">Simple Styled Lists</h2>
+                  <h2 id="sec3">Simple Styled Lists</h2>
 
                   <p>Accent colors include: <code>.list-group-item-active</code> (primary blue),&nbsp; <code>.list-group-item-success</code> (green),&nbsp; <code>.list-group-item-info</code> (light blue),&nbsp; <code>.list-group-item-warning</code> (yellow),&nbsp;
                      <code>.list-group-item-danger</code> (red).</p>
@@ -511,6 +587,9 @@
 
                   case 'special-icon':
                      simpleListOpen = "<ul class='fa-ul'>";
+                     if (specialIconChoice == "") {
+                        simpleListOpen = "<ul class='list-unstyled'>";
+                     }
                      simpleListClose = '</ul>';
                      simpleListItem = "<li><i class='" + specialIconChoice + "'></i>Content</li>";
                   break;
@@ -534,6 +613,36 @@
             // Add the active classes to the nav menu
             $(".navfeatures").addClass("active");
             $(".navlists").addClass("active");
+
+
+            $('#renderDefinitionList').click(function() {
+
+               var definitionListCount = $("#definition-list-count").val();
+               var definitionListType = $('#definition-list-type').val();
+               var definitionClass = '';
+
+               var definitionListOpening = "<dl class='" + definitionListType + "'>";
+               var definitionListClosing = "</dl>";
+
+               var definitionListItem = "<dt>Content</dt><dd>Content</dd>";
+               var definitionListItems = '';
+
+               for (i = 0; i < definitionListCount; i++) {
+                  definitionListItems += definitionListItem;
+               };
+
+               // Write the table
+               var bsDefinition = definitionListOpening + definitionListItems + definitionListClosing;
+
+               $("#definition-example-list").html(bsDefinition);
+               $("#definition-list-code").text(bsDefinition);
+
+               $('pre').removeClass('prettyprinted');
+               prettyPrint();
+
+            });
+
+
 
             $('#renderMediaList').click(function() {
 
@@ -650,6 +759,10 @@
 
             // reset buttons
             $('#clearSimpleList').click(function() {
+               location.reload(true);
+            });
+
+            $('#clearDefinitionList').click(function() {
                location.reload(true);
             });
 
