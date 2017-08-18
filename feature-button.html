@@ -252,7 +252,7 @@
                   <h2 id="sec1">Specialty Buttons</h2>
                   <p>Buttons commonly invoke a call to other services, such as opening an email client, calendar booking application, or a modal image preview window, etc. For help with more advanced buttons, <a href="help.html">contact the LibGuides Management Team</a>.</p>
 
-                  <table class='table table-striped table-hover' id="buttonsTable">
+                  <table class='table table-hover' id="buttonsTable">
                      <thead>
                         <tr>
                            <th style='width: 35%;'>Button Type</th>
@@ -347,9 +347,10 @@
             var setOpen = "";
             var spacer = "";
 
-            if (iconHTML !== '') {
-               spacer = "&nbsp;&nbsp;";
-            }
+
+            // adds fa-spacer-right class
+            var iconReal = iconHTML.replace('" aria-hidden="true"></i>',' fa-spacer-right" aria-hidden="true"></i>');
+
 
             if (buttonOpenIn == "same") {
                setOpen = "target='_self'";
@@ -363,7 +364,7 @@
             }
 
             // Write the button
-            var bsButton = "<p class='" + buttonAlignment + "'>" + "<a role='button' class='btn" + buttonSize + buttonColor + "' " + setOpen + " href='" + buttonUrl + "' target='blank'>" + iconHTML + spacer + buttonText + "</a></p>";
+            var bsButton = "<p class='" + buttonAlignment + "'>" + "<a role='button' class='btn" + buttonSize + buttonColor + "' " + setOpen + " href='" + buttonUrl + "' target='blank'>" + iconReal + buttonText + "</a></p>";
 
             $("#simple-example-button").html(bsButton);
             $('#simple-button-code').text(bsButton);
