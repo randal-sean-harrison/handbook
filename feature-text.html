@@ -1063,10 +1063,13 @@
             var sourceLink = $('#source-link').val();
 
 
-            if (blockquoteSource !== '') {
+            if (blockquoteSource !== '' && blockquoteAuthor !== '') {
                blockquoteAuthor += ", from ";
             }
 
+            if (blockquoteAuthor == '') {
+
+            }
 
             // escape the quotation marks in quote and source fields
             blockquoteQuote = blockquoteQuote.replace(/\"/g,'&#34;');
