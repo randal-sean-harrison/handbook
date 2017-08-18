@@ -673,3 +673,11 @@ h3.jumbotronic {
 .media-list-alt li:nth-child(odd) {
    background: #f5FaFa;
 }
+
+.image-grid img {
+    margin-bottom: 1em;
+}
+
+.image-grid .panel-body img {
+   margin-bottom: 0px;
+}
