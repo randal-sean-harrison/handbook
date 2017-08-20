@@ -179,6 +179,14 @@
                             </label>
                             <br/>
                             <label>
+                               <input type="radio" name="cols" value="40-60" id="40-60"> 2 columns <small>(40/60)</small>
+                            </label>
+                            <br/>
+                            <label>
+                               <input type="radio" name="cols" value="60-40" id="60-40"> 2 columns <small>(60/40)</small>
+                            </label>
+                            <br/>
+                            <label>
                                <input type="radio" name="cols" value="50-50" id="50-50"> 2 columns <small>(50/50)</small>
                             </label>
                             <br/>
@@ -298,16 +306,18 @@
 
                var bsTable = '';
 
-               var colsFinal = 'dasda';
+               var colsFinal = '';
                colsFinal = $('input[name=cols]:checked').val();
 
                var first = "<div class='row'><div class='col-sm-3'>content</div><div class='col-sm-9'>content</div></div>";
                var second = "<div class='row'><div class='col-sm-9'>content</div><div class='col-sm-3'>content</div></div>";
-               var third = "<div class='row'><div class='col-sm-6'>content</div><div class='col-sm-6'>content</div></div>";
-               var fourth = "<div class='row'><div class='col-sm-4'>content</div><div class='col-sm-4'>content</div><div class='col-sm-4'>content</div></div>";
-               var fifth = "<div class='row'><div class='col-sm-3'>content</div><div class='col-sm-3'>content</div><div class='col-sm-3'>content</div><div class='col-sm-3'>content</div></div>";
-               var sixth = "<div class='row'><div class='col-sm-2 col-sm-offset-1'>content</div><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div></div>";
-               var seventh = "<div class='row'><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div></div>";
+               var third = "<div class='row'><div class='col-sm-5'>content</div><div class='col-sm-7'>content</div></div>";
+               var fourth = "<div class='row'><div class='col-sm-7'>content</div><div class='col-sm-5'>content</div></div>";
+               var fifth = "<div class='row'><div class='col-sm-6'>content</div><div class='col-sm-6'>content</div></div>";
+               var sixth = "<div class='row'><div class='col-sm-4'>content</div><div class='col-sm-4'>content</div><div class='col-sm-4'>content</div></div>";
+               var seventh = "<div class='row'><div class='col-sm-3'>content</div><div class='col-sm-3'>content</div><div class='col-sm-3'>content</div><div class='col-sm-3'>content</div></div>";
+               var eighth = "<div class='row'><div class='col-sm-2 col-sm-offset-1'>content</div><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div></div>";
+               var ninth = "<div class='row'><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div><div class='col-sm-2'>content</div></div>";
 
                switch (colsFinal) {
                	case '25-75':
@@ -316,20 +326,26 @@
                   case '75-25':
                		bsTable = second;
                		break;
-                  case '50-50':
+                  case '40-60':
                		bsTable = third;
                		break;
-                  case '33-33-33':
+                  case '60-40':
                		bsTable = fourth;
                		break;
-                  case '25-25-25-25':
-               		bsTable = fifth;
-               		break;
-                  case '20-20-20-20-20':
+                  case '50-50':
+            		   bsTable = fifth;
+            		   break;
+                  case '33-33-33':
                		bsTable = sixth;
                		break;
-                  case '16-16-16-16-16-16':
+                  case '25-25-25-25':
                		bsTable = seventh;
+               		break;
+                  case '20-20-20-20-20':
+               		bsTable = eighth;
+               		break;
+                  case '16-16-16-16-16-16':
+               		bsTable = ninth;
                		break;
                }
 
