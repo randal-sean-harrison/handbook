@@ -164,7 +164,11 @@
             <div class="col-md-9" id="rightCol">
 
             <h2 id="sec0">Subject Guides</h2>
-               <p>Subject guides are a primary way in which Librarians assist patrons in focused research under their subject specialties. All subject guides must serve multiple audiences, running the gamut from undergaduates to more advanced researchers. The best guides will be relatively self-explanatory to any level of user, and should, ideally, be useful to librarians during their instruction.</p>
+               <p>Subject guides are a primary way in which Librarians assist patrons in focused research under their subject specialties. All subject guides must serve multiple audiences, running the gamut from undergaduates to more advanced researchers. The best guides will be relatively self-explanatory to any level of user, as well as useful to librarians during their instruction.</p>
+
+
+               <div class='alert alert-intro' role='alert'><p><i class='fa fa-info-circle fa-spacer-right' aria-hidden='true'></i><strong class='capitalized'>Associate Your Guides</strong><br/>All subject guides must be associated with a <a href="" data-toggle="modal" data-target="#subjectsModal">General Subject category</a>. For instructions, see our <a href="index.html">Quick Start</a> page.</p></div>
+
                   <p>There are 2 variants of subject guides:</p>
 
 
@@ -174,8 +178,6 @@
                      <dt>SPECIFIC Subject Guides</dt>
                      <dd>Narrower sub-topic guides, further focusing the work of General Subject Guides</dd>
                   </dl>
-
-
 
 
 
@@ -436,29 +438,29 @@
       $(".navsubject").addClass("active");
 
 
-               $.getJSON('json/subjects.json', function(data) {
-                  for (i = 0; i < 17; i++) {
-                     $('#subjects-list1').append('<li class="list-group-item">' + data[i] + '</li>');
-                  }
-               });
+      $.getJSON('json/subjects.json', function(data) {
+         for (i = 0; i < 17; i++) {
+            $('#subjects-list1').append('<li class="list-group-item">' + data[i] + '</li>');
+         }
+      });
 
-               $.getJSON('json/subjects.json', function(data) {
-                  for (i = 17; i < 34; i++) {
-                     $('#subjects-list2').append('<li class="list-group-item">' + data[i] + '</li>');
-                  }
-               });
+      $.getJSON('json/subjects.json', function(data) {
+         for (i = 17; i < 34; i++) {
+            $('#subjects-list2').append('<li class="list-group-item">' + data[i] + '</li>');
+         }
+      });
 
-               $.getJSON('json/subjects.json', function(data) {
-                  for (i = 34; i < 51; i++) {
-                     $('#subjects-list3').append('<li class="list-group-item">' + data[i] + '</li>');
-                  }
-               });
+      $.getJSON('json/subjects.json', function(data) {
+         for (i = 34; i < 51; i++) {
+            $('#subjects-list3').append('<li class="list-group-item">' + data[i] + '</li>');
+         }
+      });
 
-               $.getJSON('json/subjects.json', function(data) {
-                  for (i = 51; i < 68; i++) {
-                     $('#subjects-list4').append('<li class="list-group-item">' + data[i] + '</li>');
-                  }
-               });
+      $.getJSON('json/subjects.json', function(data) {
+         for (i = 51; i < 68; i++) {
+            $('#subjects-list4').append('<li class="list-group-item">' + data[i] + '</li>');
+         }
+      });
 
 
 
