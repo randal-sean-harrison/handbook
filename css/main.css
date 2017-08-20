@@ -569,6 +569,10 @@ h5 {
     margin: 1em 0em .75em 0em !important;
 }
 
+h5.panel-title {
+   margin: 0px !important;
+}
+
 h6 {
     font-size:1.1em !important;
     font-weight: 400 !important;
@@ -680,4 +684,8 @@ h3.jumbotronic {
 
 .image-grid .panel-body img {
    margin-bottom: 0px;
+}
+
+.panel-footer p {
+   margin-bottom: 0 !important;
 }
