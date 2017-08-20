@@ -43,6 +43,25 @@
 
    <link rel="stylesheet" href="css/main.css">
 
+   <style media="screen">
+      #subjectsModal {
+         padding: 0px !important;
+      }
+
+      .modal-dialog {
+         width: 100%;
+         height: 100%;
+         margin: 0;
+         padding: 0;
+      }
+
+      .modal-content {
+         height: auto;
+         min-height: 100%;
+         border-radius: 0;
+      }
+
+   </style>
 
 </head>
 
@@ -151,6 +170,10 @@
                <p>Course Guides should be organized so that they help students to use the Library and information resources in ways that promote their success in a particular course. Librarians work closely with instructors to decide the best resources and
                   organization for a Course Guide. However, Librarians are responsible for designing, building, and maintaining that guide, as <a href="help-faq.html">instructors are not eligible for LibGuides accounts</a>.</p><p>Help your instructor understand the proper scope and role of the Course Guide. Things like assignments and grading rubrics are usually
                      best embedded in a learning management platform such as <a href="https://sakailogin.nd.edu/" target="_blank">Sakai</a>.</p>
+
+
+               <div class='alert alert-intro' role='alert'><p><i class='fa fa-info-circle fa-spacer-right' aria-hidden='true'></i><strong class='capitalized'>Associate Your Guides</strong><br/>All course guides must be associated with a <a href="" data-toggle="modal" data-target="#subjectsModal">General Subject category</a>. For instructions, see our <a href="index.html">Quick Start</a> page.</p></div>
+
 
                <div class='alert alert-danger' role='alert'><p><i class="fa fa-times-circle" aria-hidden="true"></i><strong>Guide Proliferation Policy</strong><br>Note that only the most recent version of any instructor's Course Guide may be published. Versions from previous semesters/years must be unpublished (archived).</p></div>
 
@@ -408,6 +431,61 @@
 
    <!-- Main Content closes ----------------------------->
 
+<!-- General Subjects Modal Content ------------------->
+
+<div class="modal" id="subjectsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+
+            <a href="" style="display:block;"><h1 class='short-round pull-right' style='font-size: 24px; height: 60px; width: 60px; padding: 10px; border-radius: 60px; background: #d9534f;' class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></h1></a>
+
+            <h1 class="modal-title pull-left" id="myModalLabel" style="opacity:.4;padding-left: 50px;">General Subjects</h4>
+          </div> <!-- header -->
+
+          <div class="modal-body">
+
+             <div class="container">
+
+               <div class="row">
+                  <div class="col-md-12">
+                     <p>This represents the official list of GENERAL subjects that correspond to disciplinary offerings at Notre Dame.</p>
+                  </div>
+               </div>
+
+
+                <div class='row'>
+                   <div class='col-md-3'>
+                      <ul class='list-group alt-shaded-rows' id="subjects-list1">
+                      </ul>
+                   </div>
+                   <div class='col-md-3'>
+                      <ul class='list-group alt-shaded-rows' id="subjects-list2">
+                      </ul>
+                   </div>
+                   <div class='col-md-3'>
+                      <ul class='list-group alt-shaded-rows' id="subjects-list3">
+                      </ul>
+                   </div>
+                   <div class='col-md-3'>
+                      <ul class='list-group alt-shaded-rows' id="subjects-list4">
+                      </ul>
+                   </div>
+                </div>
+
+                <div class="row">
+                   <div class="col-md-12">
+                      <p>To modify this list: <a href="json/subjects.json">json/subjects.json</a>.</p>
+                   </div>
+                </div>
+
+             </div>
+
+          </div> <!-- body -->
+       </div> <!-- modal content -->
+    </div> <!-- modal dialog -->
+</div>
+
 
    <!-- Footer ----------------------------->
    <div id="handbook-footer">
@@ -575,32 +653,56 @@
 
          $('#simple-example-title').html(bsExample);
 
+
+
+         // Modal Pop up JSON pull
+         $.getJSON('json/subjects.json', function(data) {
+            for (i = 0; i < 17; i++) {
+               $('#subjects-list1').append('<li class="list-group-item">' + data[i] + '</li>');
+            }
+         });
+
+         $.getJSON('json/subjects.json', function(data) {
+            for (i = 17; i < 34; i++) {
+               $('#subjects-list2').append('<li class="list-group-item">' + data[i] + '</li>');
+            }
+         });
+
+         $.getJSON('json/subjects.json', function(data) {
+            for (i = 34; i < 51; i++) {
+               $('#subjects-list3').append('<li class="list-group-item">' + data[i] + '</li>');
+            }
+         });
+
+         $.getJSON('json/subjects.json', function(data) {
+            for (i = 51; i < 68; i++) {
+               $('#subjects-list4').append('<li class="list-group-item">' + data[i] + '</li>');
+            }
+         });
+
+
+         $('#refresh-button').click(function() {
+            $('#image-url').val("");
+         });
+
+         $('#refresh-button3').click(function() {
+            $('#instructPage').val("");
+         });
+
+         // clipboard button
+         new Clipboard('.btn');
+
+         $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+         })
+
       });
 
-      $('#refresh-button').click(function() {
-         $('#image-url').val("");
-      });
 
-      $('#refresh-button3').click(function() {
-         $('#instructPage').val("");
-      });
-
-      // clipboard button
-      new Clipboard('.btn');
-
-      $(function() {
-         $('[data-toggle="tooltip"]').tooltip()
-      })
    </script>
    <!-- add the active class to the correct tab and submenu element -->
 
-
-
-
    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-
-
-
 
   </body>
 
