@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Hesburgh Libraries &middot; Guides Handbook</title>
+
+   <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+   <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+   <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+   <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+   <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+   <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+   <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+   <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+   <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+   <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-icon-192x192.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+   <link rel="manifest" href="favicons/manifest.json">
+   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
+   <meta name="theme-color" content="#ffffff">
+
+
+
+
+   <!-- Bootstrap -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+   <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+   <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+
+
+   <!-- ND Styles -->
+   <link rel="stylesheet" href="css/main.css">
+
+   <!-- includes for Google's code highlighter 'prettyprint' -->
+   <link rel="stylesheet" type="text/css" href="css/prettify.css">
+   <script type="text/javascript" src="js/prettify.js"></script>
+
+
+   <style media="screen">
+      #subjectsModal {
+         padding: 0px !important;
+      }
+
+      .modal-dialog {
+         width: 100%;
+         height: 100%;
+         margin: 0;
+         padding: 0;
+      }
+
+      .modal-content {
+         height: auto;
+         min-height: 100%;
+         border-radius: 0;
+      }
+   </style>
+
+</head>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
+
+   <!-- header ----------------------------->
+
+   <div class="brand-bar container-fluid">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="hidden-xs col-sm-6 col-md-6 col-lg-6">
+               <a href="http://www.nd.edu">University <i>of</i> Notre Dame</a>
+            </div>
+            <div class="text-center col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
+               <a href="http://www.nd.edu">University <i>of</i> Notre Dame</a>
+            </div>
+            <div class="hidden-xs col-sm-6 col-md-6 col-lg-6 text-right">
+               <a href="https://provost.nd.edu/">Office <i>of the</i>  Provost</a>
+            </div>
+            <div class="text-center col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl text-center">
+               <a class="brand-bar-bottom-padded" href="https://provost.nd.edu/">Office <i>of the</i>  Provost</a>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="container-fluid">
+      <div class="row" id="nd-libguides-header-pattern">
+         <div class="hidden-xs col-sm-6 col-md-6 col-lg-6">
+            <h1 id="hesburgh-libraries"><a href="http://library.nd.edu" target="_blank">HESBURGH <span style="color:#F8E999;">LIBRARIES</span></a></h1>
+         </div>
+         <div class="hidden-xs col-sm-6 col-md-6 col-lg-6">
+            <h1 style="opacity:.6;text-align:right;">Guides Handbook</h1>
+         </div>
+         <div class="col-xs-12 text-center hidden-sm hidden-md hidden-lg">
+            <h1><a href="http://library.nd.edu" target="_blank">HESBURGH <span style="color:#F8E999;margin-bottom:10px;">LIBRARIES</span></a></h1>
+         </div>
+         <div class="col-xs-12 text-center hidden-sm hidden-md hidden-lg">
+            <h1 style="opacity:.6;text-align:center;">Guides Handbook</h1>
+         </div>
+      </div>
+   </div>
+
+   <!-- header closes ----------------------------->
+
+   <!-- Main Content ----------------------------->
+
+   <div class="container" id="main-container">
+
+      <div class="row">
+         <div class="col-xs-12 col-sm-12 col-md-12 text-right">
+            <a class="btn btn-default help-button" href="https://nd.libapps.com/libapps/login.php" role="button" target="_blank"><i class="fa fa-lock fa-spacer-right" aria-hidden="true"></i> LibGuides Login</a>
+
+            <a class="btn btn-default help-button" href="http://libguides.library.nd.edu/reusable-assets" role="button" target="_blank"><i class="fa fa-list-alt fa-spacer-right" aria-hidden="true"></i>Reusable Assets</a>
+
+         </div>
+
+      </div>
+
+      <div class="page-header">
+
+         <div w3-include-html="navmenu.html"></div>
+
+      </div>
+      <!-- page header closes -->
+
+      <div id="masthead">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h1>Publishing and Archiving</h1>
+                  <p class="lead">Guides may be published or unpublished, private, or archived as HTML.</p>
+               </div>
+            </div>
+         </div>
+         <!--/container-->
+      </div>
+      <!--/masthead-->
+
+      <div class="container">
+         <div class="row">
+
+            <!--left column-->
+            <div class="col-md-3 hidden-xs hidden-sm" id="leftCol">
+               <ul class="nav nav-stacked" id="sidebar">
+                  <li><a href="#sec0">Status Types</a></li>
+                  <li><a href="#sec1">Instructions</a></li>
+                  <li><a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> &nbsp;Back to top</a></li>
+               </ul>
+            </div>
+
+            <!--right column-->
+            <div class="col-md-9" id="rightCol">
+               <h2 id="sec0">Status Types</h2>
+
+
+               <h3>Published</h3>
+               <p>All published guides must offer the best possible user experience, presenting a strong professional ethos consistent with the Library's other brand and identity standards. Because published guides are listed categorically on the Guides
+                  home page, and are discoverable by search, all published guides:</p>
+               <ul>
+                  <li>Are subject to the style and content guidelines outlined in this handbook.</li>
+                  <li>Are subject to publication approval by the LibGuides Management Team. Before first publishing your new guide, <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;tf=1&amp;to=lmt-list@nd.edu&amp;su=Guide Publication Review" target="_blank"> contact the LibGuides Management Team</a>                     for review.</li>
+                  <li>Must be associated with a <a href="" data-toggle="modal" data-target="#subjectsModal">General Subject category</a>. For instructions on how to associate your guide with a subject, see our <a href="index.html">Quick Start</a> page.</li>
+               </ul>
+
+               <hr>
+
+
+               <h3>Private</h3>
+               <p>While private guides are not listed categorically on the Guides
+                  home page, they are still accessible to patrons who have the URL. Thus, like any publicly accessible guides, private guides too must offer the best possible user experience and conform to brand and identity standards.</p>
+
+                  <p>The exception is Internal guides, which may adopt any page structure or information architectue, although we recommend the <a href="guide-internal.html#sec1">Internal Guide (1 column) template</a>.</p>
+
+                  <p>private internal guides must be password protected to restrict their audience.</p>
+
+               <hr>
+
+               <h3>Unpublished</h3>
+
+               <p>Guide authors should unpublish guides which are no longer current and/or which are undergoing significant revision. Unpublished guides are not accessible to patrons, even those who know the URL, and are not listed categorically on the Guides home page.</p>
+
+               <hr>
+
+
+               <h3>Archived</h3>
+               <p>Guides which are no longer needed should be deleted from the LibGuides platform, where possible. However, to preserve content that may be wanted later, there are two ways in which to archive a guide:</p>
+
+               <dl>
+                  <dt>Soft Archiving</dt>
+                  <dd>By simply unpublishing a guide, you are effectively archiving the guide, though preserving the guide for republication in future.</dd>
+
+                  <dt>Hard Archiving</dt>
+                  <dd>For those who like to clean house, you may create an HTML backup and delete the guide from the LibGuides platform. This will preserve as a Web page the essential structure and content of the guide, including links.<br>
+                  <div class='alert alert-warning' role='alert' style="margin-top: 10px"><p><i class='fa fa-exclamation-triangle fa-spacer-right' aria-hidden='true'></i>The HTML backup exists <em>outside</em> of the LibGuides platform and cannot be re-imported as a functioning guide. It is useful only as a record of content/structure.</p></div>
+                  </dd>
+               </dl>
+
+
+               <h2 id="sec1">Instructions</h2>
+
+               <div class="row">
+                  <div class="col-sm-1">
+                     <h1 class='short-round center-block' style='font-size: 20px; height: 44px; width: 44px; padding: 8px; border-radius: 50px; background: #5bc0de;'>1</h1>
+                  </div>
+                  <div class="col-sm-5">
+                     <h5>Change the Status of the Guide</h5>
+
+                     <table class='table numbered-steps'>
+                        <thead></thead>
+                        <tbody>
+                           <tr>
+                              <td style='width: 45px'>1</td>
+                              <td>Click on the dropdown reflecting the current status of the guide, which may read:<br/><br/><span class='label label-warning'>Private</span> &nbsp;or&nbsp; <span class='label label-danger'>Unpublished</span> &nbsp;or&nbsp; <span class='label label-success'>Published</span></td>
+                           </tr>
+                           <tr>
+                              <td>2</td>
+                              <td>Select <code>Change Status and Share</code></td>
+                           </tr>
+                           <tr>
+                              <td>3</td>
+                              <td>In the pop up window, select the <code>Guide Publishing</code> tab.</td>
+                           </tr>
+                           <tr>
+                              <td>4</td>
+                              <td>Select desired status (unpublished, published, private) from the Publication Status dropdown.</td>
+                           </tr>
+                           <tr>
+                              <td>5</td>
+                              <td>Click <code>Save</code>.</td>
+                           </tr>
+                        </tbody>
+                     </table>
+
+
+                  </div>
+                  <div class="col-sm-6">
+                     <div class='panel panel-default'>
+                        <div class='panel-body' style='background:#FFFFFF'><img class='img img-responsive center-block' src='img/change-status.png' alt='image of change status button in LibGuides' /></div>
+                     </div>
+
+                     <div class='panel panel-default'>
+                        <div class='panel-body' style='background:#FFFFFF'><img class='img img-responsive center-block' src='img/unpublished-status.png' alt='image of change status button in LibGuides' /></div>
+                     </div>
+
+                  </div>
+
+               </div>
+
+               <hr>
+
+               <div class="row">
+                  <div class="col-sm-1">
+                     <h1 class='short-round center-block' style='font-size: 20px; height: 44px; width: 44px; padding: 8px; border-radius: 50px; background: #5bc0de;'>2</h1>
+                  </div>
+                  <div class="col-sm-5">
+                     <h5>Set a Password (optional)</h5>
+                     <table class='table numbered-steps'>
+                        <thead></thead>
+                        <tbody>
+                           <tr>
+                              <td style='width: 45px'>1</td>
+                              <td>Click on the dropdown reflecting the current status of the guide, which may read:<br/><br/><span class='label label-warning'>Private</span> &nbsp;or&nbsp; <span class='label label-danger'>Unpublished</span> &nbsp;or&nbsp; <span class='label label-success'>Published</span></td>
+                           </tr>
+                           <tr>
+                              <td>2</td>
+                              <td>Select <code>Access Controls</code></td>
+                           </tr>
+                           <tr>
+                              <td>3</td>
+                              <td>In the pop up window, select the <code>Password</code> tab.</td>
+                           </tr>
+                           <tr>
+                              <td>4</td>
+                              <td>Enter a <code>password</code>.</td>
+                           </tr>
+                           <tr>
+                              <td>5</td>
+                              <td>Click <code>Save</code>.</td>
+                           </tr>
+                        </tbody>
+                     </table>
+
+                  </div>
+                  <div class="col-sm-6">
+                     <div class='panel panel-default'>
+                        <div class='panel-body' style='background:#FFFFFF'><img class='img img-responsive center-block' src='img/access-controls.png' alt='screen capture of copy box link' /></div>
+                     </div>
+
+                     <div class='panel panel-default'>
+                        <div class='panel-body' style='background:#FFFFFF'><img class='img img-responsive center-block' src='img/password-tab.png' alt='screen capture of copy box link' /></div>
+                     </div>
+
+                  </div>
+                  <hr>
+               </div>
+
+
+
+
+            </div>
+            <!--/right-->
+         </div>
+         <!--/row-->
+      </div>
+      <!--/container-->
+
+
+   </div>
+   <!-- .container -->
+
+   <!-- Main Content closes ----------------------------->
+
+   <!-- General Subjects Modal Content ------------------->
+
+   <div class="modal" id="subjectsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+
+               <a href="" style="display:block;"><h1 class='short-round pull-right' style='font-size: 24px; height: 60px; width: 60px; padding: 10px; border-radius: 60px; background: #d9534f;' class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></h1></a>
+
+               <h1 class="modal-title pull-left" id="myModalLabel" style="opacity:.4;padding-left: 50px;">General Subjects</h4>
+             </div> <!-- header -->
+
+             <div class="modal-body">
+
+                <div class="container">
+
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>This represents the official list of GENERAL subjects that correspond to disciplinary offerings at Notre Dame.</p>
+                     </div>
+                  </div>
+
+
+                   <div class='row'>
+                      <div class='col-md-3'>
+                         <ul class='list-group alt-shaded-rows' id="subjects-list1">
+                         </ul>
+                      </div>
+                      <div class='col-md-3'>
+                         <ul class='list-group alt-shaded-rows' id="subjects-list2">
+                         </ul>
+                      </div>
+                      <div class='col-md-3'>
+                         <ul class='list-group alt-shaded-rows' id="subjects-list3">
+                         </ul>
+                      </div>
+                      <div class='col-md-3'>
+                         <ul class='list-group alt-shaded-rows' id="subjects-list4">
+                         </ul>
+                      </div>
+                   </div>
+
+                   <div class="row">
+                      <div class="col-md-12">
+                         <p>To modify this list: <a href="json/subjects.json">json/subjects.json</a>.</p>
+                      </div>
+                   </div>
+
+                </div>
+
+             </div> <!-- body -->
+          </div> <!-- modal content -->
+       </div> <!-- modal dialog -->
+   </div>
+
+   <!-- Footer ----------------------------->
+   <div id="handbook-footer">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-xs-12 col-sm-6">
+               <i class="fa fa-copyright" aria-hidden="true"></i><span id="thisYear"></span> University of Notre Dame
+            </div>
+            <div class="col-xs-12 col-sm-6">
+               <p class="text-right"><a href="https://github.com/randal-sean-harrison/handbook" target="_blank"><i class="fa fa-github fa-spacer-right" aria-hidden="true"></i>randal-sean-harrison/handbook</a></p>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <!-- Include all compiled plugins (below), or include individual files as needed -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+   <!-- Include for the Back to top button -->
+   <script src="js/back-to-top.js"></script>
+   <!-- Scrollspy / affix js -->
+   <script src="js/scripts.js"></script>
+
+   <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+   <!-- html include script -->
+   <script src="https://www.w3schools.com/lib/w3data.js"></script>
+
+   <!-- includes for Google's code highlighter 'prettyprint' -->
+   <link rel="stylesheet" type="text/css" href="css/prettify.css">
+   <script type="text/javascript" src="js/prettify.js"></script>
+
+
+   <script>
+      w3IncludeHTML();
+   </script>
+
+   <!-- clipboard.js include -->
+   <script src="js/clipboard.min.js"></script>
+
+   <script type="text/javascript">
+      $(document).ready(function() {
+
+
+
+
+         // Add the active classes to the nav menu
+         $(".navguides").addClass("active");
+         $(".navpublishing").addClass("active");
+
+         // ------- Display the address box --------------------------
+         $('#displayProfile').click(function() {
+
+
+
+            $('pre').removeClass('prettyprinted');
+            prettyPrint();
+
+         });
+
+         $('#clearProfile').click(function() {
+            location.reload(true);
+         });
+
+         $('#steps-button').click(function() {
+            $('#box-final').toggleClass('hidden');
+            $('#box-steps').toggleClass('hidden');
+
+            if ($('#steps-button').html() !== 'View Steps &amp; Structure') {
+               $('#steps-button').html('View Steps &amp; Structure');
+            } else {
+               $('#steps-button').html('View Final Result');
+            }
+
+         });
+
+
+      });
+
+      // clipboard button
+      new Clipboard('.btn');
+
+      // tooltips add
+      $(function() {
+         $('[data-toggle="tooltip"]').tooltip()
+      })
+
+      $.getJSON('json/subjects.json', function(data) {
+         for (i = 0; i < 17; i++) {
+            $('#subjects-list1').append('<li class="list-group-item">' + data[i] + '</li>');
+         }
+      });
+
+      $.getJSON('json/subjects.json', function(data) {
+         for (i = 17; i < 34; i++) {
+            $('#subjects-list2').append('<li class="list-group-item">' + data[i] + '</li>');
+         }
+      });
+
+      $.getJSON('json/subjects.json', function(data) {
+         for (i = 34; i < 51; i++) {
+            $('#subjects-list3').append('<li class="list-group-item">' + data[i] + '</li>');
+         }
+      });
+
+      $.getJSON('json/subjects.json', function(data) {
+         for (i = 51; i < 68; i++) {
+            $('#subjects-list4').append('<li class="list-group-item">' + data[i] + '</li>');
+         }
+      });
+
+
+   </script>
+   <!-- add the active class to the correct tab and submenu element -->
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+
+
+
+
+
+  </body>
+
+</html>
