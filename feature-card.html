@@ -151,18 +151,24 @@
             <div class="col-md-9" id="rightCol">
                <h2 id="sec0">Card Builder</h2>
 
-               <p>You may style your cards with any combination of the attributes below. The default accent color for cards is: <code>Default (grey)</code>.</p>
+               <p>Cards are typically used in multiples or paired with other elements. Use cards to strong effect by <a href="feature-column.html">placing them inside columns</a>. You may style your cards with any combination of the attributes below. The default accent color for cards is: <code>Default (grey)</code>.</p>
 
-               <div class="alert alert-info">
-                  <p><strong><i class="fa fa-exclamation-circle" aria-hidden="true"></i>Less is not More (for cards, anyway...)<br/></strong>Cards are typically used in multiples or paired with other elements. Use cards to strong effect by <a href="feature-column.html">placing them inside columns</a>.</p>
-               </div>
 
                <div class="row">
                   <div class="col-sm-12 col-md-3">
 
                      <form>
 
-                        <label for="panel-accent">Accent Color</label>
+                        <label for="card-num-columns"># Columns</label>
+                        <select class="form-control" id="card-num-columns">
+                               <option value="0">None</option>
+                               <option value="2">2</option>
+                               <option value="3">3</option>
+                               <option value="4">4</option>
+                               <option value="6">6</option>
+                               </select>
+
+                        <label for="panel-accent" style="margin-top: 15px">Accent Color</label>
                         <select class="form-control" id="panel-accent">
                                <option value=" panel-default" selected="selected">Default (grey)</option>
                                <option value=" panel-primary">Primary (blue)</option>
@@ -454,7 +460,9 @@
                   var panelAccent = $('#panel-accent').val();
                   var panelFooter = '';
                   var panelHeader = '';
-
+                  var closingDiv = "</div>";
+                  var cardNumColumns = $('#card-num-columns').val();
+                  var cardColumnWrapper = '';
 
                   if ($('#panel-header').is(':checked')) {
                      panelHeader = "<div class='panel-heading'><h5 class='panel-title'>Panel Title</h5></div>";
@@ -468,13 +476,28 @@
                      panelFooter = '';
                   }
 
-                  var closingDiv = "</div>";
-
                   var panelBegin = "<div class='panel" + panelAccent + "'>";
                   var panelBody = "<div class='panel-body'>Lorem ipsum dolor sic amet.</div>";
 
                   // Write the table
                   var bsPanel = panelBegin + panelHeader + panelBody + panelFooter + closingDiv;
+
+                  switch (cardNumColumns) {
+                     case '0':
+                        break;
+                     case '2':
+                        bsPanel = "<div class='row'><div class='col-sm-6'>" + bsPanel + "</div><div class='col-sm-6'>" + bsPanel + "</div></div>";
+                        break;
+                     case '3':
+                        bsPanel = "<div class='row'><div class='col-sm-4'>" + bsPanel + "</div><div class='col-sm-4'>" + bsPanel + "</div><div class='col-sm-4'>" + bsPanel + "</div></div>";
+                        break;
+                     case '4':
+                           bsPanel = "<div class='row'><div class='col-sm-3'>" + bsPanel + "</div><div class='col-sm-3'>" + bsPanel + "</div><div class='col-sm-3'>" + bsPanel + "</div><div class='col-sm-3'>" + bsPanel + "</div></div>";
+                        break;
+                     case '6':
+                           bsPanel = "<div class='row'><div class='col-sm-2'>" + bsPanel + "</div><div class='col-sm-2'>" + bsPanel + "</div><div class='col-sm-2'>" + bsPanel + "</div><div class='col-sm-2'>" + bsPanel + "</div><div class='col-sm-2'>" + bsPanel + "</div><div class='col-sm-2'>" + bsPanel + "</div></div>";
+                        break;
+                  }
 
                   $("#simple-example-panel").html(bsPanel);
                   $('#simple-panel-code').text(bsPanel);
