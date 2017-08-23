@@ -156,7 +156,7 @@
 
                <div class="col-sm-12 col-md-12">
 
-                  <p>Standard lists can be generated here, or from within the WYSIWYG editor, though you may also choose special icons for your list. In fact, any FontAwesome icon may be used to replace the standard bullet points ba adding the <code>fa-ul</code> class to the <code>&lt;ul&gt;</code> element, and <code>fa-li</code> class to the <code>&lt;li&gt;</code> of any list.</p>
+                  <p>Standard lists can be generated here, or from within the WYSIWYG editor. You may also choose any Font Awesome icon to delineate your lists by adding the <code>fa-ul</code> class to the <code>&lt;ul&gt;</code> element, and <code>fa-li</code> class to the <code>&lt;li&gt;</code> element of any list.</p>
 
                </div>
 
@@ -256,7 +256,6 @@
 
 </div>
 
-
                   <h2 id="sec1">Definition lists</h2>
 
 
@@ -264,10 +263,9 @@
 
                         <div class="col-sm-12 col-md-12">
 
-                           <p>Definition lists are useful in setting up simple term-value pairs. They can be oriented horizontally or vertically.</p>
+                           <p>Definition lists are useful in setting up simple key-value pairs. They can be oriented horizontally or vertically for large screens, with horizontal definition lists automatically stacking vertically on smaller screens.</p>
 
                         </div>
-
 
                         <div class="col-sm-12 col-md-3">
 
@@ -299,7 +297,16 @@
 
                            <div class="example" id="definition-example-list">
 
-                              <dl class=''><dt>Content</dt><dd>Content</dd><dt>Content</dt><dd>Content</dd><dt>Content</dt><dd>Content</dd></dl>
+                              <dl class=''>
+                                 <dt>Title</dt>
+                                 <dd>Content</dd>
+
+                                 <dt>Title</dt>
+                                 <dd>Content</dd>
+
+                                 <dt>Title</dt>
+                                 <dd>Content</dd>
+                              </dl>
 
                            </div>
 
@@ -311,9 +318,9 @@
 
 <pre class="prettyprint" id="definition-list-code">
 &lt;dl class=''&gt;
-&lt;dt&gt;Content&lt;/dt&gt;&lt;dd&gt;Content&lt;/dd&gt;
-&lt;dt&gt;Content&lt;/dt&gt;&lt;dd&gt;Content&lt;/dd&gt;
-&lt;dt&gt;Content&lt;/dt&gt;&lt;dd&gt;Content&lt;/dd&gt;
+&lt;dt&gt;Title&lt;/dt&gt;&lt;dd&gt;Content&lt;/dd&gt;
+&lt;dt&gt;Title&lt;/dt&gt;&lt;dd&gt;Content&lt;/dd&gt;
+&lt;dt&gt;Title&lt;/dt&gt;&lt;dd&gt;Content&lt;/dd&gt;
 &lt;/dl&gt;
 </pre>
 
@@ -624,7 +631,7 @@
                var definitionListOpening = "<dl class='" + definitionListType + "'>";
                var definitionListClosing = "</dl>";
 
-               var definitionListItem = "<dt>Content</dt><dd>Content</dd>";
+               var definitionListItem = "<dt>Title</dt><dd>Content</dd>";
                var definitionListItems = '';
 
                for (i = 0; i < definitionListCount; i++) {
