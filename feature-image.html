@@ -285,12 +285,13 @@
                </div>
                <!-- row closes -->
 
-               <h2 id="sec1">Image Grid</h2>
+               <h2 id="sec1">Image Grid <small style="opacity: .7;">(aka ‘Gallery’)</small></h2>
 
 
 
                <div class="row">
 
+               <p>Image grids, or galleries, are useful for juxtaposing larger numbers of images for comparison/contrast, or to create a catalogue effect. You may wish to add descriptive captions, with icons or without.</p>
                   <div class="col-sm-3">
 
                      <form>
@@ -311,14 +312,6 @@
                         </div>
 
                         <div class="form-group">
-                           <div class="checkbox" style="margin-top: 20px;">
-                              <label>
-                         <input type="checkbox" id="grid-image-caption"> Add captions
-                        </label>
-                           </div>
-                        </div>
-
-                        <div class="form-group">
                            <div class="checkbox">
                               <label>
                             <input type="checkbox" id="grid-image-is-link"> Make Images Links
@@ -326,7 +319,22 @@
                            </div>
                         </div>
 
+                        <div class="form-group">
+                           <div class="checkbox" style="margin-top: 20px;">
+                              <label>
+                         <input type="checkbox" id="grid-image-caption"> Add captions
+                        </label>
+                           </div>
+                        </div>
 
+                        <div id="icon-show-hide" class="hidden">
+                        <label for="button-url">Icon <small style="opacity: .5">(optional)</small></label>
+                        <div class="input-group">
+                           <span class="input-group-addon" id="refresh-button3"><i class="fa fa-refresh" aria-hidden="true"></i></span>
+                           <input type="text" class="form-control" id="image-grid-icon" placeholder="<i class='fa fa pa-camera-retro'>">
+                        </div>
+                           <p><a href="feature-icon.html" target="_blank"><small><i class="fa fa-external-link-square"></i> Icons</small><a> &nbsp;|&nbsp; <a id="add-icon"><small>Default Icon ( <i class="fa fa-camera-retro" aria-hidden="true"></i> )</small></a></p>
+                        </div>
 
                      </form>
 
@@ -502,6 +510,21 @@
             }
          });
 
+         // add the default icon (camera-retro) into the input field
+         $('#add-icon').click(function() {
+            $('#image-grid-icon').val('<i class="fa fa-camera-retro" aria-hidden="true"></i>');
+         });
+
+         $("#grid-image-caption").on('change', function() {
+
+            if ($('#grid-image-caption').is(':checked')) {
+               $('#icon-show-hide').removeClass('hidden');
+            } else {
+               $('#image-grid-icon').val('');
+               $('#icon-show-hide').addClass('hidden');
+            }
+         });
+
          $('#filler-text').on('change', function() {
 
             if ($('#filler-text').is(':checked')) {
@@ -515,8 +538,6 @@
             }
 
          });
-
-
 
          $('#displayImageGridBuilder').click(function() {
 
@@ -541,6 +562,8 @@
             var gridImageCaption = '';
             var imageRows = '';
             var captionContent = '';
+            var imageGridIcon = $('#image-grid-icon').val();
+
 
             if ($('#grid-image-caption').is(':checked')) {
 
@@ -556,6 +579,10 @@
             if ($('#grid-image-is-link').is(':checked')) {
                linkOpen = '<a href="">';
                linkClose = '</a>';
+            }
+
+            if ($('#grid-image-caption').is(':not(:checked)')) {
+               $('#image-grid-icon').val('');
             }
 
             switch (imagesPerRow) {
@@ -577,7 +604,12 @@
                   break;
             }
 
-            var gridImage = '<div class="' + colSize + '">' + panelOpen + panelBodyOpen + linkOpen + '<img alt="" class="img-responsive center-block" src="http://placehold.it/' + placeholderSize + 'x' + placeholderSize + '" />' + linkClose + panelBodyClose + panelFooterOpen + captionContent + panelFooterClose + panelClose + divClose;
+            if (imageGridIcon !== '') {
+               // adds fa-spacer-right class
+               imageGridIcon = imageGridIcon.replace('" aria-hidden="true"></i>',' fa-spacer-right" aria-hidden="true"></i>');
+            }
+
+            var gridImage = '<div class="' + colSize + '">' + panelOpen + panelBodyOpen + linkOpen + '<img alt="" class="img-responsive center-block" src="http://placehold.it/' + placeholderSize + 'x' + placeholderSize + '" />' + linkClose + panelBodyClose + panelFooterOpen + imageGridIcon + captionContent + panelFooterClose + panelClose + divClose;
             var gridRow = '';
 
             for (z = 0; z < numRows; z++) {
@@ -698,7 +730,7 @@
          });
 
          $('#refresh-button3').click(function() {
-            $('#grid-image-caption').val("");
+            $('#image-grid-icon').val("");
          });
 
          $('#clearImageBuilder').click(function() {
