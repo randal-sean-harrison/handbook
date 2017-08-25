@@ -407,8 +407,11 @@
 
             if ($('#variableWidths').is(':checked')) {
                th = thVar;
-               numRows -= 1;
+               //numRows -= 1;
             }
+
+
+
 
             if ($('#checkboxStriped').is(':checked')) {
                tableClassOpen += " table-striped";
@@ -437,16 +440,20 @@
                tableClassOpen += " numbered-steps";
             }
 
-            if ( $('#variableWidths').is(':checked') && $('#checkboxHeader').is(':not(:checked') ) {
+            if ( $('#variableWidths').is(':checked') && $('#checkboxHeader').is(':not(:checked)') ) {
                for (i = 0; i < numCols; i++) {
                   tdsVariable += tdVariable;
                }
             }
 
-
             // columns
             for (i = 0; i < numCols; i++) {
                   tds += td;
+            }
+
+            // Make sure that the header row appearing isn't at the expense of an already extant row
+            if ($('#checkboxHeader').is(':not(:checked)') && $('#variableWidths').is(':checked') ) {
+               numRows = numRows - 1;
             }
 
             // rows -- if variable Width is chosen but no header row, it puts the var widths in the first set of TDs themselves
