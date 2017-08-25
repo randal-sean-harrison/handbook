@@ -325,8 +325,20 @@
                            <input type="tel" class="form-control" id="myTelephone" placeholder="(999) 999-9999">
                         </div>
 
+                        <hr>
+
+                        <div class="form-group">
+                           <label for="myWebsite">Website <small style="opacity: .5">(optional)</small></label>
+                           <input type="text" class="form-control" id="myWebsite" placeholder="The Library Blog">
+                        </div>
+
+                        <div class="form-group">
+                           <label for="myWebsiteURL">Website URL <small style="opacity: .5">(optional)</small></label>
+                           <input type="text" class="form-control" id="myWebsiteURL" placeholder="http://thelibraryblog.com">
+                        </div>
+
                         <div class="form-group" style="margin-top: 20px;">
-                           <label for="meeting-button">Scheduler Button (optional)</label>
+                           <label for="meeting-button">Scheduler Button URL <small style="opacity:.5">(optional)</small></label>
                            <input type="text" class="form-control" id="meeting-button" placeholder="https://annsmith.youcanbook.me">
                            <p style="margin-top:3px;"><a href="https://youcanbook.me/" target="_blank"><small>&nbsp;&nbsp;<i class="fa fa-external-link fa-spacer-right" aria-hidden="true"></i>Sign up @ youcanbook.me</small></a></p>
                         </div>
@@ -344,7 +356,7 @@
 
                      <div class="example" id="myAddressExample">
 
-                        <p><a href='https://library.nd.edu/hesburgh' target='_blank'>Hesburgh Library</a><br>999 Hesburgh Library<br>University of Notre Dame<br>Notre Dame, IN 46556</p><table border='0' cellpadding='0' cellspacing='0' class='table' width='100%'><tbody><tr><td style='width:35px'><i class='fa fa-phone'></i></td><td>(999) 999-9999</td></tr><tr><td><i class='fa fa-envelope'></i></td><td><a href='mailto:hans.olo@nd.edu'>hans.olo@nd.edu</a></td></tr></tbody></table><p class='text-center'><a class='btn btn-info' href='https://hans.olo@youcanbook.me' target='_blank'><i class='fa fa-calendar fa-spacer-right'></i>Schedule a Meeting</a></p>
+                        <p><a>Hesburgh Library</a><br>123 Hesburgh Library<br>University of Notre Dame<br>Notre Dame, IN 46556</p><table border='0' cellpadding='0' cellspacing='0' class='table' width='100%'><tbody><tr><td style='width:35px'><i class='fa fa-phone'></i></td><td>(123) 456-7890</td></tr><tr><td><i class='fa fa-envelope'></i></td><td><a>hansolo1@nd.edu</a></td></tr><tr><td><i class='fa fa-globe'></td><td><a>The Library Blog</a></td></tr></tbody></table><p class='text-center'><a class='btn btn-info' ><i class='fa fa-calendar fa-spacer-right'></i>Schedule a Meeting</a></p>
 
                      </div>
 
@@ -358,7 +370,7 @@
 
 
 <pre class='prettyprint'>
-&lt;p&gt;&lt;a href='https://library.nd.edu/hesburgh' target='_blank'&gt;Hesburgh Library&lt;/a&gt;&lt;br&gt;999 Hesburgh Library&lt;br&gt;University of Notre Dame&lt;br&gt;Notre Dame, IN 46556&lt;/p&gt;&lt;table border='0' cellpadding='0' cellspacing='0' class='table' width='100%'&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style='width:35px'&gt;&lt;i class='fa fa-phone'&gt;&lt;/i&gt;&lt;/td&gt;&lt;td&gt;(999) 999-9999&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;i class='fa fa-envelope'&gt;&lt;/i&gt;&lt;/td&gt;&lt;td&gt;&lt;a href='mailto:hans.olo@nd.edu'&gt;hans.olo@nd.edu&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p class='text-center'&gt;&lt;a class='btn btn-info' href='https://hans.olo@youcanbook.me' target='_blank'&gt;&lt;i class='fa fa-calendar fa-spacer-right'&gt;&lt;/i&gt;Schedule a Meeting&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href='https://library.nd.edu/hesburgh' target='_blank'&gt;Hesburgh Library&lt;/a&gt;&lt;br&gt;123 Hesburgh Library&lt;br&gt;University of Notre Dame&lt;br&gt;Notre Dame, IN 46556&lt;/p&gt;&lt;table border='0' cellpadding='0' cellspacing='0' class='table' width='100%'&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style='width:35px'&gt;&lt;i class='fa fa-phone'&gt;&lt;/i&gt;&lt;/td&gt;&lt;td&gt;(123) 456-7890&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;i class='fa fa-envelope'&gt;&lt;/i&gt;&lt;/td&gt;&lt;td&gt;&lt;a href='mailto:hansolo1@nd.edu'&gt;hansolo1@nd.edu&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;i class='fa fa-globe'&gt;&lt;/td&gt;&lt;td&gt;&lt;a href='http://thelibraryblog.com' target='_blank'&gt;The Library Blog&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p class='text-center'&gt;&lt;a class='btn btn-info' href='http://hansolo.youcanbook.me' target='_blank'&gt;&lt;i class='fa fa-calendar fa-spacer-right'&gt;&lt;/i&gt;Schedule a Meeting&lt;/a&gt;&lt;/p&gt;
 </pre>
                </div>
                      <!-- example closes -->
@@ -444,17 +456,27 @@
             var myEmail = $('#myEmail').val();
             var addMeetingButton = '';
             var meetingButton = $('#meeting-button').val();
+            var myWebsite = $('#myWebsite').val();
+            var myWebsiteURL = $('#myWebsiteURL').val();
+            var optionalWebsite = '';
 
             if (meetingButton !== '') {
                addMeetingButton = "&lt;p class='text-center'&gt;" + "&lt;a class='btn btn-info' href='" + meetingButton + "' target='_blank'&gt;" +
                   "&lt;i class='fa fa-calendar fa-spacer-right'&gt;&lt;/i&gt;Schedule a Meeting&lt;/a&gt;&lt;/p&gt;";
             }
 
+            // Website -- optional
+            if (myWebsite !== '' && myWebsiteURL !=='') {
+            optionalWebsite = "&lt;tr&gt;&lt;td&gt;&lt;i class='fa fa-globe'&gt;&lt;/td&gt;&lt;td&gt;&lt;a href='" + myWebsiteURL + "' target='_blank'&gt;" + myWebsite + "&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;"
+            }
+
             // concatenate the inputs together
             var concatProfile = "&lt;p&gt;" + "&lt;a href='" + myLocation + "' target='_blank'&gt;" + myLocation2 + "&lt;/a&gt;" + "&lt;br&gt;" + myOffice + "&lt;br&gt;" + myAddress + "&lt;br&gt;" + myZip +
                "&lt;/p&gt;&lt;table border='0' cellpadding='0' cellspacing='0' class='table' width='100%'&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style='width:35px'&gt;&lt;i class='fa fa-phone'&gt;&lt;/i&gt;&lt;/td&gt;&lt;td&gt;" +
                myTelephone + "&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;i class='fa fa-envelope'&gt;&lt;/i&gt;&lt;/td&gt;&lt;td&gt;&lt;a href='mailto:" + myEmail + "'&gt;" + myEmail +
-               "&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" + addMeetingButton;
+               "&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;" + optionalWebsite + "&lt;/tbody&gt;&lt;/table&gt;" + addMeetingButton;
+
+
 
             // paste concatenation into the code well
             $("#myAddressCode pre#simple-profile-code").html(concatProfile);
