@@ -158,7 +158,7 @@
                      <form>
 
                         <label for="button-url">iFrame Embed URL</label>
-                        <a id="url-popover" tabindex="2" data-html="true" data-trigger="focus" role="button" data-container="body" data-toggle="popover" data-placement="top" width="400px" data-content="<h5>Embedding Your Video</h5><hr><p>Look for an &lt;mark&gt;embed&lt;/mark&gt; option to find the <code>&lt;&#8203;iframe&#8203;&gt;</code> code you need. The code should look something like this:</p><pre class='prettyprint'>&lt;&#8203;iframe src='https://archive.org/embed/someVideo' width='640' height='480' frameborder='0' webkitallowfullscreen='true' mozallowfullscreen='true' allowfullscreen&gt;&#8203;&lt;&#8203;iframe&gt;
+                        <a id="url-popover" tabindex="2" data-html="true" data-trigger="focus" role="button" data-container="body" data-toggle="popover" data-placement="top" width="400px" data-content="<h5>Embedding Your Video</h5><hr><p>Look for the &lt;strong&gt;Share&lt;/strong&gt; or &lt;strong&gt;embed&lt;/strong&gt; option to find the <code>&lt;&#8203;iframe&#8203;&gt;</code> code you need. The code should look something like this:</p><pre class='prettyprint'>&lt;&#8203;iframe src='https://archive.org/embed/someVideo' width='640' height='480' frameborder='0' webkitallowfullscreen='true' mozallowfullscreen='true' allowfullscreen&gt;&#8203;&lt;&#8203;iframe&gt;
                         &lt;/pre&gt;">
                         <i class="fa fa-info-circle" aria-hidden="true"></i>
                         </a>
@@ -195,6 +195,25 @@
                             </label>
                            </div>
                         </div>
+
+                        <div class="form-group">
+                           <div class="checkbox" style="margin-top: 20px;">
+                              <label>
+                            <input type="checkbox" id="add-text"> Add Text
+                            </label>
+                           </div>
+                        </div>
+
+                        <div id="text-reveal" class="hidden">
+                           <div class="form-group">
+                              <label for="video-text" class="control-label">Text</label>
+                              <textarea class="form-control" id="video-text" rows='6'></textarea>
+                              <p style="margin:2px 0px 0px 3px" id="add-lorem"><a><small><i class="fa fa-font fa-spacer-right" aria-hidden="true"></i>Add Lorem Ipsum</small></a></p>
+                           </div>
+                        </div>
+
+
+
                      </form>
 
                      <div style="margin-top:30px;">
@@ -296,6 +315,19 @@
          $(".navfeatures").addClass("active");
          $(".navvideos").addClass("active");
 
+         // add lorem ipsum
+         $('#add-lorem').click(function() {
+            $('#video-text').val("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur provident animi natus magni possimus ad explicabo iste, exercitationem expedita dignissimos consequuntur vitae blanditiis a dolorum dicta rem ipsum veniam nulla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae soluta corrupti fuga ducimus dolore rem voluptatem odio, iusto sunt, reprehenderit incidunt quia voluptatibus. Qui voluptas vitae, labore expedita quae corrupti. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae quas, eius quod quam enim vel quia, quae, reiciendis illo ex aliquid temporibus natus modi velit nulla dolorem earum nisi corporis.");
+         });
+
+         $('#add-text').on('change', function() {
+            if ( $('#add-text').is(':checked') ) {
+               $('#text-reveal').removeClass('hidden');
+            } else {
+               $('#text-reveal').addClass('hidden');
+               $('#video-text').val('');
+            }
+         });
 
          $('#displayVideoBuilder').click(function() {
 
@@ -317,14 +349,23 @@
             var closingDiv = "</div>";
             var panelFooterClose = "</div>";
 
-            var videoCaption = "<i class='fa fa-film fa-spacer-right'></i>" + $("#video-caption").val();
+            var videoCaptionIcon = "<i class='fa fa-film fa-spacer-right'></i>";
+            var videoCaption = $("#video-caption").val();
 
             var videoDimensions = $("#video-dimensions").val();
             var dimensionsClass = '';
 
             var panelFooterOpen = "<div class='panel-footer'>";
 
+            var videoText = $('#video-text').val();
 
+            var columnOpen = '';
+            var columnClose = '';
+
+            if ( $('#add-text').is(':checked') ) {
+                  columnOpen = "<div class='row'><div class='col-sm-6'><p>" + videoText + "</p></div><div class='col-sm-6'>";
+                  columnClose = '</div></div>';
+               }
 
             if (videoDimensions == '16by9') {
                dimensionsClass = 'embed-responsive-16by9';
@@ -332,9 +373,19 @@
                dimensionsClass = 'embed-responsive-4by3';
             }
 
+            if (videoCaption == '') {
+               panelFooterOpen = '';
+               panelFooterClose = '';
+               videoCaptionIcon = '';
+            }
+
+            alert(panelFooterClose);
+            alert(panelFooterOpen);
+
+
             var responsiveDivOpen = "<div class='embed-responsive "  +  dimensionsClass + "'>";
 
-            var bsVideo = panelOpen + panelBodyOpen + responsiveDivOpen + newVideoURL + closingDiv + closingDiv + panelFooterOpen + videoCaption + panelFooterClose + closingDiv;
+            var bsVideo = columnOpen + panelOpen + panelBodyOpen + responsiveDivOpen + newVideoURL + closingDiv + closingDiv + panelFooterOpen + videoCaptionIcon + videoCaption + panelFooterClose + closingDiv + columnClose;
 
             // Write the image
             $("#simple-example-video").html(bsVideo);
