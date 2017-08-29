@@ -185,7 +185,7 @@
                      <div class="radio">
                        <label>
                          <input type="radio" name="specialtyIcons" id="specialIcons0" value="">
-                         <i style="opacity: 0" class="fa fa-times fa-spacer-left fa-spacer-right" aria-hidden="true"></i><span style="opacity: .7">Unstyled</span>
+                         <i style="opacity: 0" class="fa fa-times fa-spacer-left fa-spacer-right" aria-hidden="true"></i>Unstyled
                        </label>
                      </div>
                      <div class="radio">
@@ -202,7 +202,7 @@
                      </div>
                      <div class="radio">
                        <label>
-                         <input type="radio" name="specialtyIcons" id="specialIcons3" value="fa fa-check-circle-o fa-spacer-right">
+                         <input type="radio" name="specialtyIcons" id="specialIcons3" value="fa-li fa fa-check-circle-o fa-spacer-right">
                          <i class="fa fa-check-circle-o fa-spacer-left fa-spacer-right" aria-hidden="true"></i>Circle
                        </label>
                      </div>
@@ -219,6 +219,16 @@
                        </label>
                      </div>
                </div>
+
+               <hr>
+
+
+               <div style="margin-top: 15px;" class="checkbox">
+                  <label>
+                <input type="checkbox" id="simple-styled-checkbox-has-links"> Hyperlinks
+                </label>
+               </div>
+
 
                   </form>
 
@@ -432,9 +442,11 @@
                               <input type="text" class="form-control" id="styled-list-item-num" placeholder="3" name="list-col-num">
                            </div>
 
+                           <hr>
+
                            <div style="margin-top: 15px;" class="checkbox">
                               <label>
-                            <input type="checkbox" id="checkbox-has-links"> Links
+                            <input type="checkbox" id="checkbox-has-links"> Hyperlinks
                             </label>
                            </div>
 
@@ -578,18 +590,25 @@
                var simpleListClose = '';
                var simpleListItems = '';
                var simpleListItems = '';
+               var simpleLinkOpen = '';
+               var simpleLinkClose = '';
+
+               if ($('#simple-styled-checkbox-has-links').is(':checked')) {
+                  simpleLinkOpen = '<a href="">';
+                  simpleLinkClose = '</a>';
+               }
 
                switch (listType) {
                   case 'ul':
                      simpleListOpen = '<ul>';
                      simpleListClose = '</ul>';
-                     simpleListItem = '<li>Content</li>';
+                     simpleListItem = '<li>' + simpleLinkOpen + 'Content' + simpleLinkClose + '</li>';
                      break;
 
                   case 'ol':
                      simpleListOpen = '<ol>';
                      simpleListClose = '</ol>';
-                     simpleListItem = '<li>Content</li>';
+                     simpleListItem = '<li>' + simpleLinkOpen + 'Content' + simpleLinkClose + '</li>';
                      break;
 
                   case 'special-icon':
@@ -598,7 +617,7 @@
                         simpleListOpen = "<ul class='list-unstyled'>";
                      }
                      simpleListClose = '</ul>';
-                     simpleListItem = "<li><i class='" + specialIconChoice + "'></i>Content</li>";
+                     simpleListItem = "<li>" + simpleLinkOpen + "<i class='" + specialIconChoice + "'></i>Content" + simpleLinkClose + "</li>";
                   break;
 
                }
