@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Hesburgh Libraries &middot; Guides Handbook</title>
+
+   <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+   <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+   <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+   <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+   <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+   <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+   <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+   <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+   <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+   <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-icon-192x192.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+   <link rel="manifest" href="favicons/manifest.json">
+   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
+   <meta name="theme-color" content="#ffffff">
+
+
+
+   <!-- Bootstrap -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+   <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+   <!-- <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css"> -->
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
+
+   <!-- main styles -->
+   <link rel="stylesheet" href="css/main.css">
+
+   <!-- includes for Google's code highlighter 'prettyprint' -->
+   <link rel="stylesheet" type="text/css" href="css/prettify.css">
+   <script type="text/javascript" src="js/prettify.js"></script>
+
+   <!-- tiny MCE include -->
+   <script src="tinyMCE/jquery.tinymce.min.js"></script>
+   <script src="tinyMCE/tinymce.min.js"></script>
+
+   <style>
+      /* Instrucitons Steps styles -------------------------------- */
+
+      .step {
+         font-size: 20px;
+         height: 44px;
+         width: 44px;
+         padding: 8px;
+         border-radius: 50px;
+         border: 1px solid #CCCCCC;
+      }
+
+      .conditional {
+         background: transparent;
+         color: #777777;
+      }
+
+      .success {
+         background: #5cb85c;
+         color: #FFFFFF;
+      }
+
+      label {
+         font-weight: 600;
+      }
+
+      .stepwise {
+         font-size: 1.5rem;
+         color: #777777;
+         margin: 0 0 1rem .5rem;
+         color: #db4c3f;
+      }
+      /* Gets rid of spinner buttons */
+
+      input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button {
+         -webkit-appearance: none;
+         margin: 0;
+      }
+      /* Eliminate the last hr separating instruction steps */
+
+      .instruction-set:last-of-type+hr {
+         display: none;
+      }
+
+      .link_blue {
+         color: #337ab7;
+      }
+
+   </style>
+
+</head>
+
+<body>
+
+   <!-- header ----------------------------->
+
+   <div class="brand-bar container-fluid">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="hidden-xs col-sm-6 col-md-6 col-lg-6">
+               <a href="http://www.nd.edu">University <i>of</i> Notre Dame</a>
+            </div>
+            <div class="text-center col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
+               <a href="http://www.nd.edu">University <i>of</i> Notre Dame</a>
+            </div>
+            <div class="hidden-xs col-sm-6 col-md-6 col-lg-6 text-right">
+               <a href="https://provost.nd.edu/">Office <i>of the</i>  Provost</a>
+            </div>
+            <div class="text-center col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl text-center">
+               <a class="brand-bar-bottom-padded" href="https://provost.nd.edu/">Office <i>of the</i>  Provost</a>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="container-fluid">
+      <div class="row" id="nd-libguides-header-pattern">
+         <div class="hidden-xs col-sm-6 col-md-6 col-lg-6">
+            <h1 id="hesburgh-libraries"><a href="http://library.nd.edu" target="_blank">HESBURGH <span style="color:#F8E999;">LIBRARIES</span></a></h1>
+         </div>
+         <div class="hidden-xs col-sm-6 col-md-6 col-lg-6">
+            <h1 style="opacity:.6;text-align:right;">Guides Handbook</h1>
+         </div>
+         <div class="col-xs-12 text-center hidden-sm hidden-md hidden-lg">
+            <h1><a href="http://library.nd.edu" target="_blank">HESBURGH <span style="color:#F8E999;margin-bottom:10px;">LIBRARIES</span></a></h1>
+         </div>
+         <div class="col-xs-12 text-center hidden-sm hidden-md hidden-lg">
+            <h1 style="opacity:.6;text-align:center;">Guides Handbook</h1>
+         </div>
+      </div>
+   </div>
+
+   <!-- header closes ----------------------------->
+
+   <!-- Main Content ----------------------------->
+
+   <div class="container" id="main-container">
+
+      <div class="row">
+         <div class="col-xs-12 col-sm-12 col-md-12 text-right">
+            <a class="btn btn-default help-button" href="https://nd.libapps.com/libapps/login.php" role="button" target="_blank"><i class="fa fa-lock fa-spacer-right" aria-hidden="true"></i> LibGuides Login</a>
+
+            <a class="btn btn-default help-button" href="http://libguides.library.nd.edu/reusable-assets" role="button" target="_blank"><i class="fa fa-list-alt fa-spacer-right" aria-hidden="true"></i>Reusable Assets</a>
+
+         </div>
+
+      </div>
+
+      <div class="page-header">
+
+         <div w3-include-html="navmenu.html"></div>
+
+      </div>
+      <!-- page header closes -->
+
+      <div id="masthead">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h1>Instruction</h1>
+                  <p class="lead">Instruction sets guide users clearly and efficiently through a process.</p>
+               </div>
+            </div>
+         </div>
+         <!--/container-->
+      </div>
+      <!--/masthead-->
+
+      <hr>
+
+      <div class="container alert alert-intro">
+         <div class="row">
+
+            <div class="col-sm-3">
+               <form id="num-steps-form" class="form-inline">
+                  <div class="form-group">
+                     <label class="control-label"><strong class="link_blue"># Steps &nbsp;&nbsp;</strong></label>
+                     <div class="input-group">
+                        <span class="input-group-btn">
+                           <a class="btn btn-default" id="down"><span class="fa fa-minus link_blue"></span></a>
+                        </span>
+                        <input type="number" id="number-steps" class="form-control text-center" value="1" max="30" min="1">
+                        <span class="input-group-btn">
+                           <a class="btn btn-default" id="up"><span class="fa fa-plus link_blue"></span></a>
+                        </span>
+                     </div>
+                  </div>
+
+               </form>
+            </div>
+            <!-- .col-sm-12 -->
+            <div class="col-sm-9">
+               <p>Add a title and instructions to each step, below. Click <strong>Build</strong> to render them into HTML code for inserting into your Instruction boxes. Step titles should reflect higher-level chunking, with step tables and bullet points for breaking each step into sub-steps. The maximum number of steps is 30.</p>
+            </div>
+         </div>
+         <!-- .row -->
+      </div>
+
+      <div class="container">
+
+         <div class="row">
+
+            <div class="col-sm-6">
+
+               <form id="steps-form">
+
+                  <!-- 0 to 10 - - - - - - - - - - - - - - - -->
+
+                  <div class="form-group">
+                     <p class="stepwise">Before You Begin...</p>
+                     <p>First, create an outline of instruction steps and sub-steps (perhaps in a <a href="https://docs.google.com/document/create?">Google Doc</a> in your Google Drive home directory? Next, enter those steps into the boxes below. Click <strong>Build</strong> to render the HTML. Finally <strong>copy</strong> and paste the HTML or save it to a text file.</p>
+                  </div>
+
+                  <div class="form-group titles">
+                     <p class="stepwise">Step 1</p>
+                     <input id="title1" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps">
+                     <textarea id="step1" class="step form-control" name="step1" rows="8" cols="80"></textarea>
+                  </div>
+
+                  <div class="form-group titles hidden">
+                     <p class="stepwise">Step 2</p>
+                     <input id="title2" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps hidden">
+                     <textarea id="step2" class="step form-control" name="step1" rows="8" cols="80"></textarea>
+                  </div>
+
+                  <div class="form-group titles hidden">
+                     <p class="stepwise">Step 3</p>
+                     <input id="title3" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps hidden">
+                     <textarea id="step3" class="step form-control" name="step1" rows="8" cols="80"></textarea>
+                  </div>
+
+                  <div class="form-group titles hidden">
+                     <p class="stepwise">Step 4</p>
+                     <input id="title4" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps hidden">
+                     <textarea id="step4" class="step form-control" name="step1" rows="8" cols="80"></textarea>
+                  </div>
+
+                  <div class="form-group titles hidden">
+                     <p class="stepwise">Step 5</p>
+                     <input id="title5" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps hidden">
+                     <textarea id="step5" class="step form-control" name="step1" rows="8" cols="80"></textarea>
+                  </div>
+
+                  <div class="form-group titles hidden">
+                     <p class="stepwise">Step 6</p>
+                     <input id="title6" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps hidden">
+                     <textarea id="step6" class="step form-control" name="step1" rows="8" cols="80"></textarea>
+                  </div>
+
+                  <div class="form-group titles hidden">
+                     <p class="stepwise">Step 7</p>
+                     <input id="title7" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps hidden">
+                     <textarea id="step7" class="step form-control" name="step1" rows="8" cols="80"></textarea>
+                  </div>
+
+                  <div class="form-group titles hidden">
+                     <p class="stepwise">Step 8</p>
+                     <input id="title8" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps hidden">
+                     <textarea id="step8" class="step form-control" name="step1" rows="8" cols="80"></textarea>
+                  </div>
+
+                  <div class="form-group titles hidden">
+                     <p class="stepwise">Step 9</p>
+                     <input id="title9" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps hidden">
+                     <textarea id="step9" class="step form-control" name="step1" rows="8" cols="80"></textarea>
+                  </div>
+
+                  <div class="form-group titles hidden">
+                     <p class="stepwise">Step 10</p>
+                     <input id="title10" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps hidden">
+                     <textarea id="step10" class="step form-control" name="step1" rows="8" cols="80"></textarea>
+                  </div>
+
+                  <!-- to 20 - - - - - - - - - - - - - - - -->
+
+                  <div class="form-group titles hidden">
+                     <p class="stepwise">Step 11</p>
+                     <input id="title11" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps hidden">
+                     <textarea id="step11" class="step form-control" name="step11" rows="8" cols="80"></textarea>
+                  </div>
+
+                  <div class="form-group titles hidden">
+                     <p class="stepwise">Step 12</p>
+                     <input id="title12" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps hidden">
+                     <textarea id="step12" class="step form-control" name="step12" rows="8" cols="80"></textarea>
+                  </div>
+
+                  <div class="form-group titles hidden">
+                     <p class="stepwise">Step 13</p>
+                     <input id="title13" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps hidden">
+                     <textarea id="step13" class="step form-control" name="step13" rows="8" cols="80"></textarea>
+                  </div>
+
+                  <div class="form-group titles hidden">
+                     <p class="stepwise">Step 14</p>
+                     <input id="title14" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps hidden">
+                     <textarea id="step14" class="step form-control" name="step14" rows="8" cols="80"></textarea>
+                  </div>
+
+                  <div class="form-group titles hidden">
+                     <p class="stepwise">Step 15</p>
+                     <input id="title15" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps hidden">
+                     <textarea id="step15" class="step form-control" name="step15" rows="8" cols="80"></textarea>
+                  </div>
+
+                  <div class="form-group titles hidden">
+                     <p class="stepwise">Step 16</p>
+                     <input id="title16" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps hidden">
+                     <textarea id="step16" class="step form-control" name="step16" rows="8" cols="80"></textarea>
+                  </div>
+
+                  <div class="form-group titles hidden">
+                     <p class="stepwise">Step 17</p>
+                     <input id="title17" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps hidden">
+                     <textarea id="step17" class="step form-control" name="step17" rows="8" cols="80"></textarea>
+                  </div>
+
+                  <div class="form-group titles hidden">
+                     <p class="stepwise">Step 18</p>
+                     <input id="title18" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps hidden">
+                     <textarea id="step18" class="step form-control" name="step18" rows="8" cols="80"></textarea>
+                  </div>
+
+                  <div class="form-group titles hidden">
+                     <p class="stepwise">Step 19</p>
+                     <input id="title19" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps hidden">
+                     <textarea id="step19" class="step form-control" name="step19" rows="8" cols="80"></textarea>
+                  </div>
+
+                  <div class="form-group titles hidden">
+                     <p class="stepwise">Step 20</p>
+                     <input id="title20" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps hidden">
+                     <textarea id="step20" class="step form-control" name="step20" rows="8" cols="80"></textarea>
+                  </div>
+
+                  <!-- to 20 - - - - - - - - - - - - - - - -->
+
+                  <div class="form-group titles hidden">
+                     <p class="stepwise">Step 21</p>
+                     <input id="title21" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps hidden">
+                     <textarea id="step21" class="step form-control" name="step21" rows="8" cols="80"></textarea>
+                  </div>
+
+                  <div class="form-group titles hidden">
+                     <p class="stepwise">Step 22</p>
+                     <input id="title22" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps hidden">
+                     <textarea id="step22" class="step form-control" name="step22" rows="8" cols="80"></textarea>
+                  </div>
+
+                  <div class="form-group titles hidden">
+                     <p class="stepwise">Step 23</p>
+                     <input id="title23" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps hidden">
+                     <textarea id="step23" class="step form-control" name="step23" rows="8" cols="80"></textarea>
+                  </div>
+
+                  <div class="form-group titles hidden">
+                     <p class="stepwise">Step 24</p>
+                     <input id="title24" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps hidden">
+                     <textarea id="step24" class="step form-control" name="step24" rows="8" cols="80"></textarea>
+                  </div>
+
+                  <div class="form-group titles hidden">
+                     <p class="stepwise">Step 25</p>
+                     <input id="title25" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps hidden">
+                     <textarea id="step25" class="step form-control" name="step25" rows="8" cols="80"></textarea>
+                  </div>
+
+                  <div class="form-group titles hidden">
+                     <p class="stepwise">Step 26</p>
+                     <input id="title26" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps hidden">
+                     <textarea id="step26" class="step form-control" name="step26" rows="8" cols="80"></textarea>
+                  </div>
+
+                  <div class="form-group titles hidden">
+                     <p class="stepwise">Step 27</p>
+                     <input id="title27" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps hidden">
+                     <textarea id="step27" class="step form-control" name="step27" rows="8" cols="80"></textarea>
+                  </div>
+
+                  <div class="form-group titles hidden">
+                     <p class="stepwise">Step 28</p>
+                     <input id="title28" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps hidden">
+                     <textarea id="step28" class="step form-control" name="step28" rows="8" cols="80"></textarea>
+                  </div>
+
+                  <div class="form-group titles hidden">
+                     <p class="stepwise">Step 29</p>
+                     <input id="title29" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps hidden">
+                     <textarea id="step29" class="step form-control" name="step29" rows="8" cols="80"></textarea>
+                  </div>
+
+                  <div class="form-group titles hidden">
+                     <p class="stepwise">Step 30</p>
+                     <input id="title30" type="text" class="form-control step-title" placeholder="Title of this step...">
+                  </div>
+                  <div class="form-group steps hidden">
+                     <textarea id="step30" class="step form-control" name="step30" rows="8" cols="80"></textarea>
+                  </div>
+
+               </form>
+
+            </div>
+            <!-- col-sm-8 -->
+
+            <div class="col-sm-6" id="builder-div">
+
+               <div class="example" id="steps-example">
+
+               </div>
+
+               <div class="well" id="myAddressCode">
+
+                  <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#steps-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                              <i class="fa fa-clipboard" aria-hidden="true"></i>
+                           </button>
+
+                  <pre class="prettyprint" id="steps-code">
+
+                     </pre>
+
+               </div>
+               <!-- example closes -->
+
+               <div class="row">
+                  <div class="col-sm-9">
+                     <div id="build-buttons">
+                        <button type="button" class="btn btn-default" id="reload-page">Reset</button>
+                        <button type="button" class="btn btn-primary" id="create-steps">Build</button>
+                     </div>
+                  </div>
+                  <div class="col-sm-3">
+                     <button type="button" class="pull-right btn btn-success" id="save-steps">Save</button>
+                  </div>
+               </div>
+               <!-- sub .row -->
+
+            </div>
+            <!-- col-sm-4 -->
+
+         </div>
+         <!-- .row -->
+
+      </div>
+      <!-- .container -->
+
+      <!-- Main Content closes ----------------------------->
+
+
+      <!-- Footer ----------------------------->
+      <div id="handbook-footer">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-xs-12 col-sm-6">
+                  <i class="fa fa-copyright" aria-hidden="true"></i><span id="thisYear"></span> University of Notre Dame
+               </div>
+               <div class="col-xs-12 col-sm-6">
+                  <p class="text-right"><a href="https://github.com/randal-sean-harrison/handbook" target="_blank"><i class="fa fa-github fa-spacer-right" aria-hidden="true"></i>randal-sean-harrison/handbook</a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      <!-- Include for the Back to top button -->
+      <script src="js/back-to-top.js"></script>
+      <!-- Scrollspy / affix js -->
+      <script src="js/scripts.js"></script>
+
+      <!-- html include script -->
+      <script src="https://www.w3schools.com/lib/w3data.js"></script>
+
+      <script>
+         w3IncludeHTML();
+      </script>
+
+      <!-- Filesaver include -->
+      <script src="filesaver/FileSaver.min.js"></script>
+
+      <!-- clipboard.js include -->
+      <script src="js/clipboard.min.js"></script>
+
+      <script type="text/javascript">
+         $(document).ready(function() {
+
+            // Add the active classes to the nav menu
+            $(".navfeatures").addClass("active");
+            $(".navinstructions").addClass("active");
+
+            $('pre').removeClass('prettyprinted');
+            prettyPrint();
+
+            // Have to declare these globally for save button to work
+            var writeSteps = '';
+            var savedFile = '';
+
+            // TinyMCE init - - - - - - - - - - - - - - - - - - - - - - - /
+            tinymce.init({
+               selector: "textarea",
+               plugins: "code hr codesample link paste table lists autoresize",
+               toolbar: "undo redo | styleselect | bold italic | link | table | alignleft aligncenter alignright | bullist numlist | outdent indent code codesample restoredraft",
+               branding: false,
+               menubar: false
+            });
+
+            // clipboard button - - - - - - - - - - - - - - - - - - - - - - - /
+            new Clipboard('.btn');
+
+            // max and min number of steps
+            var max = 30;
+            var min = 1;
+
+            // Add Steps - - - - - - - - - - - - - - - - - - - - - - - /
+            $('#up').click(function() {
+
+               var numberSteps = $('#number-steps').val();
+
+               if (numberSteps < max) {
+                  numberSteps++;
+                  $('#number-steps').val(numberSteps);
+               } else {
+                  $('#number-steps').val(numberSteps);
+               }
+
+               // Show the Titles
+               titlesLT = '.titles:lt(' + numberSteps + ')';
+               titlesGT = '.titles:gt(' + numberSteps + ')';
+
+               $(titlesLT).removeClass('hidden');
+               $(titlesGT).addClass('hidden');
+
+               // Show the steps
+               stepsLT = '.steps:lt(' + numberSteps + ')';
+               stepsGT = '.steps:gt(' + numberSteps + ')';
+
+               $(stepsLT).removeClass('hidden');
+               $(stepsGT).addClass('hidden');
+
+            });
+
+            // Subtract Steps - - - - - - - - - - - - - - - - - - - - - - - /
+            $('#down').click(function() {
+
+               var numberSteps = $('#number-steps').val();
+
+               if (numberSteps > min) {
+                  numberSteps--;
+                  $('#number-steps').val(numberSteps);
+               } else {
+                  $('#number-steps').val(numberSteps);
+               }
+
+               // Hide the titles
+               titlesLT = '.titles:lt(' + (numberSteps - 1) + ')';
+               titlesGT = '.titles:gt(' + (numberSteps - 1) + ')';
+
+               $(titlesLT).removeClass('hidden');
+               $(titlesGT).addClass('hidden');
+
+               // Hide the steps
+               stepsLT = '.steps:lt(' + (numberSteps - 1) + ')';
+               stepsGT = '.steps:gt(' + (numberSteps - 1) + ')';
+
+               $(stepsLT).removeClass('hidden');
+               $(stepsGT).addClass('hidden');
+
+            });
+
+            // Reset the Page button - - - - - - - - - - - - - - - - - - - - - - - /
+            $('#reload-page').click(function() {
+               $('#number-steps').val('1');
+               localStorage.clear();
+               location.reload(true);
+            });
+
+            // Build HTML button - - - - - - - - - - - - - - - - - - - - - - - /
+            $("#create-steps").click(function() {
+
+               // Allow jQuery to capture from the textarea fields when set to tinyMCE
+               tinyMCE.triggerSave();
+
+               // Write null to any hidden inputs by removing tinymce from empty textareas, clearing the textareas themselves, then reiniting tinyMCE on all hidden textareas
+               $("div[class~='hidden'] input").val('');
+
+               tinymce.remove("div[class~='hidden'] textarea");
+               $("div[class~='hidden'] textarea").val('');
+
+               tinymce.init({
+                  selector: '.step',
+                  plugins: "code hr codesample link paste table lists autoresize autosave",
+                  toolbar: "undo redo | paste | styleselect | bold italic | link | table | alignleft aligncenter alignright | bullist numlist | outdent indent code codesample",
+                  branding: false,
+                  menubar: false,
+                  selection_toolbar: "bold italic | quicklink h3 h4 h5 h6 blockquote",
+               });
+
+               // Variables Main Section
+               var rowOpen = "<div class='row'>";
+               var numColumnOpen = "<div class='col-sm-2'>"
+               var numColumnClose = "</div> <!-- .col-sm-2 -->"
+               var textColumnOpen = "<div class='col-sm-10'>"
+               var textColumnClose = "</div> <!-- .col-sm-10 -->"
+               var rowClose = "</div> <!-- .row -->";
+
+               var title1 = $('#title1').val();
+               var title2 = $('#title2').val();
+               var title3 = $('#title3').val();
+               var title4 = $('#title4').val();
+               var title5 = $('#title5').val();
+               var title6 = $('#title6').val();
+               var title7 = $('#title7').val();
+               var title8 = $('#title8').val();
+               var title9 = $('#title9').val();
+               var title10 = $('#title10').val();
+               var title11 = $('#title11').val();
+               var title12 = $('#title12').val();
+               var title13 = $('#title13').val();
+               var title14 = $('#title14').val();
+               var title15 = $('#title15').val();
+               var title16 = $('#title16').val();
+               var title17 = $('#title17').val();
+               var title18 = $('#title18').val();
+               var title19 = $('#title19').val();
+               var title20 = $('#title20').val();
+               var title21 = $('#title21').val();
+               var title22 = $('#title22').val();
+               var title23 = $('#title23').val();
+               var title24 = $('#title24').val();
+               var title25 = $('#title25').val();
+               var title26 = $('#title26').val();
+               var title27 = $('#title27').val();
+               var title28 = $('#title28').val();
+               var title29 = $('#title29').val();
+               var title30 = $('#title30').val();
+
+               var step1 = $('#step1').val();
+               var step2 = $('#step2').val();
+               var step3 = $('#step3').val();
+               var step4 = $('#step4').val();
+               var step5 = $('#step5').val();
+               var step6 = $('#step6').val();
+               var step7 = $('#step7').val();
+               var step8 = $('#step8').val();
+               var step9 = $('#step9').val();
+               var step10 = $('#step10').val();
+               var step11 = $('#step11').val();
+               var step12 = $('#step12').val();
+               var step13 = $('#step13').val();
+               var step14 = $('#step14').val();
+               var step15 = $('#step15').val();
+               var step16 = $('#step16').val();
+               var step17 = $('#step17').val();
+               var step18 = $('#step18').val();
+               var step19 = $('#step19').val();
+               var step20 = $('#step20').val();
+               var step21 = $('#step21').val();
+               var step22 = $('#step22').val();
+               var step23 = $('#step23').val();
+               var step24 = $('#step24').val();
+               var step25 = $('#step25').val();
+               var step26 = $('#step26').val();
+               var step27 = $('#step27').val();
+               var step28 = $('#step28').val();
+               var step29 = $('#step29').val();
+               var step30 = $('#step30').val();
+
+               // The Bootstrap wrappers and fillers
+               var a = "<div class='row instruction-set'><div class='col-sm-2'>";
+               var b = "</h1></div> <!-- .col-sm-2 --><div class='col-sm-10'><h4>";
+               var c = "</h4></div> <!-- .col-sm-10 --><div class='col-sm-2'></div> <!-- .col-sm-10 --><div class='col-sm-10'>";
+               var d = "</div> <!-- .col-sm-10 --></div> <!-- .row --><hr>";
+
+               // set the final output variables
+               if (title1 !== '' && step1 !== '') {
+                  var output1 = a + "<h1 class='short-round center-block step conditional' id='checkit-1'>" + "1" + b + title1 + c + step1 + d;
+               } else {
+                  output1 = '';
+               }
+
+               if (title2 !== '' && step2 !== '') {
+                  var output2 = a + "<h1 class='short-round center-block step conditional' id='checkit-2'>" + "2" + b + title2 + c + step2 + d;
+               } else {
+                  output2 = '';
+               }
+
+               if (title3 !== '' && step3 !== '') {
+                  var output3 = a + "<h1 class='short-round center-block step conditional' id='checkit-3'>" + "3" + b + title3 + c + step3 + d;
+               } else {
+                  output3 = '';
+               }
+
+               if (title4 !== '' && step4 !== '') {
+                  var output4 = a + "<h1 class='short-round center-block step conditional' id='checkit-4'>" + "4" + b + title4 + c + step4 + d;
+               } else {
+                  output4 = '';
+               }
+
+               if (title5 !== '' && step5 !== '') {
+                  var output5 = a + "<h1 class='short-round center-block step conditional' id='checkit-5'>" + "5" + b + title5 + c + step5 + d;
+               } else {
+                  output5 = '';
+               }
+
+               if (title6 !== '' && step6 !== '') {
+                  var output6 = a + "<h1 class='short-round center-block step conditional' id='checkit-6'>" + "6" + b + title6 + c + step6 + d;
+               } else {
+                  output6 = '';
+               }
+
+               if (title7 !== '' && step7 !== '') {
+                  var output7 = a + "<h1 class='short-round center-block step conditional' id='checkit-7'>" + "7" + b + title7 + c + step7 + d;
+               } else {
+                  output7 = '';
+               }
+
+               if (title8 !== '' && step8 !== '') {
+                  var output8 = a + "<h1 class='short-round center-block step conditional' id='checkit-8'>" + "8" + b + title8 + c + step8 + d;
+               } else {
+                  output8 = '';
+               }
+
+               if (title9 !== '' && step9 !== '') {
+                  var output9 = a + "<h1 class='short-round center-block step conditional' id='checkit-9'>" + "9" + b + title9 + c + step9 + d;
+               } else {
+                  output9 = '';
+               }
+
+               if (title10 !== '' && step10 !== '') {
+                  var output10 = a + "<h1 class='short-round center-block step conditional' id='checkit-10'>" + "10" + b + title10 + c + step10 + d;
+               } else {
+                  output10 = '';
+               }
+
+               if (title11 !== '' && step11 !== '') {
+                  var output11 = a + "<h1 class='short-round center-block step conditional' id='checkit-11'>" + "11" + b + title11 + c + step11 + d;
+               } else {
+                  output11 = '';
+               }
+
+               if (title12 !== '' && step12 !== '') {
+                  var output12 = a + "<h1 class='short-round center-block step conditional' id='checkit-12'>" + "12" + b + title12 + c + step12 + d;
+               } else {
+                  output12 = '';
+               }
+
+               if (title13 !== '' && step13 !== '') {
+                  var output13 = a + "<h1 class='short-round center-block step conditional' id='checkit-13'>" + "13" + b + title13 + c + step13 + d;
+               } else {
+                  output13 = '';
+               }
+
+               if (title14 !== '' && step14 !== '') {
+                  var output14 = a + "<h1 class='short-round center-block step conditional' id='checkit-14'>" + "14" + b + title14 + c + step14 + d;
+               } else {
+                  output14 = '';
+               }
+
+               if (title15 !== '' && step15 !== '') {
+                  var output15 = a + "<h1 class='short-round center-block step conditional' id='checkit-15'>" + "15" + b + title15 + c + step15 + d;
+               } else {
+                  output15 = '';
+               }
+
+               if (title16 !== '' && step16 !== '') {
+                  var output16 = a + "<h1 class='short-round center-block step conditional' id='checkit-16'>" + "16" + b + title16 + c + step16 + d;
+               } else {
+                  output16 = '';
+               }
+
+               if (title17 !== '' && step17 !== '') {
+                  var output17 = a + "<h1 class='short-round center-block step conditional' id='checkit-17'>" + "17" + b + title17 + c + step17 + d;
+               } else {
+                  output17 = '';
+               }
+
+               if (title18 !== '' && step18 !== '') {
+                  var output18 = a + "<h1 class='short-round center-block step conditional' id='checkit-18'>" + "18" + b + title18 + c + step18 + d;
+               } else {
+                  output18 = '';
+               }
+
+               if (title19 !== '' && step19 !== '') {
+                  var output19 = a + "<h1 class='short-round center-block step conditional' id='checkit-19'>" + "19" + b + title19 + c + step19 + d;
+               } else {
+                  output19 = '';
+               }
+
+               if (title20 !== '' && step20 !== '') {
+                  var output20 = a + "<h1 class='short-round center-block step conditional' id='checkit-20'>" + "20" + b + title20 + c + step20 + d;
+               } else {
+                  output20 = '';
+               }
+
+               if (title21 !== '' && step21 !== '') {
+                  var output21 = a + "<h1 class='short-round center-block step conditional' id='checkit-21'>" + "21" + b + title21 + c + step21 + d;
+               } else {
+                  output21 = '';
+               }
+
+               if (title22 !== '' && step22 !== '') {
+                  var output22 = a + "<h1 class='short-round center-block step conditional' id='checkit-22'>" + "22" + b + title22 + c + step22 + d;
+               } else {
+                  output22 = '';
+               }
+
+               if (title23 !== '' && step23 !== '') {
+                  var output23 = a + "<h1 class='short-round center-block step conditional' id='checkit-23'>" + "23" + b + title23 + c + step23 + d;
+               } else {
+                  output23 = '';
+               }
+
+               if (title24 !== '' && step24 !== '') {
+                  var output24 = a + "<h1 class='short-round center-block step conditional' id='checkit-24'>" + "24" + b + title24 + c + step24 + d;
+               } else {
+                  output24 = '';
+               }
+
+               if (title25 !== '' && step25 !== '') {
+                  var output25 = a + "<h1 class='short-round center-block step conditional' id='checkit-25'>" + "25" + b + title25 + c + step25 + d;
+               } else {
+                  output25 = '';
+               }
+
+               if (title26 !== '' && step26 !== '') {
+                  var output26 = a + "<h1 class='short-round center-block step conditional' id='checkit-26'>" + "26" + b + title26 + c + step26 + d;
+               } else {
+                  output26 = '';
+               }
+
+               if (title27 !== '' && step27 !== '') {
+                  var output27 = a + "<h1 class='short-round center-block step conditional' id='checkit-27'>" + "27" + b + title27 + c + step27 + d;
+               } else {
+                  output27 = '';
+               }
+
+               if (title28 !== '' && step28 !== '') {
+                  var output28 = a + "<h1 class='short-round center-block step conditional' id='checkit-28'>" + "28" + b + title28 + c + step28 + d;
+               } else {
+                  output28 = '';
+               }
+
+               if (title29 !== '' && step29 !== '') {
+                  var output29 = a + "<h1 class='short-round center-block step conditional' id='checkit-29'>" + "29" + b + title29 + c + step29 + d;
+               } else {
+                  output29 = '';
+               }
+
+               if (title30 !== '' && step30 !== '') {
+                  var output30 = a + "<h1 class='short-round center-block step conditional' id='checkit-30'>" + "30" + b + title30 + c + step30 + d;
+               } else {
+                  output30 = '';
+               }
+
+               // finds the number of non-hidden steps
+               var numSteps = $(".steps").not('[class*="hidden"]').length;
+
+               var instructionsBox = "<!-- Instruction alert--><div class='alert alert-intro' role='alert'><p><i class='fa fa-check-circle-o fa-spacer-right' aria-hidden='true'></i>Click each step number as you finish to track your progress.</p></div>";
+
+               // Write the table - - - - - - - - - - - - - - - - - - - - - - - /
+               writeSteps = instructionsBox + output1 + output2 + output3 + output4 + output5 + output6 + output7 + output8 + output9 + output10 + output11 + output12 + output13 + output14 + output15 + output16 + output17 + output18 + output19 + output20 +
+                  output21 + output22 + output23 + output24 + output25 + output26 + output27 + output28 + output29 + output30;
+
+               //replace all empty Paragraphs and header-white-style
+               writeSteps = writeSteps.replace(/<p>&nbsp;<\/p>/g, "");
+               writeSteps = writeSteps.replace(/<h1>&nbsp;<\/h1>/g, "");
+               writeSteps = writeSteps.replace(/<h2>&nbsp;<\/h2>/g, "");
+               writeSteps = writeSteps.replace(/<h3>&nbsp;<\/h3>/g, "");
+               writeSteps = writeSteps.replace(/<h4>&nbsp;<\/h4>/g, "");
+               writeSteps = writeSteps.replace(/<h5>&nbsp;<\/h5>/g, "");
+               writeSteps = writeSteps.replace(/<h6>&nbsp;<\/h6>/g, "");
+
+               // Write the output
+               $("#steps-example").html(writeSteps);
+               $('#steps-code').text(writeSteps);
+
+               // Fix for prettyprint (so it will reset and recolorize after DOM load)
+               $('pre').removeClass('prettyprinted');
+               prettyPrint();
+
+            });
+
+            // Saves the current form to a file from @ https://github.com/eligrey/FileSaver.js
+            $("#save-steps").click(function() {
+               //var filename = $("#input-fileName").val()
+               var blob = new Blob([writeSteps], {
+                  type: "text/txt;charset=utf-8"
+               });
+               saveAs(blob, "steps.txt");
+            });
+
+         });
+
+         // clipboard button
+         new Clipboard('.btn');
+
+         $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+         })
+      </script>
+      <!-- add the active class to the correct tab and submenu element -->
+
+      <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+</body>
+
+</html>
