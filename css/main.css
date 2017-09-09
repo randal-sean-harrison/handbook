@@ -2,6 +2,7 @@
 
 @import url('fonts/GalaxiePolaris-Medium.woff');
 
+/* Containers --------------------------------------------------- */
 html {
   font-size: 1.00rem; /* 20px / 16px = 1.125 */
 }
@@ -13,18 +14,31 @@ body {
   font-weight: 400;
 }
 
-h1, h2, h3, h4, h5, h6 {
-   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-   color: #434c57;
-   margin-bottom:.75rem;
-}
-
 h1 { font-size: 2.5rem }
 h2 { font-size: 2rem }
 h3 { font-size: 1.75rem }
 h4 { font-size: 1.5rem }
 h5 { font-size: 1.25rem }
 h6 { font-size: 1rem }
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: "Open Sans", Arial, sans-serif;
+   color: #434c57;
+   margin-bottom:.75rem;
+   font-weight: 500;
+}
+
+h1, h2, h3, h4 {
+   font-weight: 400;
+}
+
+h5, h6 {
+   font-weight: 600;
+}
+
+h6 {
+   font-style: italic;
+}
 
 p, li, th, td, dd, dl, a, dl, input, textarea, button, select, option {
    font-weight: 400;
@@ -83,10 +97,6 @@ a, a:link {
    font-weight: 600;
 }
 
-.alert i {
-    margin-right: .7em;
-}
-
 #rightCol h2 {
    padding-top: 15px;
    margin-top: 60px;
@@ -104,12 +114,6 @@ ul li, ol li {
    margin-bottom: -1px;
 }
 
-h3.sub-header {
-   color: #777777 !important;
-   margin:30px 0px 20px 0px;
-   font-size: 1.3em;
-}
-
 h5.panel-title a:link,
 h5.panel-title a:visited,
 h5.panel-title a:hover,
@@ -120,12 +124,6 @@ h5.panel-title a:active  {
 
 .blue {
    color: #337ab7;
-}
-
-h4 {
-    font-size:1.5em;
-    border-bottom: 1px solid #CCC;
-    font-weight: 400;
 }
 
 #lead-trainer p, #lead-trainer h4 {
@@ -581,16 +579,6 @@ a#select-warning {
 
 /* ------------ */
 
-h4 {
-    font-size:1.6em !important;
-    border-bottom: 1px solid #CCC !important;
-}
-
-h3, h4 {
-    margin: 0em 0em .75em 0em;
-    font-weight: 400 !important;
-}
-
 h4.media-heading {
    border-bottom: none;
 }
@@ -603,12 +591,6 @@ h5 {
 h5.panel-title {
    margin: 0px !important;
 }
-
-h6 {
-    font-weight: 600 !important;
-    margin: 0em 0em .5em 0em;
-}
-
 
 /* ---- placeholder text --------------------------- */
 
@@ -718,4 +700,41 @@ h3.jumbotronic {
 
 .panel-footer p {
    margin-bottom: 0 !important;
+}
+
+.dropdown-menu>li>a {
+   font-weight: 600 !important;
+}
+
+/* Modal */
+.modal-dialog {
+   width: 95%;
+   height: 100%;
+   margin: 10px auto;
+   padding: 0;
+}
+
+.modal-content {
+   height: auto;
+   min-height: 100%;
+   border-radius: 0;
+}
+
+.capitalized {
+   text-transform: lowercase;
+   text-transform: capitalize;
+}
+
+.alert i, .alert i.fa-spacer-right {
+   margin-right: .5rem;
+}
+
+.btn-group button,
+.btn-group button:link,
+.btn-group button:visited,
+.btn-group button:hover,
+.btn-group button:active,
+.dropdown-menu > li > a {
+   color: #337ab7;
+   font-weight: 600 !important;
 }
