@@ -41,7 +41,8 @@
 
 
 
-   <!-- <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css"> -->    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
+   <!-- <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css"> -->
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
 
 
    <link rel="stylesheet" href="css/main.css">
@@ -391,6 +392,11 @@
          <script type="text/javascript">
             $(document).ready(function() {
 
+               // Add the active classes to the nav menu
+               $(".navfeatures").addClass("active");
+               $(".navjumbotron").addClass("active");
+
+
                // clear the image url button
                $('#refresh-button1').click(function() {
                   $('#image-url').val('');
@@ -405,10 +411,6 @@
                $(function() {
                   $('#cp2').colorpicker();
                });
-
-               // Add the active classes to the nav menu
-               $(".navfeatures").addClass("active");
-               $(".navjumbotron").addClass("active");
 
                $('pre').removeClass('prettyprinted');
                prettyPrint();
@@ -630,6 +632,10 @@
             $(function() {
                $('[data-toggle="tooltip"]').tooltip()
             })
+
+
+
+
          </script>
 
          <!-- Prettify include -->
@@ -639,7 +645,13 @@
          <script src="js/bootstrap-colorpicker.min.js"></script>
 
 
+            <script>
 
+            // Add the active classes to the nav menu
+            $(".navfeatures").addClass("active");
+            $(".navjumbotron").addClass("active");
+
+            </script>
 
 
 
