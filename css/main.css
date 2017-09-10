@@ -1,7 +1,5 @@
 /* ND styles */
 
-@import url('fonts/GalaxiePolaris-Medium.woff');
-
 /* Containers --------------------------------------------------- */
 html {
   font-size: 1.00rem; /* 20px / 16px = 1.125 */
@@ -242,7 +240,7 @@ a.brand-bar-bottom-padded {
 
 div#nd-libguides-header-pattern {
   background-color: #082142;
-  background-image: url('img/jesus.gif');
+  background-image: url('../img/jesus.gif');
   background-repeat: repeat-y;
   clear: both;
 }
@@ -259,11 +257,13 @@ div#nd-libguides-header-pattern h1 {
  font-size: 1.4em !important;
  text-transform: uppercase;
  font-family: "GalaxiePolaris-Medium", sans-serif;
+ src: url("fonts/GalaxiePolaris-Medium.woff");
  margin-top: 20px;
 }
 
 #nd-libguides-header-pattern h1 a {
   font-family: "GalaxiePolarisCondensed-Medium", sans-serif;
+  src: url("fonts/GalaxiePolarisCondensed-Medium.woff");
   color: #FFFFFF;
   text-decoration: none;
   font-size: 1.4em !important;
