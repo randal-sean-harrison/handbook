@@ -88,7 +88,7 @@ input {
 
 p {
    line-height: 1.5em;
-   margin-bottom: 1.2em;
+   margin-bottom: 1.2rem;
 }
 
 a, a:link {
@@ -102,9 +102,13 @@ a, a:link {
    border-top: 1px solid #cccccc;
 }
 
+ul, ol {
+   margin-bottom: 1.5rem !important;
+}
+
 ul li, ol li {
-   margin-bottom: .25em;
-   margin-top: .25em;
+   margin-bottom: .15rem;
+   margin-top: .15rem;
 }
 
 #rightCol ul.list-group li,
@@ -737,4 +741,21 @@ h3.jumbotronic {
 .dropdown-menu > li > a {
    color: #337ab7;
    font-weight: 600 !important;
+}
+
+/* Margin classes */
+.marginal-top {
+   margin-top: 1rem;
+}
+
+.marginal-bottom {
+   margin-bottom: 1rem;
+}
+
+.marginal-left {
+   margin-left: 1rem;
+}
+
+.marginal-right {
+   margin-right: 1rem;
 }
