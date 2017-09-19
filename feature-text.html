@@ -1076,6 +1076,9 @@
          $('#alertButton').click(function() {
 
             var alertIcon = $('#alert-icon').val();
+            // adds fa-spacer-right class
+            var alertIconSpaced = alertIcon.replace('" aria-hidden="true"></i>',' fa-spacer-right" aria-hidden="true"></i>');
+
             var alertColorChoice = $('#alert-color').val();
             var alertIconAssignation = '';
             var checked = $('#standard-icons').prop('checked');
@@ -1092,42 +1095,42 @@
                   if (checked) {
                      alertIconAssignation = "<i class='fa fa-info-circle fa-spacer-right' aria-hidden='true'></i>";
                   } else if (customIzed) {
-                     alertIconAssignation = alertIcon;
+                     alertIconAssignation = alertIconSpaced;
                   }
                   break;
                case ' alert-intro':
                   if (checked) {
                      alertIconAssignation = "";
                   } else if (customIzed) {
-                     alertIconAssignation = alertIcon;
+                     alertIconAssignation = alertIconSpaced;
                   }
                   break;
                case ' alert-info':
                   if (checked) {
                      alertIconAssignation = "<i class='fa fa-info-circle fa-spacer-right' aria-hidden='true'></i>";
                   } else if (customIzed) {
-                     alertIconAssignation = alertIcon;
+                     alertIconAssignation = alertIconSpaced;
                   }
                   break;
                case ' alert-danger':
                   if (checked) {
                      alertIconAssignation = "<i class='fa fa-times-circle fa-spacer-right' aria-hidden='true'></i>";
                   } else if (customIzed) {
-                     alertIconAssignation = alertIcon;
+                     alertIconAssignation = alertIconSpaced;
                   }
                   break;
                case ' alert-warning':
                   if (checked) {
                      alertIconAssignation = "<i class='fa fa-exclamation-triangle fa-spacer-right' aria-hidden='true'></i>";
                   } else if (customIzed) {
-                     alertIconAssignation = alertIcon;
+                     alertIconAssignation = alertIconSpaced;
                   }
                   break;
                case ' alert-success':
                   if (checked) {
                      alertIconAssignation = "<i class='fa fa-star fa-spacer-right' aria-hidden='true'></i>";
                   } else if (customIzed) {
-                     alertIconAssignation = alertIcon;
+                     alertIconAssignation = alertIconSpaced;
                   }
                   break;
             }
