@@ -50,55 +50,6 @@
       .empty-state {
          display: none !important;
       }
-
-      /* Instrucitons Steps styles -------------------------------- */
-
-      .step {
-         font-size: 20px;
-         height: 44px;
-         width: 44px;
-         padding: 8px;
-         border-radius: 50px;
-         border: 1px solid #CCCCCC;
-      }
-
-      .conditional {
-         background: transparent;
-         color: #777777;
-      }
-
-      .success {
-         background: #5cb85c;
-         color: #FFFFFF;
-      }
-
-      label {
-         font-weight: 600;
-      }
-
-      .stepwise {
-         font-size: 1.5rem;
-         color: #777777;
-         margin: 0 0 1rem .5rem;
-         color: #db4c3f;
-      }
-      /* Gets rid of spinner buttons */
-
-      input[type=number]::-webkit-inner-spin-button,
-      input[type=number]::-webkit-outer-spin-button {
-         -webkit-appearance: none;
-         margin: 0;
-      }
-      /* Eliminate the last hr separating instruction steps */
-
-      .instruction-set:last-of-type + hr {
-         display: none;
-      }
-
-      .link_blue {
-         color: #337ab7;
-      }
-
    </style>
 
 </head>
@@ -170,8 +121,8 @@
          <div class="container">
             <div class="row">
                <div class="col-md-12">
-                  <h1>Contact Us</h1>
-                  <p class="lead">We're here to help you with your Guides.</p>
+                  <h1>Get Help</h1>
+                  <p class="lead">Get in touch! We're here to help you with your Guides.</p>
                </div>
             </div>
          </div>
@@ -195,87 +146,44 @@
 
             <!--right column-->
             <div class="col-md-12" id="rightCol">
+               <h2 id="sec0">Contact Us</h2>
 
 
 
                <div class="row">
-                  <div class="col-sm-9">
+                  <div class="col-sm-8">
 
-                     <!-- Instruction alert-->
-                     <div class='alert alert-intro' role='alert'>
-                        <p>There are several ways to reach us, depending on your needs.</p>
-                     </div>
-                     <div class='row instruction-set'>
-                        <div class='col-sm-1'>
-                           <h1 class='short-round center-block step conditional' id='checkit-1'>1</h1></div>
-                        <!-- .col-sm-1 -->
-                        <div class='col-sm-11'>
-                           <h4>Read the FAQ</h4></div>
-                        <!-- .col-sm-11 -->
-                        <div class='col-sm-1'></div>
-                        <!-- .col-sm-11 -->
-                        <div class='col-sm-11'>
-                           <p><a href="help-faq.html">Consult the FAQ</a>. Your question may have been asked before.</p>
+                     <p>There are several ways to reach us, depending on your needs. We recommend the following ways to get in touch:</p>
+
+                  <ul>
+                     <li><a href="help-faq.html">Read the FAQ</a>&mdash;perhaps your question has been asked before.</li>
+                     <li>Open a chat window, below, for answers to quick questions.</li>
+                     <li><a href="https://nd.service-now.com/nd_portal?id=sc_cat_item&sys_id=1198d67ddb4a7240de73f5161d961936&URL=https://library.nd.edu/">Open a ticket in ServiceNow</a> to report more serious issues.</li>
+                     <li>Contact any LMT member individually or through our listserv at <a href="mailto:lmt-list@nd.edu">lmt-list@nd.edu</a>.</li>
+                  </ul>
+
+
+
+                     <div class="panel panel-default">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">
+                           <h3 class="panel-title">Chat with a Trainer</h3>
                         </div>
-                        <!-- .col-sm-11 -->
-                     </div>
-                     <!-- .row -->
-                     <hr>
-                     <div class='row instruction-set'>
-                        <div class='col-sm-1'>
-                           <h1 class='short-round center-block step conditional' id='checkit-2'>2</h1></div>
-                        <!-- .col-sm-1 -->
-                        <div class='col-sm-11'>
-                           <h4>Open a ticket <sup><small><span class='label label-success fa-spacer-left'>Recommended</span></small></sup></h4></div>
-                        <!-- .col-sm-11 -->
-                        <div class='col-sm-1'></div>
-                        <!-- .col-sm-11 -->
-                        <div class='col-sm-11'>
-                           <p><a href="https://nd.service-now.com/nd_portal?id=sc_cat_item&amp;sys_id=1198d67ddb4a7240de73f5161d961936&amp;URL=https://library.nd.edu/">Open a ticket in ServiceNow</a><span>&nbsp;</span>to report more serious issues. This is the best method to ensure your issue is tracked and resolved quickly.</p>
-                        </div>
-                        <!-- .col-sm-11 -->
-                     </div>
-                     <!-- .row -->
-                     <hr>
-                     <div class='row instruction-set'>
-                        <div class='col-sm-1'>
-                           <h1 class='short-round center-block step conditional' id='checkit-3'>3</h1></div>
-                        <!-- .col-sm-1 -->
-                        <div class='col-sm-11'>
-                           <h4>Chat with us</h4></div>
-                        <!-- .col-sm-11 -->
-                        <div class='col-sm-1'></div>
-                        <!-- .col-sm-11 -->
-                        <div class='col-sm-11'>
-                           <p>Open a chat window, below, for answers to quick questions. You may also contact the LMT directly (at right). </p>
+                        <div class="panel-body">
+                           <div class="alert alert-default">
+                              <p><i class="fa fa-info-circle fa-spacer-right" aria-hidden="true"></i> If no trainers are online and available, you may email us or open a ticket in Service Now.</p>
+                           </div>
 
-                           <div class="panel panel-default">
-                              <!-- Default panel contents -->
-                              <div class="panel-heading">
-                                 <h3 class="panel-title">Chat with a Trainer</h3>
-                              </div>
-                              <div class="panel-body">
-
-                                 <div class="hipchat-embed">
-                                 </div>
-
-                              </div>
-
+                           <div class="hipchat-embed">
                            </div>
 
                         </div>
-                        <!-- .col-sm-11 -->
+
                      </div>
-                     <!-- .row -->
-                     <hr>
-
-
-
-
 
                   </div>
 
-                  <div class="col-sm-3">
+                  <div class="col-sm-4">
 
                      <div class="panel panel-default">
                         <div class="panel-heading">
@@ -382,6 +290,9 @@
 
    <script type="text/javascript">
       $(document).ready(function() {
+
+
+
 
          // Add the active classes to the nav menu
          $(".navhelp").addClass("active");
