@@ -83,7 +83,7 @@
          font-size: 1.5rem;
          color: #777777;
          margin: 0 0 1rem .5rem;
-         color: #db4c3f;
+         color: chocolate;
       }
       /* Gets rid of spinner buttons */
 
@@ -206,7 +206,7 @@
             </div>
             <!-- .col-sm-12 -->
             <div class="col-sm-9">
-               <p>Add a title and instructions to each step, below. Click <strong>Build</strong> to render them into HTML code for inserting into your Instruction boxes. Step titles should reflect higher-level chunking, with step tables and bullet points for breaking each step into sub-steps. The maximum number of steps is 30.</p>
+               <p>Add a title and instructions to each step, below. The maximum number of steps is 30. When finished, click <strong>Build</strong> to render them into HTML code for inserting into your Instruction boxes.</p>
             </div>
          </div>
          <!-- .row -->
@@ -225,6 +225,16 @@
                   <div class="form-group hidden">
                      <p class="stepwise">Before You Begin...</p>
                      <p>First, create an outline of instruction steps and sub-steps (perhaps in a <a href="https://docs.google.com/document/create?">Google Doc</a> in your Google Drive home directory? Next, enter those steps into the boxes below. Click <strong>Build</strong> to render the HTML. Finally <strong>copy</strong> and paste the HTML or save it to a text file.</p>
+                  </div>
+
+                  <p class="stepwise">Instructions</p>
+
+                  <div class="form-group">
+                     <div class="checkbox alert alert-default">
+                        <label>
+                        <input type="checkbox" id="add-instructions"> &nbsp;Add Instructions
+                        </label>
+                     </div>
                   </div>
 
                   <div class="form-group titles">
@@ -740,12 +750,20 @@
                var step28 = $('#step28').val();
                var step29 = $('#step29').val();
                var step30 = $('#step30').val();
+               var instructionsBox = "";
 
                // The Bootstrap wrappers and fillers
                var a = "<div class='row instruction-set'><div class='col-sm-2'>";
                var b = "</h1></div> <!-- .col-sm-2 --><div class='col-sm-10'><h4>";
                var c = "</h4></div> <!-- .col-sm-10 --><div class='col-sm-2'></div> <!-- .col-sm-10 --><div class='col-sm-10'>";
                var d = "</div> <!-- .col-sm-10 --></div> <!-- .row --><hr>";
+
+               // Add Instructions checkbox
+               if ($('#add-instructions').is(':checked')) {
+                  var instructionsBox = "<!-- Instruction alert--><div class='alert alert-intro' role='alert'><p><i class='fa fa-check-circle-o fa-spacer-right' aria-hidden='true'></i>Click each step number as you finish to track your progress.</p></div>";
+               } else {
+                  instructionsBox = "";
+               }
 
                // set the final output variables
                if (title1 !== '' && step1 !== '') {
@@ -930,8 +948,6 @@
 
                // finds the number of non-hidden steps
                var numSteps = $(".steps").not('[class*="hidden"]').length;
-
-               var instructionsBox = "<!-- Instruction alert--><div class='alert alert-intro' role='alert'><p><i class='fa fa-check-circle-o fa-spacer-right' aria-hidden='true'></i>Click each step number as you finish to track your progress.</p></div>";
 
                // Write the table - - - - - - - - - - - - - - - - - - - - - - - /
                writeSteps = instructionsBox + output1 + output2 + output3 + output4 + output5 + output6 + output7 + output8 + output9 + output10 + output11 + output12 + output13 + output14 + output15 + output16 + output17 + output18 + output19 + output20 +

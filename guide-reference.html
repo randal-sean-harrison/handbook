@@ -112,8 +112,8 @@
          <div class="container">
             <div class="row">
                <div class="col-md-9">
-                  <h1>How-to Guides</h1>
-                  <p class="lead">How-to Guides instruct users in using a particular resource or a perfoming a specific process.</p>
+                  <h1>Reference &amp; General Purpose Guides</h1>
+                  <p class="lead">General Purpose Guides and Reference Guides present skills/topics that are general in nature and generally useful in academic research, respectively.</p>
                </div>
          <div class="col-md-3">
                  <a href="index.html" style="text-decoration:none;"><h2 class='short-round center-block' style='font-size: 22px; height: 48px; width: 48px; padding: 9px; border-radius: 55px; background: #337ab7; color: #FFFFFF !important;'><i class="fa fa-bolt" aria-hidden="true"></i></h2>
@@ -132,21 +132,22 @@
             <!--left column-->
             <div class="col-md-3 hidden-xs hidden-sm" id="leftCol">
                <ul class="nav nav-stacked" id="sidebar">
-                  <li><a href="#sec0">How-to Guides</a></li>
-                  <li class="hidden"><a href="#sec1">Examples</a></li>
+                  <li><a href="#sec0">Reference Guides</a></li>
+                  <li><a href="#sec1">General Purpose Guides</a></li>
+                  <li class="hidden"><a href="#sec2">Examples</a></li>
                   <li><a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> &nbsp;Back to top</a></li>
                </ul>
             </div>
 
             <!--right column-->
             <div class="col-md-9" id="rightCol">
-               <h2 id="sec0">How-to Guides</h2>
+               <h2 id="sec0">Reference Guides</h2>
 
-               <p>How-to guides should be structured according to the best practices of instructional design, moving users through a process toward completion of specific goals. Examples might include:</p>
+               <p>Rather than being focused by subject, reference guides are designed to organize materials and train skills useful across many different types of academic research. Examples include:</p>
                <ul style="margin-bottom: 30px">
-                  <li>Helping users to work in the R language to perform statistical analysis for economics research</li>
-                  <li>Helping users to understand the whys and hows of managing scholarly citations</li>
-                  <li>Providing participants of the Hesburgh Library Hackathon with logistics and other resources related to the event</li>
+                  <li>Citing and Managing Sources</li>
+                  <li>Newspapers</li>
+                  <li>Government Documents</li>
                </ul>
 
                <div class='panel panel-default'>
@@ -154,20 +155,20 @@
                      <h5 class='panel-title'>Guide At-a-glance</h5></div>
                   <div class='panel-body'>
 
-               <img class="img img-responsive" src="img/how-toArtboard-1.png" alt="example of a How-to Guide">
+               <img class="img img-responsive img-thumbnail" src="http://libguides.library.nd.edu/ld.php?screenshot=edbgbi.png" alt="example of a How-to Guide">
 
-               <h5 style="margin-bottom:15px;">Requirements</h5>
+               <h5 style="margin-bottom:15px;" class="push-down">Requirements</h5>
 
                <table class="table numbered-steps" cellspacing="4">
                   <tbody>
                      <tr>
                         <td style="width:38px;">0</td>
-                        <td>Must be based on the <code>How-to Guide</code> template. No constraints on the guide information architecture (structure of pages and boxes).</td>
+                        <td>Must be based on the <code>Reference &amp; General Purpose</code> template. No constraints on the guide information architecture (structure of pages and boxes).</td>
                      </tr>
                      <tr>
                      <tr>
                         <td>1</td>
-                        <td>Requires author's profile box below left navigation on each page</td>
+                        <td>Requires team/department profile box below left navigation on each page</td>
                      </tr>
 
                      <tr>
@@ -180,7 +181,48 @@
                </div>
             </div>
 
-               <h2 id="sec1" class="hidden">Examples</h2>
+
+            <h2 id="sec1">General Purpose Guides</h2>
+
+            <p>General Purpose guides are the miscellaneous bucket for guides not organized according by subject or organized to move users through a specific process or learning objective. Accordingly, very few guides should fit into this category. Examples might include:</p>
+            <ul style="margin-bottom: 30px">
+               <li>Hesburgh Library Hackathon</li>
+            </ul>
+
+            <div class='panel panel-default'>
+               <div class='panel-heading'>
+                  <h5 class='panel-title'>Guide At-a-glance</h5></div>
+               <div class='panel-body'>
+
+            <img class="img img-responsive img-thumbnail" src="http://libguides.library.nd.edu/ld.php?screenshot=hjgfai.png" alt="example of a How-to Guide">
+
+            <h5 class="push-down" style="margin-bottom:15px;">Requirements</h5>
+
+            <table class="table numbered-steps" cellspacing="4">
+               <tbody>
+                  <tr>
+                     <td style="width:38px;">0</td>
+                     <td>Must be based on the <code>Reference &amp; General Purpose</code> template. No constraints on the guide information architecture (structure of pages and boxes).</td>
+                  </tr>
+                  <tr>
+                  <tr>
+                     <td>1</td>
+                     <td>Requires team/department profile box below left navigation on each page</td>
+                  </tr>
+
+                  <tr>
+                     <td>2</td>
+                     <td>No content may live beneath the profile box in the left navigation</td>
+                  </tr>
+               </tbody>
+            </table>
+
+            </div>
+         </div>
+
+
+
+               <h2 id="sec2" class="hidden">Examples</h2>
                <div class="row hidden">
                   <div class="col-md-6">
                      <h5>Example of How-to Guide</h5>
@@ -270,7 +312,7 @@
 
          // Add the active classes to the nav menu
          $(".navguides").addClass("active");
-         $(".navhowto").addClass("active");
+         $(".navreference").addClass("active");
 
          //$('pre').removeClass('prettyprinted');
          //prettyPrint();

@@ -133,7 +133,14 @@ h5.panel-title a:active  {
 }
 
 #masthead h1 {
-   color: #C99700;
+   color: #d3d3d3;
+   font-size: 4rem !important;
+   font-weight: 700;
+}
+
+h1 .small, h1 small {
+   color: #d3d3d3 !important;
+   opcacity: 1 !important;
 }
 
 #rightCol h2 {
@@ -333,7 +340,7 @@ ul.nav li a {
 
   #sidebar.affix {
     position: fixed;
-    top: 160px;
+    top: 250px;
     width: 230px;
   }
 }
@@ -494,6 +501,10 @@ btn.copier {
      display: inline-block;
      padding-left: 5px;
  }
+
+#search {
+   width: 300px;
+}
 
  #table-footer {
      margin-bottom: 15px;
@@ -758,4 +769,12 @@ h3.jumbotronic {
 
 .marginal-right {
    margin-right: 1rem;
+}
+
+.push-down {
+   margin-top: 2rem !important;
+}
+
+.push-up {
+   margin-top: -2rem !important;
 }
