@@ -673,6 +673,7 @@ table.numbered-steps tr td:first-of-type { /* NOTE: formats the table with steps
    vertical-align: middle;
    font-weight: 600;
    background: #fafafa;
+   width: 1.2rem;
    color: #666666;
    font-size: 1.2rem
 }

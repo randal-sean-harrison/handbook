@@ -169,22 +169,245 @@
             <!--left column-->
             <div class="col-md-3 hidden-xs hidden-sm" id="leftCol">
                <ul class="nav nav-stacked" id="sidebar">
-                  <li><a href="#sec0">Headings</a></li>
-                  <li><a href="#sec1">Body Text</a></li>
-                  <li><a href="#sec1a">Labels</a></li>
-                  <li><a href="#sec2">Links</a></li>
-                  <li><a href="#sec3">Lead Text</a></li>
-                  <li><a href="#sec4">Blockquotes</a></li>
-                  <li><a href="#sec5">Notes and Alerts</a></li>
+                  <li><a href="#sec0">Alerts / Notes</a></li>
+                  <li><a href="#sec1">Blockquotes</a></li>
+                  <li><a href="#sec2">Body Text</a></li>
+                  <li><a href="#sec3">Headings</a></li>
+                  <li><a href="#sec4">Labels</a></li>
+                  <li><a href="#sec5">Links</a></li>
                   <li><a href="#sec6">Special Text Formats</a></li>
-                  <li class="hidden"><a href="#sec7">Examples</a></li>
                   <li><a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> &nbsp;Back to top</a></li>
                </ul>
             </div>
 
             <!--right column-->
             <div class="col-md-9" id="rightCol">
-               <h2 id="sec0">Headings</h2>
+
+<!-- Alerts and Notes ---------------------------------------------------------------------------------->
+
+               <h2 id="sec0">Alerts / Notes</h2>
+
+               <p>Alerts and notes are useful to make information 'pop'&mdash;foregrounding important information, indicating success, offering warnings, declaring prohibition, and elevating specific links.</p>
+
+               <div class="row">
+                  <div class="col-sm-3">
+
+                     <form>
+                        <div class="form-group">
+                           <label for="alert-text">Title <span style="opacity:.5">(Optional)</span></label>
+                           <input type="text" class="form-control" id="alert-title" placeholder="Standardized Fonts">
+                        </div>
+
+                        <div class="form-group">
+                           <label for="alert-text">Text</label>
+                           <input type="text" class="form-control" id="alert-text" placeholder="Except in special...">
+                        </div>
+
+                     <div class="form-group">
+                        <label for="button-color">Color</label>
+                        <select class="form-control" id="alert-color" style="margin-bottom: 15px;">
+                        <option id="option-default" value=" alert-default">Default (light grey)</option>
+                        <option id="option-default" value=" alert-intro">Introductory (seafoam)</option>
+                        <option id="option-lt-blue" value=" alert-info" selected="selected">Information (blue)</option>
+                        <option id="option-red" value=" alert-danger">Danger (red)</option>
+                        <option id="option-yellow" value=" alert-warning">Warning (yellow)</option>
+                        <option id="option-green" value=" alert-success">Success (green)</option>
+                        </select>
+                     </div>
+
+                        <div style="margin-top: 30px;" class="checkbox">
+                           <label>
+                            <input type="checkbox" id="standard-icons"> Use Default Icons
+                            </label>
+                        </div>
+
+                        <label style="margin-top: 20px;" for="icon-html">Custom Icon (or Text)</label>
+                        <div class="input-group">
+                           <span style="height: 16px;" class="input-group-addon" id="refresh-button"><i class="fa fa-refresh" aria-hidden="true"></i></span>
+                           <input type="text" class="form-control" id="alert-icon" placeholder="<i class='fa fa-up'></i>">
+                        </div>
+
+                        <p class="text-left" style="margin-left: 8px;"><a href="feature-icon.html" target="_blank"><small><i class="fa fa-external-link-square" aria-hidden="true"></i>
+               &nbsp;Find Icon</small></a></small>
+                           </a>
+
+                     </form>
+
+
+                     <div style="margin-top:30px;">
+                        <button style="margin-top: 20px;" type="button" class="btn btn-default" id="clearButton">Reset</button>
+                        <button style="margin-top: 20px;" type="button" class="btn btn-primary" id="alertButton">Build</button>
+                     </div>
+
+
+                  </div>
+
+                  <div class="col-sm-9">
+
+                     <div class="example" id="simple-example-alert">
+
+                        <div class="alert alert-danger" role="alert">
+                           <p><i class="fa fa-times-circle fa-spacer-right" aria-hidden="true"></i><strong>Standardized Fonts</strong><br/>Except in special cases, such as foreign languages or maths symbols, please do not change font face or font size in your guides.</p>
+                        </div>
+
+                     </div>
+                     <div class="well">
+
+                        <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-alert-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                        <i class="fa fa-clipboard" aria-hidden="true"></i>
+                        </button>
+
+               <pre class="prettyprint" id="simple-alert-code">
+               &lt;div class="alert alert-danger" role="alert"&gt;
+               &lt;p&gt;
+               &lt;i class="fa fa-times-circle fa-spacer-right" aria-hidden="true"&gt;&lt;/i&gt;
+               &lt;strong&gt;Standardized Fonts&lt;/strong&gt;&lt;br/&gt;
+               Except in special cases, such as foreign languages or maths symbols, please do not change font face or font size in your guides.
+               &lt;/p&gt;
+               &lt;/div&gt;
+               </pre>
+
+
+
+
+                     </div>
+                     <!-- example closes -->
+
+                  </div>
+
+               </div>
+               <!-- row -->
+
+<!-- blockquotes -------------------------------------------------------------------------------------------------->
+
+               <h2 id="sec1">Blockquotes</h2>
+               <p>Blockquotes are especially useful as epigraphs introducing content blocks.</p>
+
+               <div class="row">
+
+                  <div class="col-sm-3">
+
+                     <form>
+
+
+                        <form>
+                           <div class="form-group">
+                              <label for="blockquote-quote">Quote</label>
+                              <textarea id="blockquote-quote" class="form-control" rows="8" placeholder="And when this happens..."></textarea>
+                           </div>
+                        </form>
+
+                        <div class="form-group">
+                           <label for="blockquote-author">Author</label>
+                           <input type="text" class="form-control" id="blockquote-author" placeholder="Rev. Martin Luther King, Jr.">
+                        </div>
+
+                        <div class="form-group">
+                           <label for="blockquote-source">Source</label>
+                           <input type="text" class="form-control" id="blockquote-source" placeholder="I Have a Dream">
+                        </div>
+
+                        <div class="form-group">
+                           <div class="checkbox" style="margin-top: 20px;">
+                              <label>
+                            <input type="checkbox" id="isItalics"> Make Source Italic
+                        </label>
+                           </div>
+                        </div>
+
+                        <div class="form-group">
+                           <div class="checkbox">
+                              <label>
+                            <input type="checkbox" id="is-link"> Make Source a Link
+                        </label>
+                           </div>
+                        </div>
+
+                        <div class="form-group hidden" id="source-link-hidden">
+                           <label for="blockquote-source">Source Link</label>
+                           <input type="text" class="form-control" id="source-link" placeholder="http://www.link.com">
+                        </div>
+
+
+                     </form>
+
+                     <div style="margin-top:30px;">
+                        <button type="button" class="btn btn-default" id="clearBlockquote">Reset</button>
+                        <button type="button" class="btn btn-primary" id="displayBlockquote">Build</button>
+                     </div>
+
+
+                  </div>
+                  <div class="col-sm-9">
+
+                     <div class="example" id="simple-example-blockquote">
+
+                        <blockquote>
+                           <p>And when this happens, when we allow freedom to ring, when we let it ring from every village and every hamlet, from every state and every city, we will be able to speed up that day when all of God's children, black men and white
+                              men, Jews and Gentiles, Protestants and Catholics, will be able to join hands and sing in the words of the old Negro spiritual: &ldquo;Free at last! Free at last! Thank God Almighty, we are free at last!&rdquo;</p>
+                           <footer>Rev. Martin Luther King, Jr., from <cite title="Source Title"><a href="http://www.americanrhetoric.com/speeches/mlkihaveadream.htm">&ldquo;I Have a Dream&rdquo;</a></cite></footer>
+                        </blockquote>
+
+                     </div>
+                     <div class="well">
+
+                        <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-blockquote-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                  <i class="fa fa-clipboard" aria-hidden="true"></i>
+                  </button>
+
+
+                        <pre class="prettyprint" id="simple-blockquote-code">
+               &lt;blockquote&gt;
+               &lt;p&gt;And when this happens, when we allow freedom to ring, when we let it ring from every village and every hamlet, from every state and every city, we will be able to speed up that day when all of God's children, black men and white men, Jews and Gentiles, Protestants and Catholics, will be able to join hands and sing in the words of the old Negro spiritual: &ldquo;Free at last! Free at last! thank God Almighty, we are free at last!&rdquo;&lt;/p&gt;
+               &lt;footer&gt;
+               Rev. Martin Luther King, Jr.
+               &lt;cite title="Source Title"&gt;&lt;a href="http://www.americanrhetoric.com/speeches/mlkihaveadream.htm"&gt;&ldquo;I Have a Dream&rdquo;&lt;/a&gt;&lt;/cite&gt;
+               &lt;/footer&gt;
+               &lt;/blockquote&gt;
+               </pre>
+
+                     </div>
+                     <!-- example closes -->
+                  </div>
+                  <!-- col md 9 -->
+               </div>
+               <!-- row -->
+
+
+<!-- body text -------------------------------------------------------------------------->
+
+<h2 id="sec2">Body Text <small style="color: #999;">(Paragraphs)</small></h2>
+<p>Body text is spaced and sized for best readability at approximately 16 pixels. Any text you enter into the WYSIWYG editor will be body text (<code>&lt;p&gt;</code>) by default.</p>
+
+<div class='alert alert-danger' role='alert'>
+   <p><i class='fa fa-times-circle fa-spacer-right' aria-hidden='true'></i><strong>Standardized Fonts</strong><br/>Except in special cases, such as foreign languages or maths symbols, please do not change font face or font size in your guides.</p>
+</div>
+
+
+<div class="example">
+
+   <p>Paragraphs make up the bulk of the text you create.</p>
+   <p>They are left-aligned and vertically block-spaced. </p>
+
+</div>
+<div class="well">
+
+   <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well5" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+   <i class="fa fa-clipboard" aria-hidden="true"></i>
+   </button>
+
+   <pre class="prettyprint" id="well5">
+&lt;p&gt;Paragraphs make up the bulk of the text you create.&lt;/p&gt;
+&lt;p&gt;The are left-aligned and vertically block-spaced.&lt;/p&gt;
+</pre>
+
+</div>
+<!-- example closes -->
+
+
+<!-- Headings  ----------------------------------------------------------------------------------------->
+
+               <h2 id="sec3">Headings</h2>
 
                <p>Use headings to subdivide the content in your Rich Text / HTML boxes. Generally, you might use <code>&lt;H3&gt;</code> headings to head a content block for the entire box. Use <code>&lt;H4&gt;</code> headings to further subdivide the content into sections. Use <code>&lt;h5&gt;</code> and <code>&lt;h6&gt;</code> headings to further subdivide the <code>&lt;h4&gt;</code> content blocks.</p>
 
@@ -257,35 +480,9 @@
                </div>
                <!-- example closes -->
 
-               <h2 id="sec1">Body Text <small style="color: #999;">(Paragraphs)</small></h2>
-               <p>Body text is spaced and sized for best readability at approximately 16 pixels. Any text you enter into the WYSIWYG editor will be body text (<code>&lt;p&gt;</code>) by default.</p>
+<!-- Labels -------------------------------------------------------------------------------------------->
 
-               <div class='alert alert-danger' role='alert'>
-                  <p><i class='fa fa-times-circle fa-spacer-right' aria-hidden='true'></i><strong>Standardized Fonts</strong><br/>Except in special cases, such as foreign languages or maths symbols, please do not change font face or font size in your guides.</p>
-               </div>
-
-
-               <div class="example">
-
-                  <p>Paragraphs make up the bulk of the text you create.</p>
-                  <p>They are left-aligned and vertically block-spaced. </p>
-
-               </div>
-               <div class="well">
-
-                  <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well5" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
-                  <i class="fa fa-clipboard" aria-hidden="true"></i>
-                  </button>
-
-                  <pre class="prettyprint" id="well5">
-&lt;p&gt;Paragraphs make up the bulk of the text you create.&lt;/p&gt;
-&lt;p&gt;The are left-aligned and vertically block-spaced.&lt;/p&gt;
-</pre>
-
-               </div>
-               <!-- example closes -->
-
-               <h2 id="sec1a">Labels</h2>
+               <h2 id="sec4">Labels</h2>
                <p>Labels pop! They add meaning contextually, and are best when used sparingly.</p>
 
                <div class="row">
@@ -364,7 +561,7 @@
 
 
 
-               <h2 id="sec2">Links <small>(Inside a Rich Text Box)</small></h2>
+               <h2 id="sec5">Links <small>(Inside a Rich Text Box)</small></h2>
                <p>Links are the way we help users&mdash;including users with visual impairment&mdash;quickly and efficiently reach important resources. For that reason it's important to <a href="help-web-writing.html#sec2">make links meaningful</a>.</p>
 
                <div class='alert alert-info' role='alert'>
@@ -373,18 +570,14 @@
                </div>
 
 
-
                <div class="example">
-
                   <p>To supercharge your guides, <a target="_self">Read the Handbook!</a></p>
-
                </div>
                <div class="well">
 
                   <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well7a" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
                         <i class="fa fa-clipboard" aria-hidden="true"></i>
                         </button>
-
 
                   <pre class="prettyprint" id="well7a">
 &lt;p&gt;To supercharge your guides, &lt;a href="handbook.html" target="_self"&gt;Read the Handbook!&lt;/a&gt;
@@ -394,8 +587,7 @@
                </div>
                <!-- example closes -->
 
-               <!-- More about Links ----------------------------------->
-
+               <!-- More about Links -->
                <div class='panel-group' id='accordion' role='tablist' aria-multiselectable='true'>
                   <div class='panel panel-default'>
                      <div class='panel-heading' role='tab' id='heading0'>
@@ -464,224 +656,26 @@
                <!-- panel group -->
                <!-- More about links closes ---------------------------------->
 
-               <h2 id="sec3">Lead Text</h2>
-
-               <p>Lead text should be used sparingly at the beginning of larger content blocks to summarize content or focus readers.</p>
-
-               <div class="example">
 
 
-                  <p class="lead">Organize and highlight your content with strong typographic hierarchy.</p>
-
-               </div>
-               <div class="well">
-
-                  <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well6" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
-                  <i class="fa fa-clipboard" aria-hidden="true"></i>
-                  </button>
-
-                  <pre class="prettyprint" id="well6">
-&lt;p class="lead"&gt;Organize and highlight your content with strong typographic hierarchy.&lt;/p&gt;
-</pre>
-
-               </div>
-               <!-- example closes -->
-
-
-               <h2 id="sec4">Blockquotes</h2>
-               <p>Blockquotes are especially useful as epigraphs introducing content blocks.</p>
-
-               <div class="row">
-
-                  <div class="col-sm-3">
-
-                     <form>
-
-
-                        <form>
-                           <div class="form-group">
-                              <label for="blockquote-quote">Quote</label>
-                              <textarea id="blockquote-quote" class="form-control" rows="8" placeholder="And when this happens..."></textarea>
-                           </div>
-                        </form>
-
-                        <div class="form-group">
-                           <label for="blockquote-author">Author</label>
-                           <input type="text" class="form-control" id="blockquote-author" placeholder="Rev. Martin Luther King, Jr.">
-                        </div>
-
-                        <div class="form-group">
-                           <label for="blockquote-source">Source</label>
-                           <input type="text" class="form-control" id="blockquote-source" placeholder="I Have a Dream">
-                        </div>
-
-                        <div class="form-group">
-                           <div class="checkbox" style="margin-top: 20px;">
-                              <label>
-                            <input type="checkbox" id="isItalics"> Make Source Italic
-                        </label>
-                           </div>
-                        </div>
-
-                        <div class="form-group">
-                           <div class="checkbox">
-                              <label>
-                            <input type="checkbox" id="is-link"> Make Source a Link
-                        </label>
-                           </div>
-                        </div>
-
-                        <div class="form-group hidden" id="source-link-hidden">
-                           <label for="blockquote-source">Source Link</label>
-                           <input type="text" class="form-control" id="source-link" placeholder="&lt;a href='http://link.com'&gt;">
-                        </div>
-
-
-                     </form>
-
-                     <div style="margin-top:30px;">
-                        <button type="button" class="btn btn-default" id="clearBlockquote">Reset</button>
-                        <button type="button" class="btn btn-primary" id="displayBlockquote">Build</button>
-                     </div>
-
-
-                  </div>
-                  <div class="col-sm-9">
-
-                     <div class="example" id="simple-example-blockquote">
-
-                        <blockquote>
-                           <p>And when this happens, when we allow freedom to ring, when we let it ring from every village and every hamlet, from every state and every city, we will be able to speed up that day when all of God's children, black men and white
-                              men, Jews and Gentiles, Protestants and Catholics, will be able to join hands and sing in the words of the old Negro spiritual: &ldquo;Free at last! Free at last! Thank God Almighty, we are free at last!&rdquo;</p>
-                           <footer>Rev. Martin Luther King, Jr., from <cite title="Source Title"><a href="http://www.americanrhetoric.com/speeches/mlkihaveadream.htm">&ldquo;I Have a Dream&rdquo;</a></cite></footer>
-                        </blockquote>
-
-                     </div>
-                     <div class="well">
-
-                        <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-blockquote-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
-                  <i class="fa fa-clipboard" aria-hidden="true"></i>
-                  </button>
-
-
-                        <pre class="prettyprint" id="simple-blockquote-code">
-&lt;blockquote&gt;
-   &lt;p&gt;And when this happens, when we allow freedom to ring, when we let it ring from every village and every hamlet, from every state and every city, we will be able to speed up that day when all of God's children, black men and white men, Jews and Gentiles, Protestants and Catholics, will be able to join hands and sing in the words of the old Negro spiritual: &ldquo;Free at last! Free at last! thank God Almighty, we are free at last!&rdquo;&lt;/p&gt;
-   &lt;footer&gt;
-      Rev. Martin Luther King, Jr.
-      &lt;cite title="Source Title"&gt;&lt;a href="http://www.americanrhetoric.com/speeches/mlkihaveadream.htm"&gt;&ldquo;I Have a Dream&rdquo;&lt;/a&gt;&lt;/cite&gt;
-   &lt;/footer&gt;
-&lt;/blockquote&gt;
-</pre>
-
-                     </div>
-                     <!-- example closes -->
-                  </div>
-                  <!-- col md 9 -->
-               </div>
-               <!-- row -->
-               <h2 id="sec5">Notes and Alerts</h2>
-
-               <p>Notes and alerts are useful to make information 'pop'&mdash;foregrounding important information, indicating success, offering warnings, declaring prohibition, and elevating specific links.</p>
-
-               <div class="row">
-                  <div class="col-sm-3">
-
-                     <form>
-                        <div class="form-group">
-                           <label for="alert-text">Title <span style="opacity:.5">(Optional)</span></label>
-                           <input type="text" class="form-control" id="alert-title" placeholder="Standardized Fonts">
-                        </div>
-
-                        <div class="form-group">
-                           <label for="alert-text">Text</label>
-                           <input type="text" class="form-control" id="alert-text" placeholder="Except in special...">
-                        </div>
-
-                     <div class="form-group">
-                        <label for="button-color">Color</label>
-                        <select class="form-control" id="alert-color" style="margin-bottom: 15px;">
-                        <option id="option-default" value=" alert-default">Default (light grey)</option>
-                        <option id="option-default" value=" alert-intro">Introductory (seafoam)</option>
-                        <option id="option-lt-blue" value=" alert-info" selected="selected">Information (blue)</option>
-                        <option id="option-red" value=" alert-danger">Danger (red)</option>
-                        <option id="option-yellow" value=" alert-warning">Warning (yellow)</option>
-                        <option id="option-green" value=" alert-success">Success (green)</option>
-                        </select>
-                     </div>
-
-                        <div style="margin-top: 30px;" class="checkbox">
-                           <label>
-                            <input type="checkbox" id="standard-icons"> Use Default Icons
-                            </label>
-                        </div>
-
-                        <label style="margin-top: 20px;" for="icon-html">Custom Icon (or Text)</label>
-                        <div class="input-group">
-                           <span style="height: 16px;" class="input-group-addon" id="refresh-button"><i class="fa fa-refresh" aria-hidden="true"></i></span>
-                           <input type="text" class="form-control" id="alert-icon" placeholder="<i class='fa fa-up'></i>">
-                        </div>
-
-                        <p class="text-left" style="margin-left: 8px;"><a href="feature-icon.html" target="_blank"><small><i class="fa fa-external-link-square" aria-hidden="true"></i>
- &nbsp;Find Icon</small></a></small>
-                           </a>
-
-                     </form>
-
-
-                     <div style="margin-top:30px;">
-                        <button style="margin-top: 20px;" type="button" class="btn btn-default" id="clearButton">Reset</button>
-                        <button style="margin-top: 20px;" type="button" class="btn btn-primary" id="alertButton">Build</button>
-                     </div>
-
-
-                  </div>
-
-                  <div class="col-sm-9">
-
-                     <div class="example" id="simple-example-alert">
-
-                        <div class="alert alert-danger" role="alert">
-                           <p><i class="fa fa-times-circle fa-spacer-right" aria-hidden="true"></i><strong>Standardized Fonts</strong><br/>Except in special cases, such as foreign languages or maths symbols, please do not change font face or font size in your guides.</p>
-                        </div>
-
-                     </div>
-                     <div class="well">
-
-                        <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-alert-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
-                        <i class="fa fa-clipboard" aria-hidden="true"></i>
-                        </button>
-
-<pre class="prettyprint" id="simple-alert-code">
-&lt;div class="alert alert-danger" role="alert"&gt;
-  &lt;p&gt;
-     &lt;i class="fa fa-times-circle fa-spacer-right" aria-hidden="true"&gt;&lt;/i&gt;
-     &lt;strong&gt;Standardized Fonts&lt;/strong&gt;&lt;br/&gt;
-     Except in special cases, such as foreign languages or maths symbols, please do not change font face or font size in your guides.
-  &lt;/p&gt;
-&lt;/div&gt;
-</pre>
-
-
-
-
-                     </div>
-                     <!-- example closes -->
-
-                  </div>
-
-               </div>
-               <!-- row -->
+<!-- Special Text formats  ------------------------------------------------------------------------------>
 
 
                <h2 id="sec6">Special Text Formats</h2>
 
                <p>When used correctly, special textual formats decidedly improve the usability and readability of textual entries. Many of these special text formats are available under the <strong>Styles</strong> dropdown menu in the WYSIWYG editor.</p>
 
-               <h5>Computer Code</h5>
                <table style="margin-top: 30px;" class='table table-bordered'>
                   <thead></thead>
                   <tbody>
+                     <tr>
+                        <td>Lead Text</td>
+                        <td><p class='lead'>Use lead text to summarize content or focus readers</p></td>
+                        <td id="well6"><pre class="prettyprint">&lt;p class="lead"&gt;Use lead text to summarize content or focus readers&lt;/p&gt;</pre></td>
+                        <td><button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#well6" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                        <i class="fa fa-clipboard" aria-hidden="true"></i>
+                        </button></td>
+                     </tr>
                      <tr>
                         <td>Math Variables</td>
                         <td><var>a</var> + <var>b</var> = <var>c</var></td>
@@ -714,13 +708,6 @@
                      <i class="fa fa-clipboard" aria-hidden="true"></i>
                      </button></td>
                      </tr>
-                  </tbody>
-               </table>
-
-               <h5>Styled Text</h5>
-               <table style="margin-top: 30px;" class='table table-bordered'>
-                  <thead></thead>
-                  <tbody>
                      <tr>
                         <td>Marker Text</td>
                         <td>Pay attention <mark>to this</mark></td>

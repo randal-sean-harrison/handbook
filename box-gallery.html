@@ -40,7 +40,8 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-   <!-- <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css"> -->    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
+   <!-- <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css"> -->
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
 
 
 
@@ -121,7 +122,7 @@
             <div class="row">
                <div class="col-md-12">
                   <h1>Gallery Boxes <span><small style="opacity: .6">(Carousel)</small></span></h1>
-                  <p class="lead">The Gallery Box is meant to juxtapose multiple images in succession.</p>
+                  <p class="lead">The Gallery Box juxtaposes multiple images or library resources in succession.</p>
                </div>
             </div>
          </div>
@@ -136,7 +137,8 @@
             <div class="col-md-3 hidden-xs hidden-sm" id="leftCol">
                <ul class="nav nav-stacked" id="sidebar">
                   <li><a href="#sec0">Gallery Box</a></li>
-                  <li><a href="#sec1">Example</a></li>
+                  <li><a href="#sec1">Example (Image)</a></li>
+                  <li><a href="#sec2">Example (Instructions)</a></li>
                   <li><a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> &nbsp;Back to top</a></li>
                </ul>
             </div>
@@ -144,23 +146,69 @@
             <!--right column-->
             <div class="col-md-9" id="rightCol">
                <h2 id="sec0">Gallery Box</h2>
-               <p>A gallery box is ... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dolorum commodi, quos labore adipisci? Dolorem qui voluptas dolorum sapiente, fugit reprehenderit quas nisi aliquam suscipit consequatur nostrum repudiandae error eos..</p>
+               <p>A gallery box is a way to present images and other library resources in an interactive linear progression. In addition to <code>images</code>, you may add <code>books</code>, <code>databases</code>, <code>library guides</code>, and <code>LibCal events</code>.</p>
+                  <p>You may customize your gallery in the following ways:</p>
+               <ul>
+                  <li><strong>A transparent or colored caption</strong>, with rich text paragraph and hyperlinked title, at top, bottom, left or right.</li>
+                  <li><strong>A simple navigation menu</strong> at top, bottom, left or right.</li>
+                  <li><strong>Transition type</strong> may be <code>slide</code> or <code>fade</code>.</li>
+                  <li><strong>Animation options</strong> include <code>autoplay</code> and a specific <code>transition speed</code>.</li>
+                  <li><strong>An image gallery</strong> can be made by setting multiple images per row, across multiple rows.</li>
+               </ul>
 
 
+               <h2 id="sec1">Example (Image)</h2>
 
+               <div class='alert alert-warning' role='alert'>
+                  <p><i class='fa fa-exclamation-triangle fa-spacer-right' aria-hidden='true'></i><strong class='capitalized'>Standardize Your Size</strong><br/>Make sure that the images you use in your slides all have at least the same height, if not both
+                     the width and height.</p>
+               </div>
 
-
-
-               <h2 id="sec1">Example</h2>
+               <!-- Image Example -->
 
                <div class="example">
 
-                  <img id="box-final" src="img/stacking-paradigm-final.png" class="img img-responsive center-block" alt="" />
+               <p>This image gallery is set to auto advance every three seconds. The title of the slide is linked to the original file and the description is listed below. The user may force the slide to advance or rewind by using the side arrows or bottom navigation.</p>
+                     <script type="text/javascript" src="//lgapi-us.libapps.com/web/js1.22.3/springshare.public.min.js"></script>
+                     <script type="text/javascript" src="//lgapi-us.libapps.com/web/js1.22.3/springshare.common.min.js"></script>
+                     <script type="text/javascript" src="//lgapi-us.libapps.com/web/js1.22.3/common/springspace_sui_helptip.js"></script>
+                  <script src="//lgapi-us.libapps.com/sa.php?site_id=3767" onload="jQuery(window).on("load", function() {springSpace.springTrack.init({_st_site_id: '3767'});});"></script>
+                     <script>springSpace.Common = springSpace.Common || { };
+                     springSpace.Common.constant = { PROCESSING: { ACTION_DISPLAY_POLL: 159}};
+                     springSpace.Common.baseURL = "//lgapi-us.libapps.com/";
+                     springSpace.Common.apiLoad = true;</script><script>
+                  springshare_widget_config_1518817611118 = { path: 'boxes/18343937' };
+                  </script>
+                  <div id="s-lg-widget-1518817611118"></div>
+                  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://lgapi-us.libapps.com/widgets.php?site_id=3767&widget_type=8&output_format=1&widget_title=Image+Gallery&widget_height=&widget_width=&widget_embed_type=1&guide_id=810726&box_id=18343937&map_id=21541893&content_only=0&config_id=1518817611118";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","s-lg-widget-script-1518817611118");</script>
 
-                  <img id="box-steps" src="img/stacking-paradigm-steps.png" class="img img-responsive center-block hidden" alt="" />
 
                </div>
+               <!-- Image example closes -->
 
+
+               <h2 id="sec1">Example (Instructions)</h2>
+
+            <!-- instructions example -->
+            <div class="example">
+
+               <p>This instruction gallery requires the user to advance to the next slide. Each slide represents a step in a linear process. As the name of the step, the title of the slide is not linked. The description field is used to describe the step further.</p>
+
+
+
+                  <script src="//lgapi-us.libapps.com/sa.php?site_id=3767" onload="jQuery(window).on("load", function() {springSpace.springTrack.init({_st_site_id: '3767'});});"></script>
+                  <script>springSpace.Common = springSpace.Common || { };
+                  springSpace.Common.constant = { PROCESSING: { ACTION_DISPLAY_POLL: 159}};
+                  springSpace.Common.baseURL = "//lgapi-us.libapps.com/";
+                  springSpace.Common.apiLoad = true;</script><script>
+      springshare_widget_config_1518831096621 = { path: 'boxes/18343940' };
+      </script>
+      <div id="s-lg-widget-1518831096621"></div>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://lgapi-us.libapps.com/widgets.php?site_id=3767&widget_type=8&output_format=1&widget_title=Instructions+Gallery&widget_height=&widget_width=&widget_embed_type=1&guide_id=810726&box_id=18343940&map_id=21541896&content_only=0&config_id=1518831096621";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","s-lg-widget-script-1518831096621");</script>
+
+
+            </div>
+            <!-- instructions example closes -->
 
 
 
@@ -266,7 +314,7 @@
    </script>
    <!-- add the active class to the correct tab and submenu element -->
 
-  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+   <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 
 
 
@@ -274,6 +322,6 @@
 
 
 
-  </body>
+</body>
 
 </html>
