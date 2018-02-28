@@ -8,7 +8,7 @@ html {
 body {
   line-height: 1.4rem; /* 30px / 20px = 1.5 */
   position: relative;
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  font-family: "Open Sans", Arial, sans-serif !important;
   font-weight: 400;
 }
 
@@ -20,22 +20,9 @@ h5 { font-size: 1.25rem }
 h6 { font-size: 1rem }
 
 h1, h2, h3, h4, h5, h6 {
-   font-family: "Open Sans", Arial, sans-serif;
    color: #434c57;
    margin-bottom:.75rem;
    font-weight: 500;
-}
-
-h1, h2, h3, h4 {
-   font-weight: 400;
-}
-
-h5, h6 {
-   font-weight: 600;
-}
-
-h6 {
-   font-style: italic;
 }
 
 p, li, th, td, dd, dl, a, dl, input, textarea, button, select, option {
@@ -70,7 +57,7 @@ label {
    font-size: 15px;
 }
 
-ul.alt-shaded-rows li:nth-child(odd) {
+.alt-shaded-rows li:nth-child(odd) {
    background: #fAfAfA;
 }
 
@@ -140,14 +127,14 @@ h5.panel-title a:active  {
 
 h1 .small, h1 small {
    color: #d3d3d3 !important;
-   opcacity: 1 !important;
+   opacity: .8 !important;
 }
 
 #rightCol h2 {
    color: #002b5b;
 }
 
-div.stepwise h1 {
+.stepwise h1 {
    background: #337ab7;
    display: flex;
    justify-content: center;
@@ -165,7 +152,7 @@ div.stepwise h1 {
     color: #337ab7;
     background: transparent;
     text-align: right !important;
-    margin: 10px 0px 0px 10px;
+    margin: 10px 0 0 10px;
 }
 
 .nav .open>a {
@@ -294,7 +281,7 @@ table#myths-table span.label.label-danger {
 /* ------------------ body -------------------- */
 
 .page-header {
-   border-bottom: 0px !important;
+   border-bottom: 0 !important;
    margin-top: 15px !important;
 }
 
@@ -305,7 +292,7 @@ table#myths-table span.label.label-danger {
 img.pulled-right {
    padding: 3px;
    border: 1px solid #cccccc;
-   margin: 0px 0px 10px 10px;
+   margin: 0 0 10px 10px;
    box-shadow: 1px 1px 3px #999999;
 }
 
@@ -322,7 +309,7 @@ ul.nav li a {
   /* Set the fixed height of the footer here */
   height: 70px;
   padding: 20px;
-  margin: 50px 0px 0px 0px;
+  margin: 50px 0 0 0;
 }
 
 #handbook-footer * {
@@ -346,7 +333,7 @@ ul.nav li a {
 }
 
 #sidebar li a {
-    margin:0px 0px 3px 0px;
+    margin:0px 0 3px 0;
     padding: 8px;
 }
 
@@ -430,7 +417,7 @@ blockquote footer cite {
 }
 
 .well {
-   border-radius: 0px 0px 4px 4px;
+   border-radius: 0 0 4px 4px;
    font-size: 18px;
 }
 
@@ -535,9 +522,9 @@ btn.copier {
     left: 0;
     border-top: 5px solid #316594;
     background: #fff;
-    -moz-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);
-    -webkit-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);
-    box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
+    -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
     z-index: 999999;
     padding: 10px 0;
     -webkit-box-sizing: content-box;
@@ -600,11 +587,11 @@ h4.media-heading {
 
 h5 {
     font-weight: 600 !important;
-    margin: 0em 0em .5em 0em !important;
+    margin: 0 0 .5em 0 !important;
 }
 
 h5.panel-title {
-   margin: 0px !important;
+   margin: 0 !important;
 }
 
 /* ---- placeholder text --------------------------- */
@@ -648,22 +635,22 @@ code, kbd, pre, samp {
 .table-unbound tr td,
 .table-unbound thead tr th {
    border-bottom: none !important;
-   border: 0px !important;
+   border: 0 !important;
 }
 
 .img-instruct {
-   margin:10px 0px;
+   margin:10px 0;
 }
 
 .embedded-photo-left {
-   margin: 0px 20px 10px 0px;
+   margin: 0 20px 10px 0;
 }
 
 .embedded-photo-right {
-   margin: 0px 0px 10px 20px;
+   margin: 0 0 10px 20px;
 }
 
-div.jumbotron h3 {
+.jumbotron h3 {
    margin-bottom: 12px !important;
 }
 
@@ -711,7 +698,7 @@ h3.jumbotronic {
 }
 
 .image-grid .panel-body img {
-   margin-bottom: 0px;
+   margin-bottom: 0;
 }
 
 .panel-footer p {

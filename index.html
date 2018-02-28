@@ -135,7 +135,7 @@
          <div class="container">
             <div class="row">
                <div class="col-md-12">
-                  <h1>Quick Start</h1>
+                  <h1>Create a Guide</h1>
                   <p class="lead">Quickly create a guide. Soup-to-nuts!</p>
                </div>
             </div>
@@ -159,12 +159,13 @@
                         <span class="caret"></span>
                          </button>
                         <ul class="dropdown-menu">
-                           <li id="subject-general-button"><a>Subject, General <small style="opacity:.7">(was DDW)</small></a></li>
+                           <li id="subject-general-button"><a>Subject, General <small>(was DDW)</small></a></li>
                            <li id="subject-specific-button"><a>Subject, Specific</a></li>
                         </ul>
                      </div>
                      <button id="course-button" type="button" class="btn btn-default">Course</button>
                      <button id="how-to-button" type="button" class="btn btn-default">How-to</button>
+                     <button id="reference-button" type="button" class="btn btn-default">Reference and General Purpose</button>
                      <div class="btn-group" role="group">
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Internal
@@ -1458,9 +1459,6 @@
       $(document).ready(function() {
 
 
-
-
-
          // Add the active classes to the nav menu
          $(".navstarted").addClass("active");
          $(".navhome").addClass("active");
@@ -1477,7 +1475,7 @@
             // show
             $('.subject-general-content').removeClass('hidden');
             $('#guide-type-page-title').removeClass('hidden');
-            $('#guide-type-page-title #page-title h1').html('Subject <small style="opacity:.7">(General)</small>');
+            $('#guide-type-page-title #page-title h1').html('Subject <small>(General)</small>');
             $('#guide-requirements-link h1').wrap("<a href='guide-subject.html' style='text-decoration:none;'></a>");
             $('#guide-requirements-link p').wrap("<a href='guide-subject.html' style='text-decoration:none;'></a>");
 
@@ -1494,7 +1492,7 @@
             // show
             $('.subject-specific-content').removeClass('hidden');
             $('#guide-type-page-title').removeClass('hidden');
-            $('#guide-type-page-title #page-title h1').html('Subject <small style="opacity:.7">(Specific)</small>');
+            $('#guide-type-page-title #page-title h1').html('Subject <small>(Specific)</small>');
             $('#guide-requirements-link h1').wrap("<a href='guide-subject.html' style='text-decoration:none;'></a>");
             $('#guide-requirements-link p').wrap("<a href='guide-subject.html' style='text-decoration:none;'></a>");
 
