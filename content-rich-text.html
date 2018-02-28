@@ -45,6 +45,13 @@
 
    <link rel="stylesheet" href="css/main.css">
 
+   <style type="text/css">
+
+   #hierarchy-table td:first-of-type {
+      text-align: center
+   }
+   </style>
+
 
 </head>
 
@@ -143,7 +150,7 @@
                <p>The Rich Text / HTML content item accepts plain text, rich text, and HTML code through the rich text editor. While <code>documents</code>, <code>links</code>, <code>books</code>, <code>media widgets</code>, <code>rss feeds</code>, <code>polls</code> and all other system components must span the full width of a box, the Rich Text / HTML content item is the only system component which can be subdivided into <a href="feature-column.html">columns</a>.</p>
 
 
-               <h5 class="push-down">Pasting Text</h5>
+               <h5 class="push-down">Copy&ndash;Pasting Text</h5>
 
                <p>Use caution when pasting text from other applications or webpages as this may <a href="help-faq.html">introduce extraneous formatting</a>. There are three ways to paste text in the WYSIWYG editor.</p>
 
@@ -184,9 +191,12 @@
                         </tr>
                      </table>
 
-                     <p>
-                        <a href="feature-text.html"> <i class="fa fa-info-circle fa-fw" aria-hidden="true"></i> More about text formats</a>
-                     </p>
+
+                     <p class="push-down"><a href="" data-toggle="modal" data-target="#typographyModal"><i class="fa fa-list-ol fa-spacer-right" aria-hidden="true"></i>See an example hierarchy of headings </a></p>
+
+                     <!-- <p>
+                        <a href="feature-text.html" target="_blank"> <i class="fa fa-info-circle fa-fw" aria-hidden="true"></i> More about text formats <i class="fa fa-external-link" aria-hidden="true"></i></a>
+                     </p> -->
                   </div>
 
                   <div class="col-sm-4">
@@ -197,7 +207,7 @@
 
                <h2 id="sec1">Adding Features</h2>
 
-               <p>Features are added inside of the source code window of a Rich Text / HTML content item. Adding a feature is a 2-step process: 1) Select and customize any feature with its code-builder tool in this Handbook, 2) Copy the generated code and paste it into the Library Guide, editing as necessary.</p>
+               <p>Features&mdash;including <code>alerts and labels</code>, <code>icons and buttons</code>, <code>columns</code>, <code>tables</code>, <code>videos</code>, <code>cards and panels</code>, and <code>images and videos</code>, etc.&mdash;are added inside of the source code window of a Rich Text / HTML content item. Adding a feature is a 2-step process: 1) Select and customize any feature with its code-builder tool in this Handbook, 2) Copy the generated code and paste it into the Library Guide, editing as necessary.</p>
 
                <div class="row">
                   <div class="col-sm-1">
@@ -347,6 +357,134 @@
 
    <!-- Main Content closes ----------------------------->
 
+
+   <div class="modal" id="typographyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+
+               <a href="" style="display:block;"><h1 class='short-round pull-right' style='font-size: 24px; height: 60px; width: 60px; padding: 10px; border-radius: 60px; background: #d9534f;' class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></h1></a>
+
+               <h1 class="modal-title pull-left" id="myModalLabel" style="opacity:.4;padding-left: 50px;">Typographic Hierarchy</h4>
+         </div>
+         <div class="modal-body">
+            <div class="container">
+             <div class="col-sm-12">
+
+                <table class='table table-striped' id="hierarchy-table">
+            <thead></thead>
+            <tbody>
+               <tr>
+                  <td style='width: 15%'> <h3>h3</h3> </td>
+                  <td style='width: 85%'> <h3>The Canons of Rhetoric</h3> </td>
+               </tr>
+               <tr>
+                  <td> <p>p</p> </td>
+                  <td> <p>There are 5 canons of rhetoric. The mnemonic M.A.I.D.S. makes it easy to remember them as <strong>Memory</strong>, <strong>Arrangement</strong>, <strong>Invention</strong>, <strong>Delivery</strong>, and <strong>Style</strong>.</p> </td>
+               </tr>
+               <tr>
+                  <td> <h4>h4</h4> </td>
+                  <td> <h4>Memory</h4> </td>
+               </tr>
+               <tr>
+                  <td> <p>p</p> </td>
+                  <td> <p>Memory has, in part, to do with mnemonics (memory aids) that would assist a budding orator in retaining his speech. However, it clearly had to do with more than simply learning how to memorize an already composed speech for re-presentation.</p> </td>
+               </tr>
+               <tr>
+                  <td> <h4>h4</h4> </td>
+                  <td> <h4>Style</h4> </td>
+               </tr>
+               <tr>
+                  <td> <p>p</p> </td>
+                  <td> Style concerns the artful expression of ideas. If invention addresses what is to be said; style addresses how this will be said.</td>
+               </tr>
+               <tr>
+                  <td> <h5>h5</h5> </td>
+                  <td> <h5>Virtues of Style</h5> </td>
+               </tr>
+               <tr>
+                  <td> <p>p</p> </td>
+                  <td> Five encompassing concerns of style which relate style to grammar, audience, effective and affective appeals, the guiding principle of decorum, and the importance of ornamenting language through figurative speech. </td>
+               </tr>
+               <tr>
+                  <td> <h6>h6</h6> </td>
+                  <td> <h6>Correctness of Style</h6> </td>
+               </tr>
+               <tr>
+                  <td> <p>p</p> </td>
+                  <td> Correctness or purity is that quality of style by which one speaks or writes in a manner consistent with a given language's norms (consuetudo, usus). </td>
+               </tr>
+               <tr>
+                  <td> <h6>h6</h6> </td>
+                  <td> <h6>Clarity of Style</h6> </td>
+               </tr>
+               <tr>
+                  <td> <p>p</p> </td>
+                  <td> <p>Clarity (perspicuitas), closely related to correctness or purity (above), is that quality of style by which language is intelligible.</p> </td>
+               </tr>
+               <tr>
+                  <td> <h6>h6</h6> </td>
+                  <td> <h6>Evidence of Style</h6> </td>
+               </tr>
+               <tr>
+                  <td> <p>p</p> </td>
+                  <td> <p>"Evidence" does not mean logical proof, but as the Latin root of this word suggests, it refers to that which comes before the eyes.</p> </td>
+               </tr>
+               <tr>
+                  <td> <h6>h6</h6> </td>
+                  <td> <h6>Propriety of Style</h6> </td>
+               </tr>
+               <tr>
+                  <td> <p>p</p> </td>
+                  <td> <p>Although listed as a quality of style, propriety is of course a controlling principle for all of rhetoric, known better by the Latin term decorum. With respect to style, it is necessary that the words be aptly fit to the subject matter.</p> </td>
+               </tr>
+               <tr>
+                  <td> <h6>h6</h6> </td>
+                  <td> <h6>Ornateness of Style</h6> </td>
+               </tr>
+               <tr>
+                  <td> <p>p</p> </td>
+                  <td> This quality of style refers to the various aesthetic qualities of language so fully illustrated among the various figures of speech.</td>
+               </tr>
+               <tr>
+                  <td> <h5>h5</h5> </td>
+                  <td> <h5>Levels of Style</h5> </td>
+               </tr>
+               <tr>
+                  <td> <p>p</p> </td>
+                  <td> <p>From the Roman tradition three levels of style have been laid out, each suited to one of three distinct rhetorical purposes.</p> </td>
+               </tr>
+               <tr>
+                  <td> <h5>h5</h5> </td>
+                  <td> <h5>Qualities of Style</h5> </td>
+               </tr>
+               <tr>
+                  <td> <p>p</p> </td>
+                  <td> <p>A large descriptive terminology has been developed to critique the qualities of style. These are interpretive in nature, and overlap broadly with figures of speech or the virtues and levels of style.</p> </td>
+               </tr>
+               <tr>
+                  <td> <h5>h5</h5> </td>
+                  <td> <h5>Figures of Speech</h5> </td>
+               </tr>
+               <tr>
+                  <td> <p>p</p> </td>
+                  <td> <p>Sometimes considered part of "ornateness" (one of the Virtues of Style), and sometimes taken to represent the whole of rhetoric, the rhetorical figures constitute a vast technical vocabulary naming ways that both ideas and language have been configured.</p> </td>
+               </tr>
+
+            </tbody>
+         </table>
+
+          </div>
+          <div class="col-sm-12">
+             <!-- Alert note ----------------------------------->
+             <div class='alert alert-default' role='alert'><p><i class='fa fa-info-circle fa-spacer-right' aria-hidden='true'></i>Rhetorical primer excerpted from the <a href="http://rhetoric.byu.edu/" target="_blank"><em>Silva Rhetoricae</em></a>. <em>Arrangement</em>, <em>Invention</em>, and <em>Delivery</em> canons omitted.</p></div>
+          </div>
+       </div>
+         </div>
+
+       </div>
+     </div>
+   </div>
 
    <!-- Footer ----------------------------->
    <div id="handbook-footer">
