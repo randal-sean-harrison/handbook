@@ -1,6 +1,6 @@
 /* Website Design */
 
-	Release date: Fall, 2017
+	Release date: spring, 2018
 
 	Web Design and Development
 
@@ -13,4 +13,4 @@
    Frameworks: jQuery, Bootstrap 3
    Web Fonts: FontAwesome
 
-   IDE/Env: Atom.io
+   IDE/Env: Atom.io, GitHub

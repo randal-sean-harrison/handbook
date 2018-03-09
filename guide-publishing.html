@@ -53,8 +53,13 @@
 
 
    <style media="screen">
+
       #subjectsModal {
          padding: 0px !important;
+      }
+
+      table.centrist td:first-child {
+         text-align: center;
       }
 
    </style>
@@ -129,7 +134,7 @@
             <div class="row">
                <div class="col-md-12">
                   <h1>Publish a Guide</h1>
-                  <p class="lead">Guides may be set to <em>Published</em>, <em>Unpublished</em>, <em>Private</em>, or <em>Archived</em> as HTML.</p>
+                  <p class="lead">Pre-flight and Publish&mdash;or unpublish and archive&mdash;your guide.</p>
                </div>
             </div>
          </div>
@@ -143,19 +148,81 @@
             <!--left column-->
             <div class="col-md-3 hidden-xs hidden-sm" id="leftCol">
                <ul class="nav nav-stacked" id="sidebar">
-                  <li><a href="#sec0">Status Types</a></li>
-                  <li><a href="#sec1">Instructions</a></li>
+                  <li><a href="#sec0">Preflight for Publication</a></li>
+                  <li><a href="#sec1">Publication Stages</a></li>
+                  <li><a href="#sec2">Instructions</a></li>
                   <li><a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> &nbsp;Back to top</a></li>
                </ul>
             </div>
 
             <!--right column-->
             <div class="col-md-9" id="rightCol">
-               <h2 id="sec0">Status Types</h2>
+
+               <h2 id="sec0">Preflight for Publication</h2>
+
+                  <p>Before publishing your guide, keep this page open and run your completed guide through this quick checklist. You may click the circle as you complete each step to track your progress.</p>
+
+                  <table class='table table-responsive centrist'>
+                     <thead>
+                        <tr>
+                           <th style='width:15%; color: #777777' class="text-center"><h6>Completed?</h6></th>
+                           <th style='width:85%'><h6>Steps</h6></th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td><i class="fa fa-circle-thin grey size-20 hidden" aria-hidden="true" id="done0no"></i><i class="fa fa-check-circle green size-20" aria-hidden="true" id="done0yes"></i></td>
+                           <td>
+                              <div class='panel-group' id='accordion3967089' role='tablist' aria-multiselectable='true'><div class='panel panel-default'><div class='panel-heading' role='tab' id='heading930234'><h5 class='panel-title'><a role='button' data-toggle='collapse' data-parent='#accordion3967089' href='#collapse930234' aria-expanded='true' aria-controls='collapse1'><i class="fa fa-arrow-circle-o-down fa-spacer-right" aria-hidden="true"></i>Create the guide</a></h5></div><div id='collapse930234' class='panel-collapse collapse' role='tabpanel' aria-labelledby='heading1'><div class='panel-body'>If you have not done so already, <a href="index.html">Create the guide</a>.</div></div></div></div> <!-- panel group -->
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><i class="fa fa-circle-thin grey size-20" aria-hidden="true" id="done1no"></i><i class="fa fa-check-circle green size-20 hidden" aria-hidden="true" id="done1yes"></i></td>
+                           <td><div class='panel-group' id='accordion2599253' role='tablist' aria-multiselectable='true'><div class='panel panel-default'><div class='panel-heading' role='tab' id='heading1101707'><h5 class='panel-title'><a role='button' data-toggle='collapse' data-parent='#accordion2599253' href='#collapse1101707' aria-expanded='true' aria-controls='collapse1'><i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp; Name the Guide</a></h5></div><div id='collapse1101707' class='panel-collapse collapse' role='tabpanel' aria-labelledby='heading1'><div class='panel-body'>For Course Guides, use the convenient <a href="guide-course.html#sec1" target="_blank">Title Formatter</a>.</div></div></div></div> <!-- panel group --></td>
+                        </tr>
+                        <tr>
+                           <td><i class="fa fa-circle-thin grey size-20" aria-hidden="true" id="done3no"></i><i class="fa fa-check-circle green size-20 hidden" aria-hidden="true" id="done3yes"></i></td>
+                           <td><div class='panel-group' id='accordion346424' role='tablist' aria-multiselectable='true'><div class='panel panel-default'><div class='panel-heading' role='tab' id='heading8134094'><h5 class='panel-title'><a role='button' data-toggle='collapse' data-parent='#accordion346424' href='#collapse8134094' aria-expanded='true' aria-controls='collapse1'><i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp; Apply correct template</a></h5></div><div id='collapse8134094' class='panel-collapse collapse' role='tabpanel' aria-labelledby='heading1'><div class='panel-body'>Lorem ipsum dolor sic amet!</div></div></div></div> <!-- panel group --></td>
+                        </tr>
+                        <tr>
+                           <td><i class="fa fa-circle-thin grey size-20" aria-hidden="true" id="done2no"></i><i class="fa fa-check-circle green size-20 hidden" aria-hidden="true" id="done2yes"></i></td>
+                           <td><strong>Set the guide type</strong></td>
+                           <td>Each guide must be assigned an appropriate type: Subject, Course, How-to, or Internal.</td>
+                        </tr>
+
+                        <tr>
+                           <td><i class="fa fa-circle-thin grey size-20" aria-hidden="true" id="done5no"></i><i class="fa fa-check-circle green size-20 hidden" aria-hidden="true" id="done5yes"></i></td>
+                           <td><strong>Assign a subject</strong></td>
+                           <td>content</td>
+                        </tr>
+                        <tr>
+                           <td><i class="fa fa-circle-thin grey size-20" aria-hidden="true" id="done4no"></i><i class="fa fa-check-circle green size-20 hidden" aria-hidden="true" id="done4yes"></i></td>
+                           <td><strong>Set friendly URLs</strong></td>
+                           <td>content</td>
+                        </tr>
+                        <tr>
+                           <td><i class="fa fa-circle-thin grey size-20" aria-hidden="true" id="done6no"></i><i class="fa fa-check-circle green size-20 hidden" aria-hidden="true" id="done6yes"></i></td>
+                           <td><strong>Add tags</strong></td>
+                           <td>content</td>
+                        </tr>
+                        <tr>
+                           <td><i class="fa fa-circle-thin grey size-20" aria-hidden="true" id="done7no"></i><i class="fa fa-check-circle green size-20 hidden" aria-hidden="true" id="done7yes"></i></td>
+                           <td><strong>Add a profile box to each page</strong></td>
+                           <td>content</td>
+                        </tr>
+                        <tr>
+                           <td><i class="fa fa-circle-thin grey size-20" aria-hidden="true" id="done9no"></i><i class="fa fa-check-circle green size-20 hidden" aria-hidden="true" id="done9yes"></i></td>
+                           <td><strong>Final review with LMT</strong></td>
+                           <td><a href="help.html" target="_blank">Contact the LMT</a> for review of your guide prior to publication</td>
+                        </tr>
+                     </tbody>
+                  </table>
+
+               <h2 id="sec1">Publication Stages</h2>
 
 
                <h4>Published</h4>
-               <p>All published guides must offer the best possible user experience, presenting a strong professional ethos consistent with the Library's other brand and identity standards. Because published guides are listed categorically on the Guides
+               <p>Because published guides are listed categorically on the Guides
                   home page, and are discoverable by search, all published guides are subject to the style and content guidelines outlined in this handbook.</p>
 
                <hr>
@@ -188,7 +255,7 @@
 
                <div class='alert alert-danger' role='alert' style="margin-top: 10px"><p><i class='fa fa-exclamation-triangle fa-spacer-right' aria-hidden='true'></i>The HTML backup cannot be re-imported as a functioning guide. It is useful only as a record of content/structure.</p></div>
 
-               <h2 id="sec1">Instructions</h2>
+               <h2 id="sec2">Instructions</h2>
 
                <div class="row">
                   <div class="col-sm-1">
@@ -462,6 +529,113 @@
       $(function() {
          $('[data-toggle="tooltip"]').tooltip()
       })
+
+      // Turn the grey circles into green check marks
+
+      $('#done0no').click(function() {
+         $('#done0yes').removeClass('hidden');
+         $('#done0no').addClass('hidden');
+      });
+
+      $('#done1no').click(function() {
+         $('#done1yes').removeClass('hidden');
+         $('#done1no').addClass('hidden');
+      });
+
+      $('#done2no').click(function() {
+         $('#done2yes').removeClass('hidden');
+         $('#done2no').addClass('hidden');
+      });
+
+      $('#done3no').click(function() {
+         $('#done3yes').removeClass('hidden');
+         $('#done3no').addClass('hidden');
+      });
+
+      $('#done4no').click(function() {
+         $('#done4yes').removeClass('hidden');
+         $('#done4no').addClass('hidden');
+      });
+
+      $('#done5no').click(function() {
+         $('#done5yes').removeClass('hidden');
+         $('#done5no').addClass('hidden');
+      });
+
+      $('#done6no').click(function() {
+         $('#done6yes').removeClass('hidden');
+         $('#done6no').addClass('hidden');
+      });
+
+      $('#done7no').click(function() {
+         $('#done7yes').removeClass('hidden');
+         $('#done7no').addClass('hidden');
+      });
+
+      $('#done8no').click(function() {
+         $('#done8yes').removeClass('hidden');
+         $('#done8no').addClass('hidden');
+      });
+
+      $('#done9no').click(function() {
+         $('#done9yes').removeClass('hidden');
+         $('#done9no').addClass('hidden');
+      });
+
+
+      // Turn the green checkmarks back into grey circles
+
+      $('#done0yes').click(function() {
+         $('#done0no').removeClass('hidden');
+         $('#done0yes').addClass('hidden');
+      });
+
+      $('#done1yes').click(function() {
+         $('#done1no').removeClass('hidden');
+         $('#done1yes').addClass('hidden');
+      });
+
+      $('#done2yes').click(function() {
+         $('#done2no').removeClass('hidden');
+         $('#done2yes').addClass('hidden');
+      });
+
+      $('#done3yes').click(function() {
+         $('#done3no').removeClass('hidden');
+         $('#done3yes').addClass('hidden');
+      });
+
+      $('#done4yes').click(function() {
+         $('#done4no').removeClass('hidden');
+         $('#done4yes').addClass('hidden');
+      });
+
+      $('#done5yes').click(function() {
+         $('#done5no').removeClass('hidden');
+         $('#done5yes').addClass('hidden');
+      });
+
+      $('#done6yes').click(function() {
+         $('#done6no').removeClass('hidden');
+         $('#done6yes').addClass('hidden');
+      });
+
+      $('#done7yes').click(function() {
+         $('#done7no').removeClass('hidden');
+         $('#done7yes').addClass('hidden');
+      });
+
+      $('#done8yes').click(function() {
+         $('#done8no').removeClass('hidden');
+         $('#done8yes').addClass('hidden');
+      });
+
+      $('#done9yes').click(function() {
+         $('#done9no').removeClass('hidden');
+         $('#done9yes').addClass('hidden');
+      });
+
+
 
       $.getJSON('json/subjects.json', function(data) {
          for (i = 0; i < 17; i++) {
