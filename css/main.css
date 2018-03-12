@@ -130,7 +130,7 @@ h5.panel-title a:active  {
 }
 
 h1 .small, h1 small {
-   color: #d3d3d3 !important;
+   color: #999999 !important;
    opacity: .8 !important;
 }
 
@@ -773,4 +773,8 @@ h3.jumbotronic {
 
 .push-up {
    margin-top: -2rem !important;
+}
+
+hr {
+   border-top: 2px solid gainsboro !important;
 }
