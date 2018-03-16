@@ -49,6 +49,12 @@ dt {
    color: #777777;
 }
 
+.lead a {
+   font-weight: 400;
+   font-size:inherit;
+}
+
+
 dl {
    margin-left: 1em;
 }
@@ -413,7 +419,9 @@ blockquote footer cite {
    color: orange;
 }
 .size-20 {
-   font-size: 1.5rem;
+   font-size: 2.3rem;
+   text-align: center !important;
+   cursor: pointer !important;
 }
 
 .green {
@@ -777,4 +785,15 @@ h3.jumbotronic {
 
 hr {
    border-top: 2px solid gainsboro !important;
+}
+
+.checklist-step {
+   color: hotpink;
+   font-size: 3rem;
+   text-align: center;
+}
+
+.centrist th:first-child,
+.centrist td:first-child {
+   text-align:center;
 }
