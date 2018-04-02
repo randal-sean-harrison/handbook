@@ -81,7 +81,7 @@
                         $('<input/>')
                         .addClass('form-control')
                         .attr('id', 'search')
-                        .attr('placeholder', 'Search...')
+                        .attr('placeholder', 'Type search term here...')
                     )
                 )
             );
@@ -123,22 +123,31 @@
                                     })
                                 )
                                 .append(
-                                    $('<option>', {
-                                        value: 15,
-                                        text: 15
-                                    })
-                                )
-                                .append(
-                                    $('<option>', {
+                                   $('<option>', {
                                         value: 20,
                                         text: 20
-                                    })
+                                   })
                                 )
                                 .append(
-                                    $('<option>', {
-                                        value: 25,
-                                        text: 25
-                                    })
+                                   $('<option>', {
+                                        value: 50,
+                                        text: 50
+                                   })
+
+                                )
+                                .append(
+                                   $('<option>', {
+                                        value: 75,
+                                        text: 75
+                                   })
+
+                                )
+                                .append(
+                                   $('<option>', {
+                                        value: 75,
+                                        text: 75
+                                   })
+
                                 )
                             )
                         )

@@ -142,10 +142,13 @@
       <div id="masthead">
          <div class="container">
             <div class="row">
-               <div class="col-md-12">
+               <div class="col-md-9">
                   <h1>Create a Guide</h1>
                   <p class="lead">Create your guide. Soup to Nuts!</p>
-
+               </div>
+               <div class="col-md-3" id="flowchart-link">
+                     <h1 class='short-round center-block nd-gold' style='font-size: 22px; height: 48px; width: 48px; padding: 9px; border-radius: 55px; background: #337ab7; color: #FFFFFF !important'><i style="font-size: 40%" class="fa fa-sitemap" aria-hidden="true"></i></h1>
+                     <p class="text-center"><a>Creation Flowchart</a></p>
                </div>
             </div>
          </div>
@@ -1216,7 +1219,7 @@
                         <div class="row">
                            <div class="col-sm-5">
                               <div class='alert alert-warning' role='alert'>
-                                 <p><i class='fa fa-exclamation-triangle fa-spacer-right' aria-hidden='true'></i><strong class='capitalized'>Subject/Tag Limit</strong><br/>If you wish to associate the guide with more than 1 subject and/or 8 tags, please
+                                 <p><i class='fa fa-exclamation-triangle fa-spacer-right' aria-hidden='true'></i><strong class='capitalized'>Subject/Tag Limit</strong><br/>If you wish to associate the guide with more than 1 subject, or more than 5 tags, please
                                     <a href="help.html">contact the LMT</a>.</p>
                               </div>
                               <table class='table numbered-steps'>
@@ -1228,7 +1231,7 @@
                                     </tr>
                                     <tr>
                                        <td style='width: 45px'>2</td>
-                                       <td>Click the <strong>pencil icon (<i class="fa fa-pencil fa-fw"></i>)</strong> next to <strong>Tags</strong> to add up to 8 tags. All tags should be lowercase.
+                                       <td>Click the <strong>pencil icon (<i class="fa fa-pencil fa-fw"></i>)</strong> next to <strong>Tags</strong> to add up to 5 tags. All tags should be lowercase.
                                        </td>
                                     </tr>
                                  </tbody>
@@ -1380,7 +1383,7 @@
                                  </tr>
                                  <tr>
                                     <td style='width: 45px; color: hotpink'>6</td>
-                                    <td><strong>Guide associated with up to 8 TAGS?</strong><br>Click the <strong>pencil icon (<i class="fa fa-pencil" aria-hidden="true"></i>)</strong> to edit <strong>Tags</strong></td>
+                                    <td><strong>Guide associated with up to 5 TAGS?</strong><br>Click the <strong>pencil icon (<i class="fa fa-pencil" aria-hidden="true"></i>)</strong> to edit <strong>Tags</strong></td>
                                     <td><i class="fa fa-circle-thin grey size-20" aria-hidden="true" id="done6no"></i><i class="fa fa-check-circle green size-20 hidden" aria-hidden="true" id="done6yes"></i></td>
                                  </tr>
                                  <tr>
@@ -2079,6 +2082,12 @@
 
       // clipboard button
       new Clipboard('.btn');
+
+      // Open the flowchart link
+      $('#flowchart-link').click(function(){
+          window.open("https://www.lucidchart.com/documents/embeddedchart/5e449c8f-0328-4e09-81e7-880a777873b0");
+          return false;
+        });
 
       // tooltips add
       $(function() {

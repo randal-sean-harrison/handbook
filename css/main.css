@@ -29,7 +29,7 @@ h6 {
    font-style: italic;
 }
 
-p, li, th, td, dd, dl, a, dl, input, textarea, button, select, option {
+p, li, th, td, dd, dl, a, dd, input, textarea, button, select, option {
    font-weight: 400;
    font-size: 1rem;
    vertical-align: baseline;
@@ -506,7 +506,7 @@ btn.copier {
  }
 
 #search {
-   width: 300px;
+   width: 100%;
 }
 
  #table-footer {
