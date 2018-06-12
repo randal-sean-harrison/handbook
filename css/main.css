@@ -776,7 +776,15 @@ h3.jumbotronic {
 }
 
 .push-down {
+   margin-top: 1rem !important;
+}
+
+.push-down-2 {
    margin-top: 2rem !important;
+}
+
+.push-down-3 {
+   margin-top: 3rem !important;
 }
 
 .push-up {
