@@ -186,6 +186,14 @@
                         </select>
                         </div>
 
+                        <div class="form-group hidden" id="columnControl">
+                           <div class="checkbox">
+                              <label>
+                                 <input type="checkbox" id="twoColumns"> 2 Columns
+                              </label>
+                           </div>
+                        </div>
+
                      </form>
 
                      <div style="margin-top:30px;">
@@ -321,17 +329,42 @@
          // ------- Display the table --------------------------
          $('#displayTabs').click(function() {
 
-
             var numTabs = $('#numTabs').val();
             var tabPill = $('#tabPill').val();
             var alignment = $('#alignment').val();
+
+            var columnLeftOpen = "";
+            var columnLeftClosed = "";
+
+            var columnRightOpen = "";
+            var columnRightClosed = "";
+
+            var rowOpen = "";
+            var rowClosed = "";
+
+            if ($('#twoColumns').is(":checked")) {
+               rowOpen = '<div class="row">';
+               rowClosed = '</div></div>';
+               columnLeftOpen = '<div class="col-sm-3">';
+               columnLeftClosed = '</div>'
+               columnRightOpen = '<div class="col-sm-9">';
+               columnRightClosed = '</div>'
+            } else {
+               columnLeftOpen = "";
+               columnLeftClosed = "";
+               columnRightOpen = "";
+               columnRightClosed = "";
+               rowOpen = "";
+               rowClosed = "";
+
+            }
 
             var stacked = $('#horizontalVertical').val();
 
             var allTabs = "";
             var allContent = "";
 
-            var tabOpen = "<ul class='nav " + tabPill + " " + stacked + " " + alignment + "' role='tablist'>";
+            var tabOpen = columnLeftOpen + "<ul class='nav " + tabPill + " " + stacked + " " + alignment + "' role='tablist'>";
             var contentOpen = "<div class='tab-content'>";
 
             for (i = 0; i < numTabs; i++) {
@@ -354,7 +387,12 @@
             var ulClose = "</ul>";
             var divClose = "</div>";
 
-            var bsTabs = tabOpen + allTabs + ulClose + contentOpen + allContent + divClose;
+            ulClose += columnLeftClosed;
+
+
+
+
+            var bsTabs = rowOpen + tabOpen + allTabs + ulClose + columnRightOpen + contentOpen + allContent + divClose + rowClosed;
 
             $("#simple-example-tabs").html(bsTabs);
             $('#simple-tabs-code').text(bsTabs);
@@ -376,17 +414,16 @@
          switch ($('#tabPill').val()) {
             case 'nav-tabs':
                $('#tabs-or-pills').html('# Tabs');
-               $('#alignment-control').removeClass("hidden");
-               $('#alignment-control-label').removeClass("hidden");
                $('#option-vertical').attr("disabled", "disabled");
                $('#horizontalVertical').attr("selected", "selected");
+               $('#columnControl').addClass("hidden");
+
                break;
             case 'nav-pills':
                $('#tabs-or-pills').html('# Pills');
-               $('#alignment-control').addClass("hidden");
-               $('#alignment-control-label').addClass("hidden");
                $('#option-vertical').removeAttr("disabled");
                $('#horizontalVertical').attr("selected", "selected");
+               $('#columnControl').removeClass("hidden");
                break;
          }
       });
