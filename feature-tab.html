@@ -46,10 +46,6 @@
    <link rel="stylesheet" href="css/main.css">
 
    <style media="screen">
-      hr.separatist {
-         margin-top: 0px;
-         margin-bottom: 0px;
-      }
    </style>
 
 </head>
@@ -121,7 +117,7 @@
          <div class="container">
             <div class="row">
                <div class="col-md-12">
-                  <h1>Tabs / Pills</h1>
+                  <h1>Tabs &amp; Pills</h1>
                   <p class="lead">Use tabs and pills to conceal-and-reveal closely related content.</p>
                </div>
             </div>
@@ -137,19 +133,19 @@
             <!--left column-->
             <div class="col-md-3 hidden-xs hidden-sm" id="leftCol">
                <ul class="nav nav-stacked" id="sidebar">
-                  <li><a href="#sec0">Tab / Pill Builder</a></li>
+                  <li><a href="#sec0">Tab &amp; Pill Builder</a></li>
                   <li><a href="#" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i> &nbsp;Back to top</a></li>
                </ul>
             </div>
 
             <!--right column-->
             <div class="col-md-9" id="rightCol">
-               <h2 id="sec0">Tab / Pill Builder</h2>
+               <h2 id="sec0">Tab &amp; Pill Builder</h2>
 
-               <p>Tabs should be limited in number and each tab should have a simple title&mdash;ideally a single word.</p>
+               <p>Tabs should be limited in number and each tab should have a short, simple title.</p>
 
-               <div class="alert alert-warning">
-                  <p><i class="fa fa-fw fa-lock" aria-hidden="true"></i>Disable a tab by adding the <code>.disabled</code> class and removing the <code>data-toggle='tab'</code> declaration on the <code>&lt;li&gt;</code> element</p>
+               <div class="alert alert-info">
+                  <p>Disable a tab by adding the <code>.disabled</code> class and removing the <code>data-toggle='tab'</code> declaration on the <code>&lt;li&gt;</code> element</p>
                </div>
 
                <div class="row">
@@ -218,10 +214,24 @@
 
                         <!-- Tab panes: This is the content bit -->
                         <div class="tab-content">
-                           <div role="tabpanel" class="tab-pane active" id="tab1"><h6>TAB ONE content</h6><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis sed eligendi laborum quaerat dolorum officia deleniti dolor eos explicabo. Blanditiis voluptates officiis nesciunt vero laborum minima nihil iusto cumque nam?</p></div>
-                           <div role="tabpanel" class="tab-pane" id="tab2"><h6>TAB TWO content</h6><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero consequatur iste nam cumque, voluptatibus dicta ducimus officiis aliquam qui atque, quis fugiat ullam ad a. Aliquid sit sed perspiciatis minima.</p></div>
-                           <div role="tabpanel" class="tab-pane" id="tab3"><h6>TAB THREE content</h6><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, optio aliquam velit eius facilis sed repudiandae, nostrum repellat nihil, sit nobis culpa vitae! Quos praesentium sed itaque iste, animi vero?</p></div>
-                           <div role="tabpanel" class="tab-pane" id="tab4"><h6>TAB FOUR content</h6><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, nihil nemo voluptatem quisquam ullam consequatur quas aliquam temporibus similique provident architecto itaque ea porro a, cum ipsam, harum commodi perspiciatis!</p></div>
+                           <div role="tabpanel" class="tab-pane active" id="tab1">
+                              <p>TAB ONE content</p>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis sed eligendi laborum quaerat dolorum officia deleniti dolor eos explicabo. Blanditiis voluptates officiis nesciunt vero laborum minima nihil iusto cumque
+                                 nam?
+                              </p>
+                           </div>
+                           <div role="tabpanel" class="tab-pane" id="tab2">
+                              <p>TAB TWO content</p>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero consequatur iste nam cumque, voluptatibus dicta ducimus officiis aliquam qui atque, quis fugiat ullam ad a. Aliquid sit sed perspiciatis minima.</p>
+                           </div>
+                           <div role="tabpanel" class="tab-pane" id="tab3">
+                              <p>TAB THREE content</p>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, optio aliquam velit eius facilis sed repudiandae, nostrum repellat nihil, sit nobis culpa vitae! Quos praesentium sed itaque iste, animi vero?</p>
+                           </div>
+                           <div role="tabpanel" class="tab-pane" id="tab4">
+                              <p>TAB FOUR content</p>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, nihil nemo voluptatem quisquam ullam consequatur quas aliquam temporibus similique provident architecto itaque ea porro a, cum ipsam, harum commodi perspiciatis!</p>
+                           </div>
                         </div>
 
                      </div>
@@ -232,7 +242,7 @@
                      <i class="fa fa-clipboard" aria-hidden="true"></i>
                      </button>
 
-<pre class="prettyprint" id="simple-tabs-code">
+                        <pre class="prettyprint" id="simple-tabs-code">
 &lt;!-- Nav tabs: This is the navigation bit --&gt;
    &lt;ul class="nav nav-tabs" role="tablist"&gt;
       &lt;!-- Standard Tabs --&gt;
@@ -370,15 +380,15 @@
             for (i = 0; i < numTabs; i++) {
                let rando = ~~(Math.random() * 10000000);
 
-               if ( i == 0 ) {
+               if (i == 0) {
                   var activeTab = "active";
                } else {
                   activeTab = "";
                }
 
-               singleTab = "<li role='presentation' class='"  + activeTab + "'><a href='#tab" + rando + " ' aria-controls='home' role='tab' data-toggle='tab'>Tab" + (i+1) + "</a></li>";
+               singleTab = "<li role='presentation' class='" + activeTab + "'><a href='#tab" + rando + " ' aria-controls='home' role='tab' data-toggle='tab'>Tab" + (i + 1) + "</a></li>";
 
-               singleContent = "<div role='tabpanel' class='tab-pane " + activeTab + "' id='tab" + rando + "'>Content tab " + (i+1) + " here</div>";
+               singleContent = "<div role='tabpanel' class='tab-pane " + activeTab + "' id='tab" + rando + "'>Content tab " + (i + 1) + " here</div>";
 
                allTabs += singleTab;
                allContent += singleContent;
@@ -427,6 +437,26 @@
                break;
          }
       });
+
+      // $('#alignment').on('change', function() {
+      //
+      //    if ($('#alignment').val() == "nav-justified") {
+      //       $('#horizontalVertical').val("");
+      //    } else {
+      //       $('#horizontalVertical').val("nav-stacked");
+      //    }
+      //
+      // });
+      //
+      // $('#horizontalVertical').on('change', function() {
+      //
+      //    if ($('#horizontalVertical').val() == "nav-justified") {
+      //       $('#alignment').val("nav-stacked");
+      //    } else {
+      //       $('#alignment').val("");
+      //    }
+      //
+      // });
 
       // clipboard button
       new Clipboard('.btn');

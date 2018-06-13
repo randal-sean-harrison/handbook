@@ -181,8 +181,9 @@ h1 .small, h1 small {
 
 .alert-intro {
     color: #000000;
-    background-color: #f1f6f6;
-    background: #f1f6f6;
+    background-color: ghostwhite;
+    /* background-color: #f1f6f6;
+    /* background: #f1f6f6; */ */
     border-color: none;
 }
 
@@ -793,6 +794,11 @@ h3.jumbotronic {
 
 hr {
    border-top: 2px solid gainsboro !important;
+}
+
+hr.separatist {
+   margin-top: 0px;
+   margin-bottom: 0px;
 }
 
 .checklist-step {
