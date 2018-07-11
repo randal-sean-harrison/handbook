@@ -686,13 +686,13 @@ h3.jumbotronic {
    font-size: 42px !important;
 }
 
-.btn-secondary-light {
-    color: #337ab7;
+.btn-secondary-dark {
+    color: #000000;
     background-color: transparent;
-    border-color: #2e6da4;
+    border-color: #000000;
 }
 
-.btn-secondary-dark {
+.btn-secondary-light {
    color: #FFFFFF;
    background-color: transparent;
    border-color: #FFFFFF;
