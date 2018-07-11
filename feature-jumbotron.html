@@ -240,13 +240,6 @@
                            </div>
                         </div>
 
-                        <!-- <div class="hidden" id="background-color-hex-input">
-                           <label for="button-text">Color (Hex) <a id="color-codes-popover" tabindex="5" data-html="true" data-trigger="focus" role="button" data-container="body" data-toggle="popover" data-placement="top" data-content="<h5>Use named colors too!</h5><hr><p>Modern browsers support 140 named colors. You may type either hex values or named colors into this field.</p><p><a href='https://htmlcolorcodes.com/color-names/' target='_blank'><i class='fa fa-external-link-square fa-spacer-right' aria-hidden='true'></i>View HTML Color Codes</a></p>" data-original-title="" title="">
-                           <i class="fa fa-info-circle" aria-hidden="true"></i>
-                           </a></label>
-                           <input type="text" class="form-control" id="hex-color" placeholder="#DB4C3F">
-                        </div> -->
-
                         <hr>
 
                         <div class="form-group">
@@ -294,6 +287,11 @@
                            </select>
                         </div>
 
+                        <div class="form-group hidden" id="button-title-group">
+                           <label for="button-title">Button Title</label>
+                           <input type="text" class="form-control" id="button-title" placeholder="Learn More">
+                        </div>
+
                         <div class="form-group hidden" id="button-alignment-div">
                            <label style="margin-top:0em;" for="button-size">Button Alignment</label>
                            <select class="form-control" id="button-alignment">
@@ -303,10 +301,12 @@
                            </select>
                         </div>
 
-                        <div class="form-group hidden" id="button-title-group">
-                           <label for="button-title">Button Title</label>
-                           <input type="text" class="form-control" id="button-title" placeholder="Learn More">
-                        </div>
+                        <label for="icon-html" style="margin-top: 20px;">Optional Icon <small>(or Text)</small></label>
+                        <div class="input-group">
+                              <span style="height: 16px;" class="input-group-addon" id="refresh-button3"><i class="fa fa-refresh" aria-hidden="true"></i></span>
+                              <input type="text" class="form-control" id="button-icon" placeholder="<i class='fa fa-up'></i>">
+                           </div>
+                           <p style="margin-left: 6px;" class="text-left"><a href="feature-icon.html" target="_blank"><small><i class="fa fa-external-link-square" aria-hidden="true"></i>&nbsp; Find Icon</small></a></p>
 
                         <div class="form-group hidden" id="button-url-group">
                            <label for="button-url">Button URL</label>
@@ -346,7 +346,7 @@
                         <i class="fa fa-clipboard" aria-hidden="true"></i>
                         </button>
 
-                        <pre class="prettyprint" id="simple-jumbotron-code">
+<pre class="prettyprint" id="simple-jumbotron-code">
 &lt;div class='jumbotron' style='background-size: cover; background-image: url("https://libapps.s3.amazonaws.com/accounts/38465/images/Africana-mini.jpg");'&gt;
    &lt;h3 style='color:#ffffff' class='jumbotronic'&gt;
       Africana Studies
@@ -444,6 +444,11 @@
             $('#button-url').val('');
          });
 
+         // clear the icon
+         $('#refresh-button3').click(function() {
+            $('#button-icon').val('');
+         });
+
          // Color picker by Stefan Petre (maintained by Javi Aguilar at https://itsjavi.com/bootstrap-colorpicker/)
          $(function() {
             $('#cp2').colorpicker();
@@ -470,6 +475,7 @@
             var buttonURL = $('#button-url').val();
             var buttonColor = $('#button-color').val();
             var buttonTitle = $('#button-title').val();
+            var buttonIcon = $('#button-icon').val();
             var textColor = $('#color-picker').val();
             var setBackground = '';
             var addImage = '';
@@ -477,6 +483,7 @@
             var textShadow = '';
             var buttonAlignment = $('#button-alignment').val();
             var jumboButton = '';
+
             if ($('#text-shadow').is(':checked')) {
                textShadow = "text-shadow: 1px 1px gray;"; //"#282C34";
             } else {
@@ -560,18 +567,16 @@
                   break;
             }
 
-            if (imageURL !== '') {
+            if (imageURL !== "") {
                addImage = " style='background-size: cover; background-image: url(\"" + imageURL + "\");'";
-            }
-
-            if (jumbotronBackground !== '') {
+            } else {
                addImage = " style='background:" + setBackground + "'";
             }
-
+            
             if (buttonColor == 'no button') {
                jumboButton = "";
             } else {
-               jumboButton = "<p class='push-down-2" + buttonAlignment + "'><a class='btn" + buttonColor + "' href='" + buttonURL + "' target='_blank' role='button'>" + buttonTitle + "</a></p>";
+               jumboButton = "<p class='push-down-2" + buttonAlignment + "'><a class='btn" + buttonColor + "' href='" + buttonURL + "' target='_blank' role='button'>" + buttonIcon + " " + buttonTitle + "</a></p>";
             }
 
             var jumboOpening = "<div class='jumbotron'" + addImage + ">";
@@ -587,8 +592,6 @@
             $('pre').removeClass('prettyprinted');
             prettyPrint();
 
-
-
          });
 
          // Clear the Jumbotron
@@ -602,7 +605,7 @@
       $("#jumbotron-background").on('change', function() {
          if ($('#jumbotron-background').val() == 'image') {
             $("#image-selection-div").removeClass("hidden");
-            $('#background-color-hex-input').removeClass('hidden');
+            $('#background-color-hex-input').addClass('hidden');
          } else if($('#jumbotron-background').val() == 'hex') {
             $("#image-selection-div").addClass("hidden");
             $('#background-color-hex-input').removeClass('hidden');
@@ -612,11 +615,14 @@
          }
       });
 
-      $('#image-url').on('blur', function() {
-            imageURL = $("#image-url").val();
+      $('#image-url').on('change', function() {
+
          if ($('#image-url').val() !== '') {
-            $('#jumbotron-background').val('default');
+            addImage = " style='background-size: cover; background-image: url(\"" + imageURL + "\");'";
+            $('#jumbotron-background').val('image');
             $('#background-color-hex-input').addClass('hidden');
+         } else  {
+            addImage = " style='background:" + setBackground + "'";
          }
       });
 

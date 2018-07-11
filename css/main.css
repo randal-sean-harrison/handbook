@@ -430,6 +430,7 @@ blockquote footer cite {
 }
 
 .well {
+   background: ghostwhite;
    border-radius: 0 0 4px 4px;
    font-size: 18px;
 }
@@ -452,13 +453,16 @@ blockquote footer cite {
     padding: 2px 8px;
     font-size: 15px;
     font-weight: bold;
-    background-color: #656f7a; /* #dff0d8  002b5b */
-    color: #FFFFFF; /*#3c763d */
+    background-color: #474E5F; /* #dff0d8  002b5b */
+    color: #FFFFFF !important; /*#3c763d */
     padding:6px;
     border-radius: 4px 0 4px 0;
     font-weight: 400;
 }
 
+pre.prettyprint {
+   background: ghostwhite !important;
+}
 
 pre.prettyprint {
    border: none !important;
@@ -471,6 +475,21 @@ pre.prettyprint {
    word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
+/* Adds individual lines to prettyprint */
+ol.linenums{
+    counter-reset:linenumber;
+}
+ol.linenums li{
+    list-style-type:none;
+    counter-increment:linenumber;
+}
+ol.linenums li:before{
+    content: counter(linenumber);
+    float:left;
+    margin-left:-4em;
+    text-align:right;
+    width:3em;
+}
 
 btn.copier {
    width: 40px;
