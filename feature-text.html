@@ -479,6 +479,7 @@
                         <div class="form-group">
                            <label for="label-size">Size</label>
                            <select class="form-control" id="label-size">
+                        <option value="big-sized" selected="selected">Big</option>
                         <option value="normal-sized" selected="selected">Normal</option>
                         <option value="small-sized">Small</option>
                      </select>
@@ -959,8 +960,10 @@
 
             if (labelSize == "normal-sized") {
                bsLabel = labelCore;
-            } else {
+            } else if (labelSize == "small-sized") {
                bsLabel = "<small>" + labelCore + "</small>";
+            } else {
+               bsLabel = "<span style='font-size:1.3rem'>" + labelCore + "</span>";
             }
 
             // write the table
