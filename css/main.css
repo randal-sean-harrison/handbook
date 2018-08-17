@@ -25,10 +25,6 @@ h1, h2, h3, h4, h5, h6 {
    font-weight: 600 !important;
 }
 
-h6 {
-   font-style: italic;
-}
-
 p, li, th, td, dd, dl, a, dd, input, textarea, button, select, option {
    font-weight: 400;
    font-size: 1rem;

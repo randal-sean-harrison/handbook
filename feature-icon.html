@@ -1117,7 +1117,7 @@
 
                      <div class="example" id="simple-example-icon">
 
-                        <h1 class='short-round center-block' style='font-size: 60px; height: 150px; width: 150px; padding: 24px; border-radius: 150px; background: #337ab7;'><i class="fa fa-calendar-plus-o" aria-hidden="true"></i></h1>
+                        <h6 class='short-round center-block' style='font-size: 60px; height: 150px; width: 150px; padding: 24px; border-radius: 150px; background: #337ab7;'><i class="fa fa-calendar-plus-o" aria-hidden="true"></i></h6>
 
                      </div>
 
@@ -1128,13 +1128,28 @@
                         </button>
 
 <pre class="prettyprint" id="simple-icon-code">
-&lt;h1 class='short-round center-block' style='font-size: 60px; height: 150px; width: 150px; padding: 24px; border-radius: 150px; background: #337ab7;'&gt;
+&lt;h6 class='short-round center-block' style='font-size: 60px; height: 150px; width: 150px; padding: 24px; border-radius: 150px; background: #337ab7;'&gt;
 &lt;i class="fa fa-calendar-plus-o" aria-hidden="true"&gt;&lt;/i&gt;
-&lt;/h1&gt;
+&lt;/h6&gt;
 </pre>
 
                      </div>
                      <!-- example closes -->
+
+               <div class="alert alert-intro">
+                  <p><i class="fa fa-exclamation-circle"></i> This icon relies on the <code>.short-round</code> class.</p>
+                  <hr>
+<pre class="prettyprint">
+.short-round {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #FFFFFF;
+   }
+</pre>
+               </div>
+               <!-- .alert -->
+
 
                   </div>
                </div>
@@ -1534,8 +1549,8 @@
             }
 
 
-            var bsIcons = "<h1 class='short-round center-block' style='font-size: " + iconHeightWidth + "px; height: " + realIconHeight + "px; width: " + realIconHeight + "px; padding: " + iconPadding + "px; border-radius: " +
-               borderRadius + "px; background: " + iconColor + ";'>" + theIcon + "</h1>";
+            var bsIcons = "<h6 class='short-round center-block' style='font-size: " + iconHeightWidth + "px; height: " + realIconHeight + "px; width: " + realIconHeight + "px; padding: " + iconPadding + "px; border-radius: " +
+               borderRadius + "px; background: " + iconColor + ";'>" + theIcon + "</h6>";
 
             $("#simple-example-icon").html(bsIcons);
             $('#simple-icon-code').text(bsIcons);
