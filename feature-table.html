@@ -268,11 +268,11 @@
 
                      <div class="well" contenteditable="true">
 
-                        <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-table-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
+                        <button class="btn btn-primary pull-right copier" type="button" data-clipboard-demo="" data-clipboard-target="#simple-code" data-toggle="tooltip" data-placement="bottom" title="copy HTML">
                      <i class="fa fa-clipboard" aria-hidden="true"></i>
                      </button>
 
-                        <pre class="prettyprint" id="simple-table-code">
+<pre id="simple-code" class="prettyprint">
 &lt;table class='table'&gt;
    &lt;thead&gt;
       &lt;tr&gt;
@@ -480,7 +480,7 @@
             var bsTable = tableOpen + tableClassOpen + tableClassClose + theaderOpen + thFinal + theaderClose + tr + tableClose;
 
             $("#simple-example-table").html(bsTable);
-            $('#simple-table-code').text(bsTable);
+            $('#simple-code').text(bsTable);
 
             $('pre').removeClass('prettyprinted');
             prettyPrint();
